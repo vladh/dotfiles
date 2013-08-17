@@ -1,0 +1,6 @@
+*~
+*.DS_Store
+*.sublime-workspace
+*.sublime-project
+*.iml
+*.sass-cache/
