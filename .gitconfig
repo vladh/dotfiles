@@ -2,7 +2,7 @@
 	name = Vlad-Ștefan Harbuz
 	email = vlad@vladh.net
 [core]
-	excludesfile = /Users/alderaan/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

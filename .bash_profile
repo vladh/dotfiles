@@ -66,10 +66,13 @@ prompt_char="∆"
 function prompt-normal {
     PS1="\[\033[G\]\[$blue\]\h \[$bold\]\[$yellow\]\w \[$red\]\$(grb_git_prompt)\[$green\]\[$bold\]$prompt_char \[$reset\]"
 }
+function prompt-username {
+	PS1="\[\033[G\]\[$blue\]\h \[$bold\]\[$green\]\u \[$bold\]\[$yellow\]\w \[$red\]\$(grb_git_prompt)\[$green\]\[$bold\]$prompt_char \[$reset\]"
+}
 function prompt-min {
     PS1="\[\033[G\]\[$green\]\[$bold\]$prompt_char \[$reset\]"
 }
-prompt-normal
+prompt-username
 
 #sources
 source ~/bin/git-completion.bash
