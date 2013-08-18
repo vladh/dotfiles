@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 2.2.4 on 2013-08-18 at 13:04 (EEST)-->
+<!--Last edited by Ukelele version 2.2.4 on 2013-08-18 at 13:46 (EEST)-->
 <!--Created by Ukelele version 2.2.4 on 2013-08-11 at 12:57 (GMT+3)-->
-<keyboard group="126" id="-20002" name="Unicode (vladh)" maxout="3">
+<keyboard group="126" id="-20000" name="Unicode (vladh)" maxout="3">
     <layouts>
         <layout first="0" last="17" modifiers="commonModifiers" mapSet="ANSI"/>
         <layout first="18" last="18" modifiers="commonModifiers" mapSet="JIS"/>
@@ -417,8 +417,8 @@
         </keyMap>
         <keyMap index="3">
             <!-- option -->
-            <key code="0" action="macron"/>
-            <key code="1" output="ß"/>
+            <key code="0" output="ă"/>
+            <key code="1" output="ș"/>
             <key code="2" output="ð"/>
             <key code="3" output="ƒ"/>
             <key code="4" action="macronbelow"/>
@@ -430,12 +430,12 @@
             <key code="9" action="caron"/>
             <key code="10" output="§"/>
             <key code="11" action="breve"/>
-            <key code="12" output="œ"/>
+            <key code="12" output="â"/>
             <key code="13" action="dotabove"/>
             <key code="14" action="acute"/>
             <key code="15" output="®"/>
             <key code="16" output="¥"/>
-            <key code="17" output="þ"/>
+            <key code="17" output="ț"/>
             <key code="18" output="¡"/>
             <key code="19" output="™"/>
             <key code="20" output="£"/>
@@ -452,7 +452,7 @@
             <key code="31" action="ø"/>
             <key code="32" action="diaeresis"/>
             <key code="33" action="“"/>
-            <key code="34" action="horn"/>
+            <key code="34" output="î"/>
             <key code="35" action="commabelow"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" action="stroke"/>
@@ -538,8 +538,8 @@
         </keyMap>
         <keyMap index="4">
             <!-- option shift -->
-            <key code="0" output="̄"/>
-            <key code="1" action="invertedbreve"/>
+            <key code="0" output="Ă"/>
+            <key code="1" output="Ș"/>
             <!-- added -->
             <key code="2" output="Ð"/>
             <key code="3" action="tildebelow"/>
@@ -554,13 +554,13 @@
             <key code="9" output="̌"/>
             <key code="10" output="±"/>
             <key code="11" output="̆"/>
-            <key code="12" output="Œ"/>
+            <key code="12" output="Â"/>
             <key code="13" output="̇"/>
             <key code="14" output="́"/>
             <key code="15" output="‰"/>
             <key code="16" action="doublegrave"/>
             <!-- added -->
-            <key code="17" output="Þ"/>
+            <key code="17" output="Ț"/>
             <key code="18" output="⁄"/>
             <!-- corrected -->
             <key code="19" output="€"/>
@@ -578,7 +578,7 @@
             <key code="31" action="Ø"/>
             <key code="32" output="̈"/>
             <key code="33" action="”"/>
-            <key code="34" output="̛"/>
+            <key code="34" output="Î"/>
             <key code="35" output="̦"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="̵"/>
@@ -2351,6 +2351,24 @@
             <when state="stroke" output="ƶ"/>
             <!-- added -->
         </action>
+        <action id="¥">
+            <when state="none" next="grave"/>
+        </action>
+        <action id="¥ 1">
+            <when state="none" next="diaeresis"/>
+        </action>
+        <action id="¥ 2">
+            <when state="none" next="caron"/>
+        </action>
+        <action id="¥ 3">
+            <when state="none" next="stroke"/>
+        </action>
+        <action id="¥ 4">
+            <when state="none" next="ogonek"/>
+        </action>
+        <action id="¥ 5">
+            <when state="none" next="macron"/>
+        </action>
         <action id="Å">
             <when state="none" output="Å"/>
             <when state="acute" output="Ǻ"/>
@@ -2376,6 +2394,12 @@
         <action id="ø">
             <when state="none" output="ø"/>
             <when state="acute" output="ǿ"/>
+        </action>
+        <action id="ă">
+            <when state="none" next="macron"/>
+        </action>
+        <action id="ă 1">
+            <when state="none" next="macron"/>
         </action>
         <action id="‘">
             <when state="none" output="æ"/>
