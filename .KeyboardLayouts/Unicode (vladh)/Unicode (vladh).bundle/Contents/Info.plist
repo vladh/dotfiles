@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.sil.ukelele.keyboardlayout.international(vladh)</string>
+	<string>org.sil.ukelele.keyboardlayout.unicode(vladh)</string>
 	<key>CFBundleName</key>
-	<string>International (vladh)</string>
+	<string>Unicode (vladh)</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>KLInfo_International (vladh)</key>
+	<key>KLInfo_Unicode (vladh)</key>
 	<dict>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout.international(vladh).international(vladh)</string>
+		<string>org.sil.ukelele.keyboardlayout.unicode(vladh).unicode(vladh)</string>
 		<key>TISIntendedLanguage</key>
-		<string>en-US</string>
+		<string>en-GB</string>
 	</dict>
 </dict>
 </plist>

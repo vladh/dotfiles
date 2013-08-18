@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 2.2.4 on 2013-08-11 at 12:58 (GMT+3)-->
+<!--Last edited by Ukelele version 2.2.4 on 2013-08-18 at 13:03 (EEST)-->
 <!--Created by Ukelele version 2.2.4 on 2013-08-11 at 12:57 (GMT+3)-->
-<keyboard group="126" id="-20000" name="International (vladh)" maxout="3">
+<keyboard group="126" id="-20000" name="Unicode (vladh)" maxout="3">
     <layouts>
         <layout first="0" last="17" modifiers="commonModifiers" mapSet="ANSI"/>
         <layout first="18" last="18" modifiers="commonModifiers" mapSet="JIS"/>
@@ -459,7 +459,7 @@
             <key code="38" action="doubleacute"/>
             <key code="39" action="æ"/>
             <key code="40" action="ringabove"/>
-            <key code="41" output="…"/>
+            <key code="41" output="“"/>
             <key code="42" output="«"/>
             <key code="43" output="≤"/>
             <key code="44" output="÷"/>
@@ -577,7 +577,7 @@
             <key code="30" action="’"/>
             <key code="31" action="Ø"/>
             <key code="32" output="̈"/>
-            <key code="33" output="”"/>
+            <key code="33" action="”"/>
             <key code="34" output="̛"/>
             <key code="35" output="̦"/>
             <key code="36" output="&#x000D;"/>
@@ -585,10 +585,10 @@
             <key code="38" output="̋"/>
             <key code="39" action="Æ"/>
             <key code="40" output="̊"/>
-            <key code="41" action="specials"/>
+            <key code="41" output="”"/>
             <!-- added -->
             <key code="42" output="»"/>
-            <key code="43" output="„"/>
+            <key code="43" output="×"/>
             <key code="44" output="¿"/>
             <key code="45" output="̃"/>
             <!-- corrected -->
@@ -2356,7 +2356,7 @@
             <when state="acute" output="Ǻ"/>
         </action>
         <action id="Æ">
-            <when state="none" output="Æ"/>
+            <when state="none" output="’"/>
             <when state="acute" output="Ǽ"/>
             <when state="macron" output="Ǣ"/>
         </action>
@@ -2369,7 +2369,7 @@
             <when state="acute" output="ǻ"/>
         </action>
         <action id="æ">
-            <when state="none" output="æ"/>
+            <when state="none" output="‘"/>
             <when state="acute" output="ǽ"/>
             <when state="macron" output="ǣ"/>
         </action>
@@ -2378,16 +2378,19 @@
             <when state="acute" output="ǿ"/>
         </action>
         <action id="‘">
-            <when state="none" output="‘"/>
+            <when state="none" output="æ"/>
             <when state="specials" output="ʻ"/>
         </action>
         <action id="’">
-            <when state="none" output="’"/>
+            <when state="none" output="Æ"/>
             <when state="specials" output="ʼ"/>
         </action>
         <action id="“">
-            <when state="none" output="“"/>
+            <when state="none" output="…"/>
             <when state="specials" output="ʽ"/>
+        </action>
+        <action id="”">
+            <when state="none" next="specials"/>
         </action>
     </actions>
     <terminators>
