@@ -22,8 +22,8 @@ alias j="jobs"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 
-if [ -f .bash_profile_private ]; then
-	source .bash_profile_private
+if [ -f ~/.bash_profile_private ]; then
+	source ~/.bash_profile_private
 fi
 
 # Nicer history

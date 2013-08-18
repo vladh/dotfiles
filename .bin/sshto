@@ -1,2 +1,2 @@
 #!/bin/bash
-bash ~/bin/ssh/$1
+bash ~/.bin/ssh/$1
