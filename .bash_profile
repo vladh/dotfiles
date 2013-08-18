@@ -75,12 +75,12 @@ function prompt-min {
 prompt-username
 
 #sources
-source ~/bin/git-completion.bash
+source ~/.bin/git-completion.bash
 source ~/.bashrc
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.rvm/bin:$PATH"
 
 #rvm
