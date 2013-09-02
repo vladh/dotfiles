@@ -16,7 +16,7 @@ bold=`tput bold`
 #aliases
 alias ls='ls -G'
 alias ll="ls -lhaG"
-alias lt="ls -lhaGrt"
+alias lt="ls -lhGrt"
 alias irb="irb --simple-prompt"
 alias c="clear"
 alias j="jobs"
