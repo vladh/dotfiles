@@ -5,34 +5,8 @@
 *.vim-fuf-data
 *.pyc
 .ssh
-Desktop
-Documents
-Downloads
-Library
-Movies
-Music
-Pictures
-Public
-.pineapples
 .bash_history
-.npm
 .neocomplcache
-.gem
-.cache
-*.pysave
-.Trash
-.CFUserTextEncoding
-.dropbox
-Dropbox
-Games
-Applications
-Google Drive
-.lesshst
 .bash_profile_private
 .gitconfig_private
 .mysql_history
-.config
-.local
-Melodyne Transfer
-.pearrc
-.opt
