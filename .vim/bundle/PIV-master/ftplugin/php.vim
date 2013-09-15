@@ -51,7 +51,7 @@ call s:InitVariable("g:PIVPearStyle", 0)
 call s:InitVariable("g:PIVAutoClose", 0)
 
 " Auto expand tabs to spaces
-setlocal expandtab
+"setlocal expandtab
 setlocal autoindent " Auto indent after a {
 setlocal smartindent
 
@@ -59,11 +59,11 @@ setlocal smartindent
 " comments
 " setlocal textwidth=79
 
-setlocal nowrap     " Do not wrap lines automatically
+"setlocal nowrap     " Do not wrap lines automatically
 
 " Correct indentation after opening a phpdocblock and automatic * on every
 " line
-setlocal formatoptions=qroct
+"setlocal formatoptions=qroct
 
 " Use php syntax check when doing :make
 setlocal makeprg=php\ -l\ %
