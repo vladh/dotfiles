@@ -10,6 +10,7 @@ set number
 set nowrap
 set hidden
 set history=1000
+set undolevels=1000
 set scrolloff=5
 set autoindent
 set noexpandtab
@@ -26,7 +27,7 @@ set numberwidth=5
 set showtabline=1
 set wildmode=longest,list
 set wildmenu
-let mapleader="\\"
+let mapleader=","
 set backspace=indent,eol,start
 set autoread
 filetype plugin on
@@ -37,12 +38,16 @@ set noshowmode
 set whichwrap=h,l,~,[,],<,>
 set gdefault
 set visualbell " no bell kthx <3
+set noerrorbells
 set ttyfast
 set smarttab
 set nrformats-=octal
 set fileformats+=mac
 let &winheight = &lines * 7 / 10
 let g:DisableAutoPHPFolding = 1
+set pastetoggle=<leader>p
+cmap w!! w !sudo tee % >/dev/null
+set title
 
 " don't continue comments, don't break lines
 set textwidth=0
