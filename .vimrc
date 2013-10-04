@@ -49,6 +49,7 @@ set textwidth=0
 set wrapmargin=0
 set formatoptions-=croqt
 autocmd FileType * setlocal formatoptions-=croqt
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ruby
 let g:ruby_path = '~/.rvm/rubies/default/bin/ruby'
@@ -77,8 +78,8 @@ set foldnestmax=4
 
 " abbreviations
 inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-
 nnoremap ; :nohlsearch<cr>
+nnoremap <leader>j :set tabstop=2<cr>:set expandtab<cr>:set shiftwidth=2<cr>:echo "Set JTL Java indentation options (two spaces)."<cr>
 
 " very magic
 " nnoremap / /\v
