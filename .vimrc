@@ -3,9 +3,11 @@ set runtimepath^=~/.vim/bundle/ctrlp
 syntax on
 set t_Co=256 " 256 colors
 set background=dark
+let g:solarized_termcolors=256
 colorscheme molokai_3
 set guifont=Monaco\ for\ Powerline:h14
 set nocompatible
+set relativenumber
 set number
 set nowrap
 set hidden
@@ -23,7 +25,7 @@ set incsearch
 set hlsearch
 set cmdheight=1
 set switchbuf=useopen
-set numberwidth=5
+set numberwidth=4
 set showtabline=1
 set wildmode=longest,list
 set wildmenu
