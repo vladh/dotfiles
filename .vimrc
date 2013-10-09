@@ -45,7 +45,7 @@ set nrformats-=octal
 set fileformats+=mac
 let &winheight = &lines * 7 / 10
 let g:DisableAutoPHPFolding = 1
-set pastetoggle=<leader>p
+set pastetoggle=<leader>pp
 cmap w!! w !sudo tee % >/dev/null
 set title
 
