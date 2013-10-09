@@ -78,7 +78,7 @@ set foldnestmax=4
 inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 nnoremap ; :nohlsearch<cr>
 nnoremap <leader>j :set tabstop=2<cr>:set expandtab<cr>:set shiftwidth=2<cr>:echo "Set JTL Java indentation options (two spaces)."<cr>
-nnoremap <leader>rt :!clear && ./run-tests<cr>
+nnoremap <leader>t :!clear && ./run-tests<cr>
 
 " very magic
 " nnoremap / /\v
@@ -177,9 +177,9 @@ let g:user_zen_settings = {
 let g:use_zen_complete_tag = 1
 
 " bars
-nmap \m :TagbarToggle<CR>
-nmap \n :NERDTree<CR>
-nmap \b :CtrlPBuffer<CR>
+nmap <leader>m :TagbarToggle<CR>
+nmap <leader>n :NERDTree<CR>
+nmap <leader>b :CtrlPBuffer<CR>
 
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'

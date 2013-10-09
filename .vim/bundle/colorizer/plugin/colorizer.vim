@@ -220,7 +220,7 @@ command -bar ColorClear call s:ColorClear()
 command -bar ColorToggle call s:ColorToggle()
 nnoremap <unique> <silent> <Plug>Colorizer :ColorToggle<CR>
 if !hasmapto("<Plug>Colorizer") && (!exists("g:colorizer_nomap") || g:colorizer_nomap == 0)
-  nmap <unique> <Leader>tc <Plug>Colorizer
+  nmap <unique> <Leader>pc <Plug>Colorizer
 endif
 " Cleanup and modelines {{{1
 let &cpo = s:save_cpo
