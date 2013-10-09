@@ -3,11 +3,9 @@ set runtimepath^=~/.vim/bundle/ctrlp
 syntax on
 set t_Co=256 " 256 colors
 set background=dark
-let g:solarized_termcolors=256
 colorscheme molokai_3
 set guifont=Monaco\ for\ Powerline:h14
 set nocompatible
-set relativenumber
 set number
 set nowrap
 set hidden
@@ -25,7 +23,7 @@ set incsearch
 set hlsearch
 set cmdheight=1
 set switchbuf=useopen
-set numberwidth=4
+set numberwidth=5
 set showtabline=1
 set wildmode=longest,list
 set wildmenu
@@ -80,6 +78,7 @@ set foldnestmax=4
 inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 nnoremap ; :nohlsearch<cr>
 nnoremap <leader>j :set tabstop=2<cr>:set expandtab<cr>:set shiftwidth=2<cr>:echo "Set JTL Java indentation options (two spaces)."<cr>
+nnoremap <leader>rt :!clear && ./run-tests<cr>
 
 " very magic
 " nnoremap / /\v
