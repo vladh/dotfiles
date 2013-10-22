@@ -79,7 +79,7 @@ inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se
 nnoremap ; :nohlsearch<cr>
 
 nnoremap <leader>j :set tabstop=2<cr>:set expandtab<cr>:set shiftwidth=2<cr>:echo "Set JTL Java indentation options (two spaces)."<cr>
-nnoremap <leader>t :!clear && ./run-tests<cr>
+nnoremap <leader>t :!clear && ./run-tests 2>&1 \| less<cr>
 nnoremap <leader>pcj :set colorcolumn=80<cr>
 
 nnoremap <leader>pcv :set colorcolumn=120<cr>
