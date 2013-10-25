@@ -23,6 +23,11 @@ alias j="jobs"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 
+#sources
+source ~/.bin/git-completion.bash
+if [ -f ~/.bashrc ]; then
+	source ~/.bashrc
+fi
 if [ -f ~/.bash_profile_private ]; then
 	source ~/.bash_profile_private
 fi
@@ -74,10 +79,6 @@ function prompt-min {
     PS1="\[\033[G\]\[$green\]\[$bold\]$prompt_char \[$reset\]"
 }
 prompt-username
-
-#sources
-source ~/.bin/git-completion.bash
-source ~/.bashrc
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
