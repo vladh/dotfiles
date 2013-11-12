@@ -14,9 +14,9 @@ reset=`tput sgr0`
 bold=`tput bold`
 
 #aliases
-alias ls='ls -G'
-alias ll="ls -lhaG"
-alias lt="ls -lhGrt"
+alias ls='ls -G --color'
+alias ll="ls -lhaG --color"
+alias lt="ls -lhGrt --color"
 alias irb="irb --simple-prompt"
 alias c="clear"
 alias j="jobs"
@@ -83,13 +83,3 @@ prompt-username
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.rvm/bin:$PATH"
-
-#rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
