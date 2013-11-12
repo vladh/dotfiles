@@ -18,7 +18,6 @@ alias ls='ls -G --color'
 alias ll="ls -lhaG --color"
 alias lt="ls -lhGrt --color"
 alias irb="irb --simple-prompt"
-alias c="clear"
 alias j="jobs"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
