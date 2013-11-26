@@ -187,6 +187,11 @@ nmap <leader>m :TagbarToggle<CR>
 nmap <leader>n :NERDTree<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 
+" ctrlp
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP .'
+let g:ctrlp_working_path_mode = 'a'
+
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
