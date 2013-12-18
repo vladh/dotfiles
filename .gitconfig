@@ -36,3 +36,5 @@
     la = !git l --all
 [credential]
 	helper = osxkeychain
+[push]
+	default = matching

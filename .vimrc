@@ -81,6 +81,7 @@ inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se
 nnoremap ; :nohlsearch<cr>
 
 nnoremap <leader>t :!clear && ./run-tests 2>&1<cr>
+nnoremap <leader>l :!clear && xelatex %<cr>
 
 nnoremap <leader>pcj :set colorcolumn=80<cr>
 nnoremap <leader>pcv :set colorcolumn=120<cr>
