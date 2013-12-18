@@ -26,6 +26,7 @@ alias j="jobs"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 alias dogecat="while true; do doge | lolcat -a -d 100 -s 100 -p 1; done"
+alias ioana="say -v ioana"
 
 #sources
 source ~/.bin/git-completion.bash
@@ -87,3 +88,6 @@ prompt-username
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin:$PATH"
+if [[ `hostname -s` = 'sun' ]]; then
+  export PATH=.:${PATH}
+fi
