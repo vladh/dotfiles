@@ -18,9 +18,15 @@ reset=`tput sgr0`
 bold=`tput bold`
 
 #aliases
-alias ls='ls -G'
-alias ll="ls -lhaG"
-alias lt="ls -lhGrt"
+if [ "$(uname)" == "Darwin" ]; then
+  alias ls='ls -G'
+  alias ll="ls -lhaG"
+  alias lt="ls -lhrtG"
+else
+  alias ls='ls --color'
+  alias ll="ls -lha --color"
+  alias lt="ls -lhrt --color"
+fi
 alias irb="irb --simple-prompt"
 alias j="jobs"
 alias ta="tmux attach -t"
