@@ -78,14 +78,18 @@ set shiftwidth=2
 
 " abbreviations
 inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+" various maps
 nnoremap ; :nohlsearch<cr>
 
 nnoremap <leader>t :!clear && ./run-tests 2>&1<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
 
-nnoremap <leader>pcj :set colorcolumn=80<cr>
-nnoremap <leader>pcv :set colorcolumn=120<cr>
-nnoremap <leader>pcr :set colorcolumn=<cr>
+nnoremap <leader>cs :set colorcolumn=80<cr>
+nnoremap <leader>cr :set colorcolumn=<cr>
+
+map <leader>vp :exec "w !vpaste ft=".&ft<CR>
+vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
 
 " very magic
 " nnoremap / /\v
@@ -168,21 +172,6 @@ if ! has('gui_running')
 	augroup END
 endif
 
-" zencoding
-let g:user_zen_settings = {
-\  'php' : {
-\		 'extends' : 'html',
-\		 'filters' : 'c',
-\  },
-\  'xml' : {
-\		 'extends' : 'html',
-\  },
-\  'haml' : {
-\		 'extends' : 'html',
-\  },
-\}
-let g:use_zen_complete_tag = 1
-
 " bars
 nmap <leader>m :TagbarToggle<CR>
 nmap <leader>n :NERDTree<CR>
@@ -234,7 +223,6 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 set ofu=syntaxcomplete#Complete
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
-
 
 " multipurpose tab key
 " indent if we're at the beginning of a line. Else, do completion.
