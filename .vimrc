@@ -3,7 +3,8 @@ set runtimepath^=~/.vim/bundle/ctrlp
 syntax on
 set t_Co=256 " 256 colors
 set background=dark
-colorscheme molokai_3
+let g:solarized_termcolors=256
+colorscheme molokai_vladh
 set guifont=Monaco\ for\ Powerline:h14
 set nocompatible
 set number
@@ -81,17 +82,15 @@ inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se
 
 " various maps
 nnoremap ; :nohlsearch<cr>
-
 nnoremap <leader>t :!clear && ./run-tests 2>&1<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
-
 nnoremap <leader>cs :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
-
 map <leader>vp :exec "w !vpaste ft=".&ft<CR>
 vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
-
 nnoremap <leader>u :GundoToggle<CR>
+noremap <C-n> :bp<CR>
+nnoremap <C-m> :bn<CR>
 
 " very magic
 " nnoremap / /\v
@@ -173,6 +172,12 @@ if ! has('gui_running')
 		au InsertLeave * set timeoutlen=1000
 	augroup END
 endif
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_powerline_fonts = 1
 
 " bars
 nmap <leader>m :TagbarToggle<CR>
