@@ -1,7 +1,6 @@
 *.DS_Store
 *.netrwhist
 *.viminfo*
-*.vim-local
 *.vim-fuf-data
 *.pyc
 .ssh
@@ -11,3 +10,4 @@
 .gitconfig_private
 .mysql_history
 .pineapples
+.tmux.conf.private
