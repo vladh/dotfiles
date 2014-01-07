@@ -88,8 +88,8 @@ nnoremap <leader>cr :set colorcolumn=<cr>
 map <leader>vp :exec "w !vpaste ft=".&ft<CR>
 vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
 nnoremap <leader>u :GundoToggle<CR>
-noremap <C-n> :bp<CR>
-nnoremap <C-m> :bn<CR>
+noremap <leader>n :bp<CR>
+nnoremap <leader>m :bn<CR>
 
 " very magic
 " nnoremap / /\v
