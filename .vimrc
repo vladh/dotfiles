@@ -85,6 +85,7 @@ nnoremap <leader>t :!clear && ./run-tests 2>&1<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
 nnoremap <leader>cs :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
+nnoremap <leader>ps :SyntasticToggle<cr>
 map <leader>vp :exec "w !vpaste ft=".&ft<CR>
 vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
 nnoremap <leader>u :GundoToggle<CR>
@@ -159,19 +160,6 @@ set fileencoding=utf-8
 " inoremap {{			{
 " inoremap {}			{}
 
-" powerline
-" let g:Powerline_symbols = 'fancy'
-" let g:Powerline_cache_enabled = 1
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-if ! has('gui_running')
-	set ttimeoutlen=10
-	augroup FastEscape
-		autocmd!
-		au InsertEnter * set timeoutlen=0
-		au InsertLeave * set timeoutlen=1000
-	augroup END
-endif
-
 " airline
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'powerlineish'
@@ -187,6 +175,12 @@ nmap <leader>b :CtrlPBuffer<CR>
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode = 'a'
+
+" indent guides
+nmap <leader>pi :IndentGuidesToggle<CR>
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
 
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
