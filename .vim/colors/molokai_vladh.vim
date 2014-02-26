@@ -193,7 +193,7 @@ if &t_Co > 255
    hi MailHeaderEmail ctermfg=3  ctermbg=233
    hi MailEmail       ctermfg=3  ctermbg=233
 
-   hi MatchParen      ctermfg=16  ctermbg=208 cterm=bold
+   hi MatchParen      ctermfg=253  ctermbg=241
    hi ModeMsg         ctermfg=229
    hi MoreMsg         ctermfg=229
    hi Operator        ctermfg=161
