@@ -82,3 +82,6 @@
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = git@github.com:ap/vim-css-color.git
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides.git
