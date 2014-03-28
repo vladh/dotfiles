@@ -1,3 +1,81 @@
 [submodule ".bin/bashmarks"]
 	path = .bin/bashmarks
 	url = git://github.com/huyng/bashmarks.git
+[submodule ".vim/bundle/L9"]
+	path = .vim/bundle/L9
+	url = git@github.com:vim-scripts/L9.git
+[submodule ".vim/bundle/MatchTag"]
+	path = .vim/bundle/MatchTag
+	url = git@github.com:gregsexton/MatchTag.git
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule ".vim/bundle/colorizer"]
+	path = .vim/bundle/colorizer
+	url = git@github.com:lilydjwg/colorizer.git
+[submodule ".vim/bundle/csapprox"]
+	path = .vim/bundle/csapprox
+	url = git@github.com:godlygeek/csapprox.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule ".vim/bundle/gundo.vim"]
+	path = .vim/bundle/gundo.vim
+	url = git@github.com:sjl/gundo.vim.git
+[submodule ".vim/bundle/jellybeans.vim"]
+	path = .vim/bundle/jellybeans.vim
+	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule ".vim/bundle/neocomplcache.vim"]
+	path = .vim/bundle/neocomplcache.vim
+	url = git@github.com:Shougo/neocomplcache.vim.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-processing"]
+	path = .vim/bundle/vim-processing
+	url = git@github.com:sophacles/vim-processing.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim/bundle/vim-abolish"]
+	path = .vim/bundle/vim-abolish
+	url = git@github.com:tpope/vim-abolish.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule ".vim/bundle/vim-expand-region"]
+	path = .vim/bundle/vim-expand-region
+	url = git@github.com:terryma/vim-expand-region.git
+[submodule ".vim/bundle/vim-git"]
+	path = .vim/bundle/vim-git
+	url = git@github.com:tpope/vim-git.git
+[submodule ".vim/bundle/vim-haml"]
+	path = .vim/bundle/vim-haml
+	url = git@github.com:tpope/vim-haml.git
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides.git
+[submodule ".vim/bundle/vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = git@github.com:digitaltoad/vim-jade.git
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown.git
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule ".vim/bundle/vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = git@github.com:wavded/vim-stylus.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
