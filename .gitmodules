@@ -1,0 +1,3 @@
+[submodule ".bin/bashmarks"]
+	path = .bin/bashmarks
+	url = git://github.com/huyng/bashmarks.git
