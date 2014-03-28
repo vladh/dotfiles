@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
-[submodule ".vim/bundle/colorizer"]
-	path = .vim/bundle/colorizer
-	url = git@github.com:lilydjwg/colorizer.git
 [submodule ".vim/bundle/csapprox"]
 	path = .vim/bundle/csapprox
 	url = git@github.com:godlygeek/csapprox.git
@@ -82,3 +79,6 @@
 [submodule ".vim/bundle/PIV"]
 	path = .vim/bundle/PIV
 	url = git@github.com:spf13/PIV.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
