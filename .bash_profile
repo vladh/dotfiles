@@ -9,14 +9,14 @@ if [ "$(uname)" == "Darwin" ]; then
   export TERM='screen-256color'
 fi
 
-red=`tput setaf 1`
-alsored=`tput setaf 6`
-green=`tput setaf 2`
-yellow=`tput setaf 3`
-blue=`tput setaf 4`
-purple=`tput setaf 5`
-reset=`tput sgr0`
-bold=`tput bold`
+c_red=`tput setaf 1`
+c_alsored=`tput setaf 6`
+c_green=`tput setaf 2`
+c_yellow=`tput setaf 3`
+c_blue=`tput setaf 4`
+c_purple=`tput setaf 5`
+c_reset=`tput sgr0`
+c_bold=`tput bold`
 
 #aliases
 if [ "$(uname)" == "Darwin" ]; then
@@ -65,21 +65,14 @@ grb_git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
     local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-    if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-      local COLOR=${RED}
-    elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-      local COLOR=${YELLOW}
-    else
-      local COLOR=${GREEN}
-    fi
     if [ "$MINUTES_SINCE_LAST_COMMIT" -lt 60 ]
     then
-      local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+      local SINCE_LAST_COMMIT="$(minutes_since_last_commit)m"
     elif [ "$MINUTES_SINCE_LAST_COMMIT" -lt 1440 ]
     then
-      local SINCE_LAST_COMMIT="${COLOR}$(expr $MINUTES_SINCE_LAST_COMMIT / 60)h$(expr $MINUTES_SINCE_LAST_COMMIT % 60)m${NORMAL}"
+      local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 60)h$(expr $MINUTES_SINCE_LAST_COMMIT % 60)m"
     else
-      local SINCE_LAST_COMMIT="${COLOR}$(expr $MINUTES_SINCE_LAST_COMMIT / 1440)d$(expr $MINUTES_SINCE_LAST_COMMIT % 1440 / 60)h${NORMAL}"
+      local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 1440)d$(expr $MINUTES_SINCE_LAST_COMMIT % 1440 / 60)h"
     fi
     # The __git_ps1 function inserts the current git branch where %s is
     local GIT_PROMPT=`__git_ps1 "%s|${SINCE_LAST_COMMIT}"`
@@ -91,13 +84,13 @@ grb_git_prompt() {
 prompt_char="∆"
 
 function prompt-normal {
-  PS1="\[\033[G\]\[$blue\]\h \[$bold\]\[$yellow\]\w \[$red\]\$(grb_git_prompt)\[$green\]\[$bold\]$prompt_char \[$reset\]"
+  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_yellow\]\w \[$c_red\]\$(grb_git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
 }
 function prompt-username {
-  PS1="\[\033[G\]\[$blue\]\h \[$bold\]\[$green\]\u \[$bold\]\[$yellow\]\W \[$red\]\$(grb_git_prompt)\[$green\]\[$bold\]$prompt_char \[$reset\]"
+  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_green\]\u \[$c_bold\]\[$c_yellow\]\W \[$c_red\]\$(grb_git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
 }
 function prompt-min {
-  PS1="\[\033[G\]\[$green\]\[$bold\]$prompt_char \[$reset\]"
+  PS1="\[\033[G\]\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
 }
 prompt-username
 
