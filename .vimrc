@@ -49,8 +49,9 @@ set title
 set textwidth=0
 set wrapmargin=0
 set formatoptions-=croqt
+autocmd FileType * setlocal textwidth=0
+autocmd FileType * setlocal wrapmargin=0
 autocmd FileType * setlocal formatoptions-=croqt
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ruby
 let g:ruby_path = '~/.rvm/rubies/default/bin/ruby'
