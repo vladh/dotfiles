@@ -41,9 +41,6 @@ source ~/.bin/bashmarks/bashmarks.sh
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
-if [ -f ~/.bash_profile_private ]; then
-  source ~/.bash_profile_private
-fi
 
 # Nicer history
 export HISTSIZE=100000
@@ -99,4 +96,8 @@ export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${P
 export PATH="$HOME/.bin:$PATH"
 if [[ `hostname -s` = 'sun' ]]; then
   export PATH=.:${PATH}
+fi
+
+if [ -f ~/.bash_profile_private ]; then
+  source ~/.bash_profile_private
 fi
