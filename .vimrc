@@ -82,7 +82,6 @@ inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se
 
 " various maps
 nnoremap ; :nohlsearch<cr>
-nnoremap <leader>t :!clear && ./run-tests 2>&1<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
 nnoremap <leader>cs :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
@@ -92,6 +91,14 @@ vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
 nnoremap <leader>u :GundoToggle<CR>
 noremap <leader>n :bp<CR>
 nnoremap <leader>m :bn<CR>
+
+" tests
+function! MapCR()
+  nnoremap <cr> :!clear <CR>:call RunLastSpec()<cr>
+endfunction
+call MapCR()
+map <Leader>tc :!clear <CR>:call RunCurrentSpecFile()<CR>
+map <Leader>ta :!clear <CR>:call RunAllSpecs()<CR>
 
 " very magic
 " nnoremap / /\v
