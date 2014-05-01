@@ -61,19 +61,26 @@ function minutes_since_last_commit {
 grb_git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
-    local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-    if [ "$MINUTES_SINCE_LAST_COMMIT" -lt 60 ]
-    then
-      local SINCE_LAST_COMMIT="$(minutes_since_last_commit)m"
-    elif [ "$MINUTES_SINCE_LAST_COMMIT" -lt 1440 ]
-    then
-      local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 60)h$(expr $MINUTES_SINCE_LAST_COMMIT % 60)m"
-    else
-      local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 1440)d$(expr $MINUTES_SINCE_LAST_COMMIT % 1440 / 60)h"
+
+    # confirm that there is an active branch
+    local branch_count=$(git branch -a --no-color | wc -l | bc)
+
+    if [ $branch_count -gt 0 ]; then
+
+      local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+      if [ "$MINUTES_SINCE_LAST_COMMIT" -lt 60 ]
+      then
+        local SINCE_LAST_COMMIT="$(minutes_since_last_commit)m"
+      elif [ "$MINUTES_SINCE_LAST_COMMIT" -lt 1440 ]
+      then
+        local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 60)h$(expr $MINUTES_SINCE_LAST_COMMIT % 60)m"
+      else
+        local SINCE_LAST_COMMIT="$(expr $MINUTES_SINCE_LAST_COMMIT / 1440)d$(expr $MINUTES_SINCE_LAST_COMMIT % 1440 / 60)h"
+      fi
+      # The __git_ps1 function inserts the current git branch where %s is
+      local GIT_PROMPT=`__git_ps1 "%s|${SINCE_LAST_COMMIT}"`
+      echo ${GIT_PROMPT}" "
     fi
-    # The __git_ps1 function inserts the current git branch where %s is
-    local GIT_PROMPT=`__git_ps1 "%s|${SINCE_LAST_COMMIT}"`
-    echo ${GIT_PROMPT}" "
   fi
 }
 
