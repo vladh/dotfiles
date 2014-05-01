@@ -61,12 +61,9 @@ function minutes_since_last_commit {
 grb_git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
-
-    # confirm that there is an active branch
+    # confirm that there is an active branch before showing the git prompt
     local branch_count=$(git branch -a --no-color | wc -l | bc)
-
     if [ $branch_count -gt 0 ]; then
-
       local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
       if [ "$MINUTES_SINCE_LAST_COMMIT" -lt 60 ]
       then
