@@ -1,7 +1,7 @@
 #colors
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-alias tmux="TERM=screen-256color tmux"
+alias tmux="TERM=xterm-256color tmux"
 export GREP_OPTIONS="--color"
 # set -o vi
 
