@@ -184,6 +184,7 @@ nmap <leader>b :CtrlPBuffer<CR>
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_custom_ignore = '\v[\/]node_modules$'
 
 " indent guides
 nmap <leader>pi :IndentGuidesToggle<CR>
