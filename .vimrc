@@ -44,6 +44,7 @@ let g:DisableAutoPHPFolding = 1
 set pastetoggle=<leader>pp
 cmap w!! w !sudo tee % >/dev/null
 set title
+set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 
 " don't continue comments, don't break lines
 set textwidth=0
