@@ -8,7 +8,7 @@ colorscheme molokai_vladh
 set guifont=Monaco\ for\ Powerline:h14
 set nocompatible
 set number
-set nowrap
+set wrap
 set hidden
 set history=1000
 set undolevels=1000
@@ -85,7 +85,9 @@ inoreabbrev :lorem: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, se
 " various maps
 nnoremap ; :nohlsearch<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
-nnoremap <leader>cs :set colorcolumn=80<cr>
+nnoremap <leader>cs :set colorcolumn=100<cr>
+" thanks, John Latham
+nnoremap <leader>cj :set colorcolumn=80<cr> 
 nnoremap <leader>cr :set colorcolumn=<cr>
 nnoremap <leader>ps :SyntasticToggle<cr>
 map <leader>vp :exec "w !vpaste ft=".&ft<CR>
