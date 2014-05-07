@@ -12,3 +12,5 @@
 .pineapples
 .tmux.conf.private
 .coffee_history
+.dbshell
+.mongorc.js

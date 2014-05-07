@@ -16,12 +16,14 @@ set scrolloff=5
 set autoindent
 set laststatus=2
 set showmatch
+set cursorline
 set incsearch
 set hlsearch
 set cmdheight=1
 set switchbuf=useopen
 set numberwidth=5
 set showtabline=1
+set winwidth=79
 set wildmode=longest,list
 set wildmenu
 let mapleader=","
@@ -72,6 +74,7 @@ endif
 " folds
 set foldmethod=indent
 set foldnestmax=4
+set foldlevelstart=50
 
 " indenting
 set expandtab
@@ -128,15 +131,15 @@ endif
 
 " splits
 " window
-nmap <leader>sw<left>  :topleft  vnew<CR>
-nmap <leader>sw<right> :botright vnew<CR>
-nmap <leader>sw<up>		 :topleft  new<CR>
-nmap <leader>sw<down>  :botright new<CR>
+nmap <silent> <leader>sw<left>  :topleft  vnew<CR>
+nmap <silent> <leader>sw<right> :botright vnew<CR>
+nmap <silent> <leader>sw<up>		 :topleft  new<CR>
+nmap <silent> <leader>sw<down>  :botright new<CR>
 " buffer
-nmap <leader>s<left>	 :leftabove  vnew<CR>
-nmap <leader>s<right>  :rightbelow vnew<CR>
-nmap <leader>s<up>		 :leftabove  new<CR>
-nmap <leader>s<down>	 :rightbelow new<CR>
+nmap <silent> <leader>s<left>	 :leftabove  vnew<CR>
+nmap <silent> <leader>s<right>  :rightbelow vnew<CR>
+nmap <silent> <leader>s<up>		 :leftabove  new<CR>
+nmap <silent> <leader>s<down>	 :rightbelow new<CR>
 
 " highlight trailing whitespace
 " highlight ExtraWhitespace ctermbg=red guibg=#D1608D
