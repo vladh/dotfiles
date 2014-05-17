@@ -6,13 +6,14 @@
 .ssh
 .bash_history
 .neocomplcache
-.bash_profile_private
-.gitconfig_private
 .mysql_history
 .pineapples
-.tmux.conf.private
 .coffee_history
 .dbshell
 .mongorc.js
 .zcompdump
 .z
+.bash_profile_private
+.gitconfig_private
+.tmux.conf_private
+.zshrc_private
