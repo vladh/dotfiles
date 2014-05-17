@@ -16,6 +16,24 @@ My dotfiles include configs for **vim**, **tmux** and **bash**. They are good fo
 * Hacks to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
 * [Bashmarks](https://github.com/huyng/bashmarks) to bookmark directories in bash
 
+### How to use
+Just clone the repo to `~/dotfiles` and copy what you need into your home directory. For example, to use everything while backing up your existing files and moving the Git repo to your home directory:
+
+```bash
+cd && git clone https://github.com/vladh/dotfiles
+mkdir -p dotfiles-backup
+mv .bash_profile .vimrc .vim .tmux.conf .git .gitconfig dotfiles-backup/
+cd dotfiles
+mv * .[^.]* ../
+cd && rmdir dotfiles
+```
+
+To add any options you don't want in the repo, like your git.config email or .bash\_profile paths, make `_private` files. These will be included in your configuration but ignored by the repo. Currently supported:
+
+* .bash_profile_private
+* .tmux.conf.private
+* .gitconfig_private
+
 ### Credits
 
 * [The contributors](https://github.com/vladh/dotfiles/graphs/contributors)
