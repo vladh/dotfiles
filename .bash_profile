@@ -3,7 +3,6 @@ export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 alias tmux="TERM=xterm-256color tmux"
 export GREP_OPTIONS="--color"
-# set -o vi
 
 if [ "$(uname)" == "Darwin" ]; then
   export TERM='screen-256color'
