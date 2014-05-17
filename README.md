@@ -6,14 +6,15 @@
 
 My dotfiles include configs for **vim**, **tmux** and **bash**. They are good for setting up Mac OS X as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
 
-* Consistent color scheme across bash, vim etc. (custom Monokai, with alternate themes if you want them)
+* Consistent color scheme across bash, zsh, vim etc. (custom Monokai, with alternate themes if you want them)
 * Sane vim config with modern, sensible settings
 * Syntax checking right inside vim with [Syntastic](https://github.com/scrooloose/syntastic)
 * Fuzzy finding in vim with [ctrlp](https://github.com/kien/ctrlp.vim)
-* Bash prompt with git branch and time since last commit (thanks to [grb](https://github.com/garybernhardt))
+* bash & zsh prompt with git branch and time since last commit (thanks to [grb](https://github.com/garybernhardt))
+* zsh [wunjo](http://www.wunjo.org/zsh-git/) support with detailed git information and assorted prompt customisations.
 * Powerline in vim and tmux
 * vim support for lots of web-related things (PHP, Mustache, CoffeeScript, HAML, Jade, Markdown, Mocha, rspec, Stylus…)
-* Hacks to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
+* Improvements to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
 * [Bashmarks](https://github.com/huyng/bashmarks) to bookmark directories in bash
 
 ### How to use
@@ -31,8 +32,9 @@ cd && rmdir dotfiles
 To add any options you don't want in the repo, like your git.config email or .bash\_profile paths, make `_private` files. These will be included in your configuration but ignored by the repo. Currently supported:
 
 * .bash_profile_private
-* .tmux.conf.private
+* .tmux.conf_private
 * .gitconfig_private
+* .zshrc_private
 
 ### Credits
 
