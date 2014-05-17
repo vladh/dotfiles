@@ -98,7 +98,7 @@ prompt-username
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin:$PATH"
-if [[ `hostname -s` = 'sun' ]]; then
+if [[ `hostname -s` = 'whiterock' ]]; then
   export PATH=.:${PATH}
 fi
 
