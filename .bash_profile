@@ -44,9 +44,6 @@ fi
 # Nicer history
 export HISTSIZE=100000
 export HISTFILE="$HOME/.pineapples"
-#if [ -f /usr/libexec/java_home ]; then
-# export JAVA_HOME=$(/usr/libexec/java_home)
-#fi
 export SAVEHIST=$HISTSIZE
 
 #git
