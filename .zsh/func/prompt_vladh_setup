@@ -187,7 +187,7 @@ prompt_vladh_setup() {
   # PROMPT+="($pc[hist]%h$pc[reset])"
   # PROMPT+="$pc[shortpath]\$(prompt_vladh_short_path)$pc[reset]"
   PROMPT+="$pc[shortpath]%1~$pc[reset] "
-  PROMPT+="$pc[scm_branch]\$(prompt_wunjo_scm_branch)$pc[reset] "
+  PROMPT+="$pc[scm_branch]\$(prompt_wunjo_scm_branch)$pc[reset]"
   PROMPT+="$pc[#]∆$pc[reset] "
 
   RPROMPT=
@@ -345,7 +345,7 @@ prompt_wunjo_scm_branch() {
     fi
   fi
 
-  echo $pc[reset]
+  echo "$pc[reset] "
 }
 
 prompt_vladh_setup "$@"
