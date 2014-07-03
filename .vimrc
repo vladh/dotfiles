@@ -7,7 +7,7 @@ let g:solarized_termcolors=256
 colorscheme molokai_vladh
 set guifont=Monaco\ for\ Powerline:h14
 set nocompatible
-set number
+set nonumber
 set wrap
 set hidden
 set history=1000
