@@ -304,3 +304,8 @@ if exists('g:loaded_neocomplcache')
 	let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 	let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 endif
+
+" private
+if filereadable(glob("~/.vimrc_private"))
+  source ~/.vimrc_private
+endif
