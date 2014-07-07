@@ -101,10 +101,10 @@ noremap <leader>n :bp<CR>
 nnoremap <leader>m :bn<CR>
 
 " tests
-function! MapCR()
-  nnoremap <cr> :!clear <CR>:call RunLastSpec()<cr>
-endfunction
-call MapCR()
+" function! MapCR()
+"   nnoremap <cr> :!clear <CR>:call RunLastSpec()<cr>
+" endfunction
+" call MapCR()
 map <Leader>tc :!clear <CR>:call RunCurrentSpecFile()<CR>
 map <Leader>ta :!clear <CR>:call RunAllSpecs()<CR>
 
