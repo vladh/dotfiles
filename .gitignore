@@ -13,7 +13,12 @@
 .mongorc.js
 .zcompdump
 .z
+.z.*
 .bash_profile_private
 .gitconfig_private
 .tmux.conf_private
 .zshrc_private
+.vimrc_private
+.npmrc
+.cabal/
+.ghc/
