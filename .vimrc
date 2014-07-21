@@ -132,15 +132,23 @@ endif
 
 " splits
 " window
-nmap <silent> <leader>sw<left>  :topleft  vnew<CR>
+nmap <silent> <leader>sw<left> :topleft vnew<CR>
 nmap <silent> <leader>sw<right> :botright vnew<CR>
-nmap <silent> <leader>sw<up>		 :topleft  new<CR>
-nmap <silent> <leader>sw<down>  :botright new<CR>
+nmap <silent> <leader>sw<up> :topleft new<CR>
+nmap <silent> <leader>sw<down> :botright new<CR>
+nmap <silent> <leader>swj :topleft vnew<CR>
+nmap <silent> <leader>swl :botright vnew<CR>
+nmap <silent> <leader>swk :topleft new<CR>
+nmap <silent> <leader>swj :botright new<CR>
 " buffer
-nmap <silent> <leader>s<left>	 :leftabove  vnew<CR>
-nmap <silent> <leader>s<right>  :rightbelow vnew<CR>
-nmap <silent> <leader>s<up>		 :leftabove  new<CR>
-nmap <silent> <leader>s<down>	 :rightbelow new<CR>
+nmap <silent> <leader>s<left> :leftabove vnew<CR>
+nmap <silent> <leader>s<right> :rightbelow vnew<CR>
+nmap <silent> <leader>s<up> :leftabove new<CR>
+nmap <silent> <leader>s<down> :rightbelow new<CR>
+nmap <silent> <leader>sh :leftabove vnew<CR>
+nmap <silent> <leader>sl :rightbelow vnew<CR>
+nmap <silent> <leader>sk :leftabove new<CR>
+nmap <silent> <leader>sj :rightbelow new<CR>
 
 " highlight trailing whitespace
 " highlight ExtraWhitespace ctermbg=red guibg=#D1608D
