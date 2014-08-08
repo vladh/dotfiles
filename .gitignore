@@ -25,3 +25,4 @@
 .composer/
 .eshell/
 .m2/
+.lein/
