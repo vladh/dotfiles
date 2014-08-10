@@ -26,3 +26,4 @@
 .eshell/
 .m2/
 .lein/
+.android/
