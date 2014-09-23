@@ -6,21 +6,13 @@
 * [Steve Losh](http://stevelosh.com/)
 
 ## Libraries used
-* Bashmarks
-* L9
 * MatchTag
-* PIV
 * Powerline
-* ack.vim
 * csapprox
 * ctrlp.vim
-* emmet-vim
 * gundo.vim
-* ix.io
-* jellybeans.vim
 * mustache
 * neocomplcache.vim
-* nerdtree
 * syntastic
 * tagbar
 * vim-abolish
@@ -28,7 +20,6 @@
 * vim-coffee-script
 * vim-commentary
 * vim-css-color
-* vim-expand-region
 * vim-git
 * vim-gitgutter
 * vim-haml
@@ -39,4 +30,3 @@
 * vim-repeat
 * vim-spec
 * vim-stylus
-* vim-surround
