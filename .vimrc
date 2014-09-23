@@ -23,7 +23,7 @@ set cmdheight=1
 set switchbuf=useopen
 set numberwidth=5
 set showtabline=1
-set winwidth=79
+set winwidth=90
 set wildmode=longest,list
 set wildmenu
 let mapleader=","
