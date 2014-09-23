@@ -36,7 +36,6 @@ alias ioana="say -v ioana"
 
 #sources
 source ~/.bin/git-completion.bash
-source ~/.bin/bashmarks/bashmarks.sh
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
