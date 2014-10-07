@@ -213,6 +213,15 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 " showmarks
 let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+" syntastic
+let g:syntastic_html_tidy_ignore_errors = [
+  \  'plain text isn''t allowed in <head> elements',
+  \  '<base> escaping malformed URI reference',
+  \  'discarding unexpected <body>',
+  \  '<script> escaping malformed URI reference',
+  \  '</head> isn''t allowed in <body> elements'
+  \ ]
+
 " highlight words
 " thanks, sjl!
 
