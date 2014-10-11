@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vim-classpath"]
 	path = .vim/bundle/vim-classpath
 	url = git@github.com:tpope/vim-classpath.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git@github.com:vladh/tagbar.git
