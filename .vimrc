@@ -213,7 +213,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222222 ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#666666 ctermbg=235
 
 " ctags
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+let g:tagbar_ctags_bin='/usr/bin/ctags'
 
 " syntastic
 " disable HTML checking altogether
