@@ -43,10 +43,12 @@ set smarttab
 set nrformats-=octal
 set fileformats+=mac
 let g:DisableAutoPHPFolding = 1
-set pastetoggle=<leader>pp
+set pastetoggle=<leader>sp
 cmap w!! w !sudo tee % >/dev/null
 set title
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
+set encoding=utf-8
+set fileencoding=utf-8
 
 " don't continue comments, don't break lines
 set textwidth=0
@@ -56,9 +58,6 @@ autocmd FileType * setlocal textwidth=0
 autocmd FileType * setlocal wrapmargin=0
 autocmd FileType * setlocal formatoptions-=croqt
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" ruby
-let g:ruby_path = '~/.rvm/rubies/default/bin/ruby'
 
 " directories
 set nobackup
@@ -89,24 +88,17 @@ command! -bang Q quit<bang>
 " various maps
 nnoremap ; :nohlsearch<cr>
 nnoremap <leader>l :!clear && xelatex %<cr>
-nnoremap <leader>cs :set colorcolumn=100<cr>
-" thanks, John Latham
-nnoremap <leader>cj :set colorcolumn=80<cr> 
+nnoremap <leader>c0 :set colorcolumn=100<cr>
+nnoremap <leader>c8 :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
-nnoremap <leader>ps :SyntasticToggle<cr>
-map <leader>vp :exec "w !vpaste ft=".&ft<CR>
-vmap <leader>vp <ESC>:exec "'<,'>w !vpaste ft=".&ft<CR>
-nnoremap <leader>u :GundoToggle<CR>
-noremap <leader>n :bp<CR>
-nnoremap <leader>m :bn<CR>
 
 " tests
 " function! MapCR()
 "   nnoremap <cr> :!clear <CR>:call RunLastSpec()<cr>
 " endfunction
 " call MapCR()
-map <Leader>tc :!clear <CR>:call RunCurrentSpecFile()<CR>
-map <Leader>ta :!clear <CR>:call RunAllSpecs()<CR>
+nnoremap <leader>tc :!clear <CR>:call RunCurrentSpecFile()<CR>
+nnoremap <leader>ta :!clear <CR>:call RunAllSpecs()<CR>
 
 " very magic
 " nnoremap / /\v
@@ -115,7 +107,7 @@ map <Leader>ta :!clear <CR>:call RunAllSpecs()<CR>
 " split line on K
 nnoremap K i<CR><Esc>
 
-" column scroll-binding on <leader>sb (continuous line number)
+" column scroll-binding (continuous line number)
 noremap <silent> <leader>sb :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 
 " hide gvim scrollbars and tabbar
@@ -130,32 +122,51 @@ if &term =~ '256color'
 	set t_ut=
 endif
 
+" make arrow keys mappable for splits
+map <ESC>[D <C-Left>
+map <ESC>[C <C-Right>
+map <ESC>[B <C-Down>
+map <ESC>[A <C-Up>
+map! <ESC>[D <C-Left>
+map! <ESC>[C <C-Right>
+map! <ESC>[B <C-Down>
+map! <ESC>[A <C-Up>
+
 " splits
 " window
-nmap <silent> <leader>sw<left> :topleft vnew<CR>
-nmap <silent> <leader>sw<right> :botright vnew<CR>
-nmap <silent> <leader>sw<up> :topleft new<CR>
-nmap <silent> <leader>sw<down> :botright new<CR>
-nmap <silent> <leader>swj :topleft vnew<CR>
-nmap <silent> <leader>swl :botright vnew<CR>
-nmap <silent> <leader>swk :topleft new<CR>
-nmap <silent> <leader>swj :botright new<CR>
+nmap <silent> sw<left> :topleft vnew<CR>
+nmap <silent> sw<right> :botright vnew<CR>
+nmap <silent> sw<up> :topleft new<CR>
+nmap <silent> sw<down> :botright new<CR>
+nmap <silent> swj :topleft vnew<CR>
+nmap <silent> swl :botright vnew<CR>
+nmap <silent> swk :topleft new<CR>
+nmap <silent> swj :botright new<CR>
 " buffer
-nmap <silent> <leader>s<left> :leftabove vnew<CR>
-nmap <silent> <leader>s<right> :rightbelow vnew<CR>
-nmap <silent> <leader>s<up> :leftabove new<CR>
-nmap <silent> <leader>s<down> :rightbelow new<CR>
-nmap <silent> <leader>sh :leftabove vnew<CR>
-nmap <silent> <leader>sl :rightbelow vnew<CR>
-nmap <silent> <leader>sk :leftabove new<CR>
-nmap <silent> <leader>sj :rightbelow new<CR>
+nmap <silent> s<left> :leftabove vnew<CR>
+nmap <silent> s<right> :rightbelow vnew<CR>
+nmap <silent> s<up> :leftabove new<CR>
+nmap <silent> s<down> :rightbelow new<CR>
+nmap <silent> sh :leftabove vnew<CR>
+nmap <silent> sl :rightbelow vnew<CR>
+nmap <silent> sk :leftabove new<CR>
+nmap <silent> sj :rightbelow new<CR>
+" select active split
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
 
 " highlight trailing whitespace
-" highlight ExtraWhitespace ctermbg=red guibg=#D1608D
-" au ColorScheme * highlight ExtraWhitespace guibg=#D1608D
-" au BufEnter * match ExtraWhitespace /\s\+$/
-" au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-" au InsertLeave * match ExtraWhiteSpace /\s\+$/
+highlight ExtraWhitespace ctermbg=233 guibg=#666666
+au ColorScheme * highlight ExtraWhitespace guibg=#666666
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " rename current file
 function! RenameFile()
@@ -167,16 +178,6 @@ function! RenameFile()
 				redraw!
 		endif
 endfunction
-
-" Use ctrl-[hjkl] to select the active split!
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
-
-" encoding
-set encoding=utf-8
-set fileencoding=utf-8
 
 " auto closing brace
 " inoremap {			{}<Left>
@@ -192,8 +193,13 @@ let g:airline_powerline_fonts = 1
 
 " bars
 nmap <leader>m :TagbarToggle<CR>
-nmap <leader>n :NERDTree<CR>
 nmap <leader>b :CtrlPBuffer<CR>
+
+" fireplace
+nmap <leader>p <Plug>FireplaceCountPrint
+nmap <leader>r :Require<CR>
+nmap <leader>o :Require<CR> <bar> <Plug>FireplaceCountPrint
+vmap <leader>p :Eval<CR>
 
 " ctrlp
 " let g:ctrlp_map = '<c-p>'
@@ -202,16 +208,12 @@ let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = '\v[\/]node_modules$'
 
 " indent guides
-nmap <leader>pi :IndentGuidesToggle<CR>
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=233
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222222 ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#666666 ctermbg=235
 
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-
-" showmarks
-let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 " syntastic
 " disable HTML checking altogether
