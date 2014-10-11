@@ -58,3 +58,9 @@
 [submodule ".vim/bundle/vim-spec"]
 	path = .vim/bundle/vim-spec
 	url = git@github.com:geekjuice/vim-spec.git
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = git@github.com:tpope/vim-fireplace.git
+[submodule ".vim/bundle/vim-classpath"]
+	path = .vim/bundle/vim-classpath
+	url = git@github.com:tpope/vim-classpath.git
