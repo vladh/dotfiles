@@ -162,7 +162,7 @@ nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 
 " highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=233 guibg=#666666
+highlight ExtraWhitespace ctermbg=235 guibg=#666666
 au ColorScheme * highlight ExtraWhitespace guibg=#666666
 au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
