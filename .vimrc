@@ -122,44 +122,22 @@ if &term =~ '256color'
 	set t_ut=
 endif
 
-" make arrow keys mappable for splits
-map <ESC>[D <C-Left>
-map <ESC>[C <C-Right>
-map <ESC>[B <C-Down>
-map <ESC>[A <C-Up>
-map! <ESC>[D <C-Left>
-map! <ESC>[C <C-Right>
-map! <ESC>[B <C-Down>
-map! <ESC>[A <C-Up>
-
 " splits
-" window
-nmap <silent> sw<left> :topleft vnew<CR>
-nmap <silent> sw<right> :botright vnew<CR>
-nmap <silent> sw<up> :topleft new<CR>
-nmap <silent> sw<down> :botright new<CR>
+"" window
 nmap <silent> swj :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
 nmap <silent> swk :topleft new<CR>
 nmap <silent> swj :botright new<CR>
-" buffer
-nmap <silent> s<left> :leftabove vnew<CR>
-nmap <silent> s<right> :rightbelow vnew<CR>
-nmap <silent> s<up> :leftabove new<CR>
-nmap <silent> s<down> :rightbelow new<CR>
+"" buffer
 nmap <silent> sh :leftabove vnew<CR>
 nmap <silent> sl :rightbelow vnew<CR>
 nmap <silent> sk :leftabove new<CR>
 nmap <silent> sj :rightbelow new<CR>
-" select active split
+"" select active split
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=235 guibg=#666666
@@ -178,12 +156,6 @@ function! RenameFile()
 				redraw!
 		endif
 endfunction
-
-" auto closing brace
-" inoremap {			{}<Left>
-" inoremap {<CR>	{<CR>}<Esc>O
-" inoremap {{			{
-" inoremap {}			{}
 
 " airline
 " let g:airline#extensions#tabline#enabled = 1
