@@ -87,7 +87,6 @@ command! -bang Q quit<bang>
 
 " various maps
 nnoremap ; :nohlsearch<cr>
-nnoremap <leader>l :!clear && xelatex %<cr>
 nnoremap <leader>c0 :set colorcolumn=100<cr>
 nnoremap <leader>c8 :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
