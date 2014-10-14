@@ -53,10 +53,16 @@ function minutes_since_last_commit {
   minutes_since_last_commit=$((seconds_since_last_commit/60))
   echo $minutes_since_last_commit
 }
-grb_git_prompt() {
+git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
-    # confirm that there is an active branch before showing the git prompt
+    local GIT_PROMPT=`__git_ps1`
+    echo ${GIT_PROMPT}" "
+  fi
+}
+git_prompt_with_minutes() {
+  local g="$(__gitdir)"
+  if [ -n "$g" ]; then
     local branch_count=$(git branch -a --no-color | wc -l | bc)
     if [ $branch_count -gt 0 ]; then
       local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
@@ -73,17 +79,16 @@ grb_git_prompt() {
       local GIT_PROMPT=`__git_ps1 "%s|${SINCE_LAST_COMMIT}"`
       echo ${GIT_PROMPT}" "
     fi
+    local GIT_PROMPT=`__git_ps1`
+    echo ${GIT_PROMPT}" "
   fi
 }
 
 #prompt
 prompt_char="∆"
 
-function prompt-normal {
-  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_yellow\]\w \[$c_red\]\$(grb_git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
-}
 function prompt-username {
-  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_green\]\u \[$c_bold\]\[$c_yellow\]\W \[$c_red\]\$(grb_git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
+  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_green\]\u \[$c_bold\]\[$c_yellow\]\W \[$c_red\]\$(git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
 }
 function prompt-min {
   PS1="\[\033[G\]\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
