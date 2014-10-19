@@ -176,7 +176,7 @@ vmap <leader>p :Eval<CR>
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = '\v[\/]node_modules$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)$'
 
 " indent guides
 let g:indent_guides_auto_colors = 0
