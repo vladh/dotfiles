@@ -21,7 +21,7 @@ My dotfiles include configs for **vim**, **tmux** and **bash**. They are good fo
 Just clone the repo to `~/dotfiles` and copy what you need into your home directory. For example, to use everything while backing up your existing files and moving the Git repo to your home directory:
 
 ```bash
-cd && git clone https://github.com/vladh/dotfiles
+cd && git clone https://github.com/vladh/dotfiles --recursive
 mkdir -p dotfiles-backup
 mv .bash_profile .vimrc .vim .tmux.conf .git .gitconfig dotfiles-backup/
 cd dotfiles
