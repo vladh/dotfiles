@@ -49,6 +49,9 @@ export WORDCHARS='*?[]~&;!$%^<>'
 # Highlight search results in ack.
 export ACK_COLOR_MATCH='red'
 
+# Remove confirmation for rm *
+setopt rm_star_silent
+
 # Aliases
 if [[ "$(uname)" == "Darwin" ]]; then
   alias ls='ls -G'
