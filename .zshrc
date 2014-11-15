@@ -7,6 +7,7 @@ prompt vladh
 # Initialize completion
 autoload -U compinit
 compinit
+zstyle ':completion:*' menu select
 
 # Colorize terminal
 export CLICOLOR=1
