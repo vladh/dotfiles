@@ -94,7 +94,7 @@ zstyle ':completion:*:*:git:*' script /usr/local/share/zsh/site-functions
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
 
 # Includes
 . ~/.bin/z.sh
