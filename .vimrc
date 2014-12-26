@@ -183,6 +183,9 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222222 ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#666666 ctermbg=235
 
+" vim-latex-live-preview
+let g:livepreview_previewer = 'open -a Skim'
+
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
