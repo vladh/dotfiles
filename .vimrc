@@ -121,22 +121,24 @@ if &term =~ '256color'
 	set t_ut=
 endif
 
-" splits
-"" window
+" split window
 nmap <silent> swj :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
 nmap <silent> swk :topleft new<CR>
 nmap <silent> swj :botright new<CR>
-"" buffer
+" split buffer
 nmap <silent> sh :leftabove vnew<CR>
 nmap <silent> sl :rightbelow vnew<CR>
 nmap <silent> sk :leftabove new<CR>
 nmap <silent> sj :rightbelow new<CR>
-"" select active split
+" move between buffers
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+" move between tabs
+nmap <silent> <S-h> :tabprevious<CR>
+nmap <silent> <S-l> :tabnext<CR>
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=235 guibg=#666666
