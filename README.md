@@ -29,7 +29,15 @@ mv * .[^.]* ../
 cd && rmdir dotfiles
 ```
 
-To add any options you don't want in the repo, like your git.config email or .bash\_profile paths, make `_private` files. These will be included in your configuration but ignored by the repo. Currently supported:
+For tmux to work properly on Mac OS X, you also need to install this:
+
+```bash
+brew install reattach-to-user-namespace
+```
+
+This makes tmux open new windows in the right directory.
+
+To add any options you don't want to accidentally commit to the repo, like your git.config email or .bash\_profile paths, make `_private` files. These will be included in your configuration but ignored by the repo. Currently supported:
 
 * .bash_profile_private
 * .vimrc_private
