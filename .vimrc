@@ -49,7 +49,7 @@ set title
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 set encoding=utf-8
 set fileencoding=utf-8
-set breakindent
+" set breakindent
 
 " don't continue comments, don't break lines
 set textwidth=0
@@ -179,7 +179,12 @@ vmap <leader>p :Eval<CR>
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|.*\.class)$'
+
+" ctrlp-funky
+nnoremap <leader>l :CtrlPFunky<Cr>
+let g:ctrlp_funky_matchtype = 'path'
+let g:ctrlp_funky_syntax_highlight = 1
 
 " indent guides
 let g:indent_guides_auto_colors = 0

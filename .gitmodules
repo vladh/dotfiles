@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/prolog.vim"]
 	path = .vim/bundle/prolog.vim
 	url = https://github.com/adimit/prolog.vim.git
+[submodule ".vim/bundle/ctrlp-funky"]
+	path = .vim/bundle/ctrlp-funky
+	url = https://github.com/tacahiroy/ctrlp-funky.git
