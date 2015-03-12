@@ -3,21 +3,13 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
-  st = status
-  ci = commit --verbose
   co = checkout
-  di = diff
-  dc = diff --cached
-  amend = commit --amend
+  st = status
   aa = add --all .
-  ff = merge --ff-only
-  pullff = pull --ff-only
-  noff = merge --no-ff
-  fa = fetch --all
+  cm = commit --verbose
+  amend = commit --amend
   pom = push origin master
-  b = branch
-  ds = diff --stat=160,120
-  dh1 = diff HEAD~1
+  p = push
 
   # Divergence (commits we added and commits remote added)
   div = divergence
