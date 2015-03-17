@@ -86,14 +86,11 @@ prompt_char="∆"
 function prompt-username {
   PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_green\]\u \[$c_bold\]\[$c_yellow\]\W \[$c_red\]\$(git_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
 }
-function prompt-min {
-  PS1="\[\033[G\]\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
-}
 prompt-username
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
 if [[ `hostname -s` = 'whiterock' ]]; then
   export PATH=.:${PATH}
 fi
