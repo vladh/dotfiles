@@ -42,7 +42,6 @@ fi
 
 # Nicer history
 export HISTSIZE=100000
-export HISTFILE="$HOME/.pineapples"
 export SAVEHIST=$HISTSIZE
 
 #git
