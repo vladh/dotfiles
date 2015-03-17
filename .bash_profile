@@ -27,11 +27,8 @@ else
   alias ll="ls -lha --color"
   alias lt="ls -lhrt --color"
 fi
-alias irb="irb --simple-prompt"
-alias j="jobs"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
-alias dogecat="while true; do doge | lolcat -a -d 100 -s 100 -p 1; done"
 alias ioana="say -v ioana"
 
 #sources
