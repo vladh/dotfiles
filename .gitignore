@@ -32,3 +32,8 @@
 .matlab/
 .gnuplot_history
 .gnupg/
+docs/
+keys/
+proj/
+projects/
+research/
