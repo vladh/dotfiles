@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="http://vladh.net/assets/images/projects/dotfiles.png" width="150" height="150">
+  <img src="http://vladh.net/images/projects/dotfiles.png" width="150" height="150">
 </div>
 
 # vladh's dotfiles
