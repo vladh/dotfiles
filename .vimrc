@@ -123,7 +123,7 @@ if &term =~ '256color'
 endif
 
 " split window
-nmap <silent> swj :topleft vnew<CR>
+nmap <silent> swh :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
 nmap <silent> swk :topleft new<CR>
 nmap <silent> swj :botright new<CR>
