@@ -13,9 +13,9 @@ My dotfiles include configs for **vim**, **tmux** and **bash**. They are good fo
 * bash & zsh prompt with git branch and time since last commit (thanks to [grb](https://github.com/garybernhardt))
 * zsh [wunjo](http://www.wunjo.org/zsh-git/) support with detailed git information and assorted prompt customisations.
 * Powerline in vim and tmux
-* vim support for lots of web-related things (PHP, Mustache, CoffeeScript, HAML, Jade, Markdown, Mocha, rspec, Stylus…)
+* vim support for lots of things (Mustache, CoffeeScript, HAML, Jade, Markdown, Mocha, rspec, Stylus, Clojure, Processing)
 * Improvements to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
-* [Bashmarks](https://github.com/huyng/bashmarks) to bookmark directories in bash
+* [z.sh](https://github.com/rupa/z) to jump around directories in bash
 
 ### How to use
 Just clone the repo to `~/dotfiles` and copy what you need into your home directory. For example, to use everything while backing up your existing files and moving the Git repo to your home directory:
