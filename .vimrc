@@ -235,6 +235,14 @@ set ofu=syntaxcomplete#Complete
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
 
+" YouCompleteMe
+" HACK: If we don't have the version of Vim required for YouCompleteMe,
+" trick it into thinking that it's already loaded, so it doesn't actually
+" load itself and give an error message.
+if v:version < 703 || (v:version == 703 && !has('patch584'))
+  let g:loaded_youcompleteme = 1
+endif
+
 " private
 if filereadable(glob("~/.vimrc_private"))
   source ~/.vimrc_private
