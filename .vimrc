@@ -1,5 +1,9 @@
 call pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp
+if has('nvim')
+  tnoremap <Esc> <c-\><c-n>
+  runtime! plugin/python_setup.vim
+endif
 syntax on
 set t_Co=256 " 256 colors
 set background=dark
