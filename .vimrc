@@ -230,76 +230,10 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 
 " }}}
 
-" completion
-
-" default vim completion, good to have even if we're currently using neocomplcache
+" default vim completion, good to have even if we're using a plugin
 set ofu=syntaxcomplete#Complete
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
-
-" multipurpose tab key
-" indent if we're at the beginning of a line. Else, do completion.
-" thanks, Gary!
-function! InsertTabWrapper()
-	let col = col('.') - 1
-	if !col || getline('.')[col - 1] !~ '\k'
-		return "\<tab>"
-	else
-		" return "\<c-p>"
-		" return "\<c-x>\<c-o>"
-		return "\<c-n>"
-	endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <tab>
-
-if exists('g:loaded_neocomplcache')
-	let g:neocomplcache_enable_at_startup = 1
-	let g:neocomplcache_enable_camel_case_completion = 1
-	let g:neocomplcache_enable_underbar_completion = 1
-	let g:neocomplcache_enable_smart_case = 1
-
-	" default # of completions is 100, that's crazy
-	let g:neocomplcache_max_list = 5
-
-	" Tab / Shift-Tab to cycle completions
-	inoremap <expr><TAB>	pumvisible() ? "\<C-n>" : "\<TAB>"
-	inoremap <expr><S-TAB>	pumvisible() ? "\<C-p>" : "\<S-TAB>"
-
-	" words less than 3 letters long aren't worth completing
-	let g:neocomplcache_auto_completion_start_length = 3
-
-	" This makes sure we use neocomplcache completefunc instead of
-	" the one in rails.vim, otherwise this plugin will crap out
-	let g:neocomplcache_force_overwrite_completefunc = 1
-
-	" Define file-type dependent dictionaries.
-	let g:neocomplcache_dictionary_filetype_lists = {
-		\ 'default' : ''
-		\ }
-
-	" Define keyword, for minor languages
-	if !exists('g:neocomplcache_keyword_patterns')
-		let g:neocomplcache_keyword_patterns = {}
-	endif
-	let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-	" Enable omni completion.
-	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-	autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-	" Enable heavy omni completion.
-	if !exists('g:neocomplcache_omni_patterns')
-		let g:neocomplcache_omni_patterns = {}
-	endif
-	let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-	let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-	let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-	let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-endif
 
 " private
 if filereadable(glob("~/.vimrc_private"))
