@@ -1,0 +1,3 @@
+PATH=$PATH:/usr/local/bin
+exec >>~/.xsession-errors 2>&1
+~/.bin/dwm-launch

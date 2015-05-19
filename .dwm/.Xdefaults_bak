@@ -1,0 +1,124 @@
+# XDarwin only shares the CLIPBOARD properly with the rest of Mac OS X (the PRIMARY options don't work)
+# and doesn't properly handle copying to multiple buffers (it manages to lose one of them).
+# We only have one mouse button.
+# For now, let's just use the good old menu option selectToClipboard, even though it breaks extending
+# with the third mouse button we don't have.
+
+xterm*selectToClipboard: true
+
+# From http://yarger.asu.edu/NMR/Xdefaults.html
+# Take a look at what's there; there might be more worth adding
+
+## TERMINAL KEY SETTINGS
+## Adjust to OSX Terminal.app behaviour
+*VT100.translations: #override\n\
+Meta <Key> minus: smaller-vt-font() \n\
+Meta <Key> KP_Subtract: smaller-vt-font() \n\
+Meta <Key> plus: larger-vt-font() \n\
+Meta <Key> KP_Add: larger-vt-font() \n\
+
+UXTerm*utf8: 1
+UXTerm*locale: true
+XTerm*faceName: DejaVu Sans Mono for Powerline
+XTerm*faceSize: 9
+UXTerm*faceName: DejaVu Sans Mono for Powerline
+UXTerm*faceSize: 9
+
+# From http://dmr.ath.cx/notes/xterm.html
+
+xterm*loginShell: true
+XTerm*font: *-fixed-*-*-*-15-*
+# Scrollback length
+xterm*saveLines: 2000
+
+# Changes what qualifies as a word for mouse-selecting by
+# word (by clicking several times)
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48
+
+# Tell everyone we support 256 colors
+xterm*termName: xterm-color
+
+# Set foreground to 0xAA (CGA regular, not-bright white) and background
+# to black
+xterm*foreground: #f2f2f2
+xterm*background: #111111
+UXTerm*cursorColor: #F3F3F3
+
+# CGA colors
+# *.color0:  black
+# *.color1:  #cc0000
+# *.color2:  #8ae234
+# *.color3:  #c4a000
+# *.color4:  #3465a4
+# *.color5:  #75507b
+# *.color6:  #34e2e2
+# *.color7:  #d3d7cf
+# *.color8:  #555753
+# *.color9:  #ef2929
+# *.color10: #8ae234
+# *.color11: #fce94f
+# *.color12: #729fcf
+# *.color13: #ad7fa8
+# *.color14: #34e2e2
+# *.color15: #d4d4d4
+
+# Make text bright, not fat, when it is bold
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
+
+Xft.dpi:	72
+Xft.rgba:	rgb
+Xft.antialias: 	true
+Xft.hinting: 	true
+Xft.autohint: 	false
+Xft.hintstyle: 	hintmedium
+Xft.lcdfilter: 	lcddefault
+
+#define t_background #1D1F21
+#define t_current_line #282A2E
+#define t_selection #373B41
+#define t_foreground #C5C8C6
+#define t_comment #707880
+#define t_red #CC6666
+#define t_orange #DE935F
+#define t_yellow #F0C674
+#define t_green #B5BD68
+#define t_aqua #8ABEB7
+#define t_blue #81A2BE
+#define t_purple #B294BB
+
+*background: t_background
+*foreground: t_foreground
+
+! black
+*color0: t_current_line
+*color8: t_selection
+
+! red
+*color1: #A54242
+*color9: t_red
+
+! green
+*color2: #8C9440
+*color10: t_green
+
+! yellow
+*color3: t_orange
+*color11: t_yellow
+
+! blue
+*color4: #5F819D
+*color12: t_blue
+
+! magenta
+*color5: #85678F
+*color13: t_purple
+
+! cyan
+*color6: #5E8D87
+*color14: t_aqua
+
+! white
+*color7: t_comment
+*color15: t_foreground
