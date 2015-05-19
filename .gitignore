@@ -38,3 +38,4 @@ proj/
 projects/
 research/
 .vim/sessions
+.v8flags*
