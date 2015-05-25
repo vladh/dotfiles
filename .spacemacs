@@ -187,6 +187,7 @@ layers configuration."
    ;; Disable hl-like since it's not pretty in `molokai`
    global-hl-line-mode nil
    )
+  (define-key evil-normal-state-map (kbd "\\") 'projectile-find-file)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
