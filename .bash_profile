@@ -91,9 +91,6 @@ prompt-username
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
-if [[ `hostname -s` = 'whiterock' ]]; then
-  export PATH=.:${PATH}
-fi
 
 if [ -f ~/.bash_profile_private ]; then
   source ~/.bash_profile_private
