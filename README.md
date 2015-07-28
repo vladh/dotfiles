@@ -57,4 +57,4 @@ To add any options you don't want to accidentally commit to the repo, like your 
 * [Gary Bernhardt](https://github.com/garybernhardt)
 * [Steve Losh](http://stevelosh.com/)
 
-Complete credits in CREDITS.md.
+Libraries used are difficult to list as they often change, but they are evident from the git submodules.
