@@ -39,3 +39,24 @@ projects/
 research/
 .vim/sessions
 .v8flags*
+.emacs.d
+.gem
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Virtual Machines.localized/
+.Trash/
+.cache/
+.config/
+.lesshst
+.node-gyp/
+.npm/
+.nvm/
+.profile
+.rvm/
