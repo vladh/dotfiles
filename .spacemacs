@@ -210,6 +210,7 @@ layers configuration."
    projectile-enable-caching nil
    ;; Disable hl-like since it's not pretty in `molokai`
    global-hl-line-mode nil
+   python-indent 2
    )
   (define-key evil-normal-state-map (kbd "\\") 'projectile-find-file)
 )
