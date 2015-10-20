@@ -85,6 +85,7 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+au FileType python setl et ts=2 sts=2 sw=2
 
 " commands
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
