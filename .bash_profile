@@ -29,7 +29,7 @@ else
 fi
 alias ta="tmux attach -t"
 alias tl="tmux ls"
-alias ioana="say -v ioana"
+alias isodate="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 
 #sources
 source ~/.bin/git-completion.bash
