@@ -37,9 +37,9 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
-# Nicer history
-export HISTSIZE=100000
-export SAVEHIST=$HISTSIZE
+# History
+unset HISTFILE
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
 
 #git
 function minutes_since_last_commit {
