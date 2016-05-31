@@ -17,6 +17,7 @@ My dotfiles include configs for **vim**, **tmux**, **bash** and **zsh**. They ar
 * vim support for lots of things (Mustache, CoffeeScript, HAML, Jade, Markdown, Mocha, rspec, Stylus, Clojure, Processing)
 * Improvements to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
 * [z.sh](https://github.com/rupa/z) to jump around directories in bash
+* Logging all bash commands to `~/.logs`
 
 ### How to use
 **Make sure you have backed up your existing files!** Then, run this to clone everything into your home directory.
