@@ -55,7 +55,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
      darkokai-theme
-     pug-mode
+     (pug-mode :location (recipe :fetcher github :repo "hlissner/emacs-pug-mode"))
      (stylus-mode :location (recipe :fetcher github :repo "vladh/stylus-mode"))
    )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -115,11 +115,11 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         spacemacs-dark
-                         darkokai
                          molokai
-                         monokai
-                         farmhouse-dark
+                         ;; spacemacs-dark
+                         ;; darkokai
+                         ;; monokai
+                         ;; farmhouse-dark
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
