@@ -97,14 +97,6 @@ nnoremap <leader>c0 :set colorcolumn=100<cr>
 nnoremap <leader>c8 :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
 
-" tests
-" function! MapCR()
-"   nnoremap <cr> :!clear <CR>:call RunLastSpec()<cr>
-" endfunction
-" call MapCR()
-nnoremap <leader>tc :!clear <CR>:call RunCurrentSpecFile()<CR>
-nnoremap <leader>ta :!clear <CR>:call RunAllSpecs()<CR>
-
 " very magic
 " nnoremap / /\v
 " nnoremap ? ?\v
@@ -165,7 +157,6 @@ function! RenameFile()
 endfunction
 
 " airline
-" let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 1
@@ -174,30 +165,14 @@ let g:airline_powerline_fonts = 1
 nmap <leader>m :TagbarToggle<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 
-" fireplace
-nmap <leader>p <Plug>FireplaceCountPrint
-nmap <leader>r :Require<CR>
-nmap <leader>o :Require<CR> <bar> <Plug>FireplaceCountPrint
-vmap <leader>p :Eval<CR>
-
 " ctrlp
-" let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" ctrlp-funky
-nnoremap <leader>l :CtrlPFunky<Cr>
-let g:ctrlp_funky_matchtype = 'path'
-let g:ctrlp_funky_syntax_highlight = 1
 
 " indent guides
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222222 ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#666666 ctermbg=235
-
-" vim-latex-live-preview
-let g:livepreview_previewer = 'open -a Skim'
 
 " ctags
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
@@ -206,49 +181,14 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 " disable HTML checking altogether
 let g:syntastic_html_checkers=['']
 
-" highlight words
-" thanks, sjl!
-
-function! HiInterestingWord(n)
-	normal! mz
-	normal! "zyiw
-	let mid = 86750 + a:n
-	silent! call matchdelete(mid)
-	let pat = '\V\<' . escape(@z, '\') . '\>'
-	call matchadd("InterestingWord" . a:n, pat, 1, mid)
-	normal! `z
-endfunction
-
-nnoremap <silent> <leader>1 :call HiInterestingWord(1)<cr>
-nnoremap <silent> <leader>2 :call HiInterestingWord(2)<cr>
-nnoremap <silent> <leader>3 :call HiInterestingWord(3)<cr>
-nnoremap <silent> <leader>4 :call HiInterestingWord(4)<cr>
-nnoremap <silent> <leader>5 :call HiInterestingWord(5)<cr>
-nnoremap <silent> <leader>6 :call HiInterestingWord(6)<cr>
-
-hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
-hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
-hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
-hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
-hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
-hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
-
-" }}}
-
-" default vim completion, good to have even if we're using a plugin
+" default vim completion
 set ofu=syntaxcomplete#Complete
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
 
-" YouCompleteMe
-" HACK: If we don't have the version of Vim required for YouCompleteMe,
-" trick it into thinking that it's already loaded, so it doesn't actually
-" load itself and give an error message.
-if v:version < 703 || (v:version == 703 && !has('patch584'))
-  let g:loaded_youcompleteme = 1
-endif
+" ejs
+au BufNewFile,BufRead *.ejs set filetype=html
 
-" private
 if filereadable(glob("~/.vimrc_private"))
   source ~/.vimrc_private
 endif

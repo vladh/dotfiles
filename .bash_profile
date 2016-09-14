@@ -21,11 +21,11 @@ c_bold=`tput bold`
 if [ "$(uname)" == "Darwin" ]; then
   alias ls='ls -G'
   alias ll="ls -lhaG"
-  alias lt="ls -lhrtG"
+  alias llt="ls -lhrtG"
 else
   alias ls='ls --color'
   alias ll="ls -lha --color"
-  alias lt="ls -lhrt --color"
+  alias llt="ls -lhrt --color"
 fi
 alias ta="tmux attach -t"
 alias tl="tmux ls"

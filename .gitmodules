@@ -46,15 +46,9 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/vladh/tagbar.git
-[submodule ".vim/bundle/vim-go"]
-	path = .vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule ".vim/bundle/prolog.vim"]
 	path = .vim/bundle/prolog.vim
 	url = https://github.com/adimit/prolog.vim.git
-[submodule ".vim/bundle/ctrlp-funky"]
-	path = .vim/bundle/ctrlp-funky
-	url = https://github.com/tacahiroy/ctrlp-funky.git
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/vladh/vim-coffee-script.git
