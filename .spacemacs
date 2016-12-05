@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -42,7 +43,7 @@ values."
      html
      javascript
      markdown
-     ;; python
+     python
      ruby
      shell-scripts
 
@@ -259,16 +260,12 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  (setq-default
-   indent-line-function 'insert-tab
-   indent-tabs-mode nil
-   electric-indent-mode 0
-   electric-pair-mode 0
-   )
   (defun set-indent (n)
     (setq-default
      evil-shift-width n
      tab-width n
+     default-tab-width n
+     standard-indent n
      c-basic-offset n
      js-indent-level n
      js2-basic-offset n
@@ -283,9 +280,63 @@ before packages are loaded. If you are unsure, you should try in setting them in
      web-mode-css-indent-offset n
      web-mode-code-indent-offset n
      web-mode-attr-indent-offset n
+     python-indent-offset n
      python-indent n
      ))
   (set-indent 2)
+  (defun set-tab-width (n)
+    (dolist (var '(evil-shift-width
+                   default-tab-width
+                   tab-width
+                   c-basic-offset
+                   cmake-tab-width
+                   coffee-tab-width
+                   cperl-indent-level
+                   css-indent-offset
+                   elixir-smie-indent-basic
+                   enh-ruby-indent-level
+                   erlang-indent-level
+                   javascript-indent-level
+                   js-indent-level
+                   js2-basic-offset
+                   js3-indent-level
+                   lisp-indent-offset
+                   livescript-tab-width
+                   mustache-basic-offset
+                   nxml-child-indent
+                   perl-indent-level
+                   puppet-indent-level
+                   python-indent-offset
+                   ruby-indent-level
+                   rust-indent-offset
+                   scala-indent:step
+                   sgml-basic-offset
+                   sh-basic-offset
+                   web-mode-code-indent-offset
+                   web-mode-css-indent-offset
+                   web-mode-markup-indent-offset))
+      (set (make-local-variable var) n)))
+  (set-tab-width 2)
+  (add-hook 'python-mode-hook (lambda () (set-indent 2)))
+  )
+
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
+This function is called at the very end of Spacemacs initialization after
+layers configuration.
+This is the place where most of your configurations should be done. Unless it is
+explicitly specified that a variable should be set before a package is loaded,
+you should place you code here."
+  (defun highlight-todos ()
+    (font-lock-add-keywords nil '(("\\<\\(NOTE\\|TODO\\|HACK\\|BUG\\):" 1 font-lock-warning-face t))))
+  (add-hook 'prog-mode-hook 'highlight-todos)
+  (setq
+   ;; Don't cache in projectile, preventing this bug
+   ;; https://github.com/syl20bnr/spacemacs/issues/1256
+   projectile-enable-caching nil
+   ;; Disable hl-like since it's not pretty in `molokai`
+   global-hl-line-mode nil
+   )
   (setq-default
    ;; Change coffeelint filename
    flycheck-coffeelintrc "coffeelint.json"
@@ -303,25 +354,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
    evil-emacs-state-cursor 'hbar ; _
    ;; Don't create .# files
    create-lockfiles nil
-   )
-  (defun highlight-todos ()
-    (font-lock-add-keywords nil '(("\\<\\(NOTE\\|TODO\\|HACK\\|BUG\\):" 1 font-lock-warning-face t))))
-  (add-hook 'prog-mode-hook 'highlight-todos)
-  )
-
-(defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place you code here."
-  (setq
-   ;; Don't cache in projectile, preventing this bug
-   ;; https://github.com/syl20bnr/spacemacs/issues/1256
-   projectile-enable-caching nil
-   ;; Disable hl-like since it's not pretty in `molokai`
-   global-hl-line-mode nil
+   ;; Indents
+   indent-line-function 'insert-tab
+   indent-tabs-mode nil
+   electric-indent-mode 0
+   electric-pair-mode 0
+   ;; Undo
+   evil-in-single-undo t
    )
   (define-key evil-normal-state-map (kbd "\\") 'projectile-find-file)
   )
@@ -336,7 +375,7 @@ you should place you code here."
  '(ns-right-alternate-modifier (quote none))
  '(package-selected-packages
    (quote
-    (pcre2el alert log4e gntp markdown-mode json-snatcher json-reformat parent-mode projectile request haml-mode gitignore-mode fringe-helper git-gutter git-gutter+ flycheck flx git-commit with-editor smartparens anzu web-completion-data dash-functional tern pos-tip company hydra inflections edn multiple-cursors paredit s peg eval-sexp-fu highlight spinner queue pkg-info clojure-mode epl inf-ruby yasnippet packed dash avy async auto-complete popup bind-key bind-map evil cider iedit helm helm-core js2-mode magit magit-popup powerline package-build darkokai-theme zonokai-theme zenburn-theme zen-and-art-theme xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stylus-mode stekene-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smeargle slim-mode shell-pop seti-theme scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters railscasts-theme quelpa purple-haze-theme pug-mode professional-theme popwin planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pbcopy pastels-on-dark-theme paradox page-break-lines osx-trash orgit organic-green-theme org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme niflheim-theme neotree naquadah-theme mustang-theme multi-term move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc majapahit-theme magit-gitflow macrostep lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme less-css-mode launchctl json-mode js2-refactor js-doc jbeans-theme jazz-theme jade-mode ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gh-md gandalf-theme flycheck-pos-tip flx-ido flatui-theme flatland-theme fish-mode firebelly-theme fill-column-indicator farmhouse-theme fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-commentary evil-args evil-anzu espresso-theme eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dracula-theme django-theme disaster diff-hl define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme company-web company-tern company-statistics company-quickhelp company-c-headers colorsarenice-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cmake-mode clues-theme clj-refactor clean-aindent-mode clang-format cider-eval-sexp-fu chruby cherry-blossom-theme busybee-theme bundler buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme badwolf-theme auto-yasnippet auto-highlight-symbol auto-compile apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic uuidgen rake osx-dictionary org-projectile pcache org-download mwim minitest livid-mode skewer-mode simple-httpd link-hint insert-shebang hide-comnt git-link eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff eshell-z dumb-jump f company-shell column-enforce-mode clojure-snippets pcre2el alert log4e gntp markdown-mode json-snatcher json-reformat parent-mode projectile request haml-mode gitignore-mode fringe-helper git-gutter git-gutter+ flycheck flx git-commit with-editor smartparens anzu web-completion-data dash-functional tern pos-tip company hydra inflections edn multiple-cursors paredit s peg eval-sexp-fu highlight spinner queue pkg-info clojure-mode epl inf-ruby yasnippet packed dash avy async auto-complete popup bind-key bind-map evil cider iedit helm helm-core js2-mode magit magit-popup powerline package-build darkokai-theme zonokai-theme zenburn-theme zen-and-art-theme xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stylus-mode stekene-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smeargle slim-mode shell-pop seti-theme scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme reveal-in-osx-finder restart-emacs rbenv rainbow-delimiters railscasts-theme quelpa purple-haze-theme pug-mode professional-theme popwin planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pbcopy pastels-on-dark-theme paradox page-break-lines osx-trash orgit organic-green-theme org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme niflheim-theme neotree naquadah-theme mustang-theme multi-term move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc majapahit-theme magit-gitflow macrostep lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme less-css-mode launchctl json-mode js2-refactor js-doc jbeans-theme jazz-theme jade-mode ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gh-md gandalf-theme flycheck-pos-tip flx-ido flatui-theme flatland-theme fish-mode firebelly-theme fill-column-indicator farmhouse-theme fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-commentary evil-args evil-anzu espresso-theme eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dracula-theme django-theme disaster diff-hl define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme company-web company-tern company-statistics company-quickhelp company-c-headers colorsarenice-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cmake-mode clues-theme clj-refactor clean-aindent-mode clang-format cider-eval-sexp-fu chruby cherry-blossom-theme busybee-theme bundler buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme badwolf-theme auto-yasnippet auto-highlight-symbol auto-compile apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
