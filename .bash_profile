@@ -99,3 +99,5 @@ export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
 if [ -f ~/.bash_profile_private ]; then
   source ~/.bash_profile_private
 fi
+
+export POWERLINE_CONFIG_COMMAND="$HOME/.powerline/scripts/powerline-config"
