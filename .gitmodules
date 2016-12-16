@@ -67,3 +67,6 @@
 [submodule ".powerline"]
 	path = .powerline
 	url = https://github.com/powerline/powerline.git
+[submodule ".vim/bundle/vim-flake8"]
+	path = .vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git

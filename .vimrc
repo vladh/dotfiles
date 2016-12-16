@@ -165,6 +165,9 @@ let g:airline_powerline_fonts = 1
 nmap <leader>m :TagbarToggle<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 
+" flake8
+autocmd FileType python map <buffer> <leader>f :call Flake8()<CR>
+
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']

@@ -91,6 +91,8 @@ prompt-username
 # Locale
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LC_COLLATE=en_US.UTF-8
+export PYTHONIOENCODING=utf-8
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
