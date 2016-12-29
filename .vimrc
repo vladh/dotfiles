@@ -165,8 +165,9 @@ let g:airline_powerline_fonts = 1
 nmap <leader>m :TagbarToggle<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 
-" flake8
+" python
 autocmd FileType python map <buffer> <leader>f :call Flake8()<CR>
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
