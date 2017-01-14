@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.0.3.70 on 2016-04-07 at 18:11 (CEST)-->
+<!--Last edited by Ukelele version 3.2.1.161 on 2017-01-14 at 11:44 (GMT+1)-->
 <!--Created by Ukelele version 2.2.4 on 2013-09-16 at 20:24 (BST)-->
-<keyboard group="126" id="-19288" name="vladh standard" maxout="3">
+<keyboard group="126" id="-27439" name="vladh standard" maxout="3">
 	<layouts>
 		<layout first="0" last="17" mapSet="ANSI" modifiers="commonModifiers"/>
 		<layout first="18" last="18" mapSet="JIS" modifiers="commonModifiers"/>
@@ -422,22 +422,22 @@
 			<!-- option -->
 			<key code="0" output="ă"/>
 			<key code="1" output="ș"/>
-			<key code="2" output="∆"/>
-			<key code="3" output="☃"/>
+			<key code="2" output="æ"/>
+			<key code="3" output=""/>
 			<key code="4" output="←"/>
 			<key code="5" output="♥"/>
 			<key code="6" output="ß"/>
 			<!-- added -->
-			<key code="7" output=""/>
+			<key code="7" output="å"/>
 			<key code="8" output=""/>
-			<key code="9" output=""/>
+			<key code="9" output="∆"/>
 			<key code="10" output="§"/>
-			<key code="11" output=""/>
+			<key code="11" output="⁂"/>
 			<key code="12" output="â"/>
 			<key code="13" output="ä"/>
 			<key code="14" output="é"/>
 			<key code="15" output="®"/>
-			<key code="16" output=""/>
+			<key code="16" output="☃"/>
 			<key code="17" output="ț"/>
 			<key code="18" output="¡"/>
 			<key code="19" output=""/>
@@ -456,14 +456,14 @@
 			<key code="32" output="ü"/>
 			<key code="33" action="“"/>
 			<key code="34" output="î"/>
-			<key code="35" output=""/>
+			<key code="35" output="ø"/>
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output="→"/>
 			<key code="38" output="↓"/>
 			<key code="39" action="æ"/>
 			<key code="40" output="↑"/>
 			<key code="41" output="“"/>
-			<key code="42" output="«"/>
+			<key code="42" output=""/>
 			<key code="43" output="×"/>
 			<key code="44" output="¿"/>
 			<key code="45" output="♪"/>
@@ -544,7 +544,7 @@
 			<key code="0" output="Ă"/>
 			<key code="1" output="Ș"/>
 			<!-- added -->
-			<key code="2" output=""/>
+			<key code="2" output="Æ"/>
 			<key code="3" output=""/>
 			<!-- added -->
 			<key code="4" output=""/>
@@ -552,11 +552,11 @@
 			<!-- added -->
 			<key code="6" output=""/>
 			<!-- added -->
-			<key code="7" output=""/>
+			<key code="7" output="Å"/>
 			<key code="8" output=""/>
 			<key code="9" output=""/>
 			<key code="10" output="±"/>
-			<key code="11" output=""/>
+			<key code="11" output="♮"/>
 			<key code="12" output="Â"/>
 			<key code="13" output="Ä"/>
 			<key code="14" output="É"/>
@@ -580,9 +580,9 @@
 			<key code="30" action="’"/>
 			<key code="31" action="Ø"/>
 			<key code="32" output="Ü"/>
-			<key code="33" output=""/>
+			<key code="33" output="›"/>
 			<key code="34" output="Î"/>
-			<key code="35" output=""/>
+			<key code="35" output="Ø"/>
 			<key code="36" output="&#x000D;"/>
 			<key code="37" output=""/>
 			<key code="38" output=""/>
@@ -590,12 +590,12 @@
 			<key code="40" output=""/>
 			<key code="41" output="”"/>
 			<!-- added -->
-			<key code="42" output="»"/>
+			<key code="42" output=""/>
 			<key code="43" output="✓"/>
 			<key code="44" output=""/>
-			<key code="45" output=""/>
+			<key code="45" output="♭"/>
 			<!-- corrected -->
-			<key code="46" output=""/>
+			<key code="46" output="♯"/>
 			<!-- corrected -->
 			<key code="47" output="✗"/>
 			<!-- added -->
@@ -2497,15 +2497,15 @@
 			<when state="none" next="macron"/>
 		</action>
 		<action id="‘">
-			<when state="none" output="‹"/>
+			<when state="none" output="«"/>
 			<when state="specials" output="ʻ"/>
 		</action>
 		<action id="’">
-			<when state="none" output="›"/>
+			<when state="none" output="»"/>
 			<when state="specials" output="ʼ"/>
 		</action>
 		<action id="“">
-			<when state="none" output=""/>
+			<when state="none" output="‹"/>
 			<when state="specials" output="ʽ"/>
 		</action>
 		<action id="”">
