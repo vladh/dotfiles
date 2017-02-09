@@ -23,9 +23,9 @@ My dotfiles include configs for **vim**, **tmux**, **bash** and **zsh**. They ar
 **Make sure you have backed up your existing files!** Then, run this to clone everything into your home directory.
 
 ```bash
-cd && git clone https://github.com/vladh/dotfiles --recursive
-cd dotfiles
-mv -i * .[^.]* ../
+cd && git clone https://github.com/vladh/dotfiles --recursive && \
+cd dotfiles && \
+mv -i * .[^.]* ../ && \
 cd && rmdir dotfiles
 ```
 
