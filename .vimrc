@@ -53,7 +53,6 @@ set title
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 set encoding=utf-8
 set fileencoding=utf-8
-" set breakindent
 
 " don't continue comments, don't break lines
 set textwidth=0
@@ -69,10 +68,10 @@ set nobackup
 set noswapfile
 
 if has('persistent-undo')
-	set undodir=~/.vim/tmp/undo//
-	if !isdirectory(expand(&undodir))
-			call mkdir(expand(&undodir), "p")
-	endif
+  set undodir=~/.vim/tmp/undo//
+  if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+  endif
 endif
 
 " folds
@@ -85,9 +84,10 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-au FileType python setl et ts=2 sts=2 sw=2
+set smartindent
+set nocindent
 
-" commands
+" handle W and Q typos
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
 
@@ -107,16 +107,11 @@ nnoremap K i<CR><Esc>
 " column scroll-binding (continuous line number)
 noremap <silent> <leader>sb :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 
-" hide gvim scrollbars and tabbar
-set guioptions-=r
-set guioptions-=L
-set guioptions-=T
-
 if &term =~ '256color'
-	" Disable Background Color Erase (BCE) so that color schemes
-	" work properly when Vim is used inside tmux and GNU screen.
-	" See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-	set t_ut=
+  " Disable Background Color Erase (BCE) so that color schemes
+  " work properly when Vim is used inside tmux and GNU screen.
+  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
 endif
 
 " split window
@@ -144,17 +139,6 @@ au ColorScheme * highlight ExtraWhitespace guibg=#666666
 au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
-
-" rename current file
-function! RenameFile()
-		let old_name = expand('%')
-		let new_name = input('New file name: ', expand('%'), 'file')
-		if new_name != '' && new_name != old_name
-				exec ':saveas ' . new_name
-				exec ':silent !rm ' . old_name
-				redraw!
-		endif
-endfunction
 
 " airline
 let g:airline_theme = 'powerlineish'
