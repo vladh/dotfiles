@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.2.1.161 on 2017-01-14 at 11:44 (GMT+1)-->
+<!--Last edited by Ukelele version 3.2.1.161 on 2017-05-27 at 13:10 (GMT+2)-->
 <!--Created by Ukelele version 2.2.4 on 2013-09-16 at 20:24 (BST)-->
 <keyboard group="126" id="-18864" name="vladh standard" maxout="3">
 	<layouts>
@@ -439,12 +439,12 @@
 			<key code="15" output="®"/>
 			<key code="16" output="☃"/>
 			<key code="17" output="ț"/>
-			<key code="18" output="¡"/>
-			<key code="19" output=""/>
-			<key code="20" output=""/>
-			<key code="21" output="£"/>
-			<key code="22" output=""/>
-			<key code="23" output=""/>
+			<key code="18" output="α"/>
+			<key code="19" output="β"/>
+			<key code="20" output="θ"/>
+			<key code="21" output="λ"/>
+			<key code="22" output="φ"/>
+			<key code="23" output="μ"/>
 			<key code="24" output="≠"/>
 			<key code="25" output="∞"/>
 			<key code="26" output=""/>
@@ -465,7 +465,7 @@
 			<key code="41" output="“"/>
 			<key code="42" output=""/>
 			<key code="43" output="×"/>
-			<key code="44" output="¿"/>
+			<key code="44" output=""/>
 			<key code="45" output="♪"/>
 			<key code="46" output="♫"/>
 			<key code="47" output="…"/>
@@ -564,10 +564,10 @@
 			<key code="16" output=""/>
 			<!-- added -->
 			<key code="17" output="Ț"/>
-			<key code="18" output=""/>
+			<key code="18" output="¡"/>
 			<!-- corrected -->
-			<key code="19" output=""/>
-			<key code="20" output=""/>
+			<key code="19" output="†"/>
+			<key code="20" output="‡"/>
 			<key code="21" output="€"/>
 			<key code="22" output=""/>
 			<key code="23" output=""/>
@@ -592,7 +592,7 @@
 			<!-- added -->
 			<key code="42" output=""/>
 			<key code="43" output="✓"/>
-			<key code="44" output=""/>
+			<key code="44" output="¿"/>
 			<key code="45" output="♭"/>
 			<!-- corrected -->
 			<key code="46" output="♯"/>
