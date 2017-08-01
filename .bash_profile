@@ -33,6 +33,7 @@ alias isodate="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 
 #sources
 source ~/.bin/git-completion.bash
+source ~/.bin/git-prompt.sh
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
@@ -52,7 +53,7 @@ function minutes_since_last_commit {
 git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
-    local GIT_PROMPT=`__git_ps1`
+    local GIT_PROMPT=`__git_ps1 "%s"`
     echo ${GIT_PROMPT}" "
   fi
 }
