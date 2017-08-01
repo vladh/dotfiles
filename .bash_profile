@@ -99,8 +99,10 @@ export PYTHONIOENCODING=utf-8
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
 
+export POWERLINE_CONFIG_COMMAND="$HOME/.powerline/scripts/powerline-config"
+
 if [ -f ~/.bash_profile_private ]; then
   source ~/.bash_profile_private
 fi
 
-export POWERLINE_CONFIG_COMMAND="$HOME/.powerline/scripts/powerline-config"
+source ~/.bin/z.sh
