@@ -1,0 +1,11 @@
+#! /bin/bash
+
+TODAY=$(date +%d%m)
+if [ $TODAY -eq 2708 ]
+then
+  echo "They answered! Here's what they said:"
+  cat ~/.bin/secret.bin
+else
+  echo "No one answered... They just left a message:"
+  curl -s http://cbsg.sourceforge.net/cgi-bin/live | grep -Eo '^<li>.*</li>' | sed s,\</\\?li\>,,g | shuf -n 1
+fi
