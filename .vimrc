@@ -46,7 +46,6 @@ set ttyfast
 set smarttab
 set nrformats-=octal
 set fileformats+=mac
-let g:DisableAutoPHPFolding = 1
 set pastetoggle=<leader>sp
 cmap w!! w !sudo tee % >/dev/null
 set title
@@ -152,6 +151,17 @@ nmap <leader>b :CtrlPBuffer<CR>
 " python
 autocmd FileType python map <buffer> <leader>f :call Flake8()<CR>
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+
+" php
+let g:DisableAutoPHPFolding = 1
+let g:php_sql_query = 0
+let g:php_sql_heredoc = 0
+let g:php_html_in_strings = 0
+let g:php_html_in_heredoc = 0
+let g:php_html_load = 0
+let g:php_ignore_phpdoc = 1
+let g:php_folding = 0
+
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
