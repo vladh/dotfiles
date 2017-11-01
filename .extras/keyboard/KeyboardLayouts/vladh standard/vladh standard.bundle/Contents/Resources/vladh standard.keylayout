@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.2.1.161 on 2017-05-27 at 13:10 (GMT+2)-->
+<!--Last edited by Ukelele version 3.2.1.161 on 2017-11-02 at 00:33 (GMT+1)-->
 <!--Created by Ukelele version 2.2.4 on 2013-09-16 at 20:24 (BST)-->
 <keyboard group="126" id="-18864" name="vladh standard" maxout="3">
 	<layouts>
@@ -560,7 +560,7 @@
 			<key code="12" output="Â"/>
 			<key code="13" output="Ä"/>
 			<key code="14" output="É"/>
-			<key code="15" output=""/>
+			<key code="15" output="™"/>
 			<key code="16" output=""/>
 			<!-- added -->
 			<key code="17" output="Ț"/>
@@ -570,7 +570,7 @@
 			<key code="20" output="‡"/>
 			<key code="21" output="€"/>
 			<key code="22" output=""/>
-			<key code="23" output=""/>
+			<key code="23" output="£"/>
 			<key code="24" output="±"/>
 			<key code="25" output=""/>
 			<key code="26" output=""/>
