@@ -20,7 +20,8 @@ set scrolloff=5
 set autoindent
 set laststatus=2
 set showmatch
-set cursorline
+" set cursorline
+set lazyredraw
 set incsearch
 set hlsearch
 set cmdheight=1
