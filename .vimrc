@@ -34,6 +34,7 @@ let mapleader=","
 set backspace=indent,eol,start
 set autoread
 filetype plugin on
+filetype plugin indent on
 set matchpairs+=<:>
 set showcmd
 set mouse=a
@@ -166,6 +167,9 @@ let g:php_folding = 0
 " ctrlp
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" javascript
+let g:jsx_ext_required = 0
 
 " indent guides
 let g:indent_guides_auto_colors = 0
