@@ -73,12 +73,12 @@
 [submodule ".vim/bundle/vim-sleuth"]
 	path = .vim/bundle/vim-sleuth
 	url = git://github.com/tpope/vim-sleuth.git
-[submodule "/Users/vladh/.vim/bundle/vim-elixir"]
-	path = /Users/vladh/.vim/bundle/vim-elixir
+[submodule ".vim/bundle/vim-elixir"]
+	path = .vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
-[submodule "/Users/vladh/.vim/bundle/vim-javascript"]
-	path = /Users/vladh/.vim/bundle/vim-javascript
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "/Users/vladh/.vim/bundle/vim-jsx"]
-	path = /Users/vladh/.vim/bundle/vim-jsx
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
 	url = git@github.com:mxw/vim-jsx.git
