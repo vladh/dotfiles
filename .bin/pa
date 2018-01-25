@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+	echo "Usage: pa <filepath>"
+	exit
+fi
+scp $1 vladh@yavin:/srv/www/vladh-website-static/things/
