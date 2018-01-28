@@ -6,6 +6,7 @@
 /.CFUserTextEncoding
 /.Trash/
 /.android/
+/.atom
 /.babel.json
 /.bash_history
 /.bash_profile_private
@@ -79,3 +80,4 @@
 /proj-fat/
 /proj-versioned/
 /proj/
+/tmp/
