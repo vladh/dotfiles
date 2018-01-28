@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="http://vladh.net/images/projects/dotfiles.png" width="150" height="150">
-</div>
-
 # vladh's dotfiles
 
 My dotfiles include configs for **vim**, **tmux**, **bash** and **zsh**. They are good for setting up Mac OS X as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
