@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/vim-one"]
 	path = .vim/bundle/vim-one
 	url = https://github.com/rakr/vim-one.git
+[submodule ".vim/bundle/tmuxline.vim"]
+	path = .vim/bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
