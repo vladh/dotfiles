@@ -10,10 +10,12 @@
 /.babel.json
 /.bash_history
 /.bash_profile_private
+/.bash_sessions/
 /.bin_private
 /.cabal/
 /.cache/
 /.ccnet/
+/.cocoapods/
 /.coffee_history
 /.composer/
 /.config/
