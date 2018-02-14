@@ -4,7 +4,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 alias tmux="TERM=xterm-256color tmux"
 alias grep="grep --color"
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   export TERM='screen-256color'
 fi
 
@@ -18,7 +18,7 @@ c_reset=`tput sgr0`
 c_bold=`tput bold`
 
 #aliases
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   alias ls='ls -G'
   alias ll="ls -lhaG"
   alias llt="ls -lhrtG"
