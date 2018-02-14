@@ -8,14 +8,25 @@ if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   export TERM='screen-256color'
 fi
 
-c_red=`tput setaf 1`
-c_alsored=`tput setaf 6`
-c_green=`tput setaf 2`
-c_yellow=`tput setaf 3`
-c_blue=`tput setaf 4`
-c_purple=`tput setaf 5`
-c_reset=`tput sgr0`
-c_bold=`tput bold`
+if [ "$(uname)" == "FreeBSD" ]; then
+  c_red='\e[0;31m'
+  c_alsored='\e[0;31m'
+  c_green='\e[0;32m'
+  c_yellow='\e[1;33m'
+  c_blue='\e[0;34m'
+  c_purple='\e[0;35m'
+  c_reset='\e[0m'
+  c_bold=`tput bold`
+else
+  c_red=`tput setaf 1`
+  c_alsored=`tput setaf 6`
+  c_green=`tput setaf 2`
+  c_yellow=`tput setaf 3`
+  c_blue=`tput setaf 4`
+  c_purple=`tput setaf 5`
+  c_reset=`tput sgr0`
+  c_bold=`tput bold`
+fi
 
 #aliases
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
