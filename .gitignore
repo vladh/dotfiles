@@ -3,6 +3,7 @@
 *.vim-fuf-data
 *.viminfo*
 .DS_Store
+.brunch
 /.CFUserTextEncoding
 /.Trash/
 /.android/
