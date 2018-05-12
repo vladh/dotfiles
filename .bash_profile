@@ -58,7 +58,7 @@ git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
     local GIT_PROMPT=`__git_ps1 "%s"`
-    echo ${GIT_PROMPT}" "
+    echo ":${GIT_PROMPT} "
   fi
 }
 
@@ -68,10 +68,10 @@ venv_prompt() {
   fi
 }
 
-prompt_char="∆"
+prompt_char="$"
 
 function prompt-username {
-  PS1="\[\033[G\]\[$c_blue\]\h \[$c_bold\]\[$c_green\]\u \[$c_bold\]\[$c_yellow\]\W \[$c_red\]\$(git_prompt)\$(venv_prompt)\[$c_green\]\[$c_bold\]$prompt_char \[$c_reset\]"
+  PS1="\[\033[G\]\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
 }
 prompt-username
 
