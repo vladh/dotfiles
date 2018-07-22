@@ -183,6 +183,7 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 " syntastic
 " disable HTML checking altogether
 let g:syntastic_html_checkers=['']
+let g:syntastic_python_checkers=['flake8']
 
 " default vim completion
 set ofu=syntaxcomplete#Complete

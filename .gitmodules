@@ -85,3 +85,9 @@
 [submodule ".vim/bundle/tmuxline.vim"]
 	path = .vim/bundle/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule ".vim/bundle/vim-vue"]
+	path = .vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
+[submodule ".vim/bundle/nim.vim"]
+	path = .vim/bundle/nim.vim
+	url = git://github.com/zah/nim.vim.git
