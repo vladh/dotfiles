@@ -59,7 +59,7 @@
 /.rvm/
 /.ssh
 /.subversion/
-/.tmux.conf_private
+/.tmux_private.conf
 /.tor/
 /.v8flags*
 /.vim/sessions
