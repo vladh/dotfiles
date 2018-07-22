@@ -12,6 +12,7 @@
 /.bash_history
 /.bash_profile_private
 /.bash_sessions/
+/.bashrc
 /.bin_private
 /.cabal/
 /.cache/
@@ -26,6 +27,7 @@
 /.emacs.d
 /.eshell/
 /.forever/
+/.fzf*
 /.gem
 /.ghc/
 /.gitconfig_private
