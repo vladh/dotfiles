@@ -38,6 +38,8 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "Installing fd."
     brew install fd
   fi
+else
+  echo "You're not on macOS, so remember you will have to install some packages manually. See README.md."
 fi
 
 echo "Removing README.md and .install.sh."
