@@ -82,7 +82,7 @@ export LC_COLLATE=en_US.UTF-8
 export PYTHONIOENCODING=utf-8
 
 # fzf
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --type f -H -E .git'
 
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
