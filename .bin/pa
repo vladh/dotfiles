@@ -1,6 +1,12 @@
 #!/bin/bash
 if [ $# -eq 0 ]; then
-	echo "Usage: pa <filepath>"
+	echo "Usage: pa <filepath> [<remote-folder>]"
+  echo "  If you specify the remote folder, you must specify a leading static/ or things/ too."
 	exit
 fi
-scp $1 vladh@yavin:/srv/www/vladh-website-static/things/
+if [ $# -eq 1 ]; then
+  scp $1 vladh@yavin:/srv/www/vladh-website-static/things/
+fi
+if [ $# -eq 2 ]; then
+  scp $1 vladh@yavin:/srv/www/vladh-website-static/$2/
+fi
