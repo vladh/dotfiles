@@ -20,14 +20,15 @@
 /.cocoapods/
 /.coffee_history
 /.composer/
-/.config/
+/.config/*
+!/.config/nvim
 /.cups/
 /.curlrc
 /.dbshell
 /.emacs.d
 /.eshell/
 /.forever/
-/.fzf*
+/.fzf
 /.gem
 /.ghc/
 /.gitconfig_private

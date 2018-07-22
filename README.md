@@ -1,6 +1,6 @@
 # vladh's dotfiles
 
-My dotfiles include configs for **vim**, **tmux**, **bash** and **zsh**. They are good for setting up Mac OS X as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
+My dotfiles include configs for **vim**, **tmux** and **bash**. They are good for setting up macOS as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
 
 * Consistent color scheme across bash, zsh, vim etc. (custom Monokai, with alternate themes if you want them)
 * Sane vim config with modern, sensible settings
@@ -16,35 +16,24 @@ My dotfiles include configs for **vim**, **tmux**, **bash** and **zsh**. They ar
 * Logging all bash commands to `~/.logs`
 
 ### How to use
-**Make sure you have backed up your existing files!** Then, run this to clone everything into your home directory.
+
+**Make sure you have backed up your existing files!** Then, run the following:
 
 ```bash
-cd && git clone https://github.com/vladh/dotfiles --recursive && \
-cd dotfiles && \
-mv -i * .[^.]* ../ && \
-cd && rmdir dotfiles
+git clone https://github.com/vladh/dotfiles --recursive ~/dotfiles && ~/dotfiles/.install.sh
 ```
 
-For tmux to work properly on Mac OS X, you also need to install this:
+### macOS specific packages
 
-```bash
-brew install reattach-to-user-namespace
-```
+If you have Homebrew, `reattach-to-user-namespace `will be installed automatically, which makes tmux open new windows in the right directory. If you don't have Homebrew, you will have to install this manually.
 
-This makes tmux open new windows in the right directory. On Mac OS, tmux may not start using the given `.tmux.conf` if `reattach-to-user-namespace` is not installed.
-
-You also need to install YouCompleteMe if you want vim completion. [The instructions are here](https://github.com/Valloric/YouCompleteMe), but it generally goes something like:
-
-```bash
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh
-```
+### Private files
 
 To add any options you don't want to accidentally commit to the repo, like your git.config email or .bash\_profile paths, make `_private` files. These will be included in your configuration but ignored by the repo. Currently supported:
 
 * .bash_profile_private
 * .vimrc_private
-* .tmux.conf_private
+* .tmux_private.conf
 * .gitconfig_private
 * .zshrc_private
 
@@ -53,5 +42,3 @@ To add any options you don't want to accidentally commit to the repo, like your 
 * [The contributors](https://github.com/vladh/dotfiles/graphs/contributors)
 * [Gary Bernhardt](https://github.com/garybernhardt)
 * [Steve Losh](http://stevelosh.com/)
-
-Libraries used are difficult to list as they often change, but they are evident from the git submodules.
