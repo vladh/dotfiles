@@ -45,6 +45,7 @@ To add any options you don't want to accidentally commit to the repo, like your 
 * .tmux_private.conf
 * .gitconfig_private
 * .zshrc_private
+* .config/nvim/private.vim
 
 ### Credits
 

@@ -1,3 +1,4 @@
+!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -21,7 +22,7 @@
 /.coffee_history
 /.composer/
 /.config/*
-!/.config/nvim
+/.config/nvim/private.vim
 /.cups/
 /.curlrc
 /.dbshell
