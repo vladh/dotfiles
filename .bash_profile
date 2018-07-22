@@ -81,6 +81,9 @@ export LC_ALL=en_US.UTF-8
 export LC_COLLATE=en_US.UTF-8
 export PYTHONIOENCODING=utf-8
 
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 # Add paths
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
 export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"

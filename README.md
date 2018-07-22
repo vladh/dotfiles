@@ -21,9 +21,20 @@ My dotfiles include configs for **neovim/vim**, **spacemacs**, **tmux** and **ba
 git clone https://github.com/vladh/dotfiles --recursive ~/dotfiles && ~/dotfiles/.install.sh
 ```
 
+### Non-macOS manual install steps
+
+If you're not on macOS, you will have to install the following packages manually:
+
+* `fd` — Enables proper fuzzy finding in fzf. [Instructions here.](https://github.com/junegunn/fzf)
+
 ### macOS specific packages
 
-If you have Homebrew, `reattach-to-user-namespace `will be installed automatically, which makes tmux open new windows in the right directory. If you don't have Homebrew, you will have to install this manually.
+If you have Homebrew, the following packages will be install automatically:
+
+* `reattach-to-user-namespace` — Makes tmux open new windows in the right directory.
+* `fd` — Enables proper fuzzy finding in fzf.
+
+If you don't have Homebrew, you will have to install these manually. It's highly recommended to install Homebrew before installing the dotfiles, though.
 
 ### Private files
 
