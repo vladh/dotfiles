@@ -28,6 +28,9 @@ mv -i ~/dotfiles/* ~/dotfiles/.[^.]* ~/
 echo "Removing ~/dotfiles folder."
 rm -rf ~/dotfiles
 
+echo "Installing vim-plug for Neovim."
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 if [ "$(uname)" == "Darwin" ]; then
   echo "macOS detected."
   if [[ $(command -v brew) == "" ]]; then
