@@ -1,7 +1,7 @@
 [include]
-	path = ~/.gitconfig_private
+  path = ~/.gitconfig_private
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [alias]
   co = checkout
   st = status
@@ -35,11 +35,11 @@
 [merge]
   tool = vimdiff
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [push]
-	default = simple
+  default = simple
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
