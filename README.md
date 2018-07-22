@@ -1,17 +1,14 @@
 # vladh's dotfiles
 
-My dotfiles include configs for **vim**, **tmux** and **bash**. They are good for setting up macOS as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
+My dotfiles include configs for **neovim/vim**, **tmux** and **bash**. They are good for setting up macOS as a development system, but work on Linux too. Here's a (non-exhaustive) list of features:
 
-* Consistent color scheme across bash, zsh, vim etc. (custom Monokai, with alternate themes if you want them)
-* Sane vim config with modern, sensible settings
-* Syntax checking right inside vim with [Syntastic](https://github.com/scrooloose/syntastic)
-* Fuzzy finding in vim with [ctrlp](https://github.com/kien/ctrlp.vim)
-* bash & zsh prompt with git branch and time since last commit (thanks to [grb](https://github.com/garybernhardt))
-* zsh [wunjo](http://www.wunjo.org/zsh-git/) support with detailed git information and assorted prompt customisations.
-* powerline/airline in vim and tmux
-* vim autocomplete using YouCompleteMe
-* vim support for lots of things (Mustache, CoffeeScript, HAML, Jade, Markdown, Mocha, rspec, Stylus, Clojure, Processing)
-* Improvements to make everything work properly in Mac OS X (e.g. clipboard in vim inside tmux)
+* Consistent color scheme across vim, tmux and bash (custom Monokai, with alternate themes if you want them)
+* Sane neovim & vim config with modern, sensible settings
+* Syntax checking right inside vim with [Syntastic](https://github.com/scrooloose/syntastic) or [ALE](https://github.com/w0rp/ale)
+* Fuzzy finding in vim with [ctrlp](https://github.com/kien/ctrlp.vim) or [fzf](https://github.com/junegunn/fzf)
+* bash prompt with git branch and time since last commit
+* Synchronised airline in vim and tmux
+* Improvements to make everything work properly in macOS (e.g. clipboard in vim inside tmux)
 * [z.sh](https://github.com/rupa/z) to jump around directories in bash
 * Logging all bash commands to `~/.logs`
 
