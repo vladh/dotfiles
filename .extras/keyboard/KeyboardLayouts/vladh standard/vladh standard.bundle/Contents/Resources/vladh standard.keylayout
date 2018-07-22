@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.2.1.161 on 2017-11-02 at 00:33 (GMT+1)-->
+<!--Last edited by Ukelele version 3.2.7.195 on 2018-07-22 at 21:39 (CEST)-->
 <!--Created by Ukelele version 2.2.4 on 2013-09-16 at 20:24 (BST)-->
 <keyboard group="126" id="-18864" name="vladh standard" maxout="3">
 	<layouts>
@@ -423,34 +423,34 @@
 			<key code="0" output="ă"/>
 			<key code="1" output="ș"/>
 			<key code="2" output="æ"/>
-			<key code="3" output=""/>
+			<key code="3" output="œ"/>
 			<key code="4" output="←"/>
-			<key code="5" output="♥"/>
+			<key code="5" output=""/>
 			<key code="6" output="ß"/>
 			<!-- added -->
 			<key code="7" output="å"/>
-			<key code="8" output=""/>
-			<key code="9" output="∆"/>
+			<key code="8" output="ç"/>
+			<key code="9" output="×"/>
 			<key code="10" output="§"/>
 			<key code="11" output="⁂"/>
 			<key code="12" output="â"/>
 			<key code="13" output="ä"/>
 			<key code="14" output="é"/>
-			<key code="15" output="®"/>
-			<key code="16" output="☃"/>
+			<key code="15" output="è"/>
+			<key code="16" output="ÿ"/>
 			<key code="17" output="ț"/>
-			<key code="18" output="α"/>
-			<key code="19" output="β"/>
-			<key code="20" output="θ"/>
-			<key code="21" output="λ"/>
-			<key code="22" output="φ"/>
-			<key code="23" output="μ"/>
-			<key code="24" output="≠"/>
-			<key code="25" output="∞"/>
-			<key code="26" output=""/>
+			<key code="18" output="à"/>
+			<key code="19" output="ê"/>
+			<key code="20" output="ë"/>
+			<key code="21" output="€"/>
+			<key code="22" output="®"/>
+			<key code="23" output=""/>
+			<key code="24" output="°"/>
+			<key code="25" output="ï"/>
+			<key code="26" output="ù"/>
 			<key code="27" output="–"/>
-			<key code="28" output="•"/>
-			<key code="29" output="°"/>
+			<key code="28" output="û"/>
+			<key code="29" output="ô"/>
 			<key code="30" action="‘"/>
 			<key code="31" action="ø"/>
 			<key code="32" output="ü"/>
@@ -464,14 +464,14 @@
 			<key code="40" output="↑"/>
 			<key code="41" output="“"/>
 			<key code="42" output=""/>
-			<key code="43" output="×"/>
-			<key code="44" output=""/>
+			<key code="43" output="•"/>
+			<key code="44" output="¿"/>
 			<key code="45" output="♪"/>
 			<key code="46" output="♫"/>
 			<key code="47" output="…"/>
 			<key code="48" output="&#x0009;"/>
 			<key code="49" output=" "/>
-			<key code="50" output=""/>
+			<key code="50" output="♥"/>
 			<key code="51" output="&#x0008;"/>
 			<key code="52" output="&#x0003;"/>
 			<key code="53" output="&#x001B;"/>
@@ -545,38 +545,38 @@
 			<key code="1" output="Ș"/>
 			<!-- added -->
 			<key code="2" output="Æ"/>
-			<key code="3" output=""/>
+			<key code="3" output="Œ"/>
 			<!-- added -->
 			<key code="4" output=""/>
 			<key code="5" output=""/>
 			<!-- added -->
-			<key code="6" output=""/>
+			<key code="6" output="◊"/>
 			<!-- added -->
 			<key code="7" output="Å"/>
-			<key code="8" output=""/>
-			<key code="9" output=""/>
+			<key code="8" output="Ç"/>
+			<key code="9" output="∆"/>
 			<key code="10" output="±"/>
 			<key code="11" output="♮"/>
 			<key code="12" output="Â"/>
 			<key code="13" output="Ä"/>
 			<key code="14" output="É"/>
-			<key code="15" output="™"/>
-			<key code="16" output=""/>
+			<key code="15" output="È"/>
+			<key code="16" output="Ÿ"/>
 			<!-- added -->
 			<key code="17" output="Ț"/>
-			<key code="18" output="¡"/>
+			<key code="18" output="À"/>
 			<!-- corrected -->
-			<key code="19" output="†"/>
-			<key code="20" output="‡"/>
-			<key code="21" output="€"/>
-			<key code="22" output=""/>
-			<key code="23" output="£"/>
-			<key code="24" output="±"/>
-			<key code="25" output=""/>
-			<key code="26" output=""/>
+			<key code="19" output="Ê"/>
+			<key code="20" output="Ë"/>
+			<key code="21" output="£"/>
+			<key code="22" output="™"/>
+			<key code="23" output=""/>
+			<key code="24" output="∞"/>
+			<key code="25" output="Ï"/>
+			<key code="26" output="Ù"/>
 			<key code="27" output="—"/>
-			<key code="28" output=""/>
-			<key code="29" output=""/>
+			<key code="28" output="Û"/>
+			<key code="29" output="Ô"/>
 			<key code="30" action="’"/>
 			<key code="31" action="Ø"/>
 			<key code="32" output="Ü"/>
@@ -592,7 +592,7 @@
 			<!-- added -->
 			<key code="42" output=""/>
 			<key code="43" output="✓"/>
-			<key code="44" output="¿"/>
+			<key code="44" output="¡"/>
 			<key code="45" output="♭"/>
 			<!-- corrected -->
 			<key code="46" output="♯"/>
@@ -601,7 +601,7 @@
 			<!-- added -->
 			<key code="48" output="&#x0009;"/>
 			<key code="49" output=" "/>
-			<key code="50" output=""/>
+			<key code="50" output="☃"/>
 			<key code="51" output="&#x0008;"/>
 			<key code="52" output="&#x0003;"/>
 			<key code="53" output="&#x001B;"/>
