@@ -1,4 +1,3 @@
-!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -9,6 +8,7 @@
 /.Trash/
 /.android/
 /.atom
+/.aws/
 /.babel.json
 /.bash_history
 /.bash_profile_private
@@ -17,6 +17,7 @@
 /.bin_private
 /.cabal/
 /.cache/
+/.cargo/
 /.ccnet/
 /.cocoapods/
 /.coffee_history
@@ -26,6 +27,7 @@
 /.cups/
 /.curlrc
 /.dbshell
+/.docker/
 /.emacs.d
 /.eshell/
 /.forever/
@@ -88,3 +90,4 @@
 /proj-versioned/
 /proj/
 /tmp/
+!/.config/nvim

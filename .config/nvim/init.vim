@@ -13,6 +13,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'otherjoel/vim-pollen'
 call plug#end()
 
 "
@@ -129,6 +130,14 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 let g:jsx_ext_required=0
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
+" pollen
+augroup configgroup
+  autocmd!
+  au! BufRead,BufNewFile *.pm set filetype=pollen
+  au! BufRead,BufNewFile *.pp set filetype=pollen
+  au! BufRead,BufNewFile *.ptree set filetype=pollen
+  au! BufRead,BufNewFile *.html.p set filetype=pollen
+augroup END
 
 "
 " completion
