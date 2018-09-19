@@ -25,7 +25,7 @@ git clone https://github.com/vladh/dotfiles --recursive ~/dotfiles && ~/dotfiles
 
 If you're not on macOS, you will have to install the following packages manually:
 
-* `fd` — Enables proper fuzzy finding in fzf. [Instructions here.](https://github.com/junegunn/fzf)
+* `fd` — Enables proper fuzzy finding in fzf. [Instructions here.](https://github.com/sharkdp/fd)
 
 ### macOS specific packages
 
