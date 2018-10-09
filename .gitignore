@@ -1,3 +1,4 @@
+!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -37,6 +38,7 @@
 /.gitconfig_private
 /.gnupg/
 /.gnuplot_history
+/.history
 /.htoprc
 /.irssi/
 /.lein/
@@ -90,4 +92,3 @@
 /proj-versioned/
 /proj/
 /tmp/
-!/.config/nvim
