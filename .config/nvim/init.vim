@@ -138,6 +138,8 @@ augroup configgroup
   au! BufRead,BufNewFile *.ptree set filetype=pollen
   au! BufRead,BufNewFile *.html.p set filetype=pollen
 augroup END
+" vue
+autocmd FileType vue syntax sync fromstart
 
 "
 " completion
