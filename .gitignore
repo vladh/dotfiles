@@ -5,6 +5,7 @@
 *.viminfo*
 .DS_Store
 .brunch
+.sqlite_history
 /.CFUserTextEncoding
 /.Trash/
 /.android/
