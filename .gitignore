@@ -30,6 +30,7 @@
 /.curlrc
 /.dbshell
 /.docker/
+/.dropbox/
 /.emacs.d
 /.eshell/
 /.forever/
@@ -79,6 +80,7 @@
 /Desktop/
 /Documents/
 /Downloads/
+/Dropbox/
 /Google Drive File Stream/
 /Library/
 /Movies/

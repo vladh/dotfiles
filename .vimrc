@@ -135,11 +135,7 @@ nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
 
 " highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=235 guibg=#666666
-au ColorScheme * highlight ExtraWhitespace guibg=#666666
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
+let g:better_whitespace_ctermcolor='grey'
 
 " airline
 let g:airline_theme = 'powerlineish'

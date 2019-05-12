@@ -14,6 +14,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'otherjoel/vim-pollen'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 "
@@ -99,33 +100,32 @@ nnoremap <leader>c8 :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
 
 "
-" highlight trailing whitespace
-"
-highlight ExtraWhitespace ctermbg=235 guibg=#666666
-au ColorScheme * highlight ExtraWhitespace guibg=#666666
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
-
-"
 " plugins
 "
+
 " airline
 let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=1
+
 " " ctrlp
 " let g:ctrlp_working_path_mode='a'
 " let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " " syntastic - disable HTML checking altogether
 " let g:syntastic_html_checkers=['']
 " let g:syntastic_python_checkers=['flake8']
+
+" whitespace
+let g:better_whitespace_ctermcolor='grey'
 
 "
 " languages
 "
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+" rust
+autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
 let g:jsx_ext_required=0
 " ejs
