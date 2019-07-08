@@ -140,7 +140,10 @@ let g:better_whitespace_ctermcolor='grey'
 " airline
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+
+" tmuxline
+let g:tmuxline_powerline_separators = 0
 
 " bars
 nmap <leader>m :TagbarToggle<CR>
