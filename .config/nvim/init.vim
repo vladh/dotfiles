@@ -13,7 +13,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'otherjoel/vim-pollen'
 Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
@@ -106,7 +105,10 @@ nnoremap <leader>cr :set colorcolumn=<cr>
 " airline
 let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#buffer_nr_show=1
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
+
+" tmuxline
+let g:tmuxline_powerline_separators = 0
 
 " " ctrlp
 " let g:ctrlp_working_path_mode='a'
