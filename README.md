@@ -29,7 +29,7 @@ If you're not on macOS, you will have to install the following packages manually
 
 ### macOS specific packages
 
-If you have Homebrew, the following packages will be install automatically:
+If you have Homebrew, the following packages will be installed automatically:
 
 * `reattach-to-user-namespace` — Makes tmux open new windows in the right directory.
 * `fd` — Enables proper fuzzy finding in fzf.
