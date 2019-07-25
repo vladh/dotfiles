@@ -24,16 +24,13 @@ set wrap
 let mapleader=","
 set noshowmode
 set gdefault
-" eliminate <esc> delay
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 
 "
 " theme
 "
 set background="dark"
 colorscheme molokai_vladh
-" normally we're supposed to set this I guess, but it doesn't work in tmux
-" set termguicolors
 
 "
 " directories
@@ -48,9 +45,6 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-" set nosmartindent
-" set nocindent
-" don't break lines
 set textwidth=0
 set wrapmargin=0
 autocmd FileType * setlocal textwidth=0
@@ -63,13 +57,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "
 " w!! for sudo
 cmap w!! w !sudo tee % >/dev/null
-" handle W and Q typos
-command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
-command! -bang Q quit<bang>
-" split line on K
-nnoremap K i<CR><Esc>
-" column scroll-binding (continuous line number)
-noremap <silent> <leader>sb :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 " split window
 nmap <silent> swh :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
@@ -90,7 +77,6 @@ nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
 " plugins
 nmap <C-p> :FZF<CR>
-" nmap <leader>b :CtrlPBuffer<CR>
 " other maps
 set pastetoggle=<leader>sp
 nnoremap ; :nohlsearch<cr>
@@ -110,16 +96,18 @@ let g:airline_powerline_fonts=0
 " tmuxline
 let g:tmuxline_powerline_separators = 0
 
-" " ctrlp
-" let g:ctrlp_working_path_mode='a'
-" let g:ctrlp_user_command=['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" " syntastic - disable HTML checking altogether
-" let g:syntastic_html_checkers=['']
-" let g:syntastic_python_checkers=['flake8']
-
 " whitespace
 let g:better_whitespace_ctermcolor='grey'
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
+" compensate for polyglot highlighting too much
+if exists('python_highlight_all')
+    unlet python_highlight_all
+endif
+if exists('python_space_error_highlight')
+    unlet python_space_error_highlight
+endif
 
 "
 " languages
@@ -142,14 +130,6 @@ augroup configgroup
 augroup END
 " vue
 autocmd FileType vue syntax sync fromstart
-
-"
-" completion
-"
-" " default vim completion
-" set ofu=syntaxcomplete#Complete
-" set complete=.,w,b,u,t
-" set completeopt=longest,menuone,preview
 
 "
 " includes
