@@ -4,8 +4,18 @@
 *.vim-fuf-data
 *.viminfo*
 .DS_Store
+.bash_profile_private_conda
 .brunch
+.dbvis/
+.ipython/
+.jupyter/
+.keras/
+.python_history-15235.tmp
+.rediscli_history
 .sqlite_history
+.standard-v13-cache/
+.standardx-v4-cache/
+.zsh_history
 /.CFUserTextEncoding
 /.Trash/
 /.android/
@@ -95,3 +105,7 @@
 /proj-versioned/
 /proj/
 /tmp/
+Adlm/
+Creative Cloud Files/
+Google Drive File Stream
+isus/

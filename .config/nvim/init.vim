@@ -83,6 +83,8 @@ nnoremap ; :nohlsearch<cr>
 nnoremap <leader>c0 :set colorcolumn=100<cr>
 nnoremap <leader>c8 :set colorcolumn=80<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
+" disable Shift+Down which is not needed and I keep accidentally pressing
+nnoremap <S-Down> <Nop>
 
 "
 " plugins
@@ -114,6 +116,8 @@ endif
 "
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+" tex
+let g:tex_no_error=1
 " rust
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
@@ -130,6 +134,9 @@ augroup configgroup
 augroup END
 " vue
 autocmd FileType vue syntax sync fromstart
+" r
+let r_indent_align_args = 0
+let r_indent_ess_compatible = 1
 
 "
 " includes
