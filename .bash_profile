@@ -42,7 +42,6 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 alias ta="tmux attach -t"
 alias tl="tmux ls"
-alias isodate="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 
 #sources
 source ~/.bin/git-completion.bash
