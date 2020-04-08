@@ -18,7 +18,13 @@ My dotfiles include configs for **neovim/vim**, **spacemacs**, **tmux** and **ba
 **Make sure you have backed up your existing files!** Then, run the following:
 
 ```bash
-git clone https://github.com/vladh/dotfiles --recursive ~/dotfiles && ~/dotfiles/.install.sh
+git clone https://github.com/vladh/dotfiles ~/dotfiles && ~/dotfiles/.install.sh
+```
+
+When starting vim, install your Plug packages:
+
+```
+:PlugInstall
 ```
 
 ### Non-macOS manual install steps
