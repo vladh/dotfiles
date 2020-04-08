@@ -7,6 +7,7 @@
 .bash_profile_private_conda
 .brunch
 .dbvis/
+.electron-gyp/
 .ipython/
 .jupyter/
 .keras/
@@ -15,6 +16,7 @@
 .sqlite_history
 .standard-v13-cache/
 .standardx-v4-cache/
+.vscode/
 .zsh_history
 /.CFUserTextEncoding
 /.Trash/
@@ -108,4 +110,5 @@
 Adlm/
 Creative Cloud Files/
 Google Drive File Stream
+Google Drive/
 isus/
