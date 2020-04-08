@@ -122,6 +122,9 @@ let g:tex_no_error=1
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
 let g:jsx_ext_required=0
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\}
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " pollen
