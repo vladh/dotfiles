@@ -75,14 +75,26 @@ nmap <silent> <C-l> :wincmd l<CR>
 " move between tabs
 nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
-" plugins
+" <Ctrl-p> opens fuzzy file browser
 nmap <C-p> :FZF<CR>
-" other maps
-set pastetoggle=<leader>sp
+" ; clears highlighted search results
 nnoremap ; :nohlsearch<cr>
+" ,sp toggles paste mode
+set pastetoggle=<leader>sp
+" ,c0 sets a marker at column 100
 nnoremap <leader>c0 :set colorcolumn=100<cr>
+" ,c8 sets a marker at column 80
 nnoremap <leader>c8 :set colorcolumn=80<cr>
+" ,c8 clears column markers
 nnoremap <leader>cr :set colorcolumn=<cr>
+" ,a toggles syntax checking
+nnoremap <leader>a :ALEToggle<cr>
+" ,r runs the current file
+nnoremap <leader>r :!"%:p" <cr>
+" ,l runs the current file and pipes it into less
+nnoremap <leader>l :!"%:p"  \| less<cr>
+" ,<space> runs `make`
+nnoremap <leader><space> :!make<cr>
 " disable Shift+Down which is not needed and I keep accidentally pressing
 nnoremap <S-Down> <Nop>
 
