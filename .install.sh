@@ -22,6 +22,20 @@ case "$response" in
     ;;
 esac
 
+if [ -r ~/.bashrc ]; then
+  echo "Backing up ~/.bashrc to ~/.bashrc_backup."
+   mv -i ~/.bashrc ~/.bashrc_backup
+fi
+if [ -r ~/.bash_profile ]; then
+  echo "Backing up ~/.bash_profile to ~/.bash_profile_backup."
+   mv -i ~/.bash_profile ~/.bash_profile_backup
+fi
+if [ -r ~/.gitconfig ]; then
+  echo "Backing up ~/.gitconfig to ~/.gitconfig_backup."
+   mv -i ~/.gitconfig ~/.gitconfig_backup
+fi
+
+# TODO: Merge ~/.config folder
 echo "Moving dotfiles into your home directory."
 mv -i ~/dotfiles/* ~/dotfiles/.[^.]* ~/
 

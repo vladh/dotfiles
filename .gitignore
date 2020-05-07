@@ -27,7 +27,6 @@
 /.bash_history
 /.bash_profile_private
 /.bash_sessions/
-/.bashrc
 /.bin_private
 /.cabal/
 /.cache/

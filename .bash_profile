@@ -1,8 +1,20 @@
-#colors
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-alias tmux="TERM=xterm-256color tmux"
-alias grep="grep --color"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_COLLATE=en_US.UTF-8
+export PYTHONIOENCODING=utf-8
+
+shopt -s histappend
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="%F %T "
+export HISTFILE=~/.history
+export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log'
+
+export FZF_DEFAULT_COMMAND='fd --type f -H -E .git'
+export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
+export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
 
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   export TERM='screen-256color'
@@ -28,37 +40,9 @@ else
   c_bold=`tput bold`
 fi
 
-#aliases
-if ls --color -d . >/dev/null 2>&1; then
-  # GNU ls
-  alias ls='ls --color --group-directories-first'
-  alias ll="ls -lha --color --group-directories-first"
-  alias llt="ls -lhrt --color --group-directories-first"
-elif ls -G -d . >/dev/null 2>&1; then
-  # BSD ls
-  alias ls='ls -G'
-  alias ll="ls -lhaG"
-  alias llt="ls -lhrtG"
-fi
-alias ta="tmux attach -t"
-alias tl="tmux ls"
-
-#sources
 source ~/.bin/git-completion.bash
 source ~/.bin/git-prompt.sh
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi
 
-# History
-shopt -s histappend
-export HISTFILESIZE=
-export HISTSIZE=
-export HISTTIMEFORMAT="%F %T "
-export HISTFILE=~/.history
-export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log'
-
-#git
 git_prompt() {
   local g="$(__gitdir)"
   if [ -n "$g" ]; then
@@ -74,24 +58,18 @@ venv_prompt() {
 }
 
 prompt_char="$"
+export PS1="\[\033[G\]\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
 
-function prompt-username {
-  PS1="\[\033[G\]\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
-}
-prompt-username
+declare -fx __git_eread
+declare -fx __git_find_repo_path
+declare -fx __git_ps1
+declare -fx __gitdir
+declare -fx git_prompt
+declare -fx venv_prompt
 
-# Locale
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_COLLATE=en_US.UTF-8
-export PYTHONIOENCODING=utf-8
-
-# fzf
-export FZF_DEFAULT_COMMAND='fd --type f -H -E .git'
-
-# Add paths
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
-export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
 
 if [ -f ~/.bash_profile_private ]; then
   source ~/.bash_profile_private
