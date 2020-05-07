@@ -1,4 +1,5 @@
 let plugged_path = '~/.config/nvim/plugged'
+set undodir=$HOME/.config/nvim/undo
 
 " we include this separate file to easily use one config with both
 " vim and neovim

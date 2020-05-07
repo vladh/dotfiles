@@ -20,7 +20,6 @@ call plug#end()
 " general
 "
 set number
-set wrap
 let mapleader=","
 set noshowmode
 set gdefault
@@ -37,6 +36,7 @@ colorscheme molokai_vladh
 "
 set nobackup
 set noswapfile
+set undofile
 
 "
 " indenting
@@ -75,15 +75,29 @@ nmap <silent> <C-l> :wincmd l<CR>
 " move between tabs
 nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
-" plugins
+" <Ctrl-p> opens fuzzy file browser
 nmap <C-p> :FZF<CR>
-" other maps
-set pastetoggle=<leader>sp
+" ; clears highlighted search results
 nnoremap ; :nohlsearch<cr>
+" ,sp toggles paste mode
+set pastetoggle=<leader>sp
+" ,c0 sets a marker at column 100
 nnoremap <leader>c0 :set colorcolumn=100<cr>
+" ,c8 sets a marker at column 80
 nnoremap <leader>c8 :set colorcolumn=80<cr>
+" ,c8 clears column markers
 nnoremap <leader>cr :set colorcolumn=<cr>
-" disable Shift+Down which is not needed and I keep accidentally pressing
+" ,a toggles syntax checking
+nnoremap <leader>a :ALEToggle<cr>
+" ,r runs the current file
+nnoremap <leader>r :!"%:p" <cr>
+" ,l runs the current file and pipes it into less
+nnoremap <leader>l :!"%:p"  \| less<cr>
+" ,<space> runs `make`
+nnoremap <leader><space> :!make<cr>
+" disable Shift+Down and Shift+Up which are not needed and I
+" keep accidentally pressing
+nnoremap <S-Up> <Nop>
 nnoremap <S-Down> <Nop>
 
 "
@@ -140,3 +154,12 @@ autocmd FileType vue syntax sync fromstart
 " r
 let r_indent_align_args = 0
 let r_indent_ess_compatible = 1
+" c
+" don't indent `public`, `protected`, and `private`
+set cinoptions+=g0
+
+"
+" allow per-project .vimrc
+"
+set exrc
+set secure
