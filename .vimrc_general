@@ -24,6 +24,7 @@ let mapleader=","
 set noshowmode
 set gdefault
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
+set mouse=a
 
 "
 " theme
