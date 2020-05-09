@@ -117,6 +117,7 @@ let g:tmuxline_powerline_separators = 0
 let g:better_whitespace_ctermcolor='grey'
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+let g:better_whitespace_skip_empty_lines=1
 
 " compensate for polyglot highlighting too much
 if exists('python_highlight_all')
@@ -157,7 +158,11 @@ let r_indent_align_args = 0
 let r_indent_ess_compatible = 1
 " c
 " don't indent `public`, `protected`, and `private`
-set cinoptions+=g0
+" don't specifically indent code inside multiple-line ()
+set cinoptions+=g0,(s,Ws,m1
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
+let g:ale_c_clang_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_clang_options = '-Wall -O2 -std=c++1z'
 
 "
 " allow per-project .vimrc
