@@ -36,7 +36,6 @@ call plug#end()
 "
 set number
 let mapleader=","
-set noshowmode
 set gdefault
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 set mouse=a
@@ -46,6 +45,11 @@ set mouse=a
 "
 set background="dark"
 colorscheme molokai_vladh
+
+augroup HiglightTODO
+    autocmd!
+    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE\|TODO\|FIXME', -1)
+augroup END
 
 "
 " directories
