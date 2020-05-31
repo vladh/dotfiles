@@ -46,11 +46,6 @@ set mouse=a
 set background="dark"
 colorscheme molokai_vladh
 
-augroup HiglightTODO
-    autocmd!
-    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE\|TODO\|FIXME', -1)
-augroup END
-
 "
 " directories
 "
