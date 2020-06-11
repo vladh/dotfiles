@@ -22,6 +22,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'vimwiki/vimwiki'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -36,6 +37,7 @@ call plug#end()
 "
 set number
 let mapleader=","
+set noshowmode " airline will show this
 set gdefault
 set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 set mouse=a
@@ -114,6 +116,8 @@ nnoremap <leader><space> :!make<cr>
 " keep accidentally pressing
 nnoremap <S-Up> <Nop>
 nnoremap <S-Down> <Nop>
+" indent entire file
+nnoremap =a gg=G``
 
 "
 " plugins
@@ -126,6 +130,9 @@ let g:airline_powerline_fonts=0
 
 " tmuxline
 let g:tmuxline_powerline_separators = 0
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " autocompletion
 let g:deoplete#enable_at_startup = 1
