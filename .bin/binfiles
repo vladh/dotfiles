@@ -1,0 +1,27 @@
+set -e
+
+usage() {
+  echo "binfiles <dir>"
+  echo "Organises all files in <dir> by <year>/<month> folders depending on the creation time."
+}
+
+dir=$1
+idx=0
+
+if [ "$#" -ne 1 ]; then
+    usage
+    exit
+fi
+
+for f in "$dir"/*; do
+  f=$(basename "$f")
+  creation_time=$(stat -f "%SB" "$f")
+  creation_time_unix=$(gdate +@%s -d "${creation_time}")
+  creation_year=$(gdate -u +%Y -d "${creation_time_unix}")
+  creation_month=$(gdate -u +%m -d "${creation_time_unix}")
+  echo "[${idx}] mkdir -p ${dir}/${creation_year}/${creation_month}"
+  echo "[${idx}] mv ${dir}/${f} ${dir}/${creation_year}/${creation_month}/${f}"
+  mkdir -p "${dir}/${creation_year}/${creation_month}"
+  mv "${dir}/${f}" "${dir}/${creation_year}/${creation_month}/${f}"
+  idx=$((idx + 1))
+done

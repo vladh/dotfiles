@@ -5,8 +5,8 @@ if [ $# -eq 0 ]; then
   exit
 fi
 if [ $# -eq 1 ]; then
-  scp "$1" vladh@yavin:/srv/www/vladh-website-static/things/
+  scp -r "$1" vladh@yavin:/srv/www/vladh-website-static/things/
 fi
 if [ $# -eq 2 ]; then
-  scp "$1" vladh@yavin:/srv/www/vladh-website-static/$2/
+  scp -r "$1" vladh@yavin:/srv/www/vladh-website-static/$2/
 fi

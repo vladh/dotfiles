@@ -1,0 +1,24 @@
+set -e
+
+usage() {
+  echo "namefiles <dir>"
+  echo "Renames all files in <dir> with the format Y.m.d-H.M.S-<original_filename>."
+}
+
+dir=$1
+idx=0
+
+if [ "$#" -ne 1 ]; then
+    usage
+    exit
+fi
+
+for f in "$dir"/*; do
+  f=$(basename "$f")
+  creation_time=$(stat -f "%SB" "$f")
+  creation_time_unix=$(gdate +@%s -d "${creation_time}")
+  creation_time_formatted=$(gdate -u +%Y.%m.%d-%H.%M.%S -d "${creation_time_unix}")
+  echo "[${idx}] mv ${dir}/${f} ${dir}/${creation_time_formatted}_${f}"
+  $(mv "${dir}/${f}" "${dir}/${creation_time_formatted}_${f}")
+  idx=$((idx + 1))
+done
