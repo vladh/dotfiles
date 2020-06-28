@@ -136,7 +136,9 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext'
 
 " autocompletion
 let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('auto_complete_popup', 'manual')
+if exists("deoplete#custom#option")
+  call deoplete#custom#option('auto_complete_popup', 'manual')
+endif
 inoremap <silent><expr> <TAB>
 \ pumvisible() ? "\<C-n>" :
 \ <SID>check_back_space() ? "\<TAB>" :
