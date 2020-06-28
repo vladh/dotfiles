@@ -4,13 +4,18 @@
 *.vim-fuf-data
 *.viminfo*
 .DS_Store
+.bash_logout
 .bash_profile_private_conda
+.bashrc_backup
 .brunch
 .dbvis/
 .electron-gyp/
+.hushlogin
 .ipython/
 .jupyter/
 .keras/
+.landscape/
+.motd_shown
 .pypirc
 .python_history*
 .python_history-15235.tmp
@@ -18,6 +23,7 @@
 .sqlite_history
 .standard-v13-cache/
 .standardx-v4-cache/
+.sudo_as_admin_successful
 .vscode/
 .zsh_history
 /.CFUserTextEncoding
