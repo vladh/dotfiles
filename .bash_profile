@@ -20,6 +20,12 @@ if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   export TERM='screen-256color'
 fi
 
+if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ] || [ "$(uname)" == "FreeBSD" ]; then
+  prompt_char="$"
+else
+  prompt_char=">"
+fi
+
 if [ "$(uname)" == "FreeBSD" ]; then
   c_red='\e[0;31m'
   c_alsored='\e[0;31m'
@@ -57,7 +63,6 @@ venv_prompt() {
   fi
 }
 
-prompt_char="$"
 export PS1="\[\033[G\]\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
 
 declare -fx __git_eread
