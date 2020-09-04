@@ -10,19 +10,20 @@ endif
 " plugins
 "
 call plug#begin(plugged_path)
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'rakr/vim-one'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
-Plug 'edkolev/tmuxline.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'rakr/vim-one'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -46,7 +47,8 @@ set mouse=a
 " theme
 "
 set background="dark"
-colorscheme molokai_vladh
+" colorscheme molokai_vladh
+colorscheme nord
 
 "
 " directories
@@ -124,7 +126,8 @@ nnoremap =a gg=G``
 "
 
 " airline
-let g:airline_theme='powerlineish'
+" let g:airline_theme='powerlineish'
+let g:airline_theme='nord'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=0
 
@@ -195,9 +198,10 @@ let r_indent_ess_compatible = 1
 " don't indent `public`, `protected`, and `private`
 " don't specifically indent code inside multiple-line ()
 set cinoptions+=g0,(s,Ws,m1
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
-let g:ale_c_clang_options = '-Wall -O2 -std=c99'
-let g:ale_cpp_clang_options = '-Wall -O2 -std=c++1z'
+let c_options = '-Wall -Wno-unknown-pragmas -O2 -I/mnt/c/opt/include -I "/mnt/c/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um"'
+let g:ale_cpp_gcc_options = c_options . ' --std=c++20'
+let g:ale_cpp_clang_options = c_options . ' --std=c++20'
+let g:ale_c_clang_options = c_options . ' --std=c99'
 
 "
 " allow per-project .vimrc
