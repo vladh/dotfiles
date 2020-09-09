@@ -198,10 +198,6 @@ let r_indent_ess_compatible = 1
 " don't indent `public`, `protected`, and `private`
 " don't specifically indent code inside multiple-line ()
 set cinoptions+=g0,(s,Ws,m1
-let c_options = '-Wall -Wno-unknown-pragmas -O2 -I/mnt/c/opt/include -I "/mnt/c/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um"'
-let g:ale_cpp_gcc_options = c_options . ' --std=c++20'
-let g:ale_cpp_clang_options = c_options . ' --std=c++20'
-let g:ale_c_clang_options = c_options . ' --std=c99'
 
 "
 " allow per-project .vimrc
