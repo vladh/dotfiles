@@ -13,7 +13,8 @@ call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'jremmen/vim-ripgrep'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rakr/vim-one'
@@ -24,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
+Plug 'mbbill/undotree'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -94,8 +96,12 @@ nmap <silent> <C-l> :wincmd l<CR>
 " move between tabs
 nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
-" <Ctrl-p> opens fuzzy file browser
+" opens fuzzy file browser
 nmap <C-p> :FZF<CR>
+" opens in-file search with ripgrep
+nmap <C-t> :Rg<CR>
+" strips whitespace from current buffer
+nmap <leader>ss :StripWhitespace<CR>
 " ; clears highlighted search results
 nnoremap ; :nohlsearch<cr>
 " ,sp toggles paste mode
@@ -134,11 +140,14 @@ let g:airline_powerline_fonts=0
 " tmuxline
 let g:tmuxline_powerline_separators = 0
 
+" fzf
+let g:fzf_layout = { 'down': '~30%' }
+
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " autocompletion
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup=0
 if exists("deoplete#custom#option")
   call deoplete#custom#option('auto_complete_popup', 'manual')
 endif
@@ -154,7 +163,6 @@ endfunction"}}}
 " whitespace
 let g:better_whitespace_ctermcolor='grey'
 let g:better_whitespace_enabled=1
-let g:better_whitespace_skip_empty_lines=1
 
 " compensate for polyglot highlighting too much
 if exists('python_highlight_all')
@@ -163,6 +171,13 @@ endif
 if exists('python_space_error_highlight')
     unlet python_space_error_highlight
 endif
+
+" always highlight certain words
+augroup highlight_todo
+  autocmd!
+  autocmd WinEnter,VimEnter * :silent! call
+    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow', -1)
+augroup END
 
 "
 " languages
@@ -175,11 +190,6 @@ let g:tex_no_error=1
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
 let g:jsx_ext_required=0
-let g:ale_disable_lsp=1
-let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'asm': [],
-\}
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " pollen
@@ -199,6 +209,14 @@ let r_indent_ess_compatible = 1
 " don't indent `public`, `protected`, and `private`
 " don't specifically indent code inside multiple-line ()
 set cinoptions+=g0,(s,Ws,m1
+"ale
+" let g:ale_lint_on_text_changed='never'
+" let g:ale_lint_on_insert_leave=0
+let g:ale_disable_lsp=1
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ 'asm': [],
+\}
 
 "
 " allow per-project .vimrc

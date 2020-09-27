@@ -2,6 +2,7 @@
   path = ~/.gitconfig_private
 [core]
   excludesfile = ~/.gitignore_global
+  editor = vim
 [alias]
   co = checkout
   st = status
