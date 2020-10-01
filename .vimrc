@@ -131,6 +131,9 @@ nnoremap =a gg=G``
 " plugins
 "
 
+" ALE
+let g:ale_enabled=0
+
 " airline
 " let g:airline_theme='powerlineish'
 let g:airline_theme='nord'
