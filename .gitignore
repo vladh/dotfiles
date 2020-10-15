@@ -1,4 +1,3 @@
-!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -45,7 +44,6 @@
 /.coffee_history
 /.composer/
 /.config/*
-/.config/nvim/private.vim
 /.cups/
 /.curlrc
 /.dbshell
@@ -120,3 +118,4 @@ Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
 isus/
+!/.config/nvim

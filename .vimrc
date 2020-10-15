@@ -48,6 +48,11 @@ set mouse=a
 "
 " theme
 "
+if &t_Co > 16
+  set termguicolors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 set background="dark"
 " colorscheme molokai_vladh
 colorscheme nord
@@ -165,6 +170,7 @@ endfunction"}}}
 
 " whitespace
 let g:better_whitespace_ctermcolor='grey'
+let g:better_whitespace_guicolor='grey'
 let g:better_whitespace_enabled=1
 
 " compensate for polyglot highlighting too much
