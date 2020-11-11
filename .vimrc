@@ -201,6 +201,10 @@ autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 let g:jsx_ext_required=0
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
+" glsl
+au BufRead,BufNewFile *.vert set filetype=glsl
+au BufRead,BufNewFile *.geom set filetype=glsl
+au BufRead,BufNewFile *.frag set filetype=glsl
 " pollen
 augroup configgroup
   autocmd!
