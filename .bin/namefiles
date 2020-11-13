@@ -1,24 +1,48 @@
 set -e
 
+usage_info="
+namefiles <dir> [-dateonly]
+
+Renames all files in <dir> with the format:
+  Y.m.d-H.M.S-<original_filename>
+where the date is the file's last time of modification.
+
+If the -dateonly flag is passed, the <original_filename> part will be omitted.
+"
+
 usage() {
-  echo "namefiles <dir>"
-  echo "Renames all files in <dir> with the format Y.m.d-H.M.S-<original_filename>."
+  echo "${usage_info}"
 }
 
 dir=$1
+flag=$2
 idx=0
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -lt 1 ]; then
     usage
     exit
 fi
 
 for f in "$dir"/*; do
   f=$(basename "$f")
-  creation_time=$(stat -f "%SB" "$f")
-  creation_time_unix=$(gdate +@%s -d "${creation_time}")
-  creation_time_formatted=$(gdate -u +%Y.%m.%d-%H.%M.%S -d "${creation_time_unix}")
-  echo "[${idx}] mv ${dir}/${f} ${dir}/${creation_time_formatted}_${f}"
-  $(mv "${dir}/${f}" "${dir}/${creation_time_formatted}_${f}")
+  extension="${f##*.}"
+
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    creation_time_unix=$(stat -c "%Y" "$f")
+    creation_time_formatted=$(date -u +%Y.%m.%d-%H.%M.%S -d "@${creation_time_unix}")
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    creation_time=$(stat -f "%SB" "$f")
+    creation_time_unix=$(gdate +@%s -d "${creation_time}")
+    creation_time_formatted=$(gdate -u +%Y.%m.%d-%H.%M.%S -d "${creation_time_unix}")
+  fi
+
+  if [[ $flag == "-dateonly" ]]; then
+    new_filename="${creation_time_formatted}.${extension}"
+  else
+    new_filename="${creation_time_formatted}_${f}"
+  fi
+
+  echo "[${idx}] mv ${dir}/${f} ${dir}/${new_filename}"
+  $(mv "${dir}/${f}" "${dir}/${new_filename}")
   idx=$((idx + 1))
 done
