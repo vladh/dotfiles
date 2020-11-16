@@ -82,7 +82,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " binds
 "
 " w!! for sudo
-cmap w!! w !sudo tee % >/dev/null
+command Wsudo w !sudo tee % >/dev/null
 " split window
 nmap <silent> swh :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
