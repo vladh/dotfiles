@@ -1,3 +1,4 @@
+!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -7,8 +8,10 @@
 .bash_profile_private_conda
 .bashrc_backup
 .brunch
+.clojure/
 .dbvis/
 .electron-gyp/
+.gradle/
 .hushlogin
 .ipython/
 .jupyter/
@@ -24,6 +27,7 @@
 .standard-v13-cache/
 .standardx-v4-cache/
 .sudo_as_admin_successful
+.texlive2019/
 .vscode/
 .zsh_history
 /.CFUserTextEncoding
@@ -118,4 +122,4 @@ Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
 isus/
-!/.config/nvim
+texmf/

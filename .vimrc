@@ -38,7 +38,6 @@ call plug#end()
 "
 " general
 "
-set number
 let mapleader=","
 set noshowmode " airline will show this
 set gdefault
@@ -82,7 +81,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " binds
 "
 " w!! for sudo
-command Wsudo w !sudo tee % >/dev/null
+command! Wsudo w !sudo tee % >/dev/null
 " split window
 nmap <silent> swh :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
@@ -123,6 +122,8 @@ nnoremap <leader>a :ALEToggle<cr>
 nnoremap <leader>r :!"%:p" <cr>
 " ,l runs the current file and pipes it into less
 nnoremap <leader>l :!"%:p"  \| less -r<cr>
+" ,x compiles LaTeX
+nnoremap <leader>x :!clear && xelatex -shell-escape %<cr>
 " ,<space> runs `make`
 nnoremap <leader><space> :!make<cr>
 " disable Shift+Down and Shift+Up which are not needed and I
@@ -191,10 +192,13 @@ augroup END
 "
 " languages
 "
+" peony
+au BufRead,BufNewFile *.peony* set filetype=dosini
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 " tex
 let g:tex_no_error=1
+let g:tex_flavor="latex"
 " rust
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
