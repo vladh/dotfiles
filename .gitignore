@@ -29,6 +29,7 @@
 .sudo_as_admin_successful
 .texlive2019/
 .vscode/
+.yarnrc
 .zsh_history
 /.CFUserTextEncoding
 /.Trash/
