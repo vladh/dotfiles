@@ -1,4 +1,3 @@
-!/.config/nvim
 *.netrwhist
 *.pyc
 *.vim-fuf-data
@@ -124,3 +123,4 @@ Google Drive File Stream
 Google Drive/
 isus/
 texmf/
+!/.config/nvim

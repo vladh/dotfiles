@@ -143,10 +143,16 @@ let g:airline_powerline_fonts=0
 let g:tmuxline_powerline_separators = 0
 
 " fzf
-let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_layout = {'down': '~30%'}
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+" don't hide bold/italic markers (*/_)
+set conceallevel=0
+let g:vim_json_syntax_conceal=0
+let g:vim_markdown_conceal=0
+let g:vim_markdown_conceal_code_blocks=0
+let g:vimwiki_conceallevel=0
 
 " autocompletion
 let g:deoplete#enable_at_startup=0
@@ -189,6 +195,8 @@ augroup END
 au BufRead,BufNewFile *.peony* set filetype=dosini
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+" asm
+autocmd FileType asm setlocal commentstring=;\ %s
 " tex
 let g:tex_no_error=1
 let g:tex_flavor="latex"
