@@ -3,6 +3,7 @@
 *.vim-fuf-data
 *.viminfo*
 .DS_Store
+.MacOSX/
 .bash_logout
 .bash_profile_private_conda
 .bashrc_backup
@@ -118,4 +119,5 @@ Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
 isus/
+
 !/.config/nvim

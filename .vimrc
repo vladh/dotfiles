@@ -188,6 +188,7 @@ augroup END
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 " tex
 let g:tex_no_error=1
+let g:tex_flavor = "latex"
 " rust
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
