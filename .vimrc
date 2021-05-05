@@ -38,7 +38,6 @@ call plug#end()
 "
 " general
 "
-set number
 let mapleader=","
 set noshowmode " airline will show this
 set gdefault
@@ -75,7 +74,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " binds
 "
 " w!! for sudo
-command Wsudo w !sudo tee % >/dev/null
+command! Wsudo w !sudo tee % >/dev/null
 " split window
 nmap <silent> swh :topleft vnew<CR>
 nmap <silent> swl :botright vnew<CR>
@@ -116,6 +115,8 @@ nnoremap <leader>a :ALEToggle<cr>
 nnoremap <leader>r :!"%:p" <cr>
 " ,l runs the current file and pipes it into less
 nnoremap <leader>l :!"%:p"  \| less -r<cr>
+" ,x compiles LaTeX
+nnoremap <leader>x :!clear && xelatex -shell-escape %<cr>
 " ,<space> runs `make`
 nnoremap <leader><space> :!make<cr>
 " disable Shift+Down and Shift+Up which are not needed and I
@@ -142,10 +143,16 @@ let g:airline_powerline_fonts=0
 let g:tmuxline_powerline_separators = 0
 
 " fzf
-let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_layout = {'down': '~30%'}
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+" don't hide bold/italic markers (*/_)
+set conceallevel=0
+let g:vim_json_syntax_conceal=0
+let g:vim_markdown_conceal=0
+let g:vim_markdown_conceal_code_blocks=0
+let g:vimwiki_conceallevel=0
 
 " autocompletion
 let g:deoplete#enable_at_startup=0
@@ -184,11 +191,15 @@ augroup END
 "
 " languages
 "
+" peony
+au BufRead,BufNewFile *.peony* set filetype=dosini
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+" asm
+autocmd FileType asm setlocal commentstring=;\ %s
 " tex
 let g:tex_no_error=1
-let g:tex_flavor = "latex"
+let g:tex_flavor="latex"
 " rust
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
 " javascript
