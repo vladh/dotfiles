@@ -126,6 +126,18 @@ nnoremap <S-Down> <Nop>
 " indent entire file
 nnoremap =a gg=G``
 
+" rebind up/down/left/right keys in :e autocomplete
+" by default, left/right go up and down, while up/down go in an out of
+" directories, which is extremely confusing!
+" this changes it to be the "right" way around
+" https://vi.stackexchange.com/a/22628
+set wildcharm=<C-Z>
+let edit_re = 'e\%[dit] '
+cnoremap <expr> <up> getcmdline() =~# edit_re && wildmenumode() ? "\<left>" : "\<up>"
+cnoremap <expr> <down> getcmdline() =~# edit_re && wildmenumode() ? "\<right>" : "\<down>"
+cnoremap <expr> <left> getcmdline() =~# edit_re && wildmenumode() ? "\<up>" : "\<left>"
+cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-Z>" : "\<right>"
+
 "
 " plugins
 "
@@ -146,7 +158,7 @@ let g:tmuxline_powerline_separators = 0
 let g:fzf_layout = {'down': '~30%'}
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/Dropbox/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " don't hide bold/italic markers (*/_)
 set conceallevel=0
 let g:vim_json_syntax_conceal=0

@@ -8,8 +8,10 @@
 .bashrc_backup
 .brunch
 .clojure/
+.cpan/
 .dbvis/
 .electron-gyp/
+.fonts/
 .gradle/
 .hushlogin
 .ipython/
@@ -22,6 +24,7 @@
 .python_history*
 .python_history-15235.tmp
 .rediscli_history
+.rustup/
 .sqlite_history
 .standard-v13-cache/
 .standardx-v4-cache/
@@ -123,4 +126,6 @@ Google Drive File Stream
 Google Drive/
 isus/
 texmf/
+
+
 !/.config/nvim
