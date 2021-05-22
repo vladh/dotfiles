@@ -63,9 +63,9 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set textwidth=0
+set textwidth=90
 set wrapmargin=0
-autocmd FileType * setlocal textwidth=0
+autocmd FileType * setlocal textwidth=90
 autocmd FileType * setlocal wrapmargin=0
 " don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -107,7 +107,9 @@ set pastetoggle=<leader>sp
 nnoremap <leader>c0 :set colorcolumn=100<cr>
 " ,c8 sets a marker at column 80
 nnoremap <leader>c8 :set colorcolumn=80<cr>
-" ,c8 clears column markers
+" ,cs sets a marker at column 90
+nnoremap <leader>cs :set colorcolumn=90<cr>
+" ,cr clears column markers
 nnoremap <leader>cr :set colorcolumn=<cr>
 " ,a toggles syntax checking
 nnoremap <leader>a :ALEToggle<cr>
@@ -205,6 +207,8 @@ augroup END
 "
 " peony
 au BufRead,BufNewFile *.peony* set filetype=dosini
+" qss
+au BufRead,BufNewFile *.qss set filetype=css
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 " asm
