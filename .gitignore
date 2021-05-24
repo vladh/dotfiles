@@ -48,7 +48,6 @@
 /.cocoapods/
 /.coffee_history
 /.composer/
-/.config/*
 /.cups/
 /.curlrc
 /.dbshell
@@ -124,5 +123,3 @@ Google Drive File Stream
 Google Drive/
 isus/
 texmf/
-
-!/.config/nvim
