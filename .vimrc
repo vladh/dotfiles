@@ -115,6 +115,8 @@ nnoremap <leader>cr :set colorcolumn=<cr>
 nnoremap <leader>a :ALEToggle<cr>
 " ,r runs the current file
 nnoremap <leader>r :!"%:p" <cr>
+" ,w runs `make run`
+nnoremap <leader>e :!make run<cr>
 " ,l runs the current file and pipes it into less
 nnoremap <leader>l :!"%:p"  \| less -r<cr>
 " ,x compiles LaTeX
