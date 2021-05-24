@@ -3,6 +3,7 @@
 *.vim-fuf-data
 *.viminfo*
 .DS_Store
+.MacOSX/
 .bash_logout
 .bash_profile_private_conda
 .bashrc_backup
@@ -50,7 +51,6 @@
 /.cocoapods/
 /.coffee_history
 /.composer/
-/.config/*
 /.cups/
 /.curlrc
 /.dbshell
@@ -126,6 +126,3 @@ Google Drive File Stream
 Google Drive/
 isus/
 texmf/
-
-
-!/.config/nvim
