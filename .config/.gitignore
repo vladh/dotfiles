@@ -1,6 +1,3 @@
-.mono
-citra-emu
-configstore
-iterm2
-mgba
-milkytracker
+*
+!nvim
+!alacritty
