@@ -23,6 +23,7 @@
 .pypirc
 .python_history*
 .python_history-15235.tmp
+.react-native-cli/
 .rediscli_history
 .rustup/
 .sqlite_history
