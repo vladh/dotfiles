@@ -211,6 +211,8 @@ augroup END
 au BufRead,BufNewFile *.peony* set filetype=dosini
 " qss
 au BufRead,BufNewFile *.qss set filetype=css
+" qrc
+au BufRead,BufNewFile *.qrc set filetype=xml
 " python
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 " asm
