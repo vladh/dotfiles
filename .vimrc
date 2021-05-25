@@ -27,11 +27,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'mbbill/undotree'
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'neoclide/coc.nvim'
+  Plug 'jackguo380/vim-lsp-cxx-highlight'
 endif
 call plug#end()
 
@@ -150,7 +147,6 @@ cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-
 let g:ale_enabled=0
 
 " airline
-" let g:airline_theme='powerlineish'
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=0
@@ -262,12 +258,6 @@ let g:ale_linters = {
 set exrc
 set secure
 
-if has('nvim')
-  if filereadable(glob("~/.config/nvim/private.vim"))
-    source ~/.config/nvim/private.vim
-  endif
-else
-  if filereadable(glob("~/.vimrc_private"))
-    source ~/.vimrc_private
-  endif
+if filereadable(glob("~/.vimrc_private"))
+  source ~/.vimrc_private
 endif
