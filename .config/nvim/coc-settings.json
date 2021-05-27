@@ -1,0 +1,5 @@
+{
+  "clangd.semanticHighlighting": true,
+  "suggest.autoTrigger": "none",
+  "signature.enable": false
+}

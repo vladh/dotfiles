@@ -1,3 +1,8 @@
-*
-!nvim
-!alacritty
+coc/
+configstore/
+inkscape/
+menus/
+mimeapps.list
+qmk/
+wslu/
+
