@@ -27,7 +27,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'mbbill/undotree'
 if has('nvim')
-  Plug 'neoclide/coc.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'jackguo380/vim-lsp-cxx-highlight'
 endif
 call plug#end()
