@@ -1,31 +1,22 @@
+# Shell options
 export CLICOLOR=1
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE=en_US.UTF-8
-export PYTHONIOENCODING=utf-8
-
 shopt -s histappend
 export HISTFILESIZE=
 export HISTSIZE=
 export HISTTIMEFORMAT="%F %T "
 export HISTFILE=~/.history
 export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log'
-
-export FZF_DEFAULT_COMMAND='fd --type f -H -E .git'
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}
-export PATH="$HOME/.bin_private:$HOME/.bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}"
+export PATH="${HOME}/.bin_private:${HOME}/.bin:${HOME}/local/bin:${HOME}/.local/bin:${PATH}"
 
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
   export TERM='screen-256color'
 fi
 
-if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ] || [ "$(uname)" == "FreeBSD" ]; then
-  prompt_char="$"
-else
-  prompt_char=">"
-fi
-
+# Colors
 if [ "$(uname)" == "FreeBSD" ]; then
   c_red='\e[0;31m'
   c_alsored='\e[0;31m'
@@ -44,6 +35,24 @@ else
   c_purple=`tput setaf 5`
   c_reset=`tput sgr0`
   c_bold=`tput bold`
+fi
+
+# Options for various programs
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export LS_COLORS="ow=01;36;40"
+export PYTHONIOENCODING=utf-8
+export FZF_DEFAULT_COMMAND="fd -j1 --type f -H -E .git"
+
+# Aliases
+alias vim="nvim"
+alias cmd="cmd.exe"
+alias msys="cmd.exe /c msys2_shell.cmd -defterm -here -no-start -mingw64"
+
+# Prompt
+if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ] || [ "$(uname)" == "FreeBSD" ]; then
+  prompt_char="$"
+else
+  prompt_char=">"
 fi
 
 source ~/.bin/git-completion.bash
@@ -72,6 +81,7 @@ declare -fx __gitdir
 declare -fx git_prompt
 declare -fx venv_prompt
 
+# Other sources
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi

@@ -66,9 +66,9 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set textwidth=90
+set textwidth=89
 set wrapmargin=0
-autocmd FileType * setlocal textwidth=90
+autocmd FileType * setlocal textwidth=89
 autocmd FileType * setlocal wrapmargin=0
 " don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -231,7 +231,7 @@ let r_indent_align_args=0
 let r_indent_ess_compatible=1
 " c
 " don't indent `public`, `protected`, and `private`
-" don't specifically indent code inside multiple-line ()
+" don't indent code in any special way when splitting (args, ...) over multiple lines
 set cinoptions+=g0,(s,Ws,m1
 
 

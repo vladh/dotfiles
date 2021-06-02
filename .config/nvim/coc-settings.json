@@ -1,5 +1,6 @@
 {
   "clangd.semanticHighlighting": true,
   "suggest.autoTrigger": "none",
+  "diagnostic.messageTarget": "echo",
   "signature.enable": false
 }
