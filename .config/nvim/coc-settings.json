@@ -2,6 +2,5 @@
   "clangd.semanticHighlighting": true,
   "suggest.autoTrigger": "none",
   "diagnostic.messageTarget": "echo",
-  "signature.enable": false,
-  "clangd.path": "/Users/vladh/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd"
+  "signature.enable": false
 }
