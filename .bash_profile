@@ -46,7 +46,8 @@ export FZF_DEFAULT_COMMAND="fd -j1 --type f -H -E .git"
 # Aliases
 alias vim="nvim"
 alias cmd="cmd.exe"
-alias msys="cmd.exe /c msys2_shell.cmd -defterm -here -no-start -mingw64"
+alias msys="cmd.exe /c msys2_shell.cmd -defterm -here -no-start -mingw64 -use-full-path"
+alias run="make run"
 
 # Prompt
 if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "Linux" ] || [ "$(uname)" == "FreeBSD" ]; then
