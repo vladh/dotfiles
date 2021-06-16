@@ -1,5 +1,6 @@
 window:
-  startup_mode: SimpleFullscreen
+  decorations: none
+  startup_mode: Maximized
   padding:
     x: 5
     y: 5
@@ -21,6 +22,7 @@ font:
 
 key_bindings:
   - { key: Q, mods: Control, chars: "\x11" }
+  - { key: Key6, mods: Control, chars: "\x1e" }
 
 # Nord. https://github.com/arcticicestudio/nord-alacritty
 colors:
