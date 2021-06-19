@@ -102,12 +102,16 @@
 /.z.*
 /.zcompdump
 /.zshrc_private
+/Adlm/
 /Applications/
+/Creative Cloud Files/
 /Desktop/
 /Documents/
 /Downloads/
 /Dropbox/
+/Google Drive File Stream
 /Google Drive File Stream/
+/Google Drive/
 /Library/
 /Movies/
 /Music/
@@ -116,15 +120,12 @@
 /Seafile/
 /Virtual Machines.localized/
 /docs/
+/go/
+/isus/
+/local/
 /opt/
 /proj-fat/
 /proj-versioned/
 /proj/
+/texmf/
 /tmp/
-Adlm/
-Creative Cloud Files/
-Google Drive File Stream
-Google Drive/
-isus/
-local/
-texmf/
