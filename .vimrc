@@ -131,6 +131,8 @@ nnoremap <S-Up> <Nop>
 nnoremap <S-Down> <Nop>
 " indent entire file
 nnoremap =a gg=G``
+" - to switch files
+nnoremap - <C-^>
 
 " rebind up/down/left/right keys in :e autocomplete
 " by default, left/right go up and down, while up/down go in an out of
