@@ -40,10 +40,10 @@ echo "Moving dotfiles into your home directory."
 for d in ~/dotfiles/.[^.]*/; do
   d_basename="$(basename $d)"
   mkdir -p "~/${d_basename}"
-  mv -i "${d}"/* "${d}"/.[^.]* "~/${d_basename}/"
+  mv -i "${d}"/* "${d}"/.[^.]* "~/${d_basename}/" || true
   rmdir "${d}"
 done
-mv -i ~/dotfiles/* ~/dotfiles/.[^.]* ~/
+mv -i ~/dotfiles/* ~/dotfiles/.[^.]* ~/ || true
 
 echo "Removing ~/dotfiles folder."
 rm -rf ~/dotfiles
