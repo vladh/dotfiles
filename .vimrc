@@ -43,6 +43,7 @@ set timeoutlen=1000 ttimeoutlen=0 " eliminate <esc> delay
 set mouse=a
 set signcolumn=yes
 set updatetime=300
+set nofixendofline
 
 
 "
