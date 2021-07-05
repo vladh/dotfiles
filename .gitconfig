@@ -35,8 +35,6 @@
   la = !git l --all
 [merge]
   tool = vimdiff
-[credential]
-  helper = osxkeychain
 [push]
   default = simple
 [filter "lfs"]
