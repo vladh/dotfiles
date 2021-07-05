@@ -4,6 +4,8 @@
 *.viminfo*
 .DS_Store
 .MacOSX/
+.aws
+.azure
 .bash_logout
 .bash_profile_private_conda
 .bashrc_backup

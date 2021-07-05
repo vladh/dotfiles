@@ -1,7 +1,10 @@
+*hare*
 .mono/
+calibre/
 citra-emu/
 coc/
 configstore/
+htop/
 inkscape/
 iterm2/
 menus/
@@ -10,4 +13,3 @@ milkytracker/
 mimeapps.list
 qmk/
 wslu/
-calibre/
