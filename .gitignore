@@ -13,6 +13,7 @@
 .clojure/
 .cpan/
 .dbvis/
+.dropbox-dist/
 .electron-gyp/
 .fonts/
 .fzf.bash
@@ -26,6 +27,7 @@
 .motd_shown
 .mozilla/
 .pki/
+.pulse-cookie
 .pypirc
 .python_history*
 .python_history-15235.tmp
@@ -35,6 +37,7 @@
 .sqlite_history
 .standard-v13-cache/
 .standardx-v4-cache/
+.steam*
 .sudo_as_admin_successful
 .texlive2019/
 .vscode/
