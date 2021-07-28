@@ -7,6 +7,7 @@
 .aws
 .azure
 .bash_logout
+.bash_profile_backup
 .bash_profile_private_conda
 .bashrc_backup
 .brunch
@@ -17,6 +18,8 @@
 .electron-gyp/
 .fonts/
 .fzf.bash
+.fzf.zsh
+.gitconfig_backup
 .gradle/
 .hushlogin
 .ipython/
@@ -24,6 +27,7 @@
 .keras/
 .keychain
 .landscape/
+.lldb/
 .motd_shown
 .mozilla/
 .pki/
@@ -39,10 +43,12 @@
 .standardx-v4-cache/
 .steam*
 .sudo_as_admin_successful
+.terminfo/
 .texlive2019/
 .vscode/
 .yarnrc
 .zsh_history
+.zshrc
 /.CFUserTextEncoding
 /.Trash/
 /.android/
@@ -141,6 +147,8 @@ Adlm/
 Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
+VirtualBox VMs/
+VulkanSDK/
 go/
 isus/
 local/

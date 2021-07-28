@@ -7,16 +7,16 @@ window:
 
 font:
   normal:
-    family: Iosevka SS07
-    style: Regular
+    family: Operator Mono
+    style: Book
   bold:
-    family: Iosevka SS07
+    family: Operator Mono
     style: Bold
   italic:
-    family: Iosevka SS07
-    style: Italic
+    family: Operator Mono
+    style: Book Italic
   bold_italic:
-    family: Iosevka SS07
+    family: Operator Mono
     style: Bold Italic
   size: 18.0
 
