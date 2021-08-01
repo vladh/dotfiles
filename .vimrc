@@ -15,21 +15,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'jremmen/vim-ripgrep'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'rakr/vim-one'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
-Plug 'mbbill/undotree'
-if has('nvim')
-  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " Plug 'jackguo380/vim-lsp-cxx-highlight'
-endif
 call plug#end()
 
 
@@ -134,6 +127,10 @@ nnoremap <S-Down> <Nop>
 nnoremap =a gg=G``
 " - to switch files
 nnoremap - <C-^>
+" start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " rebind up/down/left/right keys in :e autocomplete
 " by default, left/right go up and down, while up/down go in an out of
@@ -202,33 +199,30 @@ au BufRead,BufNewFile *.peony* set filetype=dosini
 au BufRead,BufNewFile *.qss set filetype=css
 " qrc
 au BufRead,BufNewFile *.qrc set filetype=xml
-" python
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
-" asm
-autocmd FileType asm setlocal commentstring=;\ %s
-" tex
-let g:tex_no_error=1
-let g:tex_flavor="latex"
-" rust
-autocmd FileType rust setlocal shiftwidth=2 tabstop=2
-" javascript
-let g:jsx_ext_required=0
-" ejs
-au BufNewFile,BufRead *.ejs set filetype=html
 " glsl
 au BufRead,BufNewFile *.vert set filetype=glsl
 au BufRead,BufNewFile *.geom set filetype=glsl
 au BufRead,BufNewFile *.frag set filetype=glsl
 " pollen
-augroup configgroup
-  autocmd!
-  au! BufRead,BufNewFile *.pm set filetype=pollen
-  au! BufRead,BufNewFile *.pp set filetype=pollen
-  au! BufRead,BufNewFile *.ptree set filetype=pollen
-  au! BufRead,BufNewFile *.html.p set filetype=pollen
-augroup END
+au BufRead,BufNewFile *.pm set filetype=pollen
+au BufRead,BufNewFile *.pp set filetype=pollen
+au BufRead,BufNewFile *.ptree set filetype=pollen
+au BufRead,BufNewFile *.html.p set filetype=pollen
+" ejs
+au BufNewFile,BufRead *.ejs set filetype=html
+" python
+au FileType python setlocal shiftwidth=4 tabstop=4
+" asm
+au FileType asm setlocal commentstring=;\ %s
+" rust
+au FileType rust setlocal shiftwidth=2 tabstop=2
 " vue
-autocmd FileType vue syntax sync fromstart
+au FileType vue syntax sync fromstart
+" tex
+let g:tex_no_error=1
+let g:tex_flavor="latex"
+" javascript
+let g:jsx_ext_required=0
 " r
 let r_indent_align_args=0
 let r_indent_ess_compatible=1
@@ -236,45 +230,6 @@ let r_indent_ess_compatible=1
 " don't indent `public`, `protected`, and `private`
 " don't indent code in any special way when splitting (args, ...) over multiple lines
 set cinoptions+=g0,(s,Ws,m1
-
-
-"
-" nvim lsp stuff
-"
-if has('nvim')
-  " don't give |ins-completion-menu| messages.  For example, 'match 1 of 2', 'The only
-  " match' etc.
-  set shortmess+=c
-
-  " " use tab to trigger completion
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-  function! s:check_back_space() abort
-    let col=col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
-
-  nmap <silent> <C-e> <Plug>(coc-diagnostic-next)
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gt <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-
-  " use K to show definition of word under cursor
-  nnoremap <silent> K :call <SID>show_documentation()<CR>
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-      call CocActionAsync('doHover')
-    else
-      execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-  endfunction
-endif
 
 
 "
