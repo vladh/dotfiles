@@ -12,9 +12,9 @@ export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $
 export PATH="/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/games/bin:${PATH}"
 export PATH="${HOME}/.bin_private:${HOME}/.bin:${HOME}/local/bin:${HOME}/.local/bin:${PATH}"
 
-if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
-  export TERM='screen-256color'
-fi
+# if [ "$(uname)" == "Darwin" ] || [ "$(uname)" == "FreeBSD" ]; then
+#   export TERM='screen-256color'
+# fi
 
 # Colors
 if [ "$(uname)" == "FreeBSD" ]; then
