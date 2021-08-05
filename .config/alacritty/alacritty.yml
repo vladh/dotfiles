@@ -1,3 +1,8 @@
+shell:
+  program: /bin/bash
+  args:
+    - --login
+
 window:
   decorations: none
   startup_mode: Maximized
