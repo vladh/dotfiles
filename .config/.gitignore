@@ -1,4 +1,6 @@
-*
-!alacritty
-!kitty
-!nvim
+/*
+!.gitignore
+*hare*
+!/alacritty
+!/kitty
+!/nvim
