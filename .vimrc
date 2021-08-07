@@ -60,9 +60,9 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set textwidth=89
+set textwidth=80
 set wrapmargin=0
-autocmd FileType * setlocal textwidth=89
+autocmd FileType * setlocal textwidth=80
 autocmd FileType * setlocal wrapmargin=0
 " don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -101,12 +101,11 @@ nmap <leader>ss :StripWhitespace<CR>
 nnoremap ; :nohlsearch<cr>
 " ,sp toggles paste mode
 set pastetoggle=<leader>sp
-" ,c0 sets a marker at column 100
-nnoremap <leader>c0 :set colorcolumn=100<cr>
-" ,c8 sets a marker at column 80
-nnoremap <leader>c8 :set colorcolumn=80<cr>
-" ,cs sets a marker at column 90
-nnoremap <leader>cs :set colorcolumn=90<cr>
+" ,c0 sets a marker at column 101
+nnoremap <leader>c0 :set colorcolumn=101<cr>
+" ,c8 and ,cs set a marker at column 81
+nnoremap <leader>c8 :set colorcolumn=81<cr>
+nnoremap <leader>cs :set colorcolumn=81<cr>
 " ,cr clears column markers
 nnoremap <leader>cr :set colorcolumn=<cr>
 " ,r runs the current file
