@@ -90,6 +90,7 @@
 /.m2/
 /.matlab/
 /.mongorc.js
+/.muttrc_private
 /.mysql_history
 /.neocomplcache
 /.node-gyp/
@@ -110,6 +111,7 @@
 /.tmux_private.conf
 /.tor/
 /.v8flags*
+/.var
 /.vim/sessions
 /.vimrc_private
 /.wget-hsts
