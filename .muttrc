@@ -1,6 +1,7 @@
 set header_cache = "~/.mutt/cache/headers"
 set message_cachedir = "~/.mutt/cache/bodies"
 set certificate_file = "~/.mutt/certificates"
+set record = "~/.mutt/sent"
 
 set mail_check = 30
 set move = no
