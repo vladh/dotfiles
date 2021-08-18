@@ -1,0 +1,18 @@
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+
+# scroll inside the message rather than the index
+bind pager <up> previous-line
+bind pager <down> next-line
+
+set sleep_time = 0
+set smart_wrap
+
+source ~/.muttrc_private

@@ -90,6 +90,7 @@
 /.m2/
 /.matlab/
 /.mongorc.js
+/.mutt/
 /.muttrc_private
 /.mysql_history
 /.neocomplcache
