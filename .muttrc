@@ -12,6 +12,7 @@ set editor = "vim"
 # scroll inside the message rather than the index
 bind pager <up> previous-line
 bind pager <down> next-line
+bind index G imap-fetch-mail
 macro index,pager a "<save-message>=Archive<enter><delete-message><enter><sync-mailbox><enter>" "Archive Message"
 
 set sleep_time = 0
