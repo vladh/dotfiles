@@ -10,6 +10,7 @@ endif
 "
 " plugins
 "
+let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -23,6 +24,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+Plug 'otherjoel/vim-pollen'
 call plug#end()
 
 
