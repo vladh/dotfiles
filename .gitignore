@@ -35,6 +35,7 @@
 .pypirc
 .python_history*
 .python_history-15235.tmp
+.racket/
 .react-native-cli/
 .rediscli_history
 .renderdoc/
@@ -151,6 +152,7 @@ Adlm/
 Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
+Videos/
 VirtualBox VMs/
 VulkanSDK/
 go/
