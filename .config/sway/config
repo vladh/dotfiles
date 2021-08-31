@@ -1,13 +1,13 @@
-# dependencies: i3blocks
+# dependencies: i3blocks, ulauncher, brightnessctl, playerctl
 
 set $mod Mod4
 set $term kitty
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 default_border none
+default_floating_border none
 font Iosevka Term SS07 7
 
-client.focused #222222 #222222 #88c0d0
+client.focused #88c0d0 #222222 #88c0d0
 client.unfocused #222222 #222222 #888888
 
 output * bg /home/vladh/Pictures/jack-ward-wbS1QeWclnE-unsplash.jpg fill
@@ -22,27 +22,33 @@ exec swayidle -w \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000'
 
-input "1:1:AT_Translated_Set_2_keyboard" {
+input "type:keyboard" {
   xkb_layout vladh
   xkb_options caps:escape
 }
-input "1267:32:Elan_Touchpad" {
+input "type:touchpad" {
   dwt enabled
   tap enabled
   natural_scroll enabled
   middle_emulation enabled
 }
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# Bind media keys
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec amixer -q sset Master toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMicMute exec amixer -q sset Capture toggle && pkill -RTMIN+10 i3blocks
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86Search exec bemenu-run
+
+# Take screenshot
+bindsym Print exec GRIM_DEFAULT_DIR="/home/vladh/Pictures/" grim
+
+# Open setting
+bindsym $mod+quoteleft exec gnome-control-center
 
 # Start a terminal
 bindsym $mod+Return exec $term
@@ -51,7 +57,9 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 # Start your launcher
-bindsym $mod+d exec $menu
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# bindsym $mod+d exec $menu
+bindsym $mod+d exec ulauncher
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -64,7 +72,10 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -t warning \
+  -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
+  -b 'Yes, exit sway' \
+  'swaymsg exit'
 
 # Move your focus around
 bindsym $mod+h focus left
@@ -170,8 +181,11 @@ bindsym $mod+r mode "resize"
 
 bar {
     position top
-    font Iosevka Term SS07 10
+    height 24
+    font Iosevka Term SS07 9
     mode hide
+    separator_symbol " "
+    tray_padding 4
 
     status_command i3blocks
 
