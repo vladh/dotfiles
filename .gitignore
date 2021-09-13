@@ -35,6 +35,7 @@
 .pypirc
 .python_history*
 .python_history-15235.tmp
+.racket/
 .react-native-cli/
 .rediscli_history
 .renderdoc/
@@ -90,6 +91,8 @@
 /.m2/
 /.matlab/
 /.mongorc.js
+/.mutt/
+/.muttrc_private
 /.mysql_history
 /.neocomplcache
 /.node-gyp/
@@ -110,6 +113,7 @@
 /.tmux_private.conf
 /.tor/
 /.v8flags*
+/.var
 /.vim/sessions
 /.vimrc_private
 /.wget-hsts
@@ -148,9 +152,11 @@ Adlm/
 Creative Cloud Files/
 Google Drive File Stream
 Google Drive/
+Videos/
 VirtualBox VMs/
 VulkanSDK/
 go/
 isus/
 local/
+scratch/
 texmf/

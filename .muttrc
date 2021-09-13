@@ -1,0 +1,21 @@
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set record = "~/.mutt/sent"
+
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+
+# scroll inside the message rather than the index
+bind pager <up> previous-line
+bind pager <down> next-line
+bind index G imap-fetch-mail
+macro index,pager a "<save-message>=Archive<enter><delete-message><enter><sync-mailbox><enter>" "Archive Message"
+
+set sleep_time = 0
+set smart_wrap
+
+source ~/.muttrc_private

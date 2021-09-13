@@ -10,6 +10,7 @@ endif
 "
 " plugins
 "
+let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -23,6 +24,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+Plug 'otherjoel/vim-pollen'
 call plug#end()
 
 
@@ -93,8 +95,6 @@ nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
 " opens fuzzy file browser
 nmap <C-p> :FZF<CR>
-" opens in-file search with ripgrep
-nmap <C-t> :Rg<CR>
 " strips whitespace from current buffer
 nmap <leader>ss :StripWhitespace<CR>
 " ; clears highlighted search results
@@ -122,14 +122,11 @@ nnoremap <leader><space> :!make<cr>
 " keep accidentally pressing
 nnoremap <S-Up> <Nop>
 nnoremap <S-Down> <Nop>
-" indent entire file
-nnoremap =a gg=G``
 " - to switch files
 nnoremap - <C-^>
-" start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" disable Ex mode
+nnoremap Q <Nop>
 
 " rebind up/down/left/right keys in :e autocomplete
 " by default, left/right go up and down, while up/down go in an out of
@@ -152,6 +149,11 @@ cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=0
+
+" EasyAlign
+" start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" start interactive EasyAlign for a motion/text object (e.g. gaip)
 
 " tmuxline
 let g:tmuxline_powerline_separators=0

@@ -1,0 +1,32 @@
+# dependencies: lm-sensors
+
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=50
+
+[temperature]
+command=sensors -u coretemp-isa-0000 | grep temp1_input | cut -c 15-17 | xargs printf 'cpu %d°'
+interval=10
+
+[volume]
+label=vol
+instance=Master
+interval=once
+signal=10
+
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+
+[battery]
+label=bat
+interval=30
+
+[wifi]
+instance=wlp61s0
+interval=10
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+separator=false
