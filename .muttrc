@@ -1,7 +1,6 @@
-set header_cache = "~/.mutt/cache/headers"
-set message_cachedir = "~/.mutt/cache/bodies"
-set certificate_file = "~/.mutt/certificates"
 set record = "~/.mutt/sent"
+
+source ~/.mutt/accounts
 
 set mail_check = 30
 set move = no
@@ -17,5 +16,3 @@ macro index,pager a "<save-message>=Archive<enter><delete-message><enter><sync-m
 
 set sleep_time = 0
 set smart_wrap
-
-source ~/.muttrc_private
