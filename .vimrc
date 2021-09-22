@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 Plug 'otherjoel/vim-pollen'
+Plug 'ziglang/zig.vim'
 call plug#end()
 
 
@@ -231,6 +232,8 @@ let r_indent_ess_compatible=1
 " don't indent `public`, `protected`, and `private`
 " don't indent code in any special way when splitting (args, ...) over multiple lines
 set cinoptions+=g0,(s,Ws,m1
+" zig
+let g:zig_fmt_autosave = 0
 
 
 "
