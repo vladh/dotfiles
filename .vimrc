@@ -208,7 +208,7 @@ au BufRead,BufNewFile *.frag set filetype=glsl
 au BufRead,BufNewFile *.pm set filetype=pollen
 au BufRead,BufNewFile *.pp set filetype=pollen
 au BufRead,BufNewFile *.ptree set filetype=pollen
-au BufRead,BufNewFile *.html.p set filetype=pollen
+au BufRead,BufNewFile *.p set filetype=pollen
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " python
