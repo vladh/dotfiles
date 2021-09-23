@@ -40,6 +40,7 @@ set mouse=a
 set signcolumn=yes
 set updatetime=300
 set nofixendofline
+set showbreak=+
 
 
 "
