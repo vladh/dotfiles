@@ -273,7 +273,10 @@ for _, lsp in ipairs(servers) do
     init_options = {
       highlight = {
         lsRanges = true;
-      }
+      },
+      cache = {
+        directory = os.getenv("HOME") .. "/.cache/ccls"
+      },
     }
   }
 end
