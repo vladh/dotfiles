@@ -4,6 +4,7 @@
 *.viminfo*
 .DS_Store
 .MacOSX/
+.aspell*
 .aws
 .azure
 .bash_logout
