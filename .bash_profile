@@ -56,8 +56,8 @@ else
   prompt_char=">"
 fi
 
-source ~/.bin/git-completion.bash
-source ~/.bin/git-prompt.sh
+source ~/.bin/lib/git-completion.bash
+source ~/.bin/lib/git-prompt.sh
 
 git_prompt() {
   local g="$(__gitdir)"
@@ -91,4 +91,4 @@ if [ -f ~/.bash_profile_private ]; then
   source ~/.bash_profile_private
 fi
 
-source ~/.bin/z.sh
+source ~/.bin/lib/z.sh

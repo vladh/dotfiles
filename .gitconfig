@@ -8,30 +8,7 @@
   st = status
   aa = add --all .
   cm = commit --verbose
-  amend = commit --amend
-  pom = push origin master
-  p = push
-
-  # Divergence (commits we added and commits remote added)
-  div = divergence
-
-  # Goodness (summary of diff lines added/removed/total)
-  gn = goodness
-  gnc = goodness --cached
-
-  # Fancy logging.
-  #   h = head
-  #   hp = head with patch
-  #   r = recent commits, only current branch
-  #   ra = recent commits, all reachable refs
-  #   l = all commits, only current branch
-  #   la = all commits, all reachable refs
-  head = !git r -1
-  h = !git head
-  hp = "!. ~/.bin/githelpers && show_git_head"
-  r = !GIT_NO_PAGER=1 git l -30
-  ra = !git r --all
-  l = "!. ~/.bin/githelpers && pretty_git_log"
+  l = "!. ~/.bin/lib/githelpers && pretty_git_log"
   la = !git l --all
 [merge]
   tool = vimdiff
