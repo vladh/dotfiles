@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 cd $HOME/opt/jmusicbot && java -Dnogui=true -jar JMusicBot-0.3.6.jar
