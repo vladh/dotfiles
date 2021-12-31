@@ -31,6 +31,7 @@ input "type:touchpad" {
   tap enabled
   natural_scroll enabled
   middle_emulation enabled
+  click_method clickfinger
 }
 
 # Bind media keys
