@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# get the staged files
+s_files=$(git diff --name-only --cached)
+
+# if a staged file contains the keyword, fail the commit
+for s_file in ${s_files};do
+  if grep -q -E 'nocheckin' ${s_file};then
+    echo "ERROR: ${s_file} contains 'nocheckin', failing commit"
+    exit 1
+  fi
+done
+
+exit 0
