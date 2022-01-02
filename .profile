@@ -20,5 +20,5 @@ fi
 
 . $HOME/.bin/lib/prompt
 [ -n "$BASH" ] && . $HOME/.env
-[ -e $HOME/.bin/hosts/$(hostname).profile ] && . $HOME/.bin/hosts/$(hostname).profile
+[ -e $HOME/.config/profiles/$(hostname).profile ] && . $HOME/.config/profiles/$(hostname).profile
 . $HOME/.bin/lib/z.sh
