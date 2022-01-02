@@ -59,9 +59,3 @@ configuration but ignored by the repo. Currently supported:
 * .vimrc_private
 * .tmux_private.conf
 * .gitconfig_private
-
-### Credits
-
-* [The contributors](https://github.com/vladh/dotfiles/graphs/contributors)
-* [Gary Bernhardt](https://github.com/garybernhardt)
-* [Steve Losh](http://stevelosh.com/)
