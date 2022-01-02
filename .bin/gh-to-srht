@@ -1,0 +1,9 @@
+#!/bin/bash
+gh=`git config --get remote.origin.url`
+base_part=${gh/git@github.com:vladh\//}
+base=${base_part/\.git/}
+git remote add all $gh
+git remote set-url --add --push all $gh
+git remote set-url --add --push all git@git.sr.ht:~vladh/$base
+git branch -M main
+git push -u all main
