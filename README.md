@@ -60,8 +60,13 @@ configuration but ignored by the repo. Currently supported:
 * .tmux_private.conf
 * .gitconfig_private
 
-### Credits
+### License
 
-* [The contributors](https://github.com/vladh/dotfiles/graphs/contributors)
-* [Gary Bernhardt](https://github.com/garybernhardt)
-* [Steve Losh](http://stevelosh.com/)
+```
+The author disclaims copyright to this source code.
+In place of a legal notice, here is a blessing:
+
+May you do good and not evil.
+May you find forgiveness for yourself and forgive others.
+May you share freely, never taking more than you give.
+```
