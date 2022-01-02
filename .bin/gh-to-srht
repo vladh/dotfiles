@@ -1,4 +1,5 @@
 #!/bin/bash
+
 gh=`git config --get remote.origin.url`
 base_part=${gh/git@github.com:vladh\//}
 base=${base_part/\.git/}

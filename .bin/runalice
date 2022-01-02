@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec cmd.exe /c msys2_shell.cmd -defterm -where d:/proj-versioned/alice-demettrie-bot -no-start -mingw64 -use-full-path './run.sh'

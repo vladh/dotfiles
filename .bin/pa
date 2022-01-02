@@ -1,4 +1,5 @@
 #!/bin/sh
+
 if [ $# -eq 0 ]; then
   echo "Usage: pa <filepath> [<remote-folder>]"
   echo "  If you specify the remote folder, you must specify a leading static/ or things/ too."
