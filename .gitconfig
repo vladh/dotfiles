@@ -4,12 +4,16 @@
   excludesfile = ~/.gitignore_global
   editor = nvim
 [alias]
-  co = checkout
-  st = status
+  a = add
   aa = add --all .
   cm = commit --verbose
+  co = checkout
+  d = diff
   l = "!. ~/.bin/lib/githelpers && pretty_git_log"
   la = !git l --all
+  p = push
+  pl = pull
+  s = status
 [merge]
   tool = vimdiff
 [push]
