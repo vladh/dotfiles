@@ -9,6 +9,9 @@ fi
 
 [ -f $HOME/.fzf.bash ] && . $HOME/.fzf.bash
 
+# c
+export CPATH=$CPATH:"/usr/include/SDL2"
+
 # rust
 . "$HOME/.cargo/env"
 
