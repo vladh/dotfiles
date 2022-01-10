@@ -19,14 +19,20 @@ Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'otherjoel/vim-pollen'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+
+" languages
+" Plug 'sheerun/vim-polyglot'
+Plug 'digitaltoad/vim-pug'
+Plug 'iloginow/vim-stylus'
+Plug 'otherjoel/vim-pollen'
+Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
+
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'jackguo380/vim-lsp-cxx-highlight'
