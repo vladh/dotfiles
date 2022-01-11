@@ -14,6 +14,7 @@
   p = push
   pl = pull
   s = status
+  st = status
 [merge]
   tool = vimdiff
 [push]
