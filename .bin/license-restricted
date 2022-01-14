@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Copyright (c) 2022 Vlad-Stefan Harbuz <vlad@vladh.net>
+
+All rights are reserved. You may not use or distribute this software." > LICENSE
