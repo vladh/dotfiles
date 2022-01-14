@@ -119,8 +119,10 @@ set pastetoggle=<leader>sp
 nnoremap <leader>c0 :set colorcolumn=101<cr>
 " ,cs sets a marker at column 121
 nnoremap <leader>cs :set colorcolumn=121<cr>
-" ,c8 set a marker at column 81
+" ,c8 sets a marker at column 81
 nnoremap <leader>c8 :set colorcolumn=81<cr>
+" ,c6 sets a marker at column 66
+nnoremap <leader>c6 :set colorcolumn=66<cr>
 " ,cr clears column markers
 nnoremap <leader>cr :set colorcolumn=<cr>
 " ,r runs the current file
