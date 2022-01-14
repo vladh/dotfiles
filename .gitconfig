@@ -7,6 +7,7 @@
   a = add
   aa = add --all .
   cm = commit --verbose
+  cma = commit --amend
   co = checkout
   d = diff
   l = "!. ~/.bin/lib/githelpers && pretty_git_log"
