@@ -34,10 +34,10 @@ Plug 'otherjoel/vim-pollen'
 Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
-if has('nvim')
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'jackguo380/vim-lsp-cxx-highlight'
-endif
+" if has('nvim')
+"   Plug 'neovim/nvim-lspconfig'
+"   Plug 'jackguo380/vim-lsp-cxx-highlight'
+" endif
 call plug#end()
 
 
@@ -255,46 +255,46 @@ let g:zig_fmt_autosave = 0
 "
 " lsp
 "
-if has('nvim')
-  lua <<EOF
-  local nvim_lsp = require('lspconfig')
+" if has('nvim')
+"   lua <<EOF
+"   local nvim_lsp = require('lspconfig')
 
-  local on_attach = function(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+"   local on_attach = function(client, bufnr)
+"     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+"     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-    local opts = { noremap=true, silent=true }
+"     local opts = { noremap=true, silent=true }
 
-    buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-    buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  end
+"     buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+"     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+"     buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+"     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+"     buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+"     buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+"     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+"   end
 
-  -- Use a loop to conveniently call 'setup' on multiple servers and
-  -- map buffer local keybindings when the language server attaches
-  local servers = { 'ccls' }
-  for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      init_options = {
-        highlight = {
-          lsRanges = true;
-        },
-        cache = {
-          directory = os.getenv("HOME") .. "/.cache/ccls"
-        },
-      }
-    }
-  end
-EOF
-endif
+"   -- Use a loop to conveniently call 'setup' on multiple servers and
+"   -- map buffer local keybindings when the language server attaches
+"   local servers = { 'ccls' }
+"   for _, lsp in ipairs(servers) do
+"     nvim_lsp[lsp].setup {
+"       on_attach = on_attach,
+"       flags = {
+"         debounce_text_changes = 150,
+"       },
+"       init_options = {
+"         highlight = {
+"           lsRanges = true;
+"         },
+"         cache = {
+"           directory = os.getenv("HOME") .. "/.cache/ccls"
+"         },
+"       }
+"     }
+"   end
+" EOF
+" endif
 
 
 "
