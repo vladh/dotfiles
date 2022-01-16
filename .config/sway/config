@@ -10,7 +10,7 @@ font Iosevka Term SS07 7
 client.focused #88c0d0 #222222 #88c0d0
 client.unfocused #222222 #222222 #888888
 
-output * bg /home/vladh/Pictures/jack-ward-wbS1QeWclnE-unsplash.jpg fill
+output * bg ~/Pictures/wallpaper.png fill
 output eDP-1 scale 2
 output eDP-1 pos 0 0 res 2560x1440
 
@@ -21,18 +21,6 @@ exec swayidle -w \
     timeout 300 'swaylock -f -c 000000' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000'
-
-input "type:keyboard" {
-  xkb_layout vladh
-  xkb_options caps:escape
-}
-input "type:touchpad" {
-  dwt enabled
-  tap enabled
-  natural_scroll enabled
-  middle_emulation enabled
-  click_method clickfinger
-}
 
 # Bind media keys
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+10 i3blocks
@@ -46,9 +34,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Take screenshot
-bindsym Print exec GRIM_DEFAULT_DIR="/home/vladh/Pictures/" grim
+bindsym Print exec GRIM_DEFAULT_DIR="~/Pictures/" grim
 
-# Open setting
+# Open settings
 bindsym $mod+quoteleft exec gnome-control-center
 
 # Start a terminal
@@ -197,4 +185,5 @@ bar {
     }
 }
 
-include @sysconfdir@/sway/config.d/*
+include ~/.config/sway/config.d/*
+include ~/.config/sway/`hostname`
