@@ -26,14 +26,10 @@ else
   prompt_char=">"
 fi
 
-. $HOME/.bin/lib/git-completion.bash
-. $HOME/.bin/lib/git-prompt.sh
-
 git_prompt() {
-  git_dir="$(__gitdir)"
-  if [ -n "$git_dir" ]; then
-    git_prompt=`__git_ps1 "%s"`
-    echo ":${git_prompt} "
+  git_branch="$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
+  if [ -n "$git_branch" ]; then
+    echo ":${git_branch} "
   fi
 }
 
@@ -43,4 +39,12 @@ venv_prompt() {
   fi
 }
 
-export PS1="\[\033[G\]\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
+if [ -n "$BASH$FISH_VERSION" ]; then
+  # Colours are enclosed in \[...\] so that they don't count towards the
+  # character count and mess up scrolling etc.
+  # PS1 used to be prefixed with: \[\033[G\]
+  # What is that?
+  export PS1="\[$c_blue\]\u \[$c_red\]\h\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)\[$c_blue\]$prompt_char \[$c_reset\]"
+else
+  export PS1="$c_blue$(whoami) $c_red$(hostname)$c_blue $(basename $(pwd))\$(git_prompt)\$(venv_prompt)$c_blue$prompt_char $c_reset"
+fi

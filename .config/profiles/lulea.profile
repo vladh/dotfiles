@@ -7,8 +7,6 @@ if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ]; then
   . /tmp/ssh-agent-$USER >/dev/null
 fi
 
-[ -f $HOME/.fzf.bash ] && . $HOME/.fzf.bash
-
 # c
 export CPATH=$CPATH:"/usr/include/SDL2"
 
