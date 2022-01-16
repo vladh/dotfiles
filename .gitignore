@@ -8,6 +8,7 @@
 .aspell*
 .aws
 .azure
+.backup/
 .bash_logout
 .bash_profile_backup
 .bash_profile_private_conda
