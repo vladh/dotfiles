@@ -13,7 +13,7 @@ endif
 let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
+Plug 'vladh/nord-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
