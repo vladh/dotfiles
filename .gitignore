@@ -45,6 +45,7 @@
 .rediscli_history
 .renderdoc/
 .rustup/
+.shimei
 .sqlite_history
 .standard-v13-cache/
 .standardx-v4-cache/

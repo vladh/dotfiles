@@ -15,7 +15,6 @@ call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'vladh/nord-vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
@@ -26,8 +25,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 
 " languages
-" Plug 'sheerun/vim-polyglot'
 Plug 'digitaltoad/vim-pug'
+Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
+Plug 'https://git.sr.ht/~vladh/shimei.vim'
 Plug 'iloginow/vim-stylus'
 Plug 'karolbelina/uxntal.vim'
 Plug 'otherjoel/vim-pollen'
