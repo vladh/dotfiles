@@ -9,6 +9,7 @@ fi
 
 # c
 export CPATH=$CPATH:"/usr/include/SDL2"
+export LD_LIBRARY_PATH="${HOME}/.local/opt/Qt/6.1.3/gcc_64/lib:${LD_LIBRARY_PATH}"
 
 # rust
 . "$HOME/.cargo/env"
