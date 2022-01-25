@@ -13,16 +13,17 @@ endif
 let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
-Plug 'vladh/nord-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sleuth'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
+Plug 'vladh/nord-vim'
 
 " languages
 Plug 'digitaltoad/vim-pug'
@@ -34,10 +35,9 @@ Plug 'otherjoel/vim-pollen'
 Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
-" if has('nvim')
-"   Plug 'neovim/nvim-lspconfig'
-"   Plug 'jackguo380/vim-lsp-cxx-highlight'
-" endif
+if has('nvim')
+  Plug 'vladh/nvim-treesitter', {'do': ':TSUpdate'}
+endif
 call plug#end()
 
 
@@ -255,46 +255,20 @@ let g:zig_fmt_autosave = 0
 "
 " lsp
 "
-" if has('nvim')
-"   lua <<EOF
-"   local nvim_lsp = require('lspconfig')
-
-"   local on_attach = function(client, bufnr)
-"     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-"     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-"     local opts = { noremap=true, silent=true }
-
-"     buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-"     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-"     buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-"     buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-"     buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-"     buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-"     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-"   end
-
-"   -- Use a loop to conveniently call 'setup' on multiple servers and
-"   -- map buffer local keybindings when the language server attaches
-"   local servers = { 'ccls' }
-"   for _, lsp in ipairs(servers) do
-"     nvim_lsp[lsp].setup {
-"       on_attach = on_attach,
-"       flags = {
-"         debounce_text_changes = 150,
-"       },
-"       init_options = {
-"         highlight = {
-"           lsRanges = true;
-"         },
-"         cache = {
-"           directory = os.getenv("HOME") .. "/.cache/ccls"
-"         },
-"       }
-"     }
-"   end
-" EOF
-" endif
+if has('nvim')
+  lua <<EOF
+  require'nvim-treesitter.configs'.setup {
+    highlight = {
+      enable = true,
+      -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+      -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+      -- Using this option may slow down your editor, and you may see some duplicate highlights.
+      -- Instead of true it can also be a list of languages
+      additional_vim_regex_highlighting = false,
+    },
+  }
+EOF
+endif
 
 
 "
