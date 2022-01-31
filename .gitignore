@@ -32,6 +32,7 @@
 .keychain
 .landscape/
 .lldb/
+.minecraft/
 .motd_shown
 .mozilla/
 .openjfx/

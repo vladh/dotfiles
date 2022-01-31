@@ -1,9 +1,9 @@
 /*
 !.gitignore
-*hare*
 !/alacritty
-!/kitty
-!/profiles
-!/nvim
-!/sway
+!/autostart
 !/i3blocks
+!/kitty
+!/nvim
+!/profiles
+!/sway
