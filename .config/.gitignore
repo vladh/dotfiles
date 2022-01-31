@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!/aerc
 !/alacritty
 !/autostart
 !/i3blocks
