@@ -14,7 +14,7 @@ let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
