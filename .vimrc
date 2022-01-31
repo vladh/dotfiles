@@ -276,7 +276,3 @@ endif
 "
 set exrc
 set secure
-
-if filereadable(glob("~/.vimrc_private"))
-  source ~/.vimrc_private
-endif

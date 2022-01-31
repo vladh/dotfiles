@@ -1,30 +1,31 @@
-[include]
-  path = ~/.gitconfig_private
 [core]
-  excludesfile = ~/.gitignore_global
-  editor = nvim
+    excludesfile = ~/.gitignore_global
+    editor = nvim
 [alias]
-  a = add
-  aa = add --all .
-  cm = commit --verbose
-  cma = commit --amend
-  co = checkout
-  d = diff
-  ds = diff --staged
-  l = "!. ~/.bin/lib/githelpers && pretty_git_log"
-  la = !git l --all
-  p = push
-  pf = push --force
-  pl = pull
-  s = status
-  st = status
+    a = add
+    aa = add --all .
+    cm = commit --verbose
+    cma = commit --amend
+    co = checkout
+    d = diff
+    ds = diff --staged
+    l = "!. ~/.bin/lib/githelpers && pretty_git_log"
+    la = !git l --all
+    p = push
+    pf = push --force
+    pl = pull
+    s = status
+    st = status
 [merge]
-  tool = vimdiff
+    tool = vimdiff
 [push]
-  default = simple
+    default = simple
 [pull]
-  rebase = false
+    rebase = false
 [sendemail]
-  annotate = yes
+    annotate = yes
 [init]
-  defaultBranch = main
+    defaultBranch = main
+[user]
+    name = Vlad-Stefan Harbuz
+    email = vlad@vladh.net

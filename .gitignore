@@ -12,7 +12,6 @@
 .backup/
 .bash_logout
 .bash_profile_backup
-.bash_profile_private_conda
 .bashrc_backup
 .brunch
 .clojure/
@@ -67,9 +66,7 @@
 /.aws/
 /.babel.json
 /.bash_history
-/.bash_profile_private
 /.bash_sessions/
-/.bin_private
 /.cabal/
 /.cache/
 /.cargo/
@@ -88,7 +85,6 @@
 /.fzf
 /.gem
 /.ghc/
-/.gitconfig_private
 /.gnupg/
 /.gnuplot_history
 /.history
@@ -101,7 +97,6 @@
 /.matlab/
 /.mongorc.js
 /.mutt/
-/.muttrc_private
 /.mysql_history
 /.neocomplcache
 /.node-gyp/
@@ -118,17 +113,14 @@
 /.rvm/
 /.ssh
 /.subversion/
-/.tmux_private.conf
 /.tor/
 /.v8flags*
 /.var
 /.vim/sessions
-/.vimrc_private
 /.wget-hsts
 /.z
 /.z.*
 /.zcompdump
-/.zshrc_private
 /Adlm/
 /Applications/
 /Creative Cloud Files/
