@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=alice
+GenericName=Alice DeMettrie Bot
+Comment=Alice DeMettrie Bot
+Exec=$HOME/.bin/runalice
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

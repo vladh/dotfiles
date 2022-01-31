@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Janelle
-GenericName=Janelle
-Comment=Janelle
-Exec=$HOME/.bin/runjanelle
-Terminal=false
-Type=Application
-X-GNOME-Autostart-enabled=true
