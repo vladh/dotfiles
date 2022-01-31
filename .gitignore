@@ -5,6 +5,7 @@
 .DS_Store
 .MacOSX/
 .anthy/
+.ash_history
 .aspell*
 .aws
 .azure
@@ -153,6 +154,7 @@
 /proj-fat/
 /proj-versioned/
 /proj/
+/sources/
 /texmf/
 /tmp/
 Adlm/
