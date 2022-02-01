@@ -1,3 +1,5 @@
+[include]
+    path = ~/.gitconfig_private
 [core]
     excludesfile = ~/.gitignore_global
     editor = nvim

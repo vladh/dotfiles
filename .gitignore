@@ -24,6 +24,7 @@
 .fzf.bash
 .fzf.zsh
 .gitconfig_backup
+.gitconfig_private
 .gradle/
 .hushlogin
 .ipython/
