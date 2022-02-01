@@ -27,7 +27,7 @@ Plug 'vladh/nord-vim'
 
 " languages
 Plug 'digitaltoad/vim-pug'
-Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
+Plug 'https://git.sr.ht/~vladh/hare.vim'
 Plug 'https://git.sr.ht/~vladh/shimei.vim'
 Plug 'iloginow/vim-stylus'
 Plug 'karolbelina/uxntal.vim'
