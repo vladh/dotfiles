@@ -56,6 +56,7 @@
 .terminfo/
 .texlive2019/
 .themes/
+.thunderbird/
 .vscode/
 .yarnrc
 .zsh_history
@@ -145,7 +146,7 @@
 /local/
 /opt/
 /proj-fat/
-/proj-versioned/
+/proj-versioned
 /proj/
 /sources/
 /texmf/
