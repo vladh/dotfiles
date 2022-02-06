@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eu
+
+if [ $# -ne 3 ]; then
+    printf "changeword: Changes all occurences of word <from> to word <to> in files\n"
+    printf "matching <pattern> in the current directory.\n"
+    printf "Usage:\n"
+    printf "    changeword <pattern> <from> <to>\n"
+    printf "Example:\n"
+    printf "    changeword *.c doThing do_thing\n"
+    exit
+fi
+
+find . -name $1 | xargs rpl -w $2 $3
