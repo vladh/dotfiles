@@ -12,20 +12,20 @@ export CPATH=$CPATH:"/usr/include/SDL2"
 export LD_LIBRARY_PATH="${HOME}/.local/opt/Qt/6.1.3/gcc_64/lib:${LD_LIBRARY_PATH}"
 
 # rust
-. "$HOME/.cargo/env"
+[ -e $HOME/.cargo/env.profile ] && . "$HOME/.cargo/env"
 
 # go
 export GOPATH="/home/vladh/go"
 export PATH=$PATH:"/usr/local/go/bin:/home/vladh/go/bin"
 
 # hare
-export PATH=$PATH:"/home/vladh/proj-versioned/qbe/obj"
-export PATH=$PATH:"/home/vladh/proj-versioned/harec/build"
-export PATH=$PATH:"/home/vladh/proj-versioned/hare/.bin"
-export HAREPATH="/home/vladh/proj-versioned/hare"
+export PATH=$PATH:"/home/vladh/sources/qbe/obj"
+export PATH=$PATH:"/home/vladh/sources/harec/build"
+export PATH=$PATH:"/home/vladh/sources/hare/.bin"
+export HAREPATH="/home/vladh/sources/hare"
 
 # uxn
-export PATH=$PATH:"/home/vladh/proj-versioned/uxn/bin"
+export PATH=$PATH:"/home/vladh/sources/uxn/bin"
 
 # zig
 export PATH=$PATH:"/home/vladh/.local/opt/zig-linux-x86_64-0.8.1"
