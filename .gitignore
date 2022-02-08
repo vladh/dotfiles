@@ -36,6 +36,7 @@
 .minecraft/
 .motd_shown
 .mozilla/
+.muttrc_private
 .openjfx/
 .pki/
 .pulse-cookie
