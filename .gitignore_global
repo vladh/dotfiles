@@ -2,7 +2,3 @@
 *.DS_Store
 .Trashes
 *.swp
-*.sublime-workspace
-*.sublime-project
-*.iml
-*.sass-cache/

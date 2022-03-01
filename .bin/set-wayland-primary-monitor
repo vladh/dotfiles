@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xrandr --output XWAYLAND${1} --primary

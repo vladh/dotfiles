@@ -1,9 +1,11 @@
 /*
 !.gitignore
-*hare*
+!/aerc
 !/alacritty
-!/kitty
-!/profiles
-!/nvim
-!/sway
 !/i3blocks
+!/kitty
+!/nvim
+!/pipewire
+!/profiles
+!/sway
+!/wireplumber

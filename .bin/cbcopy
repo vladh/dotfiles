@@ -1,0 +1,23 @@
+#!/bin/sh -eu
+
+# This script copies text piped to it to the clipboard in a more-or-less
+# cross-platform way.
+
+case "$(uname -s)" in
+   Darwin)
+     exec pbcopy
+     ;;
+
+   Linux)
+     exec xclip -sel c
+     ;;
+
+   CYGWIN*|MINGW32*|MSYS*|MINGW*)
+     exec clip.exe
+     ;;
+
+   *)
+     printf 'Unsupported OS\n'
+     exit 1
+     ;;
+esac
