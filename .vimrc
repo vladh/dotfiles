@@ -233,7 +233,9 @@ au FileType python setlocal shiftwidth=4 tabstop=4
 " asm
 au FileType asm setlocal commentstring=;\ %s
 " rust
-au FileType rust setlocal shiftwidth=2 tabstop=2
+au FileType rust setlocal shiftwidth=4 tabstop=4
+" go
+au FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
 " vue
 au FileType vue syntax sync fromstart
 " tex
