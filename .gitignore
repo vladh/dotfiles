@@ -65,6 +65,7 @@
 /.CFUserTextEncoding
 /.Trash/
 /.android/
+/.aqemu/
 /.atom
 /.aws/
 /.babel.json
@@ -126,6 +127,7 @@
 /.zcompdump
 /Adlm/
 /Applications/
+/Calibre Library/
 /Creative Cloud Files/
 /Desktop/
 /Documents/

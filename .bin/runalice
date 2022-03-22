@@ -3,5 +3,5 @@
 if [ -n "$IS_WSL" ] || [ -n "$WSL_DISTRO_NAME" ]; then
   exec cmd.exe /c msys2_shell.cmd -defterm -where d:/proj-versioned/alice-demettrie-bot -no-start -mingw64 -use-full-path './run.sh'
 else
-  cd ~/proj-versioned/alice-demettrie-bot && ./run.sh
+  cd /home/vladh/sources/alice-demettrie-bot && ./run.sh
 fi

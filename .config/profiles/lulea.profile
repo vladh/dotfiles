@@ -16,7 +16,7 @@ export LD_LIBRARY_PATH="${HOME}/.local/opt/Qt/6.1.3/gcc_64/lib:${LD_LIBRARY_PATH
 
 # go
 export GOPATH="/home/vladh/go"
-export PATH=$PATH:"/usr/local/go/bin:/home/vladh/go/bin"
+export PATH=$PATH:"${GOPATH}/bin"
 
 # hare
 export PATH=$PATH:"/home/vladh/sources/qbe/obj"

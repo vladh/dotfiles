@@ -7,7 +7,7 @@ eval $(keychain -q --agents ssh --eval id_rsa)
 
 # go
 export GOPATH="/home/vladh/go"
-export PATH=$PATH:"/usr/local/go/bin:/home/vladh/go/bin"
+export PATH=$PATH:"${GOPATH}/bin"
 
 # hare
 export PATH=$PATH:"/home/vladh/sources/qbe/obj"
