@@ -117,6 +117,7 @@
 /.rvm/
 /.ssh
 /.subversion/
+/.tmux-session
 /.tor/
 /.v8flags*
 /.var
