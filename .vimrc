@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/vim-easy-align'
+Plug 'machakann/vim-swap'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
