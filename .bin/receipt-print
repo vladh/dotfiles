@@ -1,0 +1,3 @@
+#!/bin/sh
+
+enscript -M receipt -1l --word-wrap $@
