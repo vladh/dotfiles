@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eu
+
+if [ $# -ne 3 ]; then
+    printf "call: Changes all occurences of word <from> to word <to> in\n"
+    printf "all files in the specified directory.\n"
+    printf "Usage:\n"
+    printf "    call <dir> <from> <to>\n"
+    printf "Example:\n"
+    printf "    call src doThing do_thing\n"
+    exit
+fi
+
+find $1 | xargs rpl -w $2 $3
