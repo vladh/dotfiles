@@ -1,0 +1,21 @@
+#!/bin/sh -eu
+
+repos="
+hare-project-library
+dotfiles
+hare-peony
+hare-glm
+hare-3d-graphics
+glad
+hare-gl
+shimei
+shimei.vim
+peony
+alice-demettrie-bot
+starfield
+lein-sassy
+"
+
+for repo in $repos; do
+    mirror-git-repo "git@git.sr.ht:~vladh/${repo}" "git@github.com:vladh/${repo}.git"
+done
