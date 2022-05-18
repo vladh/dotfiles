@@ -29,3 +29,7 @@ export PATH=$PATH:"/home/vladh/sources/uxn/bin"
 
 # zig
 export PATH=$PATH:"/home/vladh/.local/opt/zig-linux-x86_64-0.8.1"
+
+# texlive
+export MANPATH=$MANPATH:"/usr/local/texlive/2022/texmf-dist/doc/man"
+export PATH=$PATH:"/usr/local/texlive/2022/bin/x86_64-linux"
