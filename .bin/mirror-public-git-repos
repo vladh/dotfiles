@@ -1,19 +1,39 @@
 #!/bin/sh -eu
 
 repos="
-hare-project-library
+alice-demettrie-bot
+aoc-2020
+aoc-2021
+cheats-suck-but-are-easy
+clumsycomputer
 dotfiles
-hare-peony
-hare-glm
-hare-3d-graphics
+fotografiska
+gbchon
 glad
+hare-3d-graphics
 hare-gl
+hare-glm
+hare-peony
+hare-project-library
+irabot
+lein-sassy
+macrotone
+nouns
+particles
+peony
+peony-vulkan-scaffold
+pgmjs
+pstr
 shimei
 shimei.vim
-peony
-alice-demettrie-bot
+snake-in-asm
+squishymcbotty
 starfield
-lein-sassy
+tetris-in-go
+thursday
+tmk_keyboard_oldschool
+vegvisir
+virtualserial
 "
 
 for repo in $repos; do
