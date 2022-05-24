@@ -24,14 +24,14 @@ Plug 'tpope/vim-sleuth'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
-Plug 'vladh/nord-vim'
+Plug 'vladh/nord-vim', { 'branch': 'main' }
 
 " languages
 Plug 'digitaltoad/vim-pug'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
-Plug 'https://git.sr.ht/~vladh/shimei.vim'
+Plug 'https://git.sr.ht/~vladh/shimei.vim', { 'branch': 'main' }
 Plug 'iloginow/vim-stylus'
-Plug 'karolbelina/uxntal.vim'
+Plug 'karolbelina/uxntal.vim', { 'branch': 'main' }
 Plug 'otherjoel/vim-pollen'
 Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
