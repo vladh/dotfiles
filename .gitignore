@@ -27,6 +27,7 @@
 .gitconfig_private
 .gradle/
 .hushlogin
+.icons
 .ipython/
 .jupyter/
 .keras/
