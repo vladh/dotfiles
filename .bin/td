@@ -1,0 +1,33 @@
+#!/bin/sh -eu
+
+terminal_size() {
+    stty size 2>/dev/null | awk '{ printf "-x%d -y%d", $2, $1 }'
+}
+
+session_exists() {
+    tmux has-session -t "$1" 2>/dev/null
+}
+
+add_window() {
+    tmux new-window -d -t "$1:" -n "$2" -c "$3"
+}
+
+new_session() {
+    cd "$3" &&
+    tmux new-session -d -s "$1" -n "$2" $4 $5
+}
+
+main() {
+    local dimensions="$(terminal_size)"
+    tmux start-server
+
+    if ! session_exists "etc"; then
+        new_session "etc" "etc" "$HOME" "$dimensions" ""
+    fi
+
+    if ! session_exists "irc"; then
+        new_session "irc" "irc" "$HOME" "$dimensions" weechat
+    fi
+}
+
+main
