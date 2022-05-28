@@ -1,5 +1,5 @@
 [include]
-    path = ~/.gitconfig_private
+    path = ~/Dropbox/dotfiles-extra/.gitconfig_private
 [core]
     excludesfile = ~/.gitignore_global
     editor = nvim
