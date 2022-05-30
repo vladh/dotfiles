@@ -25,9 +25,7 @@ main() {
         new_session "etc" "etc" "$HOME" "$dimensions" ""
     fi
 
-    if ! session_exists "irc"; then
-        new_session "irc" "irc" "$HOME" "$dimensions" weechat
-    fi
+    tmux attach -t etc
 }
 
 main
