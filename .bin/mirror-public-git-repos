@@ -24,6 +24,7 @@ particles
 peony
 peony-vulkan-scaffold
 pgmjs
+plymouth-simplewallpaper
 pstr
 shimei
 shimei.vim
@@ -36,6 +37,10 @@ tmk_keyboard_oldschool
 vegvisir
 virtualserial
 "
+
+if [ $# -eq 1 ]; then
+    repos=$1
+fi
 
 for repo in $repos; do
     mirror-git-repo "git@git.sr.ht:~vladh/${repo}" "git@github.com:vladh/${repo}.git"
