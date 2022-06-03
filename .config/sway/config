@@ -10,7 +10,7 @@ font Iosevka Term SS07 7
 client.focused #88c0d0 #222222 #88c0d0
 client.unfocused #222222 #222222 #888888
 
-output * bg ~/Pictures/wallpaper.png fill
+output * bg ~/Pictures/wallpaper.jpg fill
 output eDP-1 scale 2
 output eDP-1 pos 0 0 res 2560x1440
 
