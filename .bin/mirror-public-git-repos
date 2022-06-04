@@ -15,6 +15,8 @@ hare-gl
 hare-glm
 hare-peony
 hare-project-library
+hare-vulkan
+hare-vulkan-hello-world
 irabot
 lein-sassy
 macrotone
