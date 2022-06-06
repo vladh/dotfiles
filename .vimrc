@@ -249,9 +249,9 @@ let g:jsx_ext_required=0
 let r_indent_align_args=0
 let r_indent_ess_compatible=1
 " c
-" don't indent `public`, `protected`, and `private`
+" don't indent `case`, `public`, `protected`, and `private`
 " don't indent code in any special way when splitting (args, ...) over multiple lines
-set cinoptions+=g0,(s,Ws,m1
+set cinoptions+=g0,(s,Ws,m1,:0,=s,l1
 " zig
 let g:zig_fmt_autosave = 0
 
