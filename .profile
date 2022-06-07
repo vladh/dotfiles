@@ -16,9 +16,6 @@ if [ -n "$BASH$FISH_VERSION" ]; then
   export HISTFILE=~/.history
   # This saves logs to consult later
   export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> $HOME/.logs/sh-history-$(date "+%Y-%m-%d").log'
-
-  # z.sh unfortunately only works under bash
-  . $HOME/.bin/lib/z.sh
 fi
 
 [ -e $HOME/.config/profiles/$(hostname).profile ] && . $HOME/.config/profiles/$(hostname).profile
