@@ -1,4 +1,4 @@
-# dependencies: i3blocks, ulauncher, brightnessctl, playerctl
+# dependencies: i3blocks, wofi, brightnessctl, playerctl
 
 set $mod Mod4
 set $term kitty
@@ -11,16 +11,8 @@ client.focused #88c0d0 #222222 #88c0d0
 client.unfocused #222222 #222222 #888888
 
 output * bg ~/Pictures/wallpaper.jpg fill
-output eDP-1 scale 2
-output eDP-1 pos 0 0 res 2560x1440
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
-    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
+output * scale 2
+output * pos 0 0 res 2560x1440
 
 # Bind media keys
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+10 i3blocks
@@ -48,7 +40,7 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # bindsym $mod+d exec $menu
-bindsym $mod+d exec ulauncher
+bindsym $mod+d exec "wofi --show=drun"
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -121,7 +113,7 @@ bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
@@ -178,11 +170,11 @@ bar {
 
     status_command i3blocks
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    # colors {
+    #     statusline #ffffff
+    #     background #323232
+    #     inactive_workspace #32323200 #32323200 #5c5c5c
+    # }
 }
 
 include ~/.config/sway/config.d/*
