@@ -81,14 +81,14 @@ bindsym $mod+Shift+Right move right
 
 set $ws1 web
 set $ws2 dev
-set $ws3 irc
-set $ws4 chat
-set $ws5 music
-set $ws6 s1
-set $ws7 s2
-set $ws8 s3
-set $ws9 s4
-set $ws0 s5
+set $ws3 chat
+set $ws4 music
+set $ws5 1
+set $ws6 2
+set $ws7 3
+set $ws8 4
+set $ws9 5
+set $ws0 6
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
