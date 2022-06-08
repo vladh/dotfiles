@@ -161,8 +161,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    position top
-    height 24
+    position bottom
+    height 20
     font Iosevka Term SS07 9
     mode hide
     separator_symbol " "
@@ -170,11 +170,11 @@ bar {
 
     status_command i3blocks
 
-    # colors {
-    #     statusline #ffffff
-    #     background #323232
-    #     inactive_workspace #32323200 #32323200 #5c5c5c
-    # }
+    colors {
+        statusline #ffffff
+        background #222222
+        # inactive_workspace #32323200 #32323200 #5c5c5c
+    }
 }
 
 include ~/.config/sway/config.d/*
