@@ -1,6 +1,9 @@
 #!/bin/sh -eu
 # Save and restore the state of tmux sessions and windows.
 
+# @reboot /home/vladh/.bin/tmux-session restore
+# * * * * * /bin/bash -l /home/vladh/.bin/tmux-session save
+
 dump() {
     local d=";"
     tmux list-windows -a -F "#S${d}#W${d}#{pane_current_path}"
