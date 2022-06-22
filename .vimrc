@@ -251,7 +251,9 @@ let r_indent_ess_compatible=1
 " c
 " don't indent `case`, `public`, `protected`, and `private`
 " don't indent code in any special way when splitting (args, ...) over multiple lines
-set cinoptions+=g0,(s,Ws,m1,:0,=s,l1
+" don't indent function type when it's on its own line
+set cinoptions+=g0,(s,Ws,m1,:0,=s,l1,t0
+set cinkeys+=0#
 " zig
 let g:zig_fmt_autosave = 0
 
