@@ -168,6 +168,7 @@ VulkanSDK/
 go/
 isus/
 local/
+proj
 scratch/
 snap/
 texmf/
