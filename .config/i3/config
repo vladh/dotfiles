@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Ubuntu Regular 17
+font pango:Ubuntu Regular 9
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -8,6 +8,14 @@ floating_modifier $mod
 bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+
+client.focused          #444444 #444444 #FFFFFF #000000   #000000
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background       #FFFFFF
+for_window [class="^.*"] border pixel 0
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -31,6 +39,7 @@ bindsym $mod+semicolon split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
+workspace_layout tabbed
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
@@ -95,5 +104,4 @@ bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Compton
 exec picom
