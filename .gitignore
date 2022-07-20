@@ -4,6 +4,7 @@
 *.viminfo*
 .DS_Store
 .MacOSX/
+.Xauthority
 .anthy/
 .ash_history
 .aspell*
