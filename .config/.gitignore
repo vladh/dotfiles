@@ -2,6 +2,7 @@
 !.gitignore
 !/aerc
 !/alacritty
+!/i3
 !/i3blocks
 !/kitty
 !/nvim
