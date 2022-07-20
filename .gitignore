@@ -5,6 +5,7 @@
 .DS_Store
 .MacOSX/
 .Xauthority
+.Xresources
 .anthy/
 .ash_history
 .aspell*
@@ -61,6 +62,7 @@
 .themes/
 .thunderbird/
 .vscode/
+.xinitrc
 .yarnrc
 .zsh_history
 .zshrc
