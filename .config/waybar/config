@@ -1,0 +1,30 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "temperature", "battery", "tray", "clock"],
+    "height": 26,
+    "sway/window": {
+        "max-length": 50
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+    "battery": {
+        "format": "{capacity}%",
+        "format-critical": "{capacity}%!",
+        "format-charging": "{capacity}%c"
+    },
+    "temperature": {
+        "format": "{temperatureC}°C"
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-bluetooth": "{volume}%bt",
+        "format-muted": "m",
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}

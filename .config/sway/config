@@ -6,9 +6,7 @@ default_border none
 
 # A hack to hide the title bar. Remember it will always be hidden.
 # https://github.com/swaywm/sway/issues/1286
-font pango:monospace 0
-titlebar_border_thickness 0
-titlebar_padding 0
+hide_edge_borders --i3 smart
 
 client.focused          #444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
