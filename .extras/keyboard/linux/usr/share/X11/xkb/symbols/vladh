@@ -101,6 +101,6 @@ xkb_symbols "basic" {
 
     key <BKSL> { [ backslash, bar ] };
 
-    include "level3(lalt_switch)"
+    include "level3(ralt_switch)"
     include "capslock(escape)"
 };
