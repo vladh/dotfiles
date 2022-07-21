@@ -111,5 +111,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec_always feh --bg-fill ~/Pictures/wallpaper.png
+
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec picom
