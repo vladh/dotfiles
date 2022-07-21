@@ -1,190 +1,127 @@
-# dependencies: i3blocks, wofi, brightnessctl, playerctl
-
 set $mod Mod4
-set $term kitty
 
+font pango:Ubuntu Regular 9
+floating_modifier $mod
 default_border none
-default_floating_border none
-font Iosevka Term SS07 7
-workspace_layout tabbed
 
-client.focused #88c0d0 #222222 #88c0d0
-client.unfocused #222222 #222222 #888888
+client.focused          #444444 #444444 #FFFFFF #000000   #000000
+client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background       #FFFFFF
 
-output * bg ~/Pictures/wallpaper.jpg fill
+bindsym $mod+Return exec kitty
+bindsym $mod+x kill
+bindcode $mod+40 exec "wofi --show drun"
 
-# Bind media keys
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec amixer -q sset Master toggle && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMicMute exec amixer -q sset Capture toggle && pkill -RTMIN+10 i3blocks
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Take screenshot
-bindsym $mod+Shift+s exec GRIM_DEFAULT_DIR="~/Pictures/" grim
-
-# Open settings
-bindsym $mod+quoteleft exec gnome-control-center
-
-# Start a terminal
-bindsym $mod+Return exec $term
-
-# Kill focused window
-bindsym $mod+Shift+q kill
-
-# Start your launcher
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
-# bindsym $mod+d exec $menu
-bindsym $mod+d exec "wofi --show=drun"
-
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
-# Change normal to inverse to use left mouse button for resizing and right
-# mouse button for dragging.
-floating_modifier $mod normal
-
-# Reload the configuration file
-bindsym $mod+Shift+c reload
-
-# Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning \
-  -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
-  -b 'Yes, exit sway' \
-  'swaymsg exit'
-
-# Move your focus around
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-# Or use $mod+[up|down|left|right]
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# Move the focused window with the same, but add Shift
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-# Ditto, with arrow keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-set $ws1 web
-set $ws2 dev
-set $ws3 chat
-set $ws4 music
-set $ws5 1
-set $ws6 2
-set $ws7 3
-set $ws8 4
-set $ws9 5
-set $ws0 6
+bindsym $mod+semicolon split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
 
-# Switch to workspace
+workspace_layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $wss1 "s1"
+
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-# Move focused container to workspace
+bindsym $mod+q workspace $wss1
+
+workspace $ws1 output primary
+workspace $ws2 output primary
+workspace $ws3 output primary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
+workspace $wss1 output secondary
+
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
+bindsym $mod+Shift+q move container to workspace $wss1
 
-# You can "split" the current object of your focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
-# respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
-
-# Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
-
-# Make the current focus fullscreen
-bindsym $mod+f fullscreen
-
-# Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
-
-# Swap focus between the tiling area and the floating area
-bindsym $mod+space focus mode_toggle
-
-# Move focus to the parent container
-bindsym $mod+a focus parent
-
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
-
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning \
+        -m 'Really exit sway?' \
+        -b 'Yes, exit sway' \
+        'swaymsg exit'
 
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym h resize shrink width 10px
-    bindsym j resize grow height 10px
-    bindsym k resize shrink height 10px
-    bindsym l resize grow width 10px
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
-
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
-bar {
-    position bottom
-    height 20
-    font Iosevka Term SS07 9
-    mode hide
-    separator_symbol " "
-    tray_padding 4
+output * bg ~/Pictures/wallpaper.jpg fill
 
-    status_command i3blocks
+input "type:keyboard" {
+        xkb_layout vladh
+}
 
-    colors {
-        statusline #ffffff
-        background #222222
-        # inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+input "type:touchpad" {
+        dwt enabled
+        tap enabled
+        natural_scroll enabled
+        middle_emulation enabled click_method clickfinger
 }
 
 include ~/.config/sway/config.d/*

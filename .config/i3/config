@@ -1,13 +1,7 @@
 set $mod Mod4
 
 font pango:Ubuntu Regular 9
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
 floating_modifier $mod
-bindsym $mod+Return exec kitty
-bindsym $mod+x kill
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 client.focused          #444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
@@ -17,11 +11,15 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 for_window [class="^.*"] border pixel 0
 
+bindsym $mod+Return exec kitty
+bindsym $mod+x kill
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
