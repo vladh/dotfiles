@@ -4,6 +4,12 @@ font pango:Ubuntu Regular 9
 floating_modifier $mod
 default_border none
 
+# A hack to hide the title bar. Remember it will always be hidden.
+# https://github.com/swaywm/sway/issues/1286
+font pango:monospace 0
+titlebar_border_thickness 0
+titlebar_padding 0
+
 client.focused          #444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused        #333333 #222222 #888888 #292D2E   #222222
@@ -110,6 +116,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+bar swaybar_command waybar
 
 output * bg ~/Pictures/wallpaper.jpg fill
 
