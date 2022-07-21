@@ -5,7 +5,6 @@
 .DS_Store
 .MacOSX/
 .Xauthority
-.Xresources
 .anthy/
 .ash_history
 .aspell*
@@ -62,12 +61,12 @@
 .themes/
 .thunderbird/
 .vscode/
-.xinitrc
 .yarnrc
 .zsh_history
 .zshrc
 /.CFUserTextEncoding
 /.Trash/
+/.Xresources
 /.android/
 /.aqemu/
 /.atom
@@ -127,6 +126,7 @@
 /.var
 /.vim/sessions
 /.wget-hsts
+/.xinitrc
 /.z
 /.z.*
 /.zcompdump
