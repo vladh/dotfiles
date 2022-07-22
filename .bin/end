@@ -1,0 +1,5 @@
+#!/bin/sh -eu
+
+[ ! -e $HOME/.cache/anitras-dans-short.mp3 ] && cd $HOME/.cache && wget https://vladh.net/static/anitras-dans-short.mp3
+
+mpv $HOME/.cache/anitras-dans-short.mp3 --start=02:12 --volume=150 --quiet > /dev/null
