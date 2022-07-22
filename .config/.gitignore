@@ -11,6 +11,9 @@
 !/profiles
 !/rofi
 !/sway
+!/systemd
 !/waybar
 !/weechat
 !/wireplumber
+systemd/user/*.service
+systemd/user/*.wants
