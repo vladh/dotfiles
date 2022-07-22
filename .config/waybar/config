@@ -12,8 +12,8 @@
     },
     "battery": {
         "format": "{capacity}%",
-        "format-critical": "{capacity}%!",
-        "format-charging": "{capacity}%c"
+        "format-critical": "{capacity}%",
+        "format-charging": "{capacity}%"
     },
     "temperature": {
         "format": "{temperatureC}°C"
