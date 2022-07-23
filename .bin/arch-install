@@ -1,0 +1,26 @@
+#!/bin/sh -eux
+
+aur_install() {
+    cd /tmp && git clone "https://aur.archlinux.org/$1.git" && cd "$1" && makepkg -si
+}
+
+sudo pacman -S \
+    base linux linux-firmware \
+    networkmanager avahi nss-mdns openssh inetutils bind mtr \
+    doas git curl wget which ack fd duf btop powertop \
+    gcc gdb make vim neovim tmux time man \
+    pipewire pipewire-pulse pamixer playerctl \
+    bluez bluez-utils brightnessctl \
+    kitty nomacs mpv vlc zathura zathura-pdf-mupdf \
+    cups cups-pdf ntfs-3g \
+    xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
+    i3-wm picom rofi feh \
+    sway swaybg wofi
+
+sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now avahi-daemon
+sudo systemctl enable --now sshd
+
+aur_install brother-dcp1610w
+aur_install greetd
+aur_install greetd-tuigreet
