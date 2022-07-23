@@ -13,6 +13,7 @@ for_window [class="^.*"] border pixel 0
 
 bindsym $mod+Return exec kitty
 bindsym $mod+x kill
+bindsym $mod+XF86TouchpadOn exec poweroff
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
