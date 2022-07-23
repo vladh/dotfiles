@@ -7,7 +7,7 @@ case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 	mailto*)
 		exec aerc "$1"
 		;;
-	*.pdf|*.epub)
+	*.pdf|*.epub|*.djvu)
 		exec zathura "$1"
 		;;
 	*.jpg|*.jpeg|*.png|*.gif)

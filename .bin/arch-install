@@ -11,7 +11,7 @@ sudo pacman -S \
     gcc gdb make vim neovim tmux time man \
     pipewire pipewire-pulse pamixer playerctl \
     bluez bluez-utils brightnessctl \
-    kitty nomacs mpv vlc zathura zathura-pdf-mupdf \
+    kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu \
     cups cups-pdf ntfs-3g \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh \
