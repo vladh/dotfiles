@@ -7,7 +7,7 @@ aur_install() {
 sudo pacman -S \
     base linux linux-firmware \
     networkmanager avahi nss-mdns openssh inetutils bind mtr \
-    doas git curl wget which ack fd duf btop powertop \
+    doas git curl wget which ranger ack fd duf btop powertop pv moreutils \
     gcc gdb make vim neovim tmux time man \
     pipewire pipewire-pulse pamixer playerctl \
     bluez bluez-utils brightnessctl \
