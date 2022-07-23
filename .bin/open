@@ -1,13 +1,13 @@
 #!/bin/sh -eu
 
-case "$(printf $1 | tr '[:upper:]' '[:lower:]')" in
+case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 	http*|https*)
 		exec firefox "$1"
 		;;
 	mailto*)
 		exec aerc "$1"
 		;;
-	*.pdf)
+	*.pdf|*.epub)
 		exec zathura "$1"
 		;;
 	*.jpg|*.jpeg|*.png|*.gif)
