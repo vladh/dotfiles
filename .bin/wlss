@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+grim -g "$(slurp)" - | swappy -f -
