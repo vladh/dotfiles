@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+maim -s -u ~/Downloads/$(isodate).png

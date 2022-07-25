@@ -7,14 +7,14 @@ aur_install() {
 sudo pacman -S \
     base linux linux-firmware \
     networkmanager avahi nss-mdns openssh inetutils bind mtr \
-    doas git curl wget which ranger ack fd duf btop powertop pv moreutils \
+    doas git curl wget rsync which ranger ack fd duf btop powertop pv moreutils \
     gcc gdb make vim neovim tmux time man \
     pipewire pipewire-pulse pamixer playerctl \
     bluez bluez-utils brightnessctl \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu \
     cups cups-pdf ntfs-3g \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
-    i3-wm picom rofi feh \
+    i3-wm picom rofi feh maim slop \
     sway swaybg wofi slurp swappy
 
 sudo systemctl enable --now NetworkManager
