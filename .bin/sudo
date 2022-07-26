@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+echo "Did you mean 'doas'?"
