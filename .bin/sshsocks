@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+ssh -g -f -N -D 6969 yavin
