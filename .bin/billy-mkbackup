@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export BORG_REPO='ssh://zh2116@zh2116.rsync.net:22/~/borgrepo'
+export BORG_REPO='ssh://rsync/~/borgrepo'
 export BORG_REMOTE_PATH='borg1'
 # You should set the passphrase before calling the script
 # export BORG_PASSPHRASE=''
