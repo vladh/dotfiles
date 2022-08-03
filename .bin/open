@@ -1,7 +1,7 @@
 #!/bin/sh -eu
 
 case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
-	http*|https*)
+	http*|https*|*.html)
 		exec firefox "$1"
 		;;
 	mailto*)
