@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+rsync -rPR /srv /etc/nginx /etc/bind billy:/mnt/ironwolf/Backups/yavin/
