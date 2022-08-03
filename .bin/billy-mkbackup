@@ -25,8 +25,8 @@ borg create \
     --exclude '*.git' \
     --exclude '*.Trash*' \
     --exclude '*#recycle' \
-    ::'ironwolf-{now}' \
-    /mnt/ironwolf/
+    ::'balcora-{now}' \
+    /mnt/balcora/
 
 backup_exit=$?
 
@@ -40,7 +40,7 @@ info "Pruning repository"
 
 borg prune \
     --list \
-    --prefix 'ironwolf-' \
+    --prefix 'balcora-' \
     --show-rc \
     --keep-daily 7 \
     --keep-weekly 4 \
