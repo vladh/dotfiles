@@ -1,3 +1,8 @@
-#!/bin/sh -eu
+#!/bin/sh -u
 
-echo "Did you mean 'doas'?"
+which doas
+if [ $? -eq 0 ]; then
+    echo "Did you mean 'doas'?"
+else
+    /bin/sudo $@
+fi
