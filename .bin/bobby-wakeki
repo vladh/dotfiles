@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+sudo synonet --wake B4:2E:99:95:95:93 eth0

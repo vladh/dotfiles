@@ -1,0 +1,77 @@
+#!/bin/sh
+
+export BORG_REPO='ssh://zh2116@zh2116.rsync.net:22/~/borgrepo'
+export BORG_REMOTE_PATH='borg1'
+# You should set the passphrase before calling the script
+# export BORG_PASSPHRASE=''
+
+info() { printf "%s: %s\n\n" "$(date +'%Y-%m-%dT%H:%M:%S%z')" "$*" >&2; }
+trap "echo $(date +'%Y-%m-%dT%H:%M:%S%z') Backup interrupted >&2; exit 2" INT TERM
+
+# Step 1: backup
+
+info "Starting backup"
+
+borg create \
+    --verbose \
+    --filter AME \
+    --list \
+    --stats \
+    --show-rc \
+    --compression lz4 \
+    --exclude-caches \
+    --exclude '*.nobackup' \
+    --exclude '*.DS_Store' \
+    --exclude '*.git' \
+    --exclude '*.Trash*' \
+    --exclude '*#recycle' \
+    --exclude '*@eaDir' \
+    --exclude '*@SynoResource' \
+    ::'Dagobah-{now}' \
+    /volume1/Dagobah
+
+backup_exit=$?
+
+# Step 2: prune
+# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
+# archives of THIS machine. The '{hostname}-' prefix is very important to
+# limit prune's operation to this machine's archives and not apply to
+# other machines' archives also:
+
+info "Pruning repository"
+
+borg prune \
+    --list \
+    --prefix 'Dagobah-' \
+    --show-rc \
+    --keep-daily 7 \
+    --keep-weekly 4 \
+    --keep-monthly 6
+
+prune_exit=$?
+
+# Step 3: compact
+# Actually free repo disk space by compacting segments
+# Right now this is done automatically
+# Enable this once we upgrade to version 1.2.0a2+
+
+# info "Compacting repository"
+# borg compact
+# compact_exit=$?
+
+# Step 4: finish up
+# Use highest exit code as global exit code
+
+global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
+# global_exit=$(( compact_exit > global_exit ? compact_exit : global_exit ))
+
+if [ ${global_exit} -eq 0 ]; then
+    info "Backup and prune finished successfully"
+elif [ ${global_exit} -eq 1 ]; then
+    info "Backup and prune finished with warnings"
+else
+    info "Backup and prune finished with errors"
+fi
+
+exit ${global_exit}
+

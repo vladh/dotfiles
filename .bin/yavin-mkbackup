@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+rsync -aPRh --stats --exclude '*node_modules*' --exclude '*.git*' --delete /srv /etc/nginx /etc/bind billy:/mnt/ironwolf/Backups/yavin/$1/

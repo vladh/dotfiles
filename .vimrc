@@ -33,6 +33,7 @@ Plug 'https://git.sr.ht/~vladh/shimei.vim', { 'branch': 'main' }
 Plug 'iloginow/vim-stylus'
 Plug 'karolbelina/uxntal.vim', { 'branch': 'main' }
 Plug 'otherjoel/vim-pollen'
+Plug 'pangloss/vim-javascript'
 Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
