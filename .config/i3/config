@@ -56,7 +56,7 @@ bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 set $ws1 "1"
 set $ws2 "2"
