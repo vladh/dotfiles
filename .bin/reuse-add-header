@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+
+reuse addheader --copyright 'Vlad-Stefan Harbuz <vlad@vladh.net>' --year 2022 --copyright-style symbol --template compact $@
