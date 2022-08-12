@@ -10,7 +10,7 @@ case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 	*.pdf|*.epub|*.djvu)
 		exec zathura "$1"
 		;;
-	*.jpg|*.jpeg|*.png|*.gif)
+	*.jpg|*.jpeg|*.png|*.gif|*.svg)
 		exec nomacs "$1"
 		;;
 	*.mp3|*.wav)
