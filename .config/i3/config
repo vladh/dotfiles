@@ -25,7 +25,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym Print exec xss
+bindsym Print exec xss-full
+bindsym $mod+p exec xss-full
+bindsym $mod+o exec xss
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
