@@ -181,7 +181,7 @@ let g:tmuxline_powerline_separators=0
 let g:fzf_layout={'down': '~30%'}
 
 " vimwiki
-let g:vimwiki_list=[{'path': '~/Dropbox/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list=[{'path': '~/bentus/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " don't hide bold/italic markers (*/_)
 set conceallevel=0
 let g:vim_json_syntax_conceal=0
