@@ -206,7 +206,7 @@ endif
 augroup highlight_todo
   autocmd!
   autocmd WinEnter,VimEnter * :silent! call
-    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow', -1)
+    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow\|#nocheckin', -1)
 augroup END
 
 
