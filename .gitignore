@@ -21,7 +21,7 @@
 .dbvis/
 .dropbox-dist/
 .electron-gyp/
-.fonts/
+.fonts
 .fzf.bash
 .fzf.zsh
 .gitconfig_backup

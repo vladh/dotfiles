@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Ubuntu Regular 9
+font pango:Ubuntu Mono 10
 floating_modifier $mod
 
 client.focused          #444444 #444444 #FFFFFF #000000   #000000

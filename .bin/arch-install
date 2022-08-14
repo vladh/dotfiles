@@ -14,7 +14,7 @@ sudo pacman -S \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc \
     cups cups-pdf ntfs-3g \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
-    i3-wm picom rofi feh maim slop \
+    i3-wm picom rofi feh maim slop redshift \
     sway swaybg wofi slurp swappy wl-clipboard
 
 sudo systemctl enable --now NetworkManager
