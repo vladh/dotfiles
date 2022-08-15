@@ -57,11 +57,11 @@ workspace_layout tabbed
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $wss1 "s1"
-set $wss2 "s2"
+set $ws4 "q"
+set $ws5 "w"
+set $ws6 "e"
+set $wss1 "a"
+set $wss2 "s"
 
 workspace $ws1 output primary DP-4
 workspace $ws2 output primary DP-4

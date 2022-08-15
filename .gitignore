@@ -38,6 +38,7 @@
 .minecraft/
 .motd_shown
 .mozilla/
+.msmtprc
 .muttrc_private
 .openjfx/
 .pki/
