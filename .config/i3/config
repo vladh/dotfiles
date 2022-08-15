@@ -2,6 +2,7 @@ set $mod Mod4
 
 font pango:Ubuntu Mono 10
 floating_modifier $mod
+focus_follows_mouse no
 
 client.focused          #444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
@@ -60,14 +61,16 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $wss1 "s1"
+set $wss2 "s2"
 
-workspace $ws1 output primary
-workspace $ws2 output primary
-workspace $ws3 output primary
-workspace $ws4 output primary
-workspace $ws5 output primary
-workspace $ws6 output primary
-workspace $wss1 output secondary
+workspace $ws1 output primary DP-4
+workspace $ws2 output primary DP-4
+workspace $ws3 output primary DP-4
+workspace $ws4 output primary DP-4
+workspace $ws5 output primary DP-4
+workspace $ws6 output primary DP-4
+workspace $wss1 output secondary DP-0.8
+workspace $wss2 output secondary DP-0.8
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -76,6 +79,7 @@ bindsym $mod+q workspace $ws4
 bindsym $mod+w workspace $ws5
 bindsym $mod+e workspace $ws6
 bindsym $mod+a workspace $wss1
+bindsym $mod+s workspace $wss2
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -84,6 +88,7 @@ bindsym $mod+Shift+q move container to workspace $ws4
 bindsym $mod+Shift+w move container to workspace $ws5
 bindsym $mod+Shift+e move container to workspace $ws6
 bindsym $mod+Shift+a move container to workspace $wss1
+bindsym $mod+Shift+s move container to workspace $wss2
 
 bindsym $mod+z layout tabbed
 bindsym $mod+x kill
