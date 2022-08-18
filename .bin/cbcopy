@@ -4,20 +4,26 @@
 # cross-platform way.
 
 case "$(uname -s)" in
-   Darwin)
-     exec pbcopy
-     ;;
+    Darwin)
+        exec pbcopy
+        ;;
 
-   Linux)
-     exec xclip -sel c
-     ;;
+    Linux)
+        which_exit_code=0
+        which wl-copy > /dev/null 2>/dev/null || which_exit_code=$?
+        if [ ${which_exit_code} -eq 0 ]; then
+            exec wl-copy
+        else
+            exec xclip -sel c
+        fi
+        ;;
 
-   CYGWIN*|MINGW32*|MSYS*|MINGW*)
-     exec clip.exe
-     ;;
+    CYGWIN*|MINGW32*|MSYS*|MINGW*)
+        exec clip.exe
+        ;;
 
-   *)
-     printf 'Unsupported OS\n'
-     exit 1
-     ;;
+    *)
+        printf 'Unsupported OS\n'
+        exit 1
+        ;;
 esac

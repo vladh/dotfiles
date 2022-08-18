@@ -1,7 +1,8 @@
 set $mod Mod4
 
-font pango:Ubuntu Regular 9
+font pango:Ubuntu Mono 10
 floating_modifier $mod
+focus_follows_mouse no
 
 client.focused          #444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
@@ -10,11 +11,6 @@ client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 for_window [class="^.*"] border pixel 0
-
-bindsym $mod+Return exec kitty
-bindsym $mod+x kill
-bindsym $mod+XF86TouchpadOn exec poweroff
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -25,7 +21,15 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym Print exec xss
+
+bindsym $mod+shift+0 exec poweroff
+bindsym Print exec xss-full
+bindsym $mod+p exec xss-full
+bindsym $mod+o exec xss
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Exit i3 and X?' -B 'Yes' 'i3-msg exit'"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -45,54 +49,59 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+semicolon split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Return exec kitty
+bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 workspace_layout tabbed
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
-# bindsym $mod+a focus parent
 
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $wss1 "s1"
+set $ws4 "q"
+set $ws5 "w"
+set $ws6 "e"
+set $wss1 "a"
+set $wss2 "s"
+
+workspace $ws1 output primary DP-4
+workspace $ws2 output primary DP-4
+workspace $ws3 output primary DP-4
+workspace $ws4 output primary DP-4
+workspace $ws5 output primary DP-4
+workspace $ws6 output primary DP-4
+workspace $wss1 output secondary DP-0.8
+workspace $wss2 output secondary DP-0.8
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+q workspace $wss1
-
-workspace $ws1 output primary
-workspace $ws2 output primary
-workspace $ws3 output primary
-workspace $ws4 output primary
-workspace $ws5 output primary
-workspace $ws6 output primary
-workspace $wss1 output secondary
+bindsym $mod+q workspace $ws4
+bindsym $mod+w workspace $ws5
+bindsym $mod+e workspace $ws6
+bindsym $mod+a workspace $wss1
+bindsym $mod+s workspace $wss2
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+q move container to workspace $wss1
+bindsym $mod+Shift+q move container to workspace $ws4
+bindsym $mod+Shift+w move container to workspace $ws5
+bindsym $mod+Shift+e move container to workspace $ws6
+bindsym $mod+Shift+a move container to workspace $wss1
+bindsym $mod+Shift+s move container to workspace $wss2
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3 and X?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+z layout tabbed
+bindsym $mod+x kill
+bindsym $mod+c layout toggle split
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# bindsym $mod+a focus parent
+# bindsym $mod+semicolon split h
+# bindsym $mod+v split v
+# bindsym $mod+s layout stacking
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt

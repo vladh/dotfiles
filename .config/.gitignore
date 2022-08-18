@@ -1,7 +1,6 @@
 /*
 !.gitignore
 !/aerc
-!/alacritty
 !/i3
 !/kitty
 !/nvim
@@ -9,12 +8,10 @@
 !/pipewire
 !/polybar
 !/profiles
+!/redshift
 !/rofi
+!/senpai
 !/swappy
 !/sway
-!/systemd
 !/waybar
-!/weechat
 !/wireplumber
-systemd/user/*.service
-systemd/user/*.wants

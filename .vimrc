@@ -13,7 +13,6 @@ endif
 let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
-Plug 'edkolev/tmuxline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/vim-easy-align'
 Plug 'machakann/vim-swap'
@@ -182,7 +181,7 @@ let g:tmuxline_powerline_separators=0
 let g:fzf_layout={'down': '~30%'}
 
 " vimwiki
-let g:vimwiki_list=[{'path': '~/Dropbox/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list=[{'path': '~/bentus/wiki/', 'syntax': 'markdown', 'ext': '.md'}]
 " don't hide bold/italic markers (*/_)
 set conceallevel=0
 let g:vim_json_syntax_conceal=0
@@ -207,7 +206,7 @@ endif
 augroup highlight_todo
   autocmd!
   autocmd WinEnter,VimEnter * :silent! call
-    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow', -1)
+    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow\|#nocheckin', -1)
 augroup END
 
 

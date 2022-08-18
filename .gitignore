@@ -21,7 +21,7 @@
 .dbvis/
 .dropbox-dist/
 .electron-gyp/
-.fonts/
+.fonts
 .fzf.bash
 .fzf.zsh
 .gitconfig_backup
@@ -38,6 +38,7 @@
 .minecraft/
 .motd_shown
 .mozilla/
+.msmtprc
 .muttrc_private
 .openjfx/
 .pki/
@@ -169,6 +170,7 @@ Google Drive/
 Videos/
 VirtualBox VMs/
 VulkanSDK/
+bentus/
 go/
 isus/
 local/

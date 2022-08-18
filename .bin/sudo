@@ -3,6 +3,5 @@
 which doas > /dev/null 2>/dev/null
 if [ $? -eq 0 ]; then
     echo "Did you mean 'doas'?"
-else
-    /bin/sudo $@
 fi
+/bin/sudo $@
