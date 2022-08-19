@@ -19,6 +19,8 @@ fi
 which xsetwacom > /dev/null 2>/dev/null
 if [ $? -eq 0 ]; then
     xsetwacom set "Wacom Intuos Pro S Pen stylus" "MapToOutput" "HEAD-0"
+    xsetwacom set "Wacom Intuos Pro S Pen eraser" "MapToOutput" "HEAD-0"
+    xsetwacom set "Wacom Intuos Pro S Pen cursor" "MapToOutput" "HEAD-0"
 fi
 
 exec i3
