@@ -1,0 +1,10 @@
+#!/bin/sh -eu
+
+export DISPLAY=:0
+export XAUTHORITY=/home/vladh/.Xauthority
+
+if command -v "xsetwacom"; then
+    xsetwacom set "Wacom Intuos Pro S Pen stylus" "MapToOutput" "HEAD-0"
+    xsetwacom set "Wacom Intuos Pro S Pen eraser" "MapToOutput" "HEAD-0"
+    xsetwacom set "Wacom Intuos Pro S Pen cursor" "MapToOutput" "HEAD-0"
+fi

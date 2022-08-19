@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEMS=="usb", ATTRS{idVendor}=="056a", ATTRS{idProduct}=="0314", RUN+="/home/vladh/.bin/wacom-setup"
