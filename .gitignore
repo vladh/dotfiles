@@ -129,7 +129,6 @@
 /.var
 /.vim/sessions
 /.wget-hsts
-/.xinitrc
 /.z
 /.z.*
 /.zcompdump
