@@ -9,9 +9,7 @@ case "$(uname -s)" in
         ;;
 
     Linux)
-        which_exit_code=0
-        which wl-copy > /dev/null 2>/dev/null || which_exit_code=$?
-        if [ ${which_exit_code} -eq 0 ]; then
+        if command -v "wl-copy"; then
             exec wl-copy
         else
             exec xclip -sel c
