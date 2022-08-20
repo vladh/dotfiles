@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec wget -mpck --html-extension --user-agent="" -e robots=off --wait 0.2 "$@"

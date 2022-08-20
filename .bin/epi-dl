@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+scp -r "epi:downloads/$1" $2
