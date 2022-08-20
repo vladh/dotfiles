@@ -20,11 +20,12 @@ borg create \
     --show-rc \
     --compression lz4 \
     --exclude-caches \
-    --exclude '*.nobackup' \
-    --exclude '*.DS_Store' \
-    --exclude '*.git' \
-    --exclude '*.Trash*' \
+    --exclude-from '/mnt/balcora/nobackup.txt' \
     --exclude '*#recycle' \
+    --exclude '*.DS_Store' \
+    --exclude '*.Trash*' \
+    --exclude '*.git' \
+    --exclude '*node_modules' \
     ::'balcora-{now}' \
     /mnt/balcora/
 

@@ -154,6 +154,7 @@
 /go/
 /isus/
 /local/
+/music
 /opt/
 /private
 /proj-fat/
@@ -162,6 +163,8 @@
 /sources/
 /texmf/
 /tmp/
+/video-movies
+/video-tv
 Adlm/
 Creative Cloud Files/
 Dropbox
