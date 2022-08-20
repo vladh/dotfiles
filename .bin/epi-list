@@ -1,0 +1,5 @@
+#!/bin/sh -eu
+
+. ~/bentus/dotfiles-extra/.config/transmission-remote/config.sh
+
+exec transmission-remote "$URL" -n ":$PASS" -l -t active
