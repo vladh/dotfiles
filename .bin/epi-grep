@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec ssh epi "ls -1tc ~/downloads | grep -i $@"
