@@ -4,11 +4,12 @@
 # $2: OAuth token
 # $3: file
 srht_req() {
-    QUERY=$(cat "$3" | tr -d "\n" | sed 's/"/\\"/g')
+    QUERY=$(cat "$3" | grep -v '^#' | tr -d "\n" | sed 's/"/\\"/g')
 
     curl --oauth2-bearer "$2" \
         -H 'Content-Type: application/json' \
         -d "{\"query\": \"${QUERY}\"}" \
+        -s \
         "$1" \
         | python -m json.tool | less -r
 }

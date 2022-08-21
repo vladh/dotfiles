@@ -30,6 +30,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 Plug 'https://git.sr.ht/~vladh/shimei.vim', { 'branch': 'main' }
 Plug 'iloginow/vim-stylus'
+Plug 'jparise/vim-graphql'
 Plug 'karolbelina/uxntal.vim', { 'branch': 'main' }
 Plug 'otherjoel/vim-pollen'
 Plug 'pangloss/vim-javascript'
