@@ -1,1 +1,2 @@
 mpd_music_dir = ~/music
+media_library_primary_tag = album_artist
