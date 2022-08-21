@@ -78,9 +78,9 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=120
 set wrapmargin=0
-autocmd FileType * setlocal textwidth=120
+" set textwidth=120
+" autocmd FileType * setlocal textwidth=120
 autocmd FileType * setlocal wrapmargin=0
 " don't continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -123,6 +123,8 @@ nnoremap <leader>c0 :set colorcolumn=101<cr>
 nnoremap <leader>cs :set colorcolumn=121<cr>
 " ,c8 sets a marker at column 81
 nnoremap <leader>c8 :set colorcolumn=81<cr>
+" ,c7 sets a marker at column 73
+nnoremap <leader>c7 :set colorcolumn=73<cr>
 " ,c6 sets a marker at column 66
 nnoremap <leader>c6 :set colorcolumn=66<cr>
 " ,cr clears column markers
@@ -240,6 +242,8 @@ au FileType rust setlocal shiftwidth=4 tabstop=4
 au FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
 " vue
 au FileType vue syntax sync fromstart
+" eml
+au FileType mail setlocal textwidth=72 colorcolumn=72
 " tex
 let g:tex_no_error=1
 let g:tex_flavor="latex"
