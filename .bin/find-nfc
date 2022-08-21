@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec find -type f | perl -C -MUnicode::Normalize -n -e'print if $_ eq NFC($_)'
