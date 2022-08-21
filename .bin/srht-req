@@ -1,0 +1,14 @@
+#!/bin/sh -eu
+
+# $1: URL
+# $2: OAuth token
+# $3: file
+srht_req() {
+    QUERY=$(cat "$3" | tr -d "\n" | sed 's/"/\\"/g')
+
+    curl --oauth2-bearer "$2" \
+        -H 'Content-Type: application/json' \
+        -d "{\"query\": \"${QUERY}\"}" \
+        "$1" \
+        | python -m json.tool | less -r
+}

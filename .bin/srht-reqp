@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+
+. ~/bentus/dotfiles-extra/.config/srht/secrets.sh
+. ~/.bin/srht-req
+
+srht_req "https://git.sr.ht/query" "$OAUTH_TOKEN_PROD" $1
