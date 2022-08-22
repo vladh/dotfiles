@@ -1,5 +1,4 @@
-#
-# ~/.bash_profile
-#
+#!/bin/bash
+# This file is loaded for interactive login shells.
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.profile ]] && . ~/.profile
