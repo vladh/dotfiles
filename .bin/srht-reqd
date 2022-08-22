@@ -3,4 +3,4 @@
 . ~/bentus/dotfiles-extra/.config/srht/secrets.sh
 . ~/.bin/srht-req
 
-srht_req "http://git.shi.vladh.net/query" "$OAUTH_TOKEN_DEBUG" $1
+srht_req "http://$1.shi.vladh.net/query" "$OAUTH_TOKEN_DEBUG" $2
