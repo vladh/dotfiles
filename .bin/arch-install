@@ -6,13 +6,14 @@ aur_install() {
 
 sudo pacman -S \
     base linux linux-firmware \
-    networkmanager avahi nss-mdns openssh inetutils bind mtr \
+    networkmanager avahi nss-mdns openssh inetutils bind mtr wol \
     doas git curl wget rsync which ranger ack fd duf btop powertop pv moreutils \
     gcc gdb make vim neovim tmux time man \
-    pipewire pipewire-pulse pamixer playerctl \
+    pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc \
     cups cups-pdf ntfs-3g \
+    noto-fonts noto-fonts-emoji ttf-linux-libertine ttf-dejavu \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh maim slop redshift \
     sway swaybg wofi slurp swappy wl-clipboard
@@ -24,3 +25,4 @@ sudo systemctl enable --now sshd
 aur_install brother-dcp1610w
 aur_install greetd
 aur_install greetd-tuigreet
+aur_install mpdas
