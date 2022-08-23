@@ -51,6 +51,7 @@
 .rediscli_history
 .renderdoc/
 .rustup/
+.selected_editor
 .shimei
 .sqlite_history
 .standard-v13-cache/
