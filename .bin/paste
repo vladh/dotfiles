@@ -1,0 +1,27 @@
+#!/bin/sh -eu
+
+. ~/bentus/dotfiles-extra/.config/srht/secrets.sh
+
+if [ "$#" -ne 1 ]; then
+  echo "Please specify a filename as the first argument" >&2
+  exit 1
+fi
+
+result=$(cat /dev/stdin | jq -sR '{
+	"files": [
+		{
+			"contents": .,
+			"filename": "'"$1"'",
+		}
+	],
+	"visibility": "unlisted"
+}' | curl \
+	-H Authorization:"token $LEGACY_TOKEN_PROD" \
+	-H Content-Type:application/json \
+	-X POST \
+    --silent \
+	-d @- https://paste.sr.ht/api/pastes)
+
+sha=$(printf '%s' "$result" | jq -r .sha)
+user=$(printf '%s' "$result" | jq -r .user.canonical_name)
+printf "https://paste.sr.ht/$user/$sha" | cbcopy
