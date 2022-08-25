@@ -1,0 +1,7 @@
+#!/bin/sh -eu
+
+if command -v "wol"; then
+    exec wol "$@"
+elif command -v "etherwake"; then
+    exec etherwake "$@"
+fi
