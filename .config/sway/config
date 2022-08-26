@@ -143,3 +143,5 @@ input "type:touchpad" {
 
 include ~/.config/sway/config.d/*
 include ~/.config/sway/`hostname`
+
+exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
