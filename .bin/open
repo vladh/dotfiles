@@ -16,8 +16,8 @@ case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 	*.mp3|*.wav)
 		exec mpv "$1"
 		;;
-	*.mkv|*.mp4)
-		exec vlc "$1"
+	*.mkv|*.mp4|*.webm)
+		exec mpv "$1"
 		;;
 	*)
 		echo "Don't know how to open $@" >&2
