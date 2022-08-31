@@ -12,7 +12,7 @@ sudo pacman -S \
     gcc gdb make vim neovim tmux time man \
     pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
-    kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp \
+    kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli \
     cups cups-pdf ntfs-3g \
     noto-fonts noto-fonts-emoji ttf-linux-libertine ttf-dejavu \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
