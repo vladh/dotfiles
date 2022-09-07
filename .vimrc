@@ -13,7 +13,7 @@ endif
 let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'dir': '~/.local/opt/fzf', 'do': './install --bin' }
 Plug 'junegunn/vim-easy-align'
 Plug 'machakann/vim-swap'
 Plug 'ntpeters/vim-better-whitespace'
