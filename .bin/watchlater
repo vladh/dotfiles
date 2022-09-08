@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+
+root="/mnt/balcora/bentus/video-shorts/Watch later/"
+name=$(ls -1 "$root" | sort -R | head -n 1)
+printf "Playing: $name\n\n"
+mpv "$root$name"
