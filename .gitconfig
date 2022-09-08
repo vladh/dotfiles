@@ -11,12 +11,9 @@
     co = checkout
     d = diff
     ds = diff --staged
-    l = "!. ~/.bin/lib/githelpers && pretty_git_log"
-    la = !git l --all
     p = push
     pf = push --force
     pl = pull
-    s = status
     st = status
 [merge]
     tool = vimdiff

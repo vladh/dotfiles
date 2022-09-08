@@ -13,7 +13,7 @@ sudo pacman -S \
     pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli \
-    cups cups-pdf ntfs-3g \
+    cups cups-pdf ntfs-3g lxqt-policykit \
     noto-fonts noto-fonts-emoji ttf-linux-libertine ttf-dejavu \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh maim slop redshift \
