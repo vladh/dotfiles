@@ -1,2 +1,3 @@
 --no-part
 --no-overwrite
+-o '%(channel)s__%(title)s.%(ext)s'

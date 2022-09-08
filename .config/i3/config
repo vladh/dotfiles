@@ -123,4 +123,5 @@ bindsym $mod+r mode "resize"
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
 
 exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id lxqt-policykit-agent
 exec picom
