@@ -1,0 +1,16 @@
+#!/bin/sh -eu
+
+hostname=$(hostname)
+
+if [ ! "$hostname" = "ki" ] && [ ! "$hostname" = "usu" ]; then
+    while true; do
+        read -p "Really reboot ${hostname}? " yn
+        case $yn in
+            [Yy]* ) break;;
+            [Nn]* ) exit;;
+            * ) echo "Please answer y or n.";;
+        esac
+    done
+fi
+
+reboot "$@"
