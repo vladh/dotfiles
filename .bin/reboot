@@ -13,4 +13,4 @@ if [ ! "$hostname" = "ki" ] && [ ! "$hostname" = "usu" ]; then
     done
 fi
 
-reboot "$@"
+/usr/bin/reboot "$@"

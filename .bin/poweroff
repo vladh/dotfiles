@@ -13,4 +13,4 @@ if [ ! "$hostname" = "ki" ] && [ ! "$hostname" = "usu" ]; then
     done
 fi
 
-poweroff "$@"
+/usr/bin/poweroff "$@"
