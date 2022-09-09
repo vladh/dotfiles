@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Cryptomator
+Comment=Cloud Storage Encryption Utility
+Exec=/home/vladh/Applications/cryptomator-1.6.5-x86_64.AppImage %F
+Icon=appimagekit_651b08b9cf5f68101336c7fa3d3d31f5_org.cryptomator.Cryptomator
+Terminal=false
+Type=Application
+Categories=Utility;Security;FileTools;
+StartupWMClass=org.cryptomator.launcher.Cryptomator
+MimeType=application/vnd.cryptomator.encrypted;application/x-vnd.cryptomator.vault-metadata;
+TryExec=/home/vladh/Applications/cryptomator-1.6.5-x86_64.AppImage
+X-AppImage-Old-Icon=org.cryptomator.Cryptomator
+X-AppImage-Identifier=651b08b9cf5f68101336c7fa3d3d31f5
+Actions=Remove;
+X-AppImageLauncher-Version=2.2.0 (git commit 0f91801), built on 2021-10-04 22:26:09 UTC
+
+[Desktop Action Remove]
+Name=Remove AppImage from system
+Icon=AppImageLauncher
+Exec=/usr/lib/x86_64-linux-gnu/appimagelauncher/remove "/home/vladh/Applications/cryptomator-1.6.5-x86_64.AppImage"

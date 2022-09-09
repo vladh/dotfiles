@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name=Lagrange
+Comment=A Beautiful Gemini Client
+Categories=Network;
+Exec=/home/vladh/Applications/Lagrange-1.10.2-x86_64.AppImage %U
+Terminal=false
+Type=Application
+StartupWMClass=lagrange
+Icon=appimagekit_af63618b4a248d092c1fc8cb65b2ad17_fi.skyjake.Lagrange
+MimeType=x-scheme-handler/gemini;x-scheme-handler/gopher;
+X-AppImage-Version=1.10.2
+TryExec=/home/vladh/Applications/Lagrange-1.10.2-x86_64.AppImage
+X-AppImage-Old-Icon=fi.skyjake.Lagrange
+X-AppImage-Identifier=af63618b4a248d092c1fc8cb65b2ad17
+Actions=Remove;
+X-AppImageLauncher-Version=2.2.0 (git commit 0f91801), built on 2021-10-04 22:26:09 UTC
+
+[Desktop Action Remove]
+Name=Remove AppImage from system
+Icon=AppImageLauncher
+Exec=/usr/lib/x86_64-linux-gnu/appimagelauncher/remove "/home/vladh/Applications/Lagrange-1.10.2-x86_64.AppImage"
