@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec rsync -Pvrtl --files-from=$1 "epi:downloads/" $2
