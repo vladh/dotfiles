@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+
+yt-dlp \
+    -o '%(playlist_title)s/%(channel)s__%(title)s.%(ext)s' \
+    --cookies $HOME/bentus/dotfiles-extra/.config/yt-dlp/ytcookies.txt \
+    'https://www.youtube.com/playlist?list=WL'
