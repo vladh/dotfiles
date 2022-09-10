@@ -3,4 +3,4 @@
 dir="$1/"
 shift
 mkdir -p $dir
-mv $@ $dir
+mv "$@" "$dir"
