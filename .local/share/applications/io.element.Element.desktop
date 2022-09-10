@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Element
 Comment=Feature-rich client for Matrix
-Exec=/usr/bin/element-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland %u
+Exec=wayland-wrap /usr/bin/element-desktop %u
 Terminal=false
 Type=Application
 Icon=io.element.Element
