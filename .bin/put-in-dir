@@ -2,5 +2,5 @@
 
 dir="$1/"
 shift
-mkdir -p $dir
+mkdir -p "$dir"
 mv "$@" "$dir"
