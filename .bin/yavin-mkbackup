@@ -1,3 +1,3 @@
 #!/bin/sh -eu
 
-rsync -aPRh --stats --exclude '*node_modules*' --exclude '*.git*' --delete /srv /etc billy:/mnt/balcora/backups/yavin/$1/
+rsync -vaPRh --info=progress2 --stats --exclude '*node_modules*' --exclude '*.git*' --delete /srv /etc billy:/mnt/balcora/backups/yavin/$1/
