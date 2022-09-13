@@ -15,14 +15,19 @@ get_method() {
 
 
 react() {
-    get_method
     while true; do
-        read -r unused
-        get_method
+        read method
+        if [ "$method" == "keyboard-us" ]; then
+            echo "Ａ"
+        elif [ "$method" == "mozc" ]; then
+            echo "あ"
+        fi
     done
 }
 
 
+get_method
 dbus-monitor --session destination=org.freedesktop.IBus | \
-    grep --line-buffered 'Fcitx5.*SetCurrentIM' | \
+    grep --line-buffered 'Fcitx5.*SetCurrentIM' -A 1 | \
+    grep --line-buffered -oP 'string "\K.*(?=")' |
     react
