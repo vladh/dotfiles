@@ -1,0 +1,28 @@
+#!/bin/sh -eu
+
+
+get_method() {
+    method=$(dbus-send --session --dest=org.fcitx.Fcitx5 --print-reply \
+        /controller org.fcitx.Fcitx.Controller1.CurrentInputMethod | \
+        grep -Po '(?<=")[^"]+')
+
+    if [ "$method" == "keyboard-us" ]; then
+        echo "Ａ"
+    elif [ "$method" == "mozc" ]; then
+        echo "あ"
+    fi
+}
+
+
+react() {
+    get_method
+    while true; do
+        read -r unused
+        get_method
+    done
+}
+
+
+dbus-monitor --session destination=org.freedesktop.IBus | \
+    grep --line-buffered 'Fcitx5.*SetCurrentIM' | \
+    react

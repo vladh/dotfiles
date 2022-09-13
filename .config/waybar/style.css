@@ -154,6 +154,10 @@ label:focus {
     background-color: #ffa000;
 }
 
+#custom-fcitx5 {
+    margin: 0 5px;
+}
+
 #temperature {
 }
 
@@ -161,7 +165,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
 }
 
 #tray > .passive {
