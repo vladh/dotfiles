@@ -63,12 +63,12 @@ set $ws6 "e"
 set $wss1 "a"
 set $wss2 "s"
 
-workspace $ws1 output primary DP-4
-workspace $ws2 output primary DP-4
-workspace $ws3 output primary DP-4
-workspace $ws4 output primary DP-4
-workspace $ws5 output primary DP-4
-workspace $ws6 output primary DP-4
+workspace $ws1 output primary DP-4 HDMI-0
+workspace $ws2 output primary DP-4 HDMI-0
+workspace $ws3 output primary DP-4 HDMI-0
+workspace $ws4 output primary DP-4 HDMI-0
+workspace $ws5 output primary DP-4 HDMI-0
+workspace $ws6 output primary DP-4 HDMI-0
 workspace $wss1 output secondary DP-0.8
 workspace $wss2 output secondary DP-0.8
 
