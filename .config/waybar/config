@@ -4,6 +4,9 @@
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "temperature", "battery", "custom/fcitx5", "tray", "clock"],
     "height": 26,
+    "sway/workspaces": {
+        "format": "{name}"
+    },
     "sway/window": {
         "max-length": 50
     },

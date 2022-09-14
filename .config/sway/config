@@ -63,11 +63,11 @@ workspace_layout tabbed
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
-set $ws4 "4(q)"
-set $ws5 "5(w)"
-set $ws6 "6(e)"
-set $wss1 "s1(a)"
-set $wss2 "s2(s)"
+set $ws4 "4:q"
+set $ws5 "5:w"
+set $ws6 "6:e"
+set $wss1 "s1:a"
+set $wss2 "s2:s"
 
 workspace $ws1 output primary DP-4 HDMI-0
 workspace $ws2 output primary DP-4 HDMI-0
