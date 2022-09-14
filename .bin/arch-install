@@ -16,6 +16,7 @@ sudo pacman -S \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
     noto-fonts noto-fonts-emoji ttf-linux-libertine ttf-dejavu \
+    fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh maim slop redshift \
     sway swaybg wofi slurp swappy wl-clipboard
