@@ -1,9 +1,6 @@
 #!/bin/sh
 
-export BORG_REPO='ssh://rsync/~/borgrepo'
-export BORG_REMOTE_PATH='borg1'
-# You should set the passphrase before calling the script
-# export BORG_PASSPHRASE=''
+. ~/bentus/dotfiles-extra/.config/borg/secrets.sh
 
 info() { printf "%s: %s\n\n" "$(date +'%Y-%m-%dT%H:%M:%S%z')" "$*" >&2; }
 trap "echo $(date +'%Y-%m-%dT%H:%M:%S%z') Backup interrupted >&2; exit 2" INT TERM
