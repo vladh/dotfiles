@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 
 . ~/bentus/dotfiles-extra/.config/borg/secrets.sh
 
