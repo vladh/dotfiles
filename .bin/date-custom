@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+printf "%s %s\n" "$(LC_ALL='ja_JP.UTF-8' date '+%A')" "$(date '+%Y/%m/%d %H:%M:%S' | num-to-easternarabic)"
