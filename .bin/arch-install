@@ -31,3 +31,4 @@ aur_install greetd
 aur_install greetd-tuigreet
 aur_install mpdas
 aur_install bluetuith
+aur_install rate-mirrors
