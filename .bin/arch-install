@@ -10,6 +10,7 @@ sudo pacman -S \
     doas git curl wget rsync which ranger ack fd duf btop powertop pv moreutils \
     perl-authen-sasl perl-file-mimeinfo perl-io-socket-ssl \
     gcc gdb make vim neovim tmux time man \
+    mpd mpc ncmpcpp \
     pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli \
