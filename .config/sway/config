@@ -9,12 +9,12 @@ default_border none
 # https://github.com/swaywm/sway/issues/1286
 hide_edge_borders --i3 smart
 
-client.focused          #444444 #444444 #FFFFFF #000000   #000000
+client.focused		#444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
-client.unfocused        #333333 #222222 #888888 #292D2E   #222222
-client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background       #FFFFFF
+client.unfocused	#333333 #222222 #888888 #292D2E   #222222
+client.urgent		#2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder	#000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background	#FFFFFF
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -33,9 +33,9 @@ bindsym $mod+o exec wlss
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+x exec swaynag -t warning \
-        -m 'Really exit sway?' \
-        -b 'Yes, exit sway' \
-        'swaymsg exit'
+	-m 'Really exit sway?' \
+	-b 'Yes, exit sway' \
+	'swaymsg exit'
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -69,15 +69,6 @@ set $ws6 "6:e"
 set $wss1 "s1:a"
 set $wss2 "s2:s"
 
-workspace $ws1 output primary DP-4 HDMI-0
-workspace $ws2 output primary DP-4 HDMI-0
-workspace $ws3 output primary DP-4 HDMI-0
-workspace $ws4 output primary DP-4 HDMI-0
-workspace $ws5 output primary DP-4 HDMI-0
-workspace $ws6 output primary DP-4 HDMI-0
-workspace $wss1 output secondary DP-0.8
-workspace $wss2 output secondary DP-0.8
-
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -110,25 +101,25 @@ bindsym $mod+space focus mode_toggle
 # bindsym $mod+s layout stacking
 
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
 mode "j: japanese; e: english" {
-        bindsym j exec fcitx5-remote -s mozc; mode "default"
-        bindsym e exec fcitx5-remote -s keyboard-us; mode "default"
+	bindsym j exec fcitx5-remote -s mozc; mode "default"
+	bindsym e exec fcitx5-remote -s keyboard-us; mode "default"
 }
 
 bindsym $mod+i mode "j: japanese; e: english"
@@ -138,14 +129,7 @@ bar swaybar_command waybar
 output * bg ~/Pictures/wallpaper.jpg fill
 
 input "type:keyboard" {
-        xkb_layout vladh
-}
-
-input "type:touchpad" {
-        dwt enabled
-        tap enabled
-        natural_scroll enabled
-        middle_emulation enabled click_method clickfinger
+	xkb_layout vladh
 }
 
 include ~/.config/sway/config.d/*

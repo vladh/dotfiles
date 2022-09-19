@@ -19,7 +19,7 @@ sudo pacman -S \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh maim slop redshift \
-    sway swaybg wofi slurp swappy wl-clipboard
+    sway swaybg wofi slurp swappy wl-clipboard waybar
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now avahi-daemon
