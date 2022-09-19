@@ -7,7 +7,7 @@ get_method() {
         grep -Po '(?<=")[^"]+')
 
     if [ "$method" == "keyboard-us" ]; then
-        echo "Ａ"
+        echo "A"
     elif [ "$method" == "mozc" ]; then
         echo "あ"
     fi

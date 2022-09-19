@@ -155,7 +155,11 @@ label:focus {
 }
 
 #custom-fcitx5 {
-    margin: 0 5px;
+    padding: 0 10px;
+}
+
+#custom-date {
+    padding: 0 10px;
 }
 
 #temperature {

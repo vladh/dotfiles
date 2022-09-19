@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "temperature", "battery", "custom/fcitx5", "tray", "clock"],
+    "modules-right": ["pulseaudio", "temperature", "battery", "custom/fcitx5", "tray", "custom/date"],
     "height": 26,
     "sway/workspaces": {
         "format": "{name}"
@@ -15,6 +15,9 @@
     },
     "custom/fcitx5": {
         "exec": "fcitx-monitor-method"
+    },
+    "custom/date": {
+        "exec": "date-custom"
     },
     "battery": {
         "format": "{capacity}%",
