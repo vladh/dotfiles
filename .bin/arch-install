@@ -21,10 +21,6 @@ sudo pacman -S \
     i3-wm picom rofi feh maim slop redshift \
     sway swaybg wofi slurp swappy wl-clipboard waybar
 
-sudo systemctl enable --now NetworkManager
-sudo systemctl enable --now avahi-daemon
-sudo systemctl enable --now sshd
-
 aur_install brother-dcp1610w
 aur_install brscan4
 aur_install greetd
@@ -33,3 +29,11 @@ aur_install mpdas
 aur_install bluetuith
 aur_install rate-mirrors
 aur_install ttf-iosevka-term-ss07
+
+if [ "$(hostname)" == "ki" ]; then
+    aur_install nouveau-fw
+fi
+
+sudo systemctl enable --now NetworkManager
+sudo systemctl enable --now avahi-daemon
+sudo systemctl enable --now sshd
