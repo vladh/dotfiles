@@ -55,7 +55,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec foot
+bindsym $mod+Shift+Return exec kitty
 bindsym $mod+d exec "wofi --show drun"
 
 workspace_layout tabbed

@@ -15,7 +15,7 @@ sudo pacman -S \
     bluez bluez-utils brightnessctl \
     kitty nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
-    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine \
+    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
     xorg-server xorg-xinit xorg-xbacklight xorg-xinput xclip \
     i3-wm picom rofi feh maim slop redshift \
@@ -32,3 +32,4 @@ aur_install greetd-tuigreet
 aur_install mpdas
 aur_install bluetuith
 aur_install rate-mirrors
+aur_install ttf-iosevka-term-ss07
