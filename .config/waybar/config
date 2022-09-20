@@ -17,7 +17,8 @@
         "exec": "fcitx-monitor-method"
     },
     "custom/date": {
-        "exec": "date-custom"
+        "exec": "date-custom",
+        "interval": 1
     },
     "battery": {
         "format": "{capacity}%",
