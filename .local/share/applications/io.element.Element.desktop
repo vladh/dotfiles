@@ -1,8 +1,7 @@
 [Desktop Entry]
 Name=Element
 Comment=Feature-rich client for Matrix
-# Exec=wayland-wrap /usr/bin/element-desktop %u
-Exec=/usr/bin/element-desktop %u
+Exec=wayland-wrap /usr/bin/element-desktop %u
 Terminal=false
 Type=Application
 Icon=io.element.Element
