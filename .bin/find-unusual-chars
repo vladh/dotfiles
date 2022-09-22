@@ -1,0 +1,16 @@
+#!/bin/bash -eu
+
+# NOTE: Bash only! :(
+
+ranges=$''
+ranges=$ranges$'\u0020-\u1eff' # latin
+ranges=$ranges$'\u3040-\u30ff' # kana
+ranges=$ranges$'\u4e00-\u9fbf' # kanji
+ranges=$ranges$'\u3000-\u303f' # cjk symbols and punctuation
+ranges=$ranges$'\uff00-\uffef' # halfwidth and fullwidth forms
+ranges=$ranges$'\u2000-\u206f' # general punctuation
+ranges=$ranges$'\u1100-\u11ff' # hangul
+ranges=$ranges$'\uac00-\ud7af' # hangul syllables
+ranges=$ranges$'\u2070-\u209f' # superscripts and subscripts
+
+exec find . -regex ".*[^$ranges].*"

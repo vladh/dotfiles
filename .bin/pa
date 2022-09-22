@@ -5,6 +5,7 @@ remote_root_dir="/srv/www/vladh-website-static/"
 remote_url_prefix="https://vladh.net/"
 dest_dir="t/"
 global_dest_name=""
+overwrite=0
 
 if [ $# -eq 0 ]; then
     echo -e "pa: Uploads files to a server in an easy-to-use way."
@@ -20,6 +21,8 @@ if [ $# -eq 0 ]; then
     echo -e "\t--as <newname>"
     echo -e "\t\tTreats <newname> as the filename. Applies to all files,"
     echo -e "\t\twhich will be deduplicated as mentioned above."
+    echo -e "\t-f"
+    echo -e "\t\tOverwrites existing files with the same name."
     exit
 fi
 
@@ -32,6 +35,9 @@ for arg in "$@"; do
         --as)
             global_dest_name="$1"
             shift
+            ;;
+        -f)
+            overwrite=1
             ;;
         *)
             set -- "$@" "$arg"
@@ -50,13 +56,15 @@ for arg in "$@"; do
     dest_ext="${dest_name##*.}"
     dest_barename="${dest_name%.*}"
 
-    test_exit_code=0
-    ssh ${remote} "test -e \"${remote_root_dir}${dest_dir}${dest_name}\"" || test_exit_code=$?
+    if [ $overwrite -eq 0 ]; then
+        test_exit_code=0
+        ssh ${remote} "test -e \"${remote_root_dir}${dest_dir}${dest_name}\"" || test_exit_code=$?
 
-    if [ $test_exit_code -eq 0 ]; then
-        alnum=$(printf $RANDOM | md5sum | head -c 4)
-        dest_barename="${dest_barename}-${alnum}"
-        dest_name="${dest_barename}.${dest_ext}"
+        if [ $test_exit_code -eq 0 ]; then
+            alnum=$(printf $RANDOM | md5sum | head -c 4)
+            dest_barename="${dest_barename}-${alnum}"
+            dest_name="${dest_barename}.${dest_ext}"
+        fi
     fi
 
     scp -r "${src_path}" "${remote}:${remote_root_dir}${dest_dir}${dest_name}"
