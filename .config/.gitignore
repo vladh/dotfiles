@@ -1,6 +1,7 @@
 /*
 !.gitignore
 !/aerc
+!/envs
 !/fcitx5
 !/foot
 !/gammastep
