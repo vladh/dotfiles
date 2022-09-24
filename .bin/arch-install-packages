@@ -26,7 +26,7 @@ sudo pacman -S --needed \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
     ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
-    sway swaybg wofi slurp swappy wl-clipboard waybar gammastep
+    sway swaybg wofi slurp grim swappy wl-clipboard waybar gammastep
 
 aur_install brother-dcp1610w
 aur_install brscan4
