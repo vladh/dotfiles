@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 
 if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ]; then
   if ! [ -e /tmp/ssh-agent-$USER ]; then
@@ -6,5 +6,3 @@ if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ]; then
   fi
   . /tmp/ssh-agent-$USER >/dev/null
 fi
-
-export PATH=$PATH:/usr/local/go/bin

@@ -1,5 +1,1 @@
-#!/bin/sh
-
-# go
-export GOPATH="/home/vladh/go"
-export PATH=$PATH:"${GOPATH}/bin"
+#!/bin/sh -eu
