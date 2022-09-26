@@ -12,5 +12,5 @@ workspace $wss2 output DP-4
 
 input "type:pointer" {
 	accel_profile flat
-	pointer_accel 0
+	pointer_accel -0.6
 }

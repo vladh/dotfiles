@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 # This file is loaded for interactive login shells.
 
 # Read the non-login shell config now, and when we launch future non-login
