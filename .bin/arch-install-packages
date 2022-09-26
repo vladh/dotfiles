@@ -21,7 +21,7 @@ sudo pacman -S --needed \
     mpd mpc ncmpcpp \
     pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
-    foot imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
+    foot nemo imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
     firefox telegram-desktop element-desktop signal-desktop \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
     ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei \
