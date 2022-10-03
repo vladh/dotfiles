@@ -11,7 +11,7 @@ case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 		exec zathura "$1"
 		;;
 	*.jpg|*.jpeg|*.png|*.gif|*.svg|*.ppm|*.pgm)
-		exec nomacs "$1"
+		exec imv "$1"
 		;;
 	*.mp3|*.wav)
 		exec mpv "$1"
