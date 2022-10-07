@@ -1,3 +1,0 @@
-#!/bin/sh -eu
-
-exec find . -regex $(echo -e '.*[\uf000-\uff00].*')
