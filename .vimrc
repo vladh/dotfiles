@@ -266,7 +266,7 @@ let g:zig_fmt_autosave = 0
 "
 " lsp
 "
-if has('nvim')
+if has('nvim') && 0
   lua <<EOF
   require'nvim-treesitter.configs'.setup {
     highlight = {
