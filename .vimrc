@@ -1,9 +1,9 @@
 if has('nvim')
-  let plugged_path='~/.config/nvim/plugged'
-  set undodir=$HOME/.config/nvim/undo
+    let plugged_path='~/.config/nvim/plugged'
+    set undodir=$HOME/.config/nvim/undo
 else
-  let plugged_path='~/.vim/plugged'
-  set undodir=$HOME/.vim/undo
+    let plugged_path='~/.vim/plugged'
+    set undodir=$HOME/.vim/undo
 endif
 
 
@@ -38,7 +38,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
 if has('nvim')
-  Plug 'vladh/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'vladh/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 call plug#end()
 
@@ -132,7 +132,7 @@ nnoremap <leader>c6 :set colorcolumn=66<cr>
 nnoremap <leader>cr :set colorcolumn=<cr>
 " ,r runs the current file
 nnoremap <leader>r :!"%:p" <cr>
-" ,w runs `make run`
+" ,e runs `make run`
 nnoremap <leader>e :!make run<cr>
 " ,l runs the current file and pipes it into less
 nnoremap <leader>l :!"%:p"  \| less -r<cr>
@@ -146,7 +146,6 @@ nnoremap <S-Up> <Nop>
 nnoremap <S-Down> <Nop>
 " - to switch files
 nnoremap - <C-^>
-nmap ga <Plug>(EasyAlign)
 " disable Ex mode
 nnoremap Q <Nop>
 
@@ -171,11 +170,12 @@ cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=0
+let g:airline#extensions#wordcount#filetypes= [
+    \ 'asciidoc', 'help', 'mail', 'markdown', 'nroff', 'org', 'rst', 'plaintex', 'tex', 'text', 'pollen'
+\ ]
 
 " EasyAlign
-" start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-" start interactive EasyAlign for a motion/text object (e.g. gaip)
 
 " tmuxline
 let g:tmuxline_powerline_separators=0
@@ -199,17 +199,17 @@ let g:better_whitespace_enabled=1
 
 " compensate for polyglot highlighting too much
 if exists('python_highlight_all')
-  unlet python_highlight_all
+    unlet python_highlight_all
 endif
 if exists('python_space_error_highlight')
-  unlet python_space_error_highlight
+    unlet python_space_error_highlight
 endif
 
 " always highlight certain words
 augroup highlight_todo
-  autocmd!
-  autocmd WinEnter,VimEnter * :silent! call
-    \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow\|#nocheckin', -1)
+    autocmd!
+    autocmd WinEnter,VimEnter * :silent! call
+        \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow\|#nocheckin', -1)
 augroup END
 
 
@@ -231,6 +231,7 @@ au BufRead,BufNewFile *.pm set filetype=pollen
 au BufRead,BufNewFile *.pp set filetype=pollen
 au BufRead,BufNewFile *.ptree set filetype=pollen
 au BufRead,BufNewFile *.p set filetype=pollen
+au FileType pollen setlocal textwidth=80 colorcolumn=80
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " python
@@ -267,17 +268,17 @@ let g:zig_fmt_autosave = 0
 " lsp
 "
 if has('nvim') && 0
-  lua <<EOF
-  require'nvim-treesitter.configs'.setup {
-    highlight = {
-      enable = true,
-      -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-      -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-      -- Using this option may slow down your editor, and you may see some duplicate highlights.
-      -- Instead of true it can also be a list of languages
-      additional_vim_regex_highlighting = false,
-    },
-  }
+    lua <<EOF
+    require'nvim-treesitter.configs'.setup {
+        highlight = {
+            enable = true,
+            -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+            -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+            -- Using this option may slow down your editor, and you may see some duplicate highlights.
+            -- Instead of true it can also be a list of languages
+            additional_vim_regex_highlighting = false,
+        },
+    }
 EOF
 endif
 
