@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+find . -iname '*.cue' -exec sh -c 'mv "$1" "$1.ignore"' _ {} \;
