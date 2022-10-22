@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-options="-o '%(playlist_title)s/%(channel)s__%(title)s__%(id)s.%(ext)s' --cookies $HOME/bentus/dotfiles-extra/.config/yt-dlp/ytcookies.txt"
+options="-o %(playlist_title)s/%(channel)s__%(title)s__%(id)s.%(ext)s --cookies $HOME/bentus/dotfiles-extra/.config/yt-dlp/ytcookies.txt"
 
 ids=$(yt-dlp $options --get-id --flat-playlist 'https://www.youtube.com/playlist?list=WL')
 
