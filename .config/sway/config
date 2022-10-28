@@ -138,3 +138,4 @@ include ~/.config/sway/`hostname`
 
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
 exec --no-startup-id fcitx5 -d
+exec --no-startup-id gammastep
