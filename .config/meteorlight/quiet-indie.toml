@@ -1,20 +1,20 @@
 [api]
-port=8101
+port=8106
 host="127.0.0.1"
 
 [queue]
-random_song_api="http://localhost:8100/api/japanese-and-korean/random"
+random_song_api="http://localhost:8100/api/quiet-indie/random"
 song_fetch_url=""
-np="http://localhost:8100/api/japanese-and-korean/np"
+np="http://localhost:8100/api/quiet-indie/np"
 nr=""
 fallback="/mnt/balcora/bentus/archives-music/lobby.mp3"
 buffer_duration=0
 replaygain=false
 
 [radio]
-port=8201
+port=8206
 host="127.0.0.1"
-name="vladh radio: japanese and korean"
+name="vladh radio: quiet indie"
 description=""
 url="https://radio.vladh.net"
 logo=""
