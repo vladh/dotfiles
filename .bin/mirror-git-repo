@@ -13,15 +13,8 @@ WORKDIR="$(mktemp -d)"
 
 echo "---> cloning ${SOURCE_URL} into ${WORKDIR}..."
 
-git init --bare "${WORKDIR}"
+git clone --mirror "${SOURCE_URL}" "${WORKDIR}"
 cd "${WORKDIR}"
-
-git config remote.origin.url "${SOURCE_URL}"
-git config --add remote.origin.fetch '+refs/heads/*:refs/heads/*'
-git config --add remote.origin.fetch '+refs/tags/*:refs/tags/*'
-git config --add remote.origin.fetch '+refs/notes/*:refs/notes/*'
-git config remote.origin.mirror true
-git fetch --all
 
 echo "---> pushing to ${TARGET_URL}"
 
