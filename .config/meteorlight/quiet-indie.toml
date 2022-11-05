@@ -7,7 +7,7 @@ random_song_api="http://localhost:8100/api/quiet-indie/random"
 song_fetch_url=""
 np="http://localhost:8100/api/quiet-indie/np"
 nr=""
-fallback="/mnt/balcora/bentus/archives-music/lobby.mp3"
+fallback="/mnt/music/Dave Fleischer/lobby.mp3"
 buffer_duration=0
 replaygain=false
 
