@@ -69,32 +69,50 @@ for_window [app_id="^launcher$"] floating enable, border none, resize set 70 ppt
 
 workspace_layout tabbed
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4:q"
-set $ws5 "5:w"
-set $ws6 "6:e"
-set $wss1 "s1:a"
-set $wss2 "s2:s"
+set $ws_1 "1"
+set $ws_2 "2"
+set $ws_3 "3"
+set $ws_4 "4"
+set $ws_5 "5"
+set $ws_6 "6"
+set $ws_7 "7"
+set $ws_8 "8"
+set $ws_9 "9"
+set $ws_q "4:q"
+set $ws_w "5:w"
+set $ws_e "6:e"
+set $ws_a "s1:a"
+set $ws_s "s2:s"
 
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+q workspace $ws4
-bindsym $mod+w workspace $ws5
-bindsym $mod+e workspace $ws6
-bindsym $mod+a workspace $wss1
-bindsym $mod+s workspace $wss2
+bindsym $mod+1 workspace $ws_1
+bindsym $mod+2 workspace $ws_2
+bindsym $mod+3 workspace $ws_3
+bindsym $mod+4 workspace $ws_4
+bindsym $mod+5 workspace $ws_5
+bindsym $mod+6 workspace $ws_6
+bindsym $mod+7 workspace $ws_7
+bindsym $mod+8 workspace $ws_8
+bindsym $mod+9 workspace $ws_9
+bindsym $mod+q workspace $ws_q
+bindsym $mod+w workspace $ws_w
+bindsym $mod+e workspace $ws_e
+bindsym $mod+a workspace $ws_a
+bindsym $mod+s workspace $ws_s
 
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+q move container to workspace $ws4
-bindsym $mod+Shift+w move container to workspace $ws5
-bindsym $mod+Shift+e move container to workspace $ws6
-bindsym $mod+Shift+a move container to workspace $wss1
-bindsym $mod+Shift+s move container to workspace $wss2
+bindsym $mod+Shift+1 move container to workspace $ws_1
+bindsym $mod+Shift+2 move container to workspace $ws_2
+bindsym $mod+Shift+3 move container to workspace $ws_3
+bindsym $mod+Shift+4 move container to workspace $ws_4
+bindsym $mod+Shift+5 move container to workspace $ws_5
+bindsym $mod+Shift+6 move container to workspace $ws_6
+bindsym $mod+Shift+7 move container to workspace $ws_7
+bindsym $mod+Shift+8 move container to workspace $ws_8
+bindsym $mod+Shift+9 move container to workspace $ws_9
+bindsym $mod+Shift+q move container to workspace $ws_q
+bindsym $mod+Shift+w move container to workspace $ws_w
+bindsym $mod+Shift+e move container to workspace $ws_e
+bindsym $mod+Shift+a move container to workspace $ws_a
+bindsym $mod+Shift+s move container to workspace $ws_s
 
 bindsym $mod+z layout tabbed
 bindsym $mod+x kill
