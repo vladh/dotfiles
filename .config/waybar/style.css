@@ -156,10 +156,12 @@ label:focus {
 
 #custom-fcitx5 {
     padding: 0 10px;
+    color: white;
 }
 
 #custom-date {
     padding: 0 10px;
+    color: white;
 }
 
 #temperature {
