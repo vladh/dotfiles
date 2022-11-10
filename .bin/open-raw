@@ -1,5 +1,9 @@
 #!/bin/sh -eu
 
+if [ -d "$1" ]; then
+	exec foot -D "$1"
+fi
+
 case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 	http*|https*|*.html)
 		exec firefox "$1"
