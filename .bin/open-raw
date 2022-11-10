@@ -1,0 +1,25 @@
+#!/bin/sh -eu
+
+case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
+	http*|https*|*.html)
+		exec firefox "$1"
+		;;
+	mailto*)
+		exec aerc "$1"
+		;;
+	*.pdf|*.epub|*.djvu)
+		exec zathura "$1"
+		;;
+	*.jpg|*.jpeg|*.png|*.gif|*.svg|*.ppm|*.pgm)
+		exec imv "$1"
+		;;
+	*.mp3|*.wav)
+		exec mpv "$1"
+		;;
+	*.mkv|*.mp4|*.webm)
+		exec mpv "$1"
+		;;
+	*)
+		echo "Don't know how to open $@" >&2
+		;;
+esac

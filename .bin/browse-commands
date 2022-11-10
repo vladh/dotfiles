@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec

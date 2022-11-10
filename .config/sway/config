@@ -59,13 +59,8 @@ bindsym $mod+Return exec foot
 bindsym $mod+Shift+Return exec kitty
 bindsym $mod+d exec "wofi --show drun"
 
-# bindsym $mod+d exec foot -c ~/.config/foot/launcher.ini --app-id=launcher \
-# 	bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
-
-bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=launcher \
-	bash -c 'find-docs | xargs -r -I {} open "{}"'
-
-for_window [app_id="^launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
+bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
+for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
 
 workspace_layout tabbed
 

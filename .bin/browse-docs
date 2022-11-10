@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec find-docs | xargs -I {} -r swaymsg -t command exec "\"open-raw '{}'\""
