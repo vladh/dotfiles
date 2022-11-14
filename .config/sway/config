@@ -58,7 +58,8 @@ bindsym $mod+Shift+Right move right
 
 bindsym $mod+Return exec foot
 bindsym $mod+Shift+Return exec kitty
-bindsym $mod+d exec "wofi --show drun"
+bindsym $mod+d exec wofi --show drun
+bindsym $mod+c exec collect
 
 bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
 for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
@@ -110,18 +111,12 @@ bindsym $mod+Shift+e move container to workspace $ws_e
 bindsym $mod+Shift+a move container to workspace $ws_a
 bindsym $mod+Shift+s move container to workspace $ws_s
 
-bindsym $mod+z layout tabbed
+bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
-bindsym $mod+c layout toggle split
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-
-# bindsym $mod+a focus parent
-# bindsym $mod+semicolon split h
-# bindsym $mod+v split v
-# bindsym $mod+s layout stacking
 
 mode "resize" {
 	bindsym h resize shrink width 10 px or 10 ppt
