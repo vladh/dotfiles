@@ -153,6 +153,7 @@ input "type:keyboard" {
 include ~/.config/sway/config.d/*
 include ~/.config/sway/`hostname`
 
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id gammastep
