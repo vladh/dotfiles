@@ -26,8 +26,8 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+shift+0 exec poweroff
-bindsym $mod+shift+Minus exec reboot
+bindsym $mod+grave exec poweroff
+bindsym $mod+shift+grave exec reboot
 bindsym Print exec wlss-full
 bindsym $mod+o exec wlss-full
 bindsym $mod+Shift+o exec wlss
