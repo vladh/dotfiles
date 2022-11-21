@@ -24,7 +24,7 @@ sudo pacman -S --needed \
     foot nemo imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
     firefox telegram-desktop element-desktop signal-desktop \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
-    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei \
+    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei ttf-bitstream-vera \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
     sway swaybg wofi slurp grim swappy wl-clipboard waybar gammastep
 

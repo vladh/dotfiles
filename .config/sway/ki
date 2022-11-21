@@ -1,18 +1,19 @@
+output DP-1 pos 0 0 mode 2560x1440@165.000Hz
 output DP-2 pos 0 0 mode 2560x1440@165.000Hz
 output DP-4 pos 2560 0 mode 2560x1440@59.951Hz
 
-workspace $ws_1 output DP-2
-workspace $ws_2 output DP-2
-workspace $ws_3 output DP-2
-workspace $ws_4 output DP-2
-workspace $ws_5 output DP-2
-workspace $ws_6 output DP-2
-workspace $ws_7 output DP-2
-workspace $ws_8 output DP-2
-workspace $ws_9 output DP-2
-workspace $ws_q output DP-2
-workspace $ws_w output DP-2
-workspace $ws_e output DP-2
+workspace $ws_1 output DP-2 DP-1
+workspace $ws_2 output DP-2 DP-1
+workspace $ws_3 output DP-2 DP-1
+workspace $ws_4 output DP-2 DP-1
+workspace $ws_5 output DP-2 DP-1
+workspace $ws_6 output DP-2 DP-1
+workspace $ws_7 output DP-2 DP-1
+workspace $ws_8 output DP-2 DP-1
+workspace $ws_9 output DP-2 DP-1
+workspace $ws_q output DP-2 DP-1
+workspace $ws_w output DP-2 DP-1
+workspace $ws_e output DP-2 DP-1
 workspace $ws_a output DP-4
 workspace $ws_s output DP-4
 
