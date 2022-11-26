@@ -1,25 +1,3 @@
 #!/bin/sh -eu
 
-case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
-	http*|https*|*.html)
-		exec detach firefox "$1"
-		;;
-	mailto*)
-		exec detach aerc "$1"
-		;;
-	*.pdf|*.epub|*.djvu)
-		exec detach zathura "$1"
-		;;
-	*.jpg|*.jpeg|*.png|*.gif|*.svg|*.ppm|*.pgm)
-		exec detach imv "$1"
-		;;
-	*.mp3|*.wav)
-		exec detach mpv "$1"
-		;;
-	*.mkv|*.mp4|*.webm)
-		exec detach mpv "$1"
-		;;
-	*)
-		echo "Don't know how to open $@" >&2
-		;;
-esac
+exec detach open-raw "$@" &

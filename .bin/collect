@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+wl-paste -p >> ~/collect.txt
