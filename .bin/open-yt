@@ -1,0 +1,5 @@
+#!/bin/sh -eu
+
+name="${1%.*}"
+id=$(printf "%s" $name | tail -c 11)
+firefox "https://youtu.be/$id"

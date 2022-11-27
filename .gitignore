@@ -129,6 +129,7 @@
 /.var
 /.vim/sessions
 /.wget-hsts
+/.wine/
 /.z
 /.z.*
 /.zcompdump

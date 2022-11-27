@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+rsync -Pvrthl --delete --info=progress2 /mnt/balcora/bentus/music /mnt/kei/
