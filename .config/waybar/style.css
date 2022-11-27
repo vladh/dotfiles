@@ -41,6 +41,11 @@ window#waybar.chromium {
     /* Avoid rounded borders under each workspace name */
     border: none;
     border-radius: 0;
+    border-right: 1px solid #222;
+}
+
+#workspaces button:last-child {
+    border-right: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -50,10 +55,12 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     background-color: #64727D;
+    border-right: none;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    border-right: none;
 }
 
 #mode {
