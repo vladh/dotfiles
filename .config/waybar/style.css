@@ -74,9 +74,17 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd {
+#mpd,
+#custom-fcitx5,
+#custom-date {
     padding: 0 10px;
+    border-left: 1px solid #222;
+    border-radius: 0;
     color: #ffffff;
+}
+
+#pulseaudio:first-child {
+    border-left: 0;
 }
 
 #window,
@@ -155,13 +163,9 @@ label:focus {
 }
 
 #custom-fcitx5 {
-    padding: 0 10px;
-    color: white;
 }
 
 #custom-date {
-    padding: 0 10px;
-    color: white;
 }
 
 #temperature {
