@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec cat /var/log/nginx/vladh.net_access.log /var/log/nginx/pre-2022-06-05/vladh.net_access.log.all | grep -v _matrix | goaccess - --ignore-crawlers --time-format '%H:%M:%S' --date-format '%d/%b/%Y' --log-format COMBINED
