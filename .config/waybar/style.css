@@ -45,7 +45,7 @@ window#waybar.chromium {
 }
 
 #workspaces button:last-child {
-    border-right: 0;
+    border-right-color: transparent;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
