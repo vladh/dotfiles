@@ -10,7 +10,6 @@ client.unfocused        #333333 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
-for_window [class="^.*"] border pixel 0
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -22,10 +21,11 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+shift+0 exec poweroff
+bindsym $mod+Shift+grave exec poweroff
+bindsym $mod+Ctrl+Shift+grave exec reboot
 bindsym Print exec xss-full
-bindsym $mod+p exec xss-full
-bindsym $mod+o exec xss
+bindsym $mod+o exec xss-full
+bindsym $mod+Shift+o exec xss
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -51,6 +51,7 @@ bindsym $mod+Shift+Right move right
 
 bindsym $mod+Return exec kitty
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
+bindsym $mod+c exec collect
 
 workspace_layout tabbed
 
@@ -99,32 +100,12 @@ bindsym $mod+Shift+e move container to workspace $ws_e
 bindsym $mod+Shift+a move container to workspace $ws_a
 bindsym $mod+Shift+s move container to workspace $ws_s
 
-workspace $ws_1 output DP-2 DP-1
-workspace $ws_2 output DP-2 DP-1
-workspace $ws_3 output DP-2 DP-1
-workspace $ws_4 output DP-2 DP-1
-workspace $ws_5 output DP-2 DP-1
-workspace $ws_6 output DP-2 DP-1
-workspace $ws_7 output DP-2 DP-1
-workspace $ws_8 output DP-2 DP-1
-workspace $ws_9 output DP-2 DP-1
-workspace $ws_q output DP-2 DP-1
-workspace $ws_w output DP-2 DP-1
-workspace $ws_e output DP-2 DP-1
-workspace $ws_a output DP-4
-workspace $ws_s output DP-4
-
 bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-
-# bindsym $mod+a focus parent
-# bindsym $mod+semicolon split h
-# bindsym $mod+v split v
-# bindsym $mod+s layout stacking
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
@@ -140,15 +121,36 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 mode "j: japanese; e: english" {
         bindsym j exec fcitx5-remote -s mozc; mode "default"
         bindsym e exec fcitx5-remote -s keyboard-us; mode "default"
 }
-
 bindsym $mod+i mode "j: japanese; e: english"
+
+
+# ki
+
+workspace $ws_1 output DP-2 DP-1
+workspace $ws_2 output DP-2 DP-1
+workspace $ws_3 output DP-2 DP-1
+workspace $ws_4 output DP-2 DP-1
+workspace $ws_5 output DP-2 DP-1
+workspace $ws_6 output DP-2 DP-1
+workspace $ws_7 output DP-2 DP-1
+workspace $ws_8 output DP-2 DP-1
+workspace $ws_9 output DP-2 DP-1
+workspace $ws_q output DP-2 DP-1
+workspace $ws_w output DP-2 DP-1
+workspace $ws_e output DP-2 DP-1
+workspace $ws_a output DP-4
+workspace $ws_s output DP-4
+
+
+# i3-specific stuff
+
+for_window [class="^.*"] border pixel 0
 
 exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
 
