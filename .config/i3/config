@@ -129,6 +129,9 @@ mode "j: japanese; e: english" {
 }
 bindsym $mod+i mode "j: japanese; e: english"
 
+bindsym $mod+p exec kitty -c ~/.config/kitty/launcher.conf --class=vladh_launcher browse-docs
+for_window [class="vladh_launcher"] floating enable, border none, resize set 70 ppt 70 ppt
+
 
 # ki
 

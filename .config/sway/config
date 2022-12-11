@@ -128,6 +128,9 @@ mode "j: japanese; e: english" {
 }
 bindsym $mod+i mode "j: japanese; e: english"
 
+bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
+for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
+
 
 # sway-specific stuff
 
@@ -138,9 +141,6 @@ default_border none
 # A hack to hide the title bar. Remember it will always be hidden.
 # https://github.com/swaywm/sway/issues/1286
 hide_edge_borders --i3 smart
-
-bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
-for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
 
 input "type:keyboard" {
 	xkb_layout vladh
