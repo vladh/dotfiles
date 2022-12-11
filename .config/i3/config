@@ -132,6 +132,8 @@ bindsym $mod+i mode "j: japanese; e: english"
 
 # ki
 
+exec --no-startup-id xrandr --output DP-1 --mode 2560x1440 -r 165 --primary --left-of DP-4
+
 workspace $ws_1 output DP-2 DP-1
 workspace $ws_2 output DP-2 DP-1
 workspace $ws_3 output DP-2 DP-1
@@ -152,8 +154,8 @@ workspace $ws_s output DP-4
 
 for_window [class="^.*"] border pixel 0
 
-exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
-
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id killall polybar && $HOME/.config/polybar/launch.sh
 exec --no-startup-id lxqt-policykit-agent
+exec --no-startup-id fcitx5 -d
 exec picom
