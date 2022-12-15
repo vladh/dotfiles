@@ -231,7 +231,7 @@ au BufRead,BufNewFile *.pm set filetype=pollen
 au BufRead,BufNewFile *.pp set filetype=pollen
 au BufRead,BufNewFile *.ptree set filetype=pollen
 au BufRead,BufNewFile *.p set filetype=pollen
-au FileType pollen setlocal textwidth=80 colorcolumn=80
+au FileType pollen setlocal textwidth=120 colorcolumn=120
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " python
