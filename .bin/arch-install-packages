@@ -36,6 +36,7 @@ aur_install greetd-tuigreet
 aur_install mpdas
 aur_install ranger-git
 aur_install rate-mirrors
+aur_install spotify
 aur_install ttf-iosevka-term-ss07
 
 if [ "$(hostname)" == "ki" ]; then
