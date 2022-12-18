@@ -15,7 +15,7 @@ aur_install() {
 sudo pacman -S --needed \
     base linux linux-firmware \
     networkmanager avahi nss-mdns openssh inetutils bind mtr wol \
-    doas git curl wget rsync which trash-cli ack fd fzf duf btop powertop pv moreutils sshfs \
+    doas git curl wget rsync which trash-cli ack fd fzf duf ncdu btop powertop pv moreutils sshfs \
     perl-authen-sasl perl-file-mimeinfo perl-io-socket-ssl \
     gcc gdb make vim neovim tmux time man \
     mpd mpc ncmpcpp \
@@ -36,6 +36,7 @@ aur_install greetd-tuigreet
 aur_install mpdas
 aur_install ranger-git
 aur_install rate-mirrors
+aur_install spotify
 aur_install ttf-iosevka-term-ss07
 
 if [ "$(hostname)" == "ki" ]; then

@@ -6,5 +6,3 @@ if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ]; then
   fi
   . /tmp/ssh-agent-$USER >/dev/null
 fi
-
-. /opt/asdf-vm/asdf.sh

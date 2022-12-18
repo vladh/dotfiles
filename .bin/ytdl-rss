@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+yt-dlp -o '%(upload_date)s_%(title)s.%(ext)s' "$@"
