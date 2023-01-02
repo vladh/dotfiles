@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec texcount -sum=1,1,1 $@
