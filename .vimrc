@@ -249,6 +249,7 @@ au FileType mail setlocal textwidth=72 colorcolumn=72
 " tex
 let g:tex_no_error=1
 let g:tex_flavor="latex"
+au FileType tex setlocal textwidth=120 colorcolumn=120
 " javascript
 let g:jsx_ext_required=0
 " r
