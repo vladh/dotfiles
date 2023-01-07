@@ -38,7 +38,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
 if has('nvim')
-    Plug 'vladh/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 call plug#end()
 
