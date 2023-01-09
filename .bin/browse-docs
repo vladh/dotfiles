@@ -1,3 +1,4 @@
 #!/bin/sh -eu
 
-exec find-docs | xargs -I {} -r swaymsg -t command exec "\"open-raw '{}'\""
+echo "$(find-docs)" > /tmp/browse-path
+exec swaymsg exec open-tmp
