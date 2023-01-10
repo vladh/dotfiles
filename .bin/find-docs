@@ -4,7 +4,6 @@ exec fd . \
         ~/b/books* \
         ~/b/docs* \
         ~/b/uni* \
-        ~/b/video* \
         ~/b/writing* \
         | \
     fzf
