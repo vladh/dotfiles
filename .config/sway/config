@@ -28,7 +28,7 @@ bindsym $mod+o exec wlss-full
 bindsym $mod+Shift+o exec wlss
 
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+x exec swaynag -t warning -m 'Really exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+x exec swaymsg exit
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
