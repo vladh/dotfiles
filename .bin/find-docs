@@ -1,9 +1,8 @@
 #!/bin/sh -eu
 
 exec fd . \
-        ~/b/books* \
-        ~/b/docs* \
-        ~/b/uni* \
-        ~/b/writing* \
+        ~/bentus/books* \
+        ~/bentus/uni* \
+        ~/bentus/writing* \
         | \
     fzf
