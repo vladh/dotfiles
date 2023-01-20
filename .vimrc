@@ -251,7 +251,7 @@ let g:tex_no_error=1
 let g:tex_flavor="latex"
 au FileType tex setlocal textwidth=120 colorcolumn=120
 " vimwiki
-au FileType vimwiki setlocal textwidth=120 colorcolumn=120
+au FileType vimwiki setlocal textwidth=120 colorcolumn=120 noexpandtab shiftwidth=4 tabstop=4
 " javascript
 let g:jsx_ext_required=0
 " r
