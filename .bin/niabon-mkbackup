@@ -2,5 +2,7 @@
 
 export BUPSTASH_KEY="/Users/niabon/Library/niabon-bupstash.key"
 export BUPSTASH_REPOSITORY="/Volumes/backups/niabon/bupstash"
-bupstash put /Users/niabon/Desktop
-bupstash rm --allow-many older-than 30d
+bupstash put \
+    --send-log "/Volumes/backups/niabon/bupstash.sendlog" \
+    /Users/niabon/Desktop
+bupstash rm --allow-many older-than 30d 
