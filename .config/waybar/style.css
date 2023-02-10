@@ -4,7 +4,8 @@
 }
 
 window#waybar {
-    background-color: #112;
+    /* background-color: #112; */
+    background-color: #0e1420;
     color: #ffffff;
 }
 
@@ -37,7 +38,7 @@ window#waybar.hidden {
     /* Avoid rounded borders under each workspace name */
     border: none;
     border-radius: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(200, 230, 255, 0.15);
 }
 #workspaces button:last-child {
     border-right-color: transparent;
@@ -83,7 +84,7 @@ window#waybar.hidden {
 #custom-fcitx5,
 #custom-date {
     padding: 0 10px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(200, 230, 255, 0.15);
     border-radius: 0;
     color: #ffffff;
 }
