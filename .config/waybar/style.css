@@ -4,33 +4,29 @@
 }
 
 window#waybar {
-    background-color: #111;
+    background-color: #112;
     color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
+/* window#waybar.empty { */
+/*     background-color: transparent; */
+/* } */
+/* window#waybar.solo { */
+/*     background-color: #FFFFFF; */
+/* } */
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
+/* window#waybar.termite { */
+/*     background-color: #3F3F3F; */
+/* } */
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
+/* window#waybar.chromium { */
+/*     background-color: #000000; */
+/*     border: none; */
+/* } */
 
 #workspaces button {
     padding: 0 5px;
@@ -41,9 +37,8 @@ window#waybar.chromium {
     /* Avoid rounded borders under each workspace name */
     border: none;
     border-radius: 0;
-    border-right: 1px solid #222;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 #workspaces button:last-child {
     border-right-color: transparent;
 }
@@ -51,6 +46,9 @@ window#waybar.chromium {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: #333;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    transition: none;
 }
 
 #workspaces button.focused {
@@ -85,7 +83,7 @@ window#waybar.chromium {
 #custom-fcitx5,
 #custom-date {
     padding: 0 10px;
-    border-left: 1px solid #222;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0;
     color: #ffffff;
 }
@@ -155,19 +153,19 @@ label:focus {
 #pulseaudio.muted {
 }
 
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
+/* #custom-media { */
+/*     background-color: #66cc99; */
+/*     color: #2a5c45; */
+/*     min-width: 100px; */
+/* } */
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
+/* #custom-media.custom-spotify { */
+/*     background-color: #66cc99; */
+/* } */
 
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
+/* #custom-media.custom-vlc { */
+/*     background-color: #ffa000; */
+/* } */
 
 #custom-fcitx5 {
 }
@@ -203,22 +201,22 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
+/* #mpd { */
+/*     background-color: #66cc99; */
+/*     color: #2a5c45; */
+/* } */
 
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
+/* #mpd.disconnected { */
+/*     background-color: #f53c3c; */
+/* } */
 
-#mpd.stopped {
-    background-color: #90b1b1;
-}
+/* #mpd.stopped { */
+/*     background-color: #90b1b1; */
+/* } */
 
-#mpd.paused {
-    background-color: #51a37a;
-}
+/* #mpd.paused { */
+/*     background-color: #51a37a; */
+/* } */
 
 #language {
     background: #00b093;
