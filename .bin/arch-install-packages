@@ -14,8 +14,8 @@ aur_install() {
 
 sudo pacman -S --needed \
     base linux linux-firmware \
-    networkmanager avahi nss-mdns openssh inetutils bind mtr wol \
-    doas git curl wget rsync which trash-cli ack fd fzf duf btop powertop pv moreutils sshfs \
+    networkmanager avahi nss-mdns dnsmasq openssh inetutils bind mtr wol \
+    doas git curl wget rsync which trash-cli ack fd fzf duf ncdu btop powertop pv moreutils sshfs \
     perl-authen-sasl perl-file-mimeinfo perl-io-socket-ssl \
     gcc gdb make vim neovim tmux time man \
     mpd mpc ncmpcpp \
@@ -24,7 +24,7 @@ sudo pacman -S --needed \
     foot nemo imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
     firefox telegram-desktop element-desktop signal-desktop \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
-    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei \
+    ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei ttf-bitstream-vera \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
     sway swaybg wofi slurp grim swappy wl-clipboard waybar gammastep
 
@@ -36,6 +36,7 @@ aur_install greetd-tuigreet
 aur_install mpdas
 aur_install ranger-git
 aur_install rate-mirrors
+aur_install spotify
 aur_install ttf-iosevka-term-ss07
 
 if [ "$(hostname)" == "ki" ]; then

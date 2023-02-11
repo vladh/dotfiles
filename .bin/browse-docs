@@ -1,0 +1,4 @@
+#!/bin/sh -eu
+
+echo "$(find-docs)" > /tmp/browse-path
+exec swaymsg exec open-tmp

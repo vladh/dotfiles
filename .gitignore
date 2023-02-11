@@ -129,6 +129,7 @@
 /.var
 /.vim/sessions
 /.wget-hsts
+/.wine/
 /.z
 /.z.*
 /.zcompdump
@@ -153,6 +154,7 @@
 /Virtual Machines.localized/
 /b
 /bentus
+/collect.txt
 /docs/
 /go/
 /isus/
@@ -177,9 +179,11 @@ Videos/
 VirtualBox VMs/
 VulkanSDK/
 bentus/
+epi
 go/
 isus/
 local/
+med
 proj
 scratch/
 snap/

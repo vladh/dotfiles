@@ -10,7 +10,7 @@ for f in ./Watch\ later/*; do
     id_candidate=$(printf "%s" $name | tail -c 11)
     found=0
     for id in $ids; do
-        if [ "$id_candidate" == "$id" ]; then
+        if [ "$id_candidate" = "$id" ]; then
             found=1
             break
         fi

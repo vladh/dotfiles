@@ -1,0 +1,4 @@
+#!/bin/sh -eu
+
+lspci -k | grep -EA3 'VGA|3D|Display'
+lsmod | grep "kms\|drm"

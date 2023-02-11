@@ -1,0 +1,6 @@
+#!/bin/bash -eu
+
+chars=$''
+chars=$chars$':\?"' # exFAT disallowed
+
+exec find . -regex ".*[$chars].*"

@@ -38,7 +38,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
 if has('nvim')
-    Plug 'vladh/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 call plug#end()
 
@@ -231,7 +231,7 @@ au BufRead,BufNewFile *.pm set filetype=pollen
 au BufRead,BufNewFile *.pp set filetype=pollen
 au BufRead,BufNewFile *.ptree set filetype=pollen
 au BufRead,BufNewFile *.p set filetype=pollen
-au FileType pollen setlocal textwidth=80 colorcolumn=80
+au FileType pollen setlocal textwidth=120 colorcolumn=120
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
 " python
@@ -249,6 +249,9 @@ au FileType mail setlocal textwidth=72 colorcolumn=72
 " tex
 let g:tex_no_error=1
 let g:tex_flavor="latex"
+au FileType tex setlocal textwidth=120 colorcolumn=120
+" vimwiki
+au FileType vimwiki setlocal textwidth=120 colorcolumn=120 noexpandtab shiftwidth=4 tabstop=4
 " javascript
 let g:jsx_ext_required=0
 " r

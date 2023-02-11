@@ -12,7 +12,7 @@
     d = diff
     ds = diff --staged
     p = push
-    pf = push --force
+    pf = push --force-with-lease
     pl = pull
     st = status
 [merge]
@@ -33,3 +33,5 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[diff]
+	wsErrorHighlight = all

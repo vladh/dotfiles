@@ -4,11 +4,6 @@ font pango:Ubuntu Mono 10
 floating_modifier $mod
 focus_follows_mouse no
 
-default_border none
-# A hack to hide the title bar. Remember it will always be hidden.
-# https://github.com/swaywm/sway/issues/1286
-hide_edge_borders --i3 smart
-
 client.focused		#444444 #444444 #FFFFFF #000000   #000000
 client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
 client.unfocused	#333333 #222222 #888888 #292D2E   #222222
@@ -16,26 +11,24 @@ client.urgent		#2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder	#000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background	#FFFFFF
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPause exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
-bindsym $mod+shift+0 exec poweroff
+bindsym $mod+Shift+grave exec poweroff
+bindsym $mod+Ctrl+Shift+grave exec reboot
 bindsym Print exec wlss-full
-bindsym $mod+p exec wlss-full
-bindsym $mod+o exec wlss
+bindsym $mod+o exec wlss-full
+bindsym $mod+Shift+o exec wlss
 
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+x exec swaynag -t warning \
-	-m 'Really exit sway?' \
-	-b 'Yes, exit sway' \
-	'swaymsg exit'
+bindsym $mod+Shift+x exec swaymsg exit
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -56,50 +49,62 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+Return exec foot
-bindsym $mod+Shift+Return exec kitty
-bindsym $mod+d exec "wofi --show drun"
+bindsym $mod+d exec wofi --show drun
+bindsym $mod+c exec collect
 
 workspace_layout tabbed
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4:q"
-set $ws5 "5:w"
-set $ws6 "6:e"
-set $wss1 "s1:a"
-set $wss2 "s2:s"
+set $ws_1 "1"
+set $ws_2 "2"
+set $ws_3 "3"
+set $ws_4 "4"
+set $ws_5 "5"
+set $ws_6 "6"
+set $ws_7 "7"
+set $ws_8 "8"
+set $ws_9 "9"
+set $ws_q "e1:q"
+set $ws_w "e2:w"
+set $ws_e "e3:e"
+set $ws_a "s1:a"
+set $ws_s "s2:s"
 
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+q workspace $ws4
-bindsym $mod+w workspace $ws5
-bindsym $mod+e workspace $ws6
-bindsym $mod+a workspace $wss1
-bindsym $mod+s workspace $wss2
+bindsym $mod+1 workspace $ws_1
+bindsym $mod+2 workspace $ws_2
+bindsym $mod+3 workspace $ws_3
+bindsym $mod+4 workspace $ws_4
+bindsym $mod+5 workspace $ws_5
+bindsym $mod+6 workspace $ws_6
+bindsym $mod+7 workspace $ws_7
+bindsym $mod+8 workspace $ws_8
+bindsym $mod+9 workspace $ws_9
+bindsym $mod+q workspace $ws_q
+bindsym $mod+w workspace $ws_w
+bindsym $mod+e workspace $ws_e
+bindsym $mod+a workspace $ws_a
+bindsym $mod+s workspace $ws_s
 
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+q move container to workspace $ws4
-bindsym $mod+Shift+w move container to workspace $ws5
-bindsym $mod+Shift+e move container to workspace $ws6
-bindsym $mod+Shift+a move container to workspace $wss1
-bindsym $mod+Shift+s move container to workspace $wss2
+bindsym $mod+Shift+1 move container to workspace $ws_1
+bindsym $mod+Shift+2 move container to workspace $ws_2
+bindsym $mod+Shift+3 move container to workspace $ws_3
+bindsym $mod+Shift+4 move container to workspace $ws_4
+bindsym $mod+Shift+5 move container to workspace $ws_5
+bindsym $mod+Shift+6 move container to workspace $ws_6
+bindsym $mod+Shift+7 move container to workspace $ws_7
+bindsym $mod+Shift+8 move container to workspace $ws_8
+bindsym $mod+Shift+9 move container to workspace $ws_9
+bindsym $mod+Shift+q move container to workspace $ws_q
+bindsym $mod+Shift+w move container to workspace $ws_w
+bindsym $mod+Shift+e move container to workspace $ws_e
+bindsym $mod+Shift+a move container to workspace $ws_a
+bindsym $mod+Shift+s move container to workspace $ws_s
 
-bindsym $mod+z layout tabbed
+bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
-bindsym $mod+c layout toggle split
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-
-# bindsym $mod+a focus parent
-# bindsym $mod+semicolon split h
-# bindsym $mod+v split v
-# bindsym $mod+s layout stacking
 
 mode "resize" {
 	bindsym h resize shrink width 10 px or 10 ppt
@@ -115,19 +120,26 @@ mode "resize" {
 	bindsym Escape mode "default"
 	bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
-mode "j: japanese; e: english" {
-	bindsym j exec fcitx5-remote -s mozc; mode "default"
-	bindsym e exec fcitx5-remote -s keyboard-us; mode "default"
-}
+bindsym $mod+equal exec fcitx5-remote -s mozc; mode "default"
+bindsym $mod+minus exec fcitx5-remote -s keyboard-us; mode "default"
 
-bindsym $mod+i mode "j: japanese; e: english"
+bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
+for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
+
+for_window [app_id="^haretest$"] floating enable
+
+
+# sway-specific stuff
 
 bar swaybar_command waybar
 
 output * bg ~/Pictures/wallpaper.jpg fill
+default_border none
+# A hack to hide the title bar. Remember it will always be hidden.
+# https://github.com/swaywm/sway/issues/1286
+hide_edge_borders --i3 smart
 
 input "type:keyboard" {
 	xkb_layout vladh
@@ -136,6 +148,7 @@ input "type:keyboard" {
 include ~/.config/sway/config.d/*
 include ~/.config/sway/`hostname`
 
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id gammastep

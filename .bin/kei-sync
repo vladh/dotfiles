@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec rsync -Pvrthl --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/bentus/ /mnt/kei

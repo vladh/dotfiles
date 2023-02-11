@@ -1,3 +1,0 @@
-#!/bin/sh -eu
-
-exec aspell --master=en_GB "$@"

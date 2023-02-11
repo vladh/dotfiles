@@ -1,6 +1,3 @@
 #!/bin/sh -eu
 
-if command -v "doas"; then
-    echo "Did you mean 'doas'?"
-fi
-/bin/sudo $@
+exec doas $@

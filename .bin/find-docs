@@ -1,0 +1,17 @@
+#!/bin/sh -eu
+
+if [ "$HOSTNAME" = "ki" ]; then
+        exec fd . \
+                ~/b/books* \
+                ~/b/uni* \
+                ~/b/writing* \
+                | \
+            fzf
+else
+        exec fd . \
+                ~/bentus/books* \
+                ~/bentus/uni* \
+                ~/bentus/writing* \
+                | \
+            fzf
+fi

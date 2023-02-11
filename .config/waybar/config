@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "temperature", "battery", "custom/fcitx5", "tray", "custom/date"],
+    "modules-right": ["pulseaudio", "battery", "custom/fcitx5", "tray", "custom/date"],
     "height": 26,
     "sway/workspaces": {
         "format": "{name}"

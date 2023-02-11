@@ -10,7 +10,6 @@ client.unfocused        #333333 #222222 #888888 #292D2E   #222222
 client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
-for_window [class="^.*"] border pixel 0
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -22,10 +21,11 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+shift+0 exec poweroff
+bindsym $mod+Shift+grave exec poweroff
+bindsym $mod+Ctrl+Shift+grave exec reboot
 bindsym Print exec xss-full
-bindsym $mod+p exec xss-full
-bindsym $mod+o exec xss
+bindsym $mod+o exec xss-full
+bindsym $mod+Shift+o exec xss
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -51,57 +51,61 @@ bindsym $mod+Shift+Right move right
 
 bindsym $mod+Return exec kitty
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
+bindsym $mod+c exec collect
 
 workspace_layout tabbed
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4:q"
-set $ws5 "5:w"
-set $ws6 "6:e"
-set $wss1 "s1:a"
-set $wss2 "s2:s"
+set $ws_1 "1"
+set $ws_2 "2"
+set $ws_3 "3"
+set $ws_4 "4"
+set $ws_5 "5"
+set $ws_6 "6"
+set $ws_7 "7"
+set $ws_8 "8"
+set $ws_9 "9"
+set $ws_q "e1:q"
+set $ws_w "e2:w"
+set $ws_e "e3:e"
+set $ws_a "s1:a"
+set $ws_s "s2:s"
 
-workspace $ws1 output primary DP-4 HDMI-0
-workspace $ws2 output primary DP-4 HDMI-0
-workspace $ws3 output primary DP-4 HDMI-0
-workspace $ws4 output primary DP-4 HDMI-0
-workspace $ws5 output primary DP-4 HDMI-0
-workspace $ws6 output primary DP-4 HDMI-0
-workspace $wss1 output secondary DP-0.8
-workspace $wss2 output secondary DP-0.8
+bindsym $mod+1 workspace $ws_1
+bindsym $mod+2 workspace $ws_2
+bindsym $mod+3 workspace $ws_3
+bindsym $mod+4 workspace $ws_4
+bindsym $mod+5 workspace $ws_5
+bindsym $mod+6 workspace $ws_6
+bindsym $mod+7 workspace $ws_7
+bindsym $mod+8 workspace $ws_8
+bindsym $mod+9 workspace $ws_9
+bindsym $mod+q workspace $ws_q
+bindsym $mod+w workspace $ws_w
+bindsym $mod+e workspace $ws_e
+bindsym $mod+a workspace $ws_a
+bindsym $mod+s workspace $ws_s
 
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+q workspace $ws4
-bindsym $mod+w workspace $ws5
-bindsym $mod+e workspace $ws6
-bindsym $mod+a workspace $wss1
-bindsym $mod+s workspace $wss2
+bindsym $mod+Shift+1 move container to workspace $ws_1
+bindsym $mod+Shift+2 move container to workspace $ws_2
+bindsym $mod+Shift+3 move container to workspace $ws_3
+bindsym $mod+Shift+4 move container to workspace $ws_4
+bindsym $mod+Shift+5 move container to workspace $ws_5
+bindsym $mod+Shift+6 move container to workspace $ws_6
+bindsym $mod+Shift+7 move container to workspace $ws_7
+bindsym $mod+Shift+8 move container to workspace $ws_8
+bindsym $mod+Shift+9 move container to workspace $ws_9
+bindsym $mod+Shift+q move container to workspace $ws_q
+bindsym $mod+Shift+w move container to workspace $ws_w
+bindsym $mod+Shift+e move container to workspace $ws_e
+bindsym $mod+Shift+a move container to workspace $ws_a
+bindsym $mod+Shift+s move container to workspace $ws_s
 
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+q move container to workspace $ws4
-bindsym $mod+Shift+w move container to workspace $ws5
-bindsym $mod+Shift+e move container to workspace $ws6
-bindsym $mod+Shift+a move container to workspace $wss1
-bindsym $mod+Shift+s move container to workspace $wss2
-
-bindsym $mod+z layout tabbed
+bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
-bindsym $mod+c layout toggle split
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-
-# bindsym $mod+a focus parent
-# bindsym $mod+semicolon split h
-# bindsym $mod+v split v
-# bindsym $mod+s layout stacking
 
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
@@ -117,18 +121,44 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 mode "j: japanese; e: english" {
         bindsym j exec fcitx5-remote -s mozc; mode "default"
         bindsym e exec fcitx5-remote -s keyboard-us; mode "default"
 }
-
 bindsym $mod+i mode "j: japanese; e: english"
 
-exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
+bindsym $mod+p exec kitty -c ~/.config/kitty/launcher.conf --class=vladh_launcher browse-docs
+for_window [class="vladh_launcher"] floating enable, border none, resize set 70 ppt 70 ppt
 
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+
+# ki
+
+exec --no-startup-id xrandr --output DP-1 --mode 2560x1440 -r 165 --primary --left-of DP-4
+
+workspace $ws_1 output DP-2 DP-1
+workspace $ws_2 output DP-2 DP-1
+workspace $ws_3 output DP-2 DP-1
+workspace $ws_4 output DP-2 DP-1
+workspace $ws_5 output DP-2 DP-1
+workspace $ws_6 output DP-2 DP-1
+workspace $ws_7 output DP-2 DP-1
+workspace $ws_8 output DP-2 DP-1
+workspace $ws_9 output DP-2 DP-1
+workspace $ws_q output DP-2 DP-1
+workspace $ws_w output DP-2 DP-1
+workspace $ws_e output DP-2 DP-1
+workspace $ws_a output DP-4
+workspace $ws_s output DP-4
+
+
+# i3-specific stuff
+
+for_window [class="^.*"] border pixel 0
+
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id killall polybar && $HOME/.config/polybar/launch.sh
 exec --no-startup-id lxqt-policykit-agent
+exec --no-startup-id fcitx5 -d
 exec picom

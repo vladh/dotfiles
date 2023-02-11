@@ -3,6 +3,6 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 NoDisplay=true
-Exec=/usr/bin/telegram-desktop -workdir /home/vladh/.local/share/TelegramDesktop/ -- %u
+Exec=/usr/bin/telegram-desktop -- %u
 Name=Telegram Desktop
 Comment=Custom definition for Telegram Desktop
