@@ -30,14 +30,18 @@ venv_prompt() {
   fi
 }
 
-if [ -n "$BASH$FISH_VERSION" ]; then
-  # Colours are enclosed in \[...\] so that they don't count towards the
-  # character count and mess up scrolling etc.
-  # PS1 used to be prefixed with: \[\033[G\]
-  # What is that?
-  export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)$prompt_char \[$c_reset\]"
-elif [ "$0" = "mrsh" ] || [ "$0" = "./imrsh" ] || [ "$0" = "." ] || [ $0 = "imrsh" ]; then
-  export PS1='> '
-else
-  export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt)$prompt_char $c_reset"
-fi
+case "$0" in
+  *bash*)
+    # Colours are enclosed in \[...\] so that they don't count towards the
+    # character count and mess up scrolling etc.
+    # PS1 used to be prefixed with: \[\033[G\]
+    # What is that?
+    export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)$prompt_char \[$c_reset\]"
+    ;;
+  *mrsh*)
+    export PS1='> '
+    ;;
+  *)
+    export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt)$prompt_char $c_reset"
+    ;;
+esac
