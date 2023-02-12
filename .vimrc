@@ -34,6 +34,7 @@ Plug 'jparise/vim-graphql'
 Plug 'karolbelina/uxntal.vim', { 'branch': 'main' }
 Plug 'otherjoel/vim-pollen'
 Plug 'pangloss/vim-javascript'
+Plug 'tikhomirov/vim-glsl'
 Plug 'wlangstroth/vim-racket'
 Plug 'ziglang/zig.vim'
 
