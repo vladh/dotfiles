@@ -12,7 +12,7 @@ c_reset='\e[39m'
 c_bold='\e[1m'
 
 if [ "$(uname)" = "Darwin" ] || [ "$(uname)" = "Linux" ] || [ "$(uname)" = "FreeBSD" ]; then
-  prompt_char="$"
+  prompt_char='$'
 else
   prompt_char=">"
 fi
