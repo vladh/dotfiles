@@ -1,7 +1,7 @@
 [include]
-    path = ~/bentus/dotfiles-extra/.gitconfig_private
+    path = ~/bentus/dotfiles-extra/.config/git/private
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.config/git/gitignore_global
     editor = nvim
 [alias]
     a = add
@@ -34,4 +34,4 @@
     process = git-lfs filter-process
     required = true
 [diff]
-	wsErrorHighlight = all
+    wsErrorHighlight = all
