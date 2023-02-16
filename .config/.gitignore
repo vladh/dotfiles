@@ -35,4 +35,6 @@
 !/x11
 !/yt-dlp
 !/zathura
+!env
 !hosts
+!profile
