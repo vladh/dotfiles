@@ -2,6 +2,7 @@
 !.gitignore
 !/ack
 !/aerc
+!/aspell
 !/envs
 !/fcitx5
 !/foot
