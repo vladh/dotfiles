@@ -44,6 +44,9 @@ export npm_config_userconfig="${XDG_CONFIG_HOME}/npm/config"
 export npm_config_cache="${XDG_STATE_HOME}/npm"
 export npm_config_prefix="${XDG_DATA_HOME}/npm"
 export PATH="${XDG_DATA_HOME}/npm/bin:${PATH}"
+export GOPATH="${XDG_DATA_HOME}/go"
+export PATH="${XDG_DATA_HOME}/go/bin:${PATH}"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 
 export HISTFILESIZE=
 export HISTSIZE=
