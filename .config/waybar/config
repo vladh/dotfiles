@@ -2,8 +2,8 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "battery", "custom/fcitx5", "tray", "custom/date"],
-    "height": 26,
+    "modules-right": ["pulseaudio", "battery", "custom/fcitx5", "tray", "custom/date", "image/avatar"],
+    "height": 28,
     "sway/workspaces": {
         "format": "{name}"
     },
@@ -14,16 +14,23 @@
         "format": "{:%A %Y-%m-%d %H:%M:%S}"
     },
     "custom/fcitx5": {
-        "exec": "/home/vladh/.vladh/bin/fcitx-monitor-method"
+        "exec": "/home/vladh/.vladh/bin/fcitx-monitor-method",
+        "tooltip": false,
     },
     "custom/date": {
         "exec": "/home/vladh/.vladh/bin/date-custom",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false,
+    },
+    "image/avatar": {
+        "path": "/home/vladh/bentus/images/vlad/carl_circle@40px.png",
+        "size": 20,
+        "tooltip": false,
     },
     "battery": {
-        "format": "{capacity}%",
-        "format-critical": "{capacity}%",
-        "format-charging": "{capacity}%"
+        "format": "{time}",
+        "format-critical": "{time}",
+        "format-charging": "{time}",
     },
     "temperature": {
         "format": "{temperatureC}°C"
@@ -31,7 +38,7 @@
     "pulseaudio": {
         "format": "{volume}%",
         "format-bluetooth": "{volume}%bt",
-        "format-muted": "m",
+        "format-muted": "—",
     },
     "tray": {
         "icon-size": 21,
