@@ -35,8 +35,6 @@ case "$0" in
   *bash*)
     # Colours are enclosed in \[...\] so that they don't count towards the
     # character count and mess up scrolling etc.
-    # PS1 used to be prefixed with: \[\033[G\]
-    # What is that?
     export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)$prompt_char \[$c_reset\]"
     ;;
   *mrsh*)
