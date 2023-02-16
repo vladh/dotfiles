@@ -71,6 +71,8 @@ colorscheme nord
 set nobackup
 set noswapfile
 set undofile
+" Only for original vim:
+set shadafile="~/.local/state/viminfo"
 
 
 "
