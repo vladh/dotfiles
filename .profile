@@ -13,7 +13,7 @@ if [ -n "$BASH$FISH_VERSION" ]; then
   export HISTFILESIZE=
   export HISTSIZE=
   export HISTTIMEFORMAT="%F %T "
-  export HISTFILE=~/.history
+  export HISTFILE=~/.local/state/history
   # This saves logs to consult later
   export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> $HOME/.vladh/logs/sh-history-$(date "+%Y-%m-%d").log'
 fi
