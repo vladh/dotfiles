@@ -52,7 +52,7 @@ export HISTFILESIZE=
 export HISTSIZE=
 export HISTTIMEFORMAT="%F %T "
 export HISTFILE=~/.local/state/history
-export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> $HOME/.vladh/logs/sh-history-$(date "+%Y-%m-%d").log'
+export PROMPT_COMMAND='history -a && echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> $XDG_STATE_HOME/shlogs/sh-history-$(date "+%Y-%m-%d").log'
 
 if [ "${XDG_SESSION_TYPE}" = "wayland" ]; then
   export GDK_BACKEND=wayland
