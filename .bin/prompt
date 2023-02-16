@@ -11,7 +11,8 @@ c_white='\e[97m'
 c_reset='\e[39m'
 c_bold='\e[1m'
 
-if [ "$(uname)" = "Darwin" ] || [ "$(uname)" = "Linux" ] || [ "$(uname)" = "FreeBSD" ]; then
+uname_str="$(uname)"
+if [ "$uname_str" = "Darwin" ] || [ "$uname_str" = "Linux" ] || [ "$uname_str" = "FreeBSD" ]; then
   prompt_char='$'
 else
   prompt_char=">"
@@ -39,7 +40,7 @@ case "$0" in
     export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)$prompt_char \[$c_reset\]"
     ;;
   *mrsh*)
-    export PS1='> '
+    export PS1='$ '
     ;;
   *)
     export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt)$prompt_char $c_reset"
