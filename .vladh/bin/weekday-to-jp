@@ -1,3 +1,0 @@
-#!/bin/sh -eu
-
-exec sed 's/Monday/月/g; s/Tuesday/火/g; s/Wednesday/水/g; s/Thursday/木/g; s/Friday/金/g; s/Saturday/土/g; s/Sunday/日/g'

@@ -14,10 +14,10 @@
         "format": "{:%A %Y-%m-%d %H:%M:%S}"
     },
     "custom/fcitx5": {
-        "exec": "fcitx-monitor-method"
+        "exec": "/home/vladh/.vladh/bin/fcitx-monitor-method"
     },
     "custom/date": {
-        "exec": "date-custom",
+        "exec": "/home/vladh/.vladh/bin/date-custom",
         "interval": 1
     },
     "battery": {
