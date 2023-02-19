@@ -36,10 +36,7 @@ export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export NODE_REPL_HISTORY="${XDG_STATE_HOME}/node_repl_history"
 export LESSHISTFILE="${XDG_STATE_HOME}/lesshst"
 export ACKRC="${XDG_CONFIG_HOME}/ack/ackrc"
-export ASPELL_CONF="lang en_GB;
-  per-conf ${XDG_CONFIG_HOME}/aspell/aspell.conf;
-  personal ${XDG_CONFIG_HOME}/aspell/en.pws;
-  repl ${XDG_CONFIG_HOME}/aspell/en.prepl"
+export ASPELL_CONF="lang en_GB; per-conf ${XDG_CONFIG_HOME}/aspell/aspell.conf; personal ${XDG_CONFIG_HOME}/aspell/en.pws; repl ${XDG_CONFIG_HOME}/aspell/en.prepl"
 export npm_config_userconfig="${XDG_CONFIG_HOME}/npm/config"
 export npm_config_cache="${XDG_STATE_HOME}/npm"
 export npm_config_prefix="${XDG_DATA_HOME}/npm"
