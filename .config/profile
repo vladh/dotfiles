@@ -12,3 +12,5 @@ if [ -n "$BASH$FISH_VERSION" ]; then
 fi
 
 [ -e $HOME/.config/profiles/$(hostname).profile ] && . $HOME/.config/profiles/$(hostname).profile
+
+. $HOME/.bin/prompt

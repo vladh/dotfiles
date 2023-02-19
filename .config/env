@@ -98,5 +98,3 @@ fi
 alias sd='cd "$(find * -type d | fzf)"'
 
 [ -e ${XDG_CONFIG_HOME}/envs/$(hostname).env ] && . ${XDG_CONFIG_HOME}/envs/$(hostname).env
-
-. $HOME/.bin/prompt
