@@ -125,7 +125,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+equal exec fcitx5-remote -s mozc; mode "default"
 bindsym $mod+minus exec fcitx5-remote -s keyboard-us; mode "default"
 
-bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
+bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher /bin/bash -l browse-docs
 for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
 
 for_window [app_id="^haretest$"] floating enable
