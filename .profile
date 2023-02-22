@@ -3,7 +3,7 @@
 
 # Read the non-login shell config now, and when we launch future non-login
 # shells
-export ENV=$HOME/.config/env
+export ENV=$HOME/.env
 
 if [ -n "$BASH$FISH_VERSION" ]; then
   . $ENV
