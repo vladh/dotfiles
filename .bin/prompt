@@ -27,7 +27,7 @@ git_prompt() {
 
 venv_prompt() {
   if [ -n "${VIRTUAL_ENV}" ]; then
-    echo "venv "
+    echo "+venv"
   fi
 }
 
