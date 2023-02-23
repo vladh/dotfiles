@@ -1,5 +1,7 @@
 #!/bin/sh -eu
 
-while read fname; do
-    dezoomify-rs --compression 0 -h 99999 -w 99999 "$fname"
+while read url; do
+    echo "$url"
+    dezoomify-rs --compression 0 -h 99999 -w 99999 "$url" || true
+    echo ""
 done < "$1"
