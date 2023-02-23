@@ -21,7 +21,7 @@ fi
 git_prompt() {
   git_branch="$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')"
   if [ -n "$git_branch" ]; then
-    echo ":${git_branch} "
+    echo ":${git_branch}"
   fi
 }
 
@@ -35,12 +35,12 @@ case "$0" in
   *bash*)
     # Colours are enclosed in \[...\] so that they don't count towards the
     # character count and mess up scrolling etc.
-    export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt)$prompt_char \[$c_reset\]"
+    export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt) $prompt_char \[$c_reset\]"
     ;;
   *mrsh*)
     export PS1='$ '
     ;;
   *)
-    export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt)$prompt_char $c_reset"
+    export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt) $prompt_char $c_reset"
     ;;
 esac
