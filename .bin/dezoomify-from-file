@@ -1,5 +1,5 @@
 #!/bin/sh -eu
 
 while read fname; do
-    dezoomify-rs --compression 0 -h 99999 -w 99999 < "$fname"
+    dezoomify-rs --compression 0 -h 99999 -w 99999 "$fname"
 done < "$1"
