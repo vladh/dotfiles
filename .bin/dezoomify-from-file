@@ -1,3 +1,7 @@
 #!/bin/sh -eu
 
-xargs -d '\n' -n 1 dezoomify-rs --compression 0 -h 99999 -w 99999 < "$1"
+while read fname; do
+    if [ ! -f "$fname" ]; then
+        dezoomify-rs --compression 0 -h 99999 -w 99999 < "$fname"
+    fi
+done < "$1"
