@@ -13,5 +13,6 @@ fd -e jpg | while read fname; do
     mkdir -p "$outdir"
     echo "$fname"
     env MAGICK_TMPDIR="/mnt/balcora/cache" nice -2 \
-        convert -limit memory 1GB -limit map 1GB "$fname" -resize "${1}>" "$outdir/$base"
+        convert -limit memory 3GB -limit map 3GB -monitor "$fname" -scale "${1}>" "$outdir/$base"
+    echo ""
 done
