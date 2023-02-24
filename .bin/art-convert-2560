@@ -1,0 +1,10 @@
+#!/bin/sh -eu
+
+fd -e jpg | while read fname; do
+    dir=$(dirname "$fname")
+    base=$(basename "$fname")
+    outdir="../2560x/$dir"
+    mkdir -p "$outdir"
+    echo "$fname"
+    convert "$fname" -resize 2560x\> "$outdir/$base"
+done
