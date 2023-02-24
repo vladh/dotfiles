@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+find ~/b/wallpapers -type f | sort -R | head -n 1
