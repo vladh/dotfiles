@@ -2,16 +2,16 @@
 
 if [ "$#" -ne 1 ]; then
   echo "Usage: art-convert <size>" >&2
-  echo "\te.g. art-convert 2560" >&2
+  echo "\te.g. art-convert 2560x1440" >&2
   exit 1
 fi
 
 fd -e jpg | while read fname; do
     dir=$(dirname "$fname")
     base=$(basename "$fname")
-    outdir="../${1}x/$dir"
+    outdir="../${1}/$dir"
     mkdir -p "$outdir"
     echo "$fname"
-    env MAGICK_TMPDIR=/tmp nice -5 \
-        convert -limit memory 32 -limit map 32 "$fname" -resize "${1}x>" "$outdir/$base"
+    env MAGICK_TMPDIR="/mnt/balcora/cache" nice -5 \
+        convert -limit memory 32 -limit map 32 "$fname" -resize "${1}>" "$outdir/$base"
 done
