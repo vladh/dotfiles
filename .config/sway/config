@@ -100,6 +100,7 @@ bindsym $mod+Shift+a move container to workspace $ws_a
 bindsym $mod+Shift+s move container to workspace $ws_s
 
 bindsym $mod+Tab layout toggle tabbed splith
+bindsym $mod+Shift+Tab output * bg `get-wallpaper` fill
 bindsym $mod+x kill
 
 bindsym $mod+f fullscreen toggle
