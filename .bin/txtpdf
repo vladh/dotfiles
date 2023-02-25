@@ -1,0 +1,8 @@
+#!/bin/sh -eu
+
+if [ "$#" -ne 2 ]; then
+  echo "Usage: txtpdf in.txt out.pdf" >&2
+  exit 1
+fi
+
+exec pandoc "$1" -s -V papersize:a4 -V fontsize=12pt -o "$2"
