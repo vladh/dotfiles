@@ -100,7 +100,7 @@ bindsym $mod+Shift+a move container to workspace $ws_a
 bindsym $mod+Shift+s move container to workspace $ws_s
 
 bindsym $mod+Tab layout toggle tabbed splith
-bindsym $mod+Shift+Tab output * bg `get-wallpaper` fill
+bindsym $mod+Shift+Tab output * bg `new-wallpaper` fill
 bindsym $mod+x kill
 
 bindsym $mod+f fullscreen toggle
@@ -136,7 +136,7 @@ for_window [app_id="^haretest$"] floating enable
 
 bar swaybar_command waybar
 
-output * bg `get-wallpaper` fill
+output * bg `new-wallpaper` fill
 default_border none
 # A hack to hide the title bar. Remember it will always be hidden.
 # https://github.com/swaywm/sway/issues/1286
