@@ -66,6 +66,7 @@ window#waybar.hidden {
 #mpd,
 #custom-fcitx5,
 #custom-date,
+#custom-wallpaper,
 image {
     padding: 0 12px;
     border-left: 1px solid rgba(200, 230, 255, 0.05);
@@ -73,7 +74,7 @@ image {
     color: #ffffff;
 }
 
-#pulseaudio:first-child {
+#custom-wallpaper:first-child {
     border-left: 0;
 }
 

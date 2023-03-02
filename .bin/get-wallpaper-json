@@ -1,0 +1,6 @@
+#!/bin/sh -eu
+
+text=$(get-wallpaper-lastname)
+tooltip=$(get-wallpaper)
+
+echo "{\"text\": \"$text\", \"tooltip\": \"$tooltip\"}"

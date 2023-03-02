@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+swaymsg 'output * bg `new-wallpaper` fill'

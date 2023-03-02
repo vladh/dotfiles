@@ -1,5 +1,5 @@
 #!/bin/sh -eu
 
 if [ -f /tmp/wallpaper.txt ]; then
-    cat /tmp/wallpaper.txt
+    cat /tmp/wallpaper.txt | sed s/,.*$//g
 fi

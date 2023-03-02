@@ -1,0 +1,7 @@
+#!/bin/sh -eu
+
+wallpaper=$(find ~/bentus/wallpapers -type f | sort -R | head -n 1)
+base=$(basename "$wallpaper")
+echo "$base" > /tmp/wallpaper.txt
+echo "$wallpaper"
+pkill -RTMIN+8 waybar
