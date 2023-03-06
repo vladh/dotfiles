@@ -59,6 +59,7 @@
 .steam*
 .sudo_as_admin_successful
 .terminfo/
+.texlive/
 .texlive2019/
 .themes/
 .thunderbird/
