@@ -43,6 +43,7 @@
 .muttrc_private
 .openjfx/
 .pki/
+.psql_history
 .pulse-cookie
 .pypirc
 .python_history*
