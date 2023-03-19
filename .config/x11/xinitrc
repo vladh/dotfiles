@@ -1,4 +1,4 @@
-userresources=$HOME/.config/x11/Xresources
+userresources=$HOME/.Xresources
 usermodmap=$HOME/.config/x11/Xmodmap
 
 if [ -f "$userresources" ]; then
