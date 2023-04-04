@@ -156,7 +156,7 @@ workspace $ws_s output DisplayPort-3
 for_window [class="^.*"] border pixel 0
 
 exec_always --no-startup-id feh --no-fehbg --bg-fill "`new-wallpaper`"
-exec_always --no-startup-id killall polybar && $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id /home/vladh/.config/polybar/launch.sh
 exec --no-startup-id lxqt-policykit-agent
 exec --no-startup-id fcitx5 -d
 exec picom
