@@ -5,8 +5,8 @@ floating_modifier $mod
 focus_follows_mouse no
 
 #                       border  bg      text    indict. child_border
-client.focused          #434c5e #434c5e #eceff4 #8fbcbb #88c0d0
-client.focused_inactive #2e3440 #2e3440 #d8dee9 #4c566a #4c566a
+client.focused          #373e4d #373e4d #d8dee9 #4c566a #4c566a
+client.focused_inactive #373e4d #373e4d #d8dee9 #4c566a #4c566a
 client.unfocused        #2e3440 #2e3440 #d8dee9 #4c566a #4c566a
 client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb #ebcb8b
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
