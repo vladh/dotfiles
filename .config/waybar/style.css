@@ -1,13 +1,9 @@
-* {
-    font-family: Ubuntu, sans-serif;
-    font-size: 13px;
-}
-
 window#waybar {
     background-color: #0e1420;
+    font-family: Ubuntu, sans-serif;
+    font-size: 13px;
     color: #ffffff;
 }
-
 window#waybar.hidden {
     opacity: 0.2;
 }
@@ -15,7 +11,7 @@ window#waybar.hidden {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: inherit;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
     /* Avoid rounded borders under each workspace name */
@@ -26,7 +22,6 @@ window#waybar.hidden {
 #workspaces button:last-child {
     border-right-color: transparent;
 }
-
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: #333;
@@ -34,20 +29,17 @@ window#waybar.hidden {
     text-shadow: inherit;
     transition: none;
 }
-
 #workspaces button.focused {
     background-color: #64727D;
     border-right: none;
 }
-
 #workspaces button.urgent {
     background-color: #eb4d4b;
     border-right: none;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    background-color: #0055ee;
 }
 
 #clock,
@@ -71,82 +63,20 @@ image {
     padding: 0 12px;
     border-left: 1px solid rgba(200, 230, 255, 0.05);
     border-radius: 0;
-    color: #ffffff;
-}
-
-#custom-wallpaper:first-child {
-    border-left: 0;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
-
-#window {
-    color: #aaa;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    color: inherit;
 }
 
 #battery.charging, #battery.plugged {
     color: #88ff88;
 }
-
 #battery.critical:not(.charging) {
     color: #ff8888;
-}
-
-label:focus {
-    background-color: #000000;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
-
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
 }
