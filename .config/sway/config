@@ -4,12 +4,13 @@ font pango:Ubuntu Mono 10
 floating_modifier $mod
 focus_follows_mouse no
 
-client.focused #444444 #444444 #FFFFFF #000000   #000000
-client.focused_inactive #333333 #5F676A #FFFFFF #484E50   #5F676A
-client.unfocused #333333 #222222 #888888 #292D2E   #222222
-client.urgent #2F343A #900000 #FFFFFF #900000   #900000
-client.placeholder #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background #FFFFFF
+#                       border  bg      text    indict. child_border
+client.focused          #373e4d #373e4d #d8dee9 #4c566a #4c566a
+client.focused_inactive #373e4d #373e4d #d8dee9 #4c566a #4c566a
+client.unfocused        #2e3440 #2e3440 #d8dee9 #4c566a #4c566a
+client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb #ebcb8b
+client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+client.background       #ffffff
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
