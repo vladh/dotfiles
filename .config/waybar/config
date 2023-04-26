@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/wallpaper", "pulseaudio", "battery", "custom/fcitx5", "tray", "custom/date", "image/avatar"],
+    "modules-right": ["custom/wallpaper", "temperature", "pulseaudio", "battery", "custom/fcitx5", "tray", "custom/date", "image/avatar"],
     "height": 28,
     "sway/workspaces": {
         "format": "{name}"
@@ -44,8 +44,8 @@
     },
     "pulseaudio": {
         "format": "{volume}%",
-        "format-bluetooth": "{volume}%bt",
-        "format-muted": "—",
+        "format-bluetooth": "青歯 {volume}%",
+        "format-muted": "Ｍ",
     },
     "tray": {
         "icon-size": 21,
