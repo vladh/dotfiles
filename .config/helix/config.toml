@@ -1,0 +1,16 @@
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+0 = "goto_line_start"
+"S-4" = "goto_line_end"
+s.h = ["vsplit", "jump_view_left", ":new"]
+s.j = ["hsplit", ":new"]
+s.k = ["hsplit", "jump_view_up", ":new"]
+s.l = ["vsplit", ":new"]
+"C-h" = "jump_view_left"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+"C-l" = "jump_view_right"
