@@ -20,7 +20,7 @@
 [push]
     default = simple
 [pull]
-    rebase = false
+    rebase = true
 [sendemail]
     annotate = yes
 [init]
