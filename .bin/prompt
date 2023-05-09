@@ -15,7 +15,7 @@ uname_str="$(uname)"
 prompt_char='◊'
 
 host_prompt() {
-  if pstree -p | grep -E ".*sshd.*\($$\)"; then
+  if pstree -p | grep --quiet ".*sshd.*\($$\)"; then
     echo "$(hostname) "
   fi
 }
