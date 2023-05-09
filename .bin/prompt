@@ -35,12 +35,12 @@ case "$0" in
   *bash*)
     # Colours are enclosed in \[...\] so that they don't count towards the
     # character count and mess up scrolling etc.
-    export PS1="\[$c_blue\]\u \[$c_magenta\]\H\[$c_blue\] \W\$(git_prompt)\$(venv_prompt) $prompt_char \[$c_reset\]"
+    export PS1="\[$c_blue\]\H \[$c_magenta\]\u\[$c_blue\] \W\$(git_prompt)\$(venv_prompt) $prompt_char \[$c_reset\]"
     ;;
   *mrsh*)
     export PS1='$ '
     ;;
   *)
-    export PS1="$c_blue\u $c_magenta\H$c_blue \W\$(git_prompt)\$(venv_prompt) $prompt_char $c_reset"
+    export PS1="$c_blue\H $c_magenta\u$c_blue \W\$(git_prompt)\$(venv_prompt) $prompt_char $c_reset"
     ;;
 esac
