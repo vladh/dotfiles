@@ -6,15 +6,16 @@
 [alias]
     a = add
     aa = add --all .
-    cm = commit --verbose
-    cma = commit --amend
+    c = commit --verbose
+    ca = commit --amend
     co = checkout
     d = diff
     ds = diff --staged
+    l = log
     p = push
     pf = push --force-with-lease
-    pl = pull
-    st = status
+    s = status
+    u = pull
 [merge]
     tool = vimdiff
 [push]
