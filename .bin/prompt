@@ -12,11 +12,7 @@ c_reset='\e[39m'
 c_bold='\e[1m'
 
 uname_str="$(uname)"
-if [ "$uname_str" = "Darwin" ] || [ "$uname_str" = "Linux" ] || [ "$uname_str" = "FreeBSD" ]; then
-  prompt_char='$'
-else
-  prompt_char=">"
-fi
+prompt_char='◊'
 
 uname_prompt() {
   name="$(whoami)"
