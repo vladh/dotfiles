@@ -15,7 +15,7 @@ uname_str="$(uname)"
 prompt_char='◊'
 
 host_prompt() {
-  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  if pstree -p | grep -E ".*sshd.*\($$\)"; then
     echo "$(hostname) "
   fi
 }
