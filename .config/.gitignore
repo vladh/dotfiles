@@ -2,6 +2,7 @@
 !.gitignore
 !/ack
 !/aerc
+!/electron-flags.conf
 !/envs
 !/fcitx5
 !/foot
