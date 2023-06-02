@@ -1,5 +1,15 @@
-#!/bin/sh -eu
+#!/bin/sh -u
 
-cd /mnt/balcora; cat /home/vladh/bentus/dotfiles-extra/.config/kei-files | xargs -d '\n' du -shc
+print_sizes() {
+    cd /mnt/balcora
+    cat /home/vladh/bentus/dotfiles-extra/.config/kei-files | xargs -d '\n' du -shc
+}
 
-exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/ ~/kei
+echo "File sizes:"
+print_sizes
+echo ""
+echo "Space available:"
+dfd
+echo ""
+read -p "Press any key..."
+exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/ ~/kei/
