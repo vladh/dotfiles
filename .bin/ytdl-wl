@@ -1,5 +1,10 @@
 #!/bin/sh -eu
 
+if [ ! -d "Watch later" ]; then
+    echo "'Watch later' directory does not exist in the current directory"
+    exit 1
+fi
+
 options="-o %(playlist_title)s/%(channel)s__%(title)s__%(id)s.%(ext)s --cookies $HOME/bentus/dotfiles-extra/.config/yt-dlp/ytcookies.txt"
 
 ids=$(yt-dlp $options --get-id --flat-playlist 'https://www.youtube.com/playlist?list=WL')
@@ -20,6 +25,5 @@ for f in ./Watch\ later/*; do
         rm "$f"
     fi
 done
-
 
 exec yt-dlp $options 'https://www.youtube.com/playlist?list=WL'
