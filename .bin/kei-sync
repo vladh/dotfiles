@@ -1,3 +1,5 @@
 #!/bin/sh -eu
 
-exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/ /mnt/kei
+cd /mnt/balcora; cat /home/vladh/bentus/dotfiles-extra/.config/kei-files | xargs -d '\n' du -shc
+
+exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/ ~/kei
