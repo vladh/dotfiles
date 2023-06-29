@@ -1,3 +1,4 @@
 #!/bin/sh -eu
 
-grep '^zone' /etc/bind/named.conf.local | sed 's/zone "\(.*\)\.".*/\1\n*.\1/g' | sort | uniq
+echo "vladh.net"
+grep '^zone' /etc/bind/named.conf.local | sed 's/zone "\(.*\)\.".*/\1\n*.\1/g' | sort | uniq | grep -v '^vladh.net$'
