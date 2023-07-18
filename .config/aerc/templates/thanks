@@ -1,0 +1,5 @@
+X-Sourcehut-Patchset-Update: APPLIED
+
+Thanks!
+
+{{exec "branch=$(git rev-parse --abbrev-ref HEAD); printf 'to %s\n  %s..%s  %s -> %s\n' $(git remote get-url --push origin) $(git reflog -2 origin/$branch --pretty=format:%h | tail -n1) $(git reflog -1 origin/$branch --pretty=format:%h) $branch $branch" ""}}
