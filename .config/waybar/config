@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/wallpaper", "temperature", "pulseaudio", "battery", "custom/fcitx5", "custom/date", "image/avatar"],
+    "modules-right": ["custom/wallpaper", "custom/days", "temperature", "pulseaudio", "battery", "custom/fcitx5", "custom/date", "image/avatar"],
     "height": 28,
     "sway/workspaces": {
         "format": "{name}"
@@ -28,6 +28,10 @@
         "return-type": "json",
         "on-click": "/home/vladh/.bin/update-wallpaper",
         "signal": 8,
+    },
+    "custom/days": {
+        "exec": "/home/vladh/.bin/days",
+        "interval": "3600",
     },
     "image/avatar": {
         "path": "/home/vladh/bentus/images/vlad/carl_circle@40px.png",

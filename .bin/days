@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import datetime
+
+today = datetime.date.today()
+t0 = datetime.date(2023,12,31)
+t1 = datetime.date(2024,8,31)
+d0 = t0 - today
+d1 = t1 - today
+print(f'(a {d0.days}) (b {d1.days})')
