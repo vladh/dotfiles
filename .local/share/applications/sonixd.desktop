@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=sonixd
-Comment=sonixd
-Exec=/usr/local/bin/sonixd
-Terminal=false
-Type=Application
