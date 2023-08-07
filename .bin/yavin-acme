@@ -10,9 +10,9 @@ domain_params="$(yavin-getdomains | sed 's/^/-d /g' | xargs)"
 export NSUPDATE_SERVER="localhost"
 export NSUPDATE_KEY="/etc/bind/update.key"
 
-acme.sh --config-home /etc/acme/ --home /etc/acme/ --dns dns_nsupdate ${domain_params} $@
+acme.sh --server letsencrypt --config-home /etc/acme/ --home /etc/acme/ --dns dns_nsupdate ${domain_params} $@
 
-acme.sh --config-home /etc/acme/ --home /etc/acme --install-cert \
+acme.sh --server letsencrypt --config-home /etc/acme/ --home /etc/acme --install-cert \
     -d 'vladh.net' \
     --key-file /etc/nginx/keys/key.pem \
     --fullchain-file /etc/nginx/keys/cert.pem \
