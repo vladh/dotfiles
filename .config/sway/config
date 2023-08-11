@@ -52,6 +52,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Return exec foot
 bindsym $mod+d exec wofi --show drun
 bindsym $mod+c exec collect
+bindsym $mod+v exec wl-color-picker clipboard
 
 workspace_layout tabbed
 

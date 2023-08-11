@@ -14,7 +14,7 @@ yay -S --needed \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
     ttf-ubuntu-font-family noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-linux-libertine ttf-ibm-plex ttf-liberation wqy-zenhei ttf-bitstream-vera \
     fcitx5 fcitx5-mozc fcitx5-qt fcitx5-gtk fcitx5-configtool \
-    sway swaybg wofi slurp grim swappy wl-clipboard waybar gammastep \
+    sway swaybg wofi slurp grim swappy wl-clipboard wl-color-picker waybar gammastep \
     \
     bluetuith-bin brother-dcp1610w brscan4 greetd greetd-tuigreet mpdas ranger-git \
     rate-mirrors ttf-iosevka-term-ss07 xcursor-chicago95-git
