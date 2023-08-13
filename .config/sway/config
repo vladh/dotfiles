@@ -156,3 +156,4 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec "systemctl --user import-environment; systemctl --user start graphical-session.target"
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id gammastep
+exec --no-startup-id xmodmap ~/.config/x11/Xmodmap
