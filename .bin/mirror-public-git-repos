@@ -60,4 +60,5 @@ fi
 
 for repo in $repos; do
     ~/.bin/mirror-git-repo "git@git.sr.ht:~vladh/${repo}" "git@github.com:vladh/${repo}.git"
+    ~/.bin/mirror-git-repo "git@git.sr.ht:~vladh/${repo}" "git@git.vladh.net:vladh/${repo}.git"
 done
