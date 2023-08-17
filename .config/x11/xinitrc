@@ -1,5 +1,5 @@
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.config/x11/Xmodmap
+userresources=$HOME/.config/x11/xresources
+usermodmap=$HOME/.config/x11/xmodmap
 
 if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
