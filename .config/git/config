@@ -1,38 +1,39 @@
 [include]
-    path = ~/bentus/dotfiles-extra/.config/git/private
+	path = ~/bentus/dotfiles-extra/.config/git/private
 [core]
-    excludesfile = ~/.config/git/gitignore_global
-    editor = nvim
+	excludesfile = ~/.config/git/gitignore_global
+	editor = nvim
 [alias]
-    a = add
-    aa = add --all .
-    c = commit --verbose
-    ca = commit --amend
-    co = checkout
-    d = diff
-    ds = diff --staged
-    l = log
-    p = push
-    pf = push --force-with-lease
-    s = status
-    u = pull
+	a = add
+	aa = add --all .
+	c = commit --verbose
+	ca = commit --amend
+	co = checkout
+	d = diff
+	ds = diff --staged
+	l = log
+	p = push
+	pf = push --force-with-lease
+	s = status
+	u = pull
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 [push]
-    default = simple
+	default = simple
+	autoSetupRemote = true
 [pull]
-    rebase = true
+	rebase = true
 [sendemail]
-    annotate = yes
+	annotate = yes
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [user]
-    name = Vlad-Stefan Harbuz
-    email = vlad@vladh.net
+	name = Vlad-Stefan Harbuz
+	email = vlad@vladh.net
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [diff]
-    wsErrorHighlight = all
+	wsErrorHighlight = all
