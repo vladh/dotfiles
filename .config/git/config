@@ -13,6 +13,7 @@
 	ds = diff --staged
 	l = log
 	ll = log --stat --oneline
+	lla = log --stat --oneline --all
 	p = push
 	pf = push --force-with-lease
 	s = status
