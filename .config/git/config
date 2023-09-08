@@ -8,6 +8,7 @@
 	aa = add --all .
 	c = commit --verbose
 	ca = commit --amend
+	cl = clone
 	co = checkout
 	d = diff
 	ds = diff --staged
