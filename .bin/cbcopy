@@ -9,7 +9,7 @@ case "$(uname -s)" in
         ;;
 
     Linux)
-        if command -v "wl-copy"; then
+        if command -v "wl-copy" &> /dev/null; then
             exec wl-copy
         else
             exec xclip -sel c
