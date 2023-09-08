@@ -19,7 +19,7 @@ result=$(cat /dev/stdin | jq -sR '{
 	-H Authorization:"token $LEGACY_TOKEN_PROD" \
 	-H Content-Type:application/json \
 	-X POST \
-    --silent \
+	--silent \
 	-d @- https://paste.sr.ht/api/pastes)
 
 sha=$(printf '%s' "$result" | jq -r .sha)
