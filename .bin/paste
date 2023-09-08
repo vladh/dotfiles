@@ -24,4 +24,5 @@ result=$(cat /dev/stdin | jq -sR '{
 
 sha=$(printf '%s' "$result" | jq -r .sha)
 user=$(printf '%s' "$result" | jq -r .user.canonical_name)
-printf "https://paste.sr.ht/$user/$sha" | cbcopy
+printf '%s\n' "https://paste.sr.ht/$user/$sha"
+printf '%s' "https://paste.sr.ht/$user/$sha" | cbcopy
