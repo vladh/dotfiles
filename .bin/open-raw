@@ -9,7 +9,7 @@ case "$(printf "$1" | tr '[:upper:]' '[:lower:]')" in
 		exec firefox "$1"
 		;;
 	mailto*)
-		exec aerc "$1"
+		exec foot aerc "$1"
 		;;
 	*.pdf|*.djvu)
 		exec evince "$1"
