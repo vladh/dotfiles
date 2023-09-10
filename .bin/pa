@@ -23,7 +23,7 @@ if [ $# -eq 0 ]; then
     echo -e "\t\twhich will be deduplicated as mentioned above."
     echo -e "\t-f"
     echo -e "\t\tOverwrites existing files with the same name."
-    exit
+    exit 1
 fi
 
 for arg in "$@"; do

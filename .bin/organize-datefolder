@@ -12,7 +12,7 @@ idx=0
 
 if [ "$#" -ne 1 ]; then
     usage
-    exit
+    exit 1
 fi
 
 for f in "$dir"/*; do

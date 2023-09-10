@@ -4,7 +4,7 @@ set -e
 
 if [ "$#" -ne 1 ]; then
   echo "1 argument required, $# provided"
-  exit
+  exit 1
 fi
 
 filename="$1"
