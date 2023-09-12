@@ -18,6 +18,7 @@
 	p = push
 	pf = push --force-with-lease
 	s = status
+	sh = show
 	u = pull
 [merge]
 	tool = vimdiff
