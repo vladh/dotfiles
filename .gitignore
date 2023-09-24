@@ -68,6 +68,7 @@
 .thunderbird/
 .vscode/
 .yarnrc
+.zotero/
 .zsh_history
 .zshrc
 /.CFUserTextEncoding
