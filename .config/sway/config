@@ -22,8 +22,9 @@ bindsym XF86AudioPause exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 
-bindsym $mod+Shift+grave exec poweroff
-bindsym $mod+Ctrl+Shift+grave exec reboot
+bindsym $mod+Ctrl+q exec poweroff
+bindsym $mod+Ctrl+r exec reboot
+bindsym $mod+Ctrl+w exec systemctl reboot --boot-loader-entry=auto-windows
 bindsym Print exec wlss-full
 bindsym $mod+o exec wlss-full
 bindsym $mod+Shift+o exec wlss
