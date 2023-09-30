@@ -8,7 +8,7 @@ fi
 domain_params="$(yavin-getdomains | sed 's/^/-d /g' | xargs)"
 
 export NSUPDATE_SERVER="localhost"
-export NSUPDATE_KEY="/etc/bind/update.key"
+export NSUPDATE_KEY="/etc/bind/keys/all.key"
 
 acme.sh --server letsencrypt --config-home /etc/acme/ --home /etc/acme/ --dns dns_nsupdate ${domain_params} $@
 
