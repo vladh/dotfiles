@@ -1,0 +1,14 @@
+[Unit]
+Description=balcora
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/mount -t sshfs -o uid=1000,gid=1000,allow_other billy_int:/mnt/balcora /mnt/balcora
+ExecStop=/usr/bin/umount /mnt/balcora
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
