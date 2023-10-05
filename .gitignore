@@ -31,6 +31,7 @@
 .hushlogin
 .icons
 .ipython/
+.ivy2/
 .jupyter/
 .keras/
 .keychain
@@ -54,6 +55,8 @@
 .rediscli_history
 .renderdoc/
 .rustup/
+.sbt/
+.scala_history_jline3
 .selected_editor
 .shimei
 .sqlite_history
