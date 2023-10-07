@@ -10,18 +10,12 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    margin: 5px 1px;
+    padding: 0 4px;
     background-color: transparent;
     color: inherit;
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each workspace name */
     border: none;
-    border-radius: 0;
-    border-right: 1px solid rgba(200, 230, 255, 0.15);
-}
-#workspaces button:last-child {
-    border-right-color: transparent;
+    border-radius: 5px;
 }
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
@@ -32,11 +26,9 @@ window#waybar.hidden {
 }
 #workspaces button.focused {
     background-color: #64727D;
-    border-right: none;
 }
 #workspaces button.urgent {
     background-color: #eb4d4b;
-    border-right: none;
 }
 
 #mode {
@@ -62,8 +54,6 @@ window#waybar.hidden {
 #custom-wallpaper,
 image {
     padding: 0 12px;
-    border-left: 1px solid rgba(200, 230, 255, 0.05);
-    border-radius: 0;
     color: inherit;
 }
 

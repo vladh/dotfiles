@@ -1,8 +1,8 @@
 {
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["custom/wallpaper", "temperature", "pulseaudio", "battery", "custom/fcitx5", "custom/date", "image#avatar"],
+    "modules-center": [],
+    "modules-right": ["custom/wallpaper", "pulseaudio", "battery", "custom/date", "image#avatar"],
     "height": 28,
     "sway/workspaces": {
         "format": "{name}"
