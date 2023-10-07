@@ -1,10 +1,10 @@
-/*
 !.gitignore
 !/ack
 !/aerc
 !/electron-flags.conf
 !/envs
 !/fcitx5
+!/fontconfig
 !/foot
 !/gammastep
 !/git
@@ -40,3 +40,4 @@
 !env
 !hosts
 !profile
+/*

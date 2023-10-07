@@ -140,7 +140,7 @@ for_window [app_id="^haretest$"] floating enable
 bar swaybar_command waybar
 
 # output * bg `new-wallpaper` fill
-output * bg ~/bentus/images/wallpapers/rain.png fill
+output * bg ~/bentus/images/wallpapers/macos/13-Ventura-Dark.jpg fill
 default_border none
 # A hack to hide the title bar. Remember it will always be hidden.
 # https://github.com/swaywm/sway/issues/1286
