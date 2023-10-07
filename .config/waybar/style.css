@@ -1,5 +1,6 @@
 window#waybar {
-    background-color: rgba(14, 20, 32, 0.85);
+    /* background-color: rgba(14, 20, 32, 0.85); */
+    background-image: url('/home/vladh/bentus/images/wallpapers/macos-edited/13-Ventura-Dark@2560x1440+blur+dark.jpg');
     font-family: Ubuntu, sans-serif;
     font-size: 13px;
     color: #ffffff;
