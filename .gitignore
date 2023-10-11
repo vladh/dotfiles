@@ -43,6 +43,7 @@
 .msmtprc
 .muttrc_private
 .openjfx/
+.pdsettings
 .pki/
 .psql_history
 .pulse-cookie
