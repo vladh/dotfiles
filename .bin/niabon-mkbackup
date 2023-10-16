@@ -5,4 +5,4 @@ export BUPSTASH_REPOSITORY="/Volumes/backups/niabon/bupstash"
 bupstash put \
     --send-log "/Volumes/backups/niabon/bupstash.sendlog" \
     /Users/niabon/Desktop
-bupstash rm --allow-many older-than 30d 
+bupstash rm --allow-many older-than 30d
