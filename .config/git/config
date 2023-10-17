@@ -12,6 +12,8 @@
 	co = checkout
 	d = diff
 	ds = diff --staged
+	f = fetch
+	fa = fetch --all
 	l = log
 	ll = log --stat --oneline
 	lla = log --stat --oneline --all
