@@ -27,6 +27,7 @@ Plug 'vladh/nord-vim', { 'branch': 'main' }
 
 " languages
 Plug 'arrufat/vala.vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'digitaltoad/vim-pug'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
 Plug 'https://git.sr.ht/~vladh/shimei.vim', { 'branch': 'main' }
