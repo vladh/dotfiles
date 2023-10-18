@@ -10,7 +10,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    margin: 3px 1px;
+    margin: 2px;
     padding: 1px 4px;
     background-color: transparent;
     color: inherit;
