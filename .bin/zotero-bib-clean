@@ -1,0 +1,13 @@
+#!/bin/sh -eu
+
+if [ $# -ne 1 ]; then
+    echo -e "zotero-bib-clean: Cleans up .bib files exported by Zotero."
+    echo -e ""
+    echo -e "Usage: zotero-bib-clean <filepath>"
+    exit 1
+fi
+
+cat $1 |
+    sed '/^\s\+keywords/d' |
+    sed '/^\s\+file/d' |
+    sed '/^@/ s/_\([0-9]\+\|nodate\),$/,/; /^@/ s/_/-/g'
