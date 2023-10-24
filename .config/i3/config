@@ -157,7 +157,7 @@ workspace $ws_s output DisplayPort-3
 for_window [class="^.*"] border pixel 0
 
 # exec_always --no-startup-id feh --no-fehbg --bg-fill "`new-wallpaper`"
-exec_always --no-startup-id feh --no-fehbg --bg-fill ~/bentus/images/wallpapers/rain.png fill
+exec_always --no-startup-id feh --no-fehbg --bg-fill ~/bentus/images/wallpapers/macos/13-Ventura-Dark.jpg fill
 exec_always --no-startup-id /home/vladh/.config/polybar/launch.sh
 exec --no-startup-id lxqt-policykit-agent
 exec --no-startup-id fcitx5 -d
