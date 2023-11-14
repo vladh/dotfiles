@@ -57,6 +57,7 @@ set mouse=a
 set signcolumn=yes
 set updatetime=300
 set nofixendofline
+set nolist wrap linebreak breakat&vim
 set showbreak=+
 set hlsearch
 
