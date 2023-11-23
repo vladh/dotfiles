@@ -1,0 +1,16 @@
+#!/bin/sh -eu
+
+if [ $# -eq 0 ]; then
+    echo -e "csv-to-nginx-redirect: Takes csv lines of the format “/from,/to” and creates nginx redirects."
+    echo -e ""
+    echo -e "Usage: csv-to-nginx-redirect <filepath>"
+    exit 1
+fi
+
+cat $1 | while read row; do
+    from=${row%,*}
+    to=${row#*,}
+    echo "location ~ ^${from}/?$ {"
+    echo "    return 301 ${to};"
+    echo "}"
+done
