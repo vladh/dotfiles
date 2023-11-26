@@ -38,6 +38,7 @@
 !/x11
 !/yt-dlp
 !/zathura
+!alpine-packages
 !env
 !hosts
 !profile

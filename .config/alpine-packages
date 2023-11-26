@@ -1,0 +1,13 @@
+binutils
+coreutils
+curl
+doas
+findutils
+foot-extra-terminfo
+git
+grep
+iproute2
+neovim
+pciutils
+usbutils
+util-linux
