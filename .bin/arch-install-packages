@@ -5,7 +5,7 @@ yay -S --needed \
     networkmanager avahi nss-mdns dnsmasq openssh inetutils bind mtr wol \
     doas git curl wget rsync which trash-cli ack fd fzf duf ncdu btop powertop pv moreutils sshfs \
     perl-authen-sasl perl-file-mimeinfo perl-io-socket-ssl \
-    gcc gdb make vim neovim tmux time man \
+    gcc gdb make neovim neovim-symlinks tmux time man \
     pandoc texlive-xetex \
     pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
