@@ -1,10 +1,14 @@
 #!/bin/bash -eu
 
-if [ $# -eq 0 ]; then
-    echo -e "depollen: Tries to convert a pollen file to a plain text file"
-    echo -e ""
-    echo -e "Usage: depollen <filepath>"
-    exit 1
-fi
+# if [ $# -eq 0 ]; then
+#     echo -e "depollen: Tries to convert a pollen file to a plain text file"
+#     echo -e ""
+#     echo -e "Usage: depollen <filepath>"
+#     exit 1
+# fi
 
-sed '/^#/d; /^◊/d' $1 | perl -00 -lpe 's/\n/ /g'
+if [ $# -eq 0 ]; then
+    exec sed '/^#/d; /^◊/d' | perl -00 -lpe 's/\n/ /g'
+else
+    exec sed '/^#/d; /^◊/d' $1 | perl -00 -lpe 's/\n/ /g'
+fi
