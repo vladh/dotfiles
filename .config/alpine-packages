@@ -4,10 +4,17 @@ curl
 doas
 findutils
 foot-extra-terminfo
+g++
+gcc
 git
+go
 grep
 iproute2
+make
+musl-dev
 neovim
 pciutils
+scdoc
 usbutils
 util-linux
+nginx
