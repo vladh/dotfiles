@@ -58,8 +58,11 @@ set signcolumn=yes
 set updatetime=300
 set nofixendofline
 set wrap linebreak breakat&vim
-set showbreak=+
+set showbreak=⤷
 set hlsearch
+set incsearch
+set scrolloff=10
+set nofoldenable
 
 
 "
