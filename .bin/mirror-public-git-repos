@@ -1,24 +1,22 @@
 #!/bin/sh -eu
 
 repos="
-alice-demettrie-bot
 aoc-2020
 aoc-2021
 aoc-2022
 aoc-2023
-cheats-suck-but-are-easy
 clumsycomputer
 dewdrop
 dotfiles
 fotografiska
 fotografiska2
-gbchon
 glad
 hare-3d-graphics
 hare-freetype2
 hare-gl
 hare-glm
 hare-hazel
+hare-obj
 hare-pipewire
 hare-project-library
 hare-spapod
@@ -26,12 +24,10 @@ hare-vulkan
 hare-vulkan-hello-world
 hare-wav
 hello-hare-wl
-irabot
 lein-sassy
 lovebytetcc
 macrotone
 met.vladh.net
-microblog
 min-grub-theme
 nouns
 particles
@@ -43,16 +39,12 @@ plymouth-simplewallpaper
 pstr
 radio-api
 radio.vladh.net
-shimei
-shimei.vim
 shrub-router
 snake-in-asm
 squishymcbotty
 starfield
-tetris-in-go
 thursday
 tmk_keyboard_oldschool
-touchfiles
 vegvisir
 virtualserial
 "
