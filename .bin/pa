@@ -30,7 +30,8 @@ for arg in "$@"; do
     shift
     case $arg in
         --destdir)
-            dest_dir="$1"
+            dest_dir="$1/"
+            shift
             ;;
         --as)
             global_dest_name="$1"
