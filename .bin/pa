@@ -10,14 +10,14 @@ overwrite=0
 if [ $# -eq 0 ]; then
     echo -e "pa: Uploads files to a server in an easy-to-use way."
     echo -e ""
-    echo -e "Usage: pa [--static] [--as <newname>] <filepath>..."
+    echo -e "Usage: pa [--destdir <dir>] [--as <newname>] <filepath>..."
     echo -e ""
     echo -e "If a file with a given name already exists on the server, a random"
     echo -e "suffix will be appended to the filename before the extension."
     echo -e ""
     echo -e "Flags:"
-    echo -e "\t--static"
-    echo -e "\t\tPuts the file in the static/ directory instead of the t/ directory."
+    echo -e "\t--destdir <dir>"
+    echo -e "\t\tPuts the file in the given directory instead of the t/ directory."
     echo -e "\t--as <newname>"
     echo -e "\t\tTreats <newname> as the filename. Applies to all files,"
     echo -e "\t\twhich will be deduplicated as mentioned above."
@@ -29,8 +29,8 @@ fi
 for arg in "$@"; do
     shift
     case $arg in
-        --static)
-            dest_dir="static/"
+        --destdir)
+            dest_dir="$1"
             ;;
         --as)
             global_dest_name="$1"
