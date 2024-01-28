@@ -18,6 +18,8 @@ workspace $ws_e output DP-1 DP-2 DP-3
 workspace $ws_a output DP-4
 workspace $ws_s output DP-4
 
+output DP-4 bg ~/bentus/images/wallpapers/catherine/catherine-fb-clothed-3840x2160.jpg fill
+
 input "type:pointer" {
 	accel_profile flat
 	pointer_accel -0.6
