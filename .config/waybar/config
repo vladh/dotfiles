@@ -47,8 +47,4 @@
         "format-bluetooth": "青歯 {volume}%",
         "format-muted": "Ｍ",
     },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    }
 }
