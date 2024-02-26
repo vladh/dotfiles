@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+rsync -Pvrthl --info=progress2 --rsync-path="doas rsync" yavin:/etc/nginx/keys/ .
