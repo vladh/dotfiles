@@ -134,20 +134,20 @@ for_window [class="vladh_launcher"] floating enable, border none, resize set 70 
 
 # ki
 
-exec --no-startup-id xrandr --output DisplayPort-1 --mode 2560x1440 -r 165 --primary --left-of DisplayPort-3
+exec --no-startup-id xrandr --output DisplayPort-0 --mode 2560x1440 -r 165 --primary --left-of DisplayPort-3
 
-workspace $ws_1 output DisplayPort-1
-workspace $ws_2 output DisplayPort-1
-workspace $ws_3 output DisplayPort-1
-workspace $ws_4 output DisplayPort-1
-workspace $ws_5 output DisplayPort-1
-workspace $ws_6 output DisplayPort-1
-workspace $ws_7 output DisplayPort-1
-workspace $ws_8 output DisplayPort-1
-workspace $ws_9 output DisplayPort-1
-workspace $ws_q output DisplayPort-1
-workspace $ws_w output DisplayPort-1
-workspace $ws_e output DisplayPort-1
+workspace $ws_1 output DisplayPort-0
+workspace $ws_2 output DisplayPort-0
+workspace $ws_3 output DisplayPort-0
+workspace $ws_4 output DisplayPort-0
+workspace $ws_5 output DisplayPort-0
+workspace $ws_6 output DisplayPort-0
+workspace $ws_7 output DisplayPort-0
+workspace $ws_8 output DisplayPort-0
+workspace $ws_9 output DisplayPort-0
+workspace $ws_q output DisplayPort-0
+workspace $ws_w output DisplayPort-0
+workspace $ws_e output DisplayPort-0
 workspace $ws_a output DisplayPort-3
 workspace $ws_s output DisplayPort-3
 

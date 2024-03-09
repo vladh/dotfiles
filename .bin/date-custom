@@ -5,4 +5,4 @@ weekday_to_jp() {
 }
 
 # printf "%s\n" "$(date '+%A  %m/%d %H:%M' | weekday_to_jp)"
-printf "%s\n" "$(date '+%Y-%m-%d %H:%M')"
+printf "%s\n" "$(date '+%Y-%m-%d %H:%M')"
