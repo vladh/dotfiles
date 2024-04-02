@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+git checkout $1
+git commit --amend
+git rebase -ip --root

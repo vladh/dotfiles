@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec git log --pretty="%as  %h  <%ae>  %s" --author=vlad@vladh.net

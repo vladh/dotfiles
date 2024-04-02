@@ -15,6 +15,7 @@
 	f = fetch
 	fa = fetch --all
 	l = log
+	lg = git log --oneline --graph --date-order
 	ll = log --stat --oneline
 	lla = log --stat --oneline --all
 	p = push
@@ -43,3 +44,5 @@
 	required = true
 [diff]
 	wsErrorHighlight = all
+[rerere]
+	enabled = 1
