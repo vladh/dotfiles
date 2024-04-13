@@ -1,4 +1,2 @@
-#!/bin/sh -eux
-git checkout $1
-git commit --amend
-git rebase -ip --root
+#!/bin/sh -eu
+git commit --amend -m "$1"
