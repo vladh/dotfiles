@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+rsync -Pvrthl --info=progress2 --rsync-path="doas rsync" /etc/nginx/keys/ billy:/etc/nginx/keys
+ssh billy 'doas rc-service nginx reload'
