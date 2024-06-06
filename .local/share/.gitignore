@@ -1,4 +1,7 @@
 /*
 !/.gitignore
 !/applications
+!/cargo
+/cargo/*
+!/cargo/config.toml
 applications/wine*
