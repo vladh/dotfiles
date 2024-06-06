@@ -7,7 +7,7 @@ yay -S --needed \
     perl-authen-sasl perl-file-mimeinfo perl-io-socket-ssl \
     gcc gdb make neovim neovim-symlinks tmux time man \
     pandoc texlive-xetex \
-    pipewire pipewire-pulse pamixer playerctl smbclient cifs-utils \
+    pipewire pipewire-pulse pipewire-zeroconf pamixer playerctl smbclient cifs-utils \
     bluez bluez-utils brightnessctl \
     foot nemo imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
     firefox telegram-desktop element-desktop signal-desktop \
