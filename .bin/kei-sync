@@ -12,4 +12,4 @@ echo "Space available:"
 dfd
 echo ""
 read -p "Press any key..."
-exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files /mnt/balcora/ ~/kei/
+exec rsync -Pvrthl --delete --info=progress2 --files-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files --exclude-from=/home/vladh/bentus/dotfiles-extra/.config/kei-files-ignored /mnt/balcora/ ~/kei/
