@@ -1,0 +1,12 @@
+[Unit]
+Description=easyeffects
+
+[Service]
+Type=simple
+RemainAfterExit=true
+ExecStart=/usr/bin/easyeffects --gapplication-service
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
