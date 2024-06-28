@@ -1,8 +1,8 @@
 [unstable]
 codegen-backend = true
 
-[profile.dev]
-codegen-backend = "cranelift"
+# [profile.dev]
+# codegen-backend = "cranelift"
 
 # NOTE: For maximum performance, build using a nightly compiler
 # If using rust stable, remove the "-Zshare-generics=y" below (as well as "-Csplit-debuginfo=unpacked" when building on macOS).
