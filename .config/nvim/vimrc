@@ -26,6 +26,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'vladh/nord-vim', { 'branch': 'main' }
 
 " languages
+Plug 'DingDean/wgsl.vim'
 Plug 'arrufat/vala.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'digitaltoad/vim-pug'
