@@ -1,3 +1,6 @@
+[term]
+color = 'always'
+
 [unstable]
 codegen-backend = true
 
