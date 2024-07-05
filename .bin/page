@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+exec $@ 2>&1 | less -r
