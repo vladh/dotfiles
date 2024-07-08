@@ -14,6 +14,7 @@ let g:polyglot_disabled = ['ftdetect']
 call plug#begin(plugged_path)
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.local/opt/fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'machakann/vim-swap'
 Plug 'ntpeters/vim-better-whitespace'
@@ -120,8 +121,8 @@ nmap <silent> <C-l> :wincmd l<CR>
 " move between tabs
 nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
-" opens fuzzy file browser
-nmap <C-p> :FZF<CR>
+" opens fuzzy file browser for current git directory
+nmap <C-p> :GFiles<CR>
 " strips whitespace from current buffer
 nmap <leader>ss :StripWhitespace<CR>
 " ; clears highlighted search results
