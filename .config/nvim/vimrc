@@ -222,6 +222,8 @@ augroup highlight_todo
     autocmd!
     autocmd WinEnter,VimEnter * :silent! call
         \ matchadd('Todo', 'TODO\|NOTE\|FIXME\|SLOW\|#slow\|#nocheckin', -1)
+    autocmd WinEnter,VimEnter * :silent! call
+        \ matchadd('String', '\\section\|\\subsection\|\\subsubsection', -1)
 augroup END
 
 
