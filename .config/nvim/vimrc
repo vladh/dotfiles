@@ -179,11 +179,12 @@ cnoremap <expr> <right> getcmdline() =~# edit_re && wildmenumode() ? " \<bs>\<C-
 
 " airline
 let g:airline_theme='nord'
-let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline_powerline_fonts=0
-let g:airline#extensions#wordcount#filetypes= [
-    \ 'asciidoc', 'help', 'mail', 'markdown', 'nroff', 'org', 'rst', 'plaintex', 'tex', 'text', 'pollen'
-\ ]
+" don't display file encoding if it's "utf-8[unix]"
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+" skip filetype
+let g:airline_section_x=''
+let g:airline_skip_empty_sections = 1
 
 " EasyAlign
 xmap ga <Plug>(EasyAlign)
