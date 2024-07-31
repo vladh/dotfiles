@@ -131,7 +131,7 @@ bar swaybar_command waybar
 
 # output * bg `new-wallpaper` fill
 output * bg ~/bentus/images/wallpapers/macos/13-Ventura-Dark.jpg fill
-# default_border none
+default_border none
 # A hack to hide the title bar.
 # https://github.com/swaywm/sway/issues/1286
 hide_edge_borders --i3 smart
