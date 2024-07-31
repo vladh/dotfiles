@@ -3,6 +3,7 @@ set $mod Mod4
 font pango:Ubuntu Mono 10
 floating_modifier $mod
 focus_follows_mouse no
+workspace_layout tabbed
 
 #                       border  bg      text    indict. child_border
 client.focused          #373e4d #373e4d #d8dee9 #4c566a #4c566a
@@ -25,37 +26,58 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym $mod+Ctrl+q exec poweroff
 bindsym $mod+Ctrl+r exec reboot
 bindsym $mod+Ctrl+w exec systemctl reboot --boot-loader-entry=auto-windows
-bindsym Print exec wlss-full
-bindsym $mod+o exec wlss-full
-bindsym $mod+Shift+o exec wlss
-
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+x exec swaymsg exit
+bindsym $mod+Shift+Tab exec update-wallpaper
 
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec run-cwd foot
 bindsym $mod+d exec wofi --show drun
 bindsym $mod+c exec collect
 bindsym $mod+v exec wl-color-picker clipboard
+bindsym Print exec wlss-full
+bindsym $mod+o exec wlss-full
+bindsym $mod+Shift+o exec wlss
+bindsym $mod+equal exec fcitx5-remote -s mozc; mode "default"
+bindsym $mod+minus exec fcitx5-remote -s keyboard-us; mode "default"
 
-workspace_layout tabbed
+bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
+for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
+
+bindsym $mod+Tab layout toggle tabbed splith
+bindsym $mod+x kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+grave floating toggle
+bindsym $mod+backslash focus mode_toggle
+
+mode "resize" {
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus child
+bindsym $mod+Up focus parent
+bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus child
+bindsym $mod+k focus parent
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
 
 set $ws_1 "1"
 set $ws_2 "2"
@@ -102,38 +124,6 @@ bindsym $mod+Shift+e move container to workspace $ws_e
 bindsym $mod+Shift+a move container to workspace $ws_a
 bindsym $mod+Shift+s move container to workspace $ws_s
 
-bindsym $mod+Tab layout toggle tabbed splith
-bindsym $mod+Shift+Tab exec update-wallpaper
-bindsym $mod+x kill
-
-bindsym $mod+f fullscreen toggle
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
-
-mode "resize" {
-	bindsym h resize shrink width 10 px or 10 ppt
-	bindsym j resize grow height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow width 10 px or 10 ppt
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
-}
-bindsym $mod+r mode "resize"
-
-bindsym $mod+equal exec fcitx5-remote -s mozc; mode "default"
-bindsym $mod+minus exec fcitx5-remote -s keyboard-us; mode "default"
-
-bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
-for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
-
-for_window [app_id="^haretest$"] floating enable
-
 
 # sway-specific stuff
 
@@ -141,8 +131,8 @@ bar swaybar_command waybar
 
 # output * bg `new-wallpaper` fill
 output * bg ~/bentus/images/wallpapers/macos/13-Ventura-Dark.jpg fill
-default_border none
-# A hack to hide the title bar. Remember it will always be hidden.
+# default_border none
+# A hack to hide the title bar.
 # https://github.com/swaywm/sway/issues/1286
 hide_edge_borders --i3 smart
 
