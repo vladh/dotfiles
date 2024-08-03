@@ -6,8 +6,8 @@ focus_follows_mouse no
 workspace_layout tabbed
 
 #                       border  bg      text    indict. child_border
-client.focused          #373e4d #373e4d #b8bec9 #4c566a #4c566a
-client.focused_inactive #373e4d #373e4d #b8bec9 #4c566a #4c566a
+client.focused          #373e4d #474e5d #b8bec9 #4c566a #4c566a
+client.focused_inactive #373e4d #474e5d #b8bec9 #4c566a #4c566a
 client.unfocused        #2e3440 #2e3440 #b8bec9 #4c566a #4c566a
 client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb #ebcb8b
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
