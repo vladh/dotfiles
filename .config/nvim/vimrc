@@ -40,6 +40,7 @@ Plug 'otherjoel/vim-pollen'
 Plug 'pangloss/vim-javascript'
 Plug 'tikhomirov/vim-glsl'
 Plug 'wlangstroth/vim-racket'
+Plug 'wuelnerdotexe/vim-astro'
 Plug 'ziglang/zig.vim'
 
 if has('nvim')
@@ -249,6 +250,8 @@ au BufRead,BufNewFile *.p set filetype=pollen
 au FileType pollen setlocal textwidth=120 colorcolumn=120
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
+" html
+au FileType html setlocal textwidth=120 colorcolumn=120
 " python
 au FileType python setlocal shiftwidth=4 tabstop=4
 let g:python_indent = {}
@@ -271,6 +274,7 @@ let g:tex_no_error=1
 let g:tex_flavor="latex"
 au FileType tex setlocal textwidth=120 colorcolumn=120
 " vimwiki
+au BufRead,BufNewFile *.md set filetype=vimwiki
 au FileType vimwiki setlocal textwidth=120 colorcolumn=120 noexpandtab shiftwidth=4 tabstop=4
 " javascript
 let g:jsx_ext_required=0
@@ -304,10 +308,3 @@ if has('nvim')
     }
 EOF
 endif
-
-
-"
-" allow per-project .vimrc
-"
-set exrc
-set secure
