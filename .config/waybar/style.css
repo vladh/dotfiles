@@ -1,3 +1,8 @@
+.module {
+    padding: 0 12px;
+    color: inherit;
+}
+
 window#waybar {
     /* background-color: rgba(14, 20, 32, 0.85); */
     background-image: url('/home/vladh/bentus/images/wallpapers/macos-edited/13-Ventura-Dark@2560x1440+blur+dark.jpg');
@@ -9,6 +14,9 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+#workspaces {
+    padding: 0;
+}
 #workspaces button {
     margin: 3px 2px;
     padding: 0px 4px;
@@ -33,28 +41,6 @@ window#waybar.hidden {
 
 #mode {
     background-color: #0055ee;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd,
-#custom-fcitx5,
-#custom-date,
-#custom-wallpaper,
-image {
-    padding: 0 12px;
-    color: inherit;
 }
 
 #battery.charging, #battery.plugged {

@@ -1,0 +1,3 @@
+#!/bin/sh -eu
+
+printf "%s\n" "$(date '+%a %b %d, %H:%M')"
