@@ -8,7 +8,7 @@ yay -S --needed \
     gcc gdb make neovim neovim-symlinks tmux time man \
     pandoc texlive-xetex \
     pipewire pipewire-pulse pipewire-zeroconf pamixer playerctl smbclient cifs-utils \
-    bluez bluez-utils brightnessctl \
+    bluez bluez-utils brightnessctl avizo \
     foot nemo imv nomacs mpv vlc zathura zathura-pdf-mupdf zathura-djvu aerc yt-dlp transmission-cli speedcrunch \
     firefox telegram-desktop element-desktop signal-desktop \
     cups cups-pdf ntfs-3g lxqt-policykit simple-scan \
