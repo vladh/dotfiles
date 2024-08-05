@@ -4,7 +4,6 @@
     "modules-center": [],
     "modules-right": [
         "custom/wallpaper",
-        "pulseaudio",
         "battery",
         "custom/date-est",
         "custom/date-adt",
@@ -63,10 +62,5 @@
     },
     "temperature": {
         "format": "{temperatureC}°C"
-    },
-    "pulseaudio": {
-        "format": "{volume}%",
-        "format-bluetooth": "青歯 {volume}%",
-        "format-muted": "Ｍ",
     },
 }

@@ -13,15 +13,15 @@ client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb #ebcb8b
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 client.background       #ffffff
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 2
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 2
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioPause exec mpc toggle
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioRaiseVolume exec volumectl -u up
+bindsym XF86AudioLowerVolume exec volumectl -u down
+bindsym XF86AudioMute exec volumectl toggle-mute
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
+# bindsym XF86AudioPlay exec ...
+# bindsym XF86AudioPause exec ...
+# bindsym XF86AudioNext exec ...
+# bindsym XF86AudioPrev exec ...
 
 bindsym $mod+Ctrl+q exec poweroff
 bindsym $mod+Ctrl+r exec reboot
@@ -148,3 +148,4 @@ exec "systemctl --user import-environment; systemctl --user start graphical-sess
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id gammastep
 exec --no-startup-id xmodmap ~/.config/x11/Xmodmap
+exec avizo-service
