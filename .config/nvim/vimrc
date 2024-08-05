@@ -40,7 +40,6 @@ Plug 'otherjoel/vim-pollen'
 Plug 'pangloss/vim-javascript'
 Plug 'tikhomirov/vim-glsl'
 Plug 'wlangstroth/vim-racket'
-Plug 'wuelnerdotexe/vim-astro'
 Plug 'ziglang/zig.vim'
 
 if has('nvim')
@@ -250,6 +249,8 @@ au BufRead,BufNewFile *.p set filetype=pollen
 au FileType pollen setlocal textwidth=120 colorcolumn=120
 " ejs
 au BufNewFile,BufRead *.ejs set filetype=html
+" astro
+au BufNewFile,BufRead *.astro set filetype=html
 " html
 au FileType html setlocal textwidth=120 colorcolumn=120
 " python
