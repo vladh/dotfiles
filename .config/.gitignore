@@ -2,6 +2,7 @@
 !.gitignore
 !/ack
 !/aerc
+!/avizo
 !/electron-flags.conf
 !/envs
 !/fcitx5
