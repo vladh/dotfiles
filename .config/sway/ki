@@ -24,3 +24,6 @@ input "type:pointer" {
 	accel_profile flat
 	pointer_accel -0.6
 }
+
+include ~/.config/sway/systemd
+exec gammastep

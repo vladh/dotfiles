@@ -1,0 +1,5 @@
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment DISPLAY \
+                                                  SWAYSOCK \
+                                                  XDG_CURRENT_DESKTOP=sway \
+                                                  WAYLAND_DISPLAY

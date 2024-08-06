@@ -22,3 +22,6 @@ input "type:touchpad" {
 	natural_scroll enabled
 	middle_emulation enabled click_method clickfinger
 }
+
+include ~/.config/sway/systemd
+exec gammastep
