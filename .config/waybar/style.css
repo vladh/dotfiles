@@ -1,4 +1,29 @@
-.module {
+.module,
+/* TODO: Remove these unnecessary lines after upgrading waybar. */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#custom-fcitx5,
+#custom-date-est,
+#custom-date-adt,
+#custom-date-jst,
+#custom-date-aest,
+#custom-date,
+#custom-wallpaper,
+image
+/* end TODO */
+{
     padding: 0 12px;
     color: inherit;
 }
