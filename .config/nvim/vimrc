@@ -122,7 +122,7 @@ nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <S-h> :tabprevious<CR>
 nmap <silent> <S-l> :tabnext<CR>
 " opens fuzzy file browser for current git directory
-nmap <C-p> :GFiles<CR>
+nmap <C-p> :GFiles --exclude-standard --others --cached<CR>
 " strips whitespace from current buffer
 nmap <leader>ss :StripWhitespace<CR>
 " ; clears highlighted search results
