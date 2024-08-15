@@ -8,9 +8,13 @@ case $1 in
     thanksd)
         cd ~/sources/thanksd.js
         swaymsg exec run-in-dir ~/sources/thanksd foot
+        sleep 0.05
         swaymsg exec run-in-dir ~/sources/www-app foot
+        sleep 0.05
         swaymsg exec run-in-dir ~/sources/thanksd.js foot
+        sleep 0.05
         swaymsg exec run-in-dir ~/sources/thanksd foot
+        sleep 0.05
         swaymsg exec run-in-dir ~/sources/www-app foot
         ;;
     *)
