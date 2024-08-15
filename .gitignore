@@ -151,7 +151,6 @@
 /Documents/
 /Downloads/
 /Dropbox/
-/Google Drive File Stream
 /Google Drive File Stream/
 /Google Drive/
 /Library/
@@ -161,44 +160,34 @@
 /Pictures/
 /Public/
 /Seafile/
+/Videos/
 /Virtual Machines.localized/
+/VirtualBox VMs/
+/VulkanSDK/
 /applications/
 /b
-/bentus
+/bentus/
 /collect.txt
 /docs/
+/epi
+/games/
 /go/
 /isus/
 /kei
+/local/
+/med
+/media/
 /music
 /opt/
 /private
+/proj
 /proj-fat/
 /proj-versioned
-/proj/
+/roms/
+/scratch/
+/snap/
 /sources/
 /texmf/
 /tmp/
 /video-movies
 /video-tv
-Adlm/
-Creative Cloud Files/
-Dropbox
-Google Drive File Stream
-Google Drive/
-Videos/
-VirtualBox VMs/
-VulkanSDK/
-bentus/
-epi
-games/
-go/
-isus/
-local/
-med
-media/
-proj
-roms/
-scratch/
-snap/
-texmf/

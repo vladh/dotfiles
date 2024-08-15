@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ $# -lt 2 ]; then
+    echo -e "Usage: run-in-dir <dir> <command> [args...]"
+    exit 1
+fi
+
 cd "$1"
 shift
 exec "$@"

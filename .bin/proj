@@ -1,0 +1,18 @@
+#!/bin/sh -eu
+
+if [ $# -eq 0 ]; then
+    echo -e "Usage: proj [name]"
+fi
+
+case $1 in
+    thanksd)
+        cd ~/sources/thanksd.js
+        swaymsg exec run-in-dir ~/sources/thanksd foot
+        swaymsg exec run-in-dir ~/sources/www-app foot
+        swaymsg exec run-in-dir ~/sources/thanksd.js foot
+        swaymsg exec run-in-dir ~/sources/thanksd foot
+        swaymsg exec run-in-dir ~/sources/www-app foot
+        ;;
+    *)
+        ;;
+esac
