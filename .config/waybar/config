@@ -5,11 +5,11 @@
     "modules-right": [
         "custom/wallpaper",
         "battery",
-        "custom/date-est",
-        "custom/date-adt",
-        "custom/date-jst",
-        "custom/date-aest",
-        "custom/date"
+        "clock#est",
+        "clock#adt",
+        "clock#jst",
+        "clock#aest",
+        "clock#local"
     ],
     "height": 28,
     "sway/workspaces": {
@@ -25,30 +25,24 @@
         "exec": "/home/vladh/.bin/fcitx-monitor-method",
         "tooltip": false,
     },
-    "custom/date-est": {
-        "exec": "/home/vladh/.bin/date-short America/Montreal EST",
-        "interval": 30,
-        "tooltip": false,
+    "clock#est": {
+        "format": "{:%H:%M} EST",
+        "timezone": "America/Montreal",
     },
-    "custom/date-adt": {
-        "exec": "/home/vladh/.bin/date-short America/Halifax ADT",
-        "interval": 30,
-        "tooltip": false,
+    "clock#adt": {
+        "format": "{:%H:%M} ADT",
+        "timezone": "America/Halifax",
     },
-    "custom/date-jst": {
-        "exec": "/home/vladh/.bin/date-short Asia/Tokyo JST",
-        "interval": 30,
-        "tooltip": false,
+    "clock#jst": {
+        "format": "{:%H:%M} JST",
+        "timezone": "Asia/Tokyo",
     },
-    "custom/date-aest": {
-        "exec": "/home/vladh/.bin/date-short Australia/Sydney AEST",
-        "interval": 30,
-        "tooltip": false,
+    "clock#aest": {
+        "format": "{:%H:%M} AEST",
+        "timezone": "Australia/Sydney",
     },
-    "custom/date": {
-        "exec": "/home/vladh/.bin/date-local",
-        "interval": 1,
-        "tooltip": false,
+    "clock#local": {
+        "format": "{:%a %b %d, %H:%M}",
     },
     "image#avatar": {
         "path": "/home/vladh/bentus/images/vlad/carl_circle@40px.png",
