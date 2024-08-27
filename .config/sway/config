@@ -1,6 +1,8 @@
 set $mod Mod4
 
 font pango:Ubuntu 9
+seat seat0 xcursor_theme Adwaita 24
+
 floating_modifier $mod
 focus_follows_mouse no
 workspace_layout tabbed
