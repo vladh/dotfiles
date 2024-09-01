@@ -45,6 +45,8 @@ bindsym $mod+minus exec fcitx5-remote -s keyboard-us; mode "default"
 bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher browse-docs
 for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
 
+for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
+
 bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
