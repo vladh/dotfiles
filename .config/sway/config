@@ -147,6 +147,6 @@ input "type:keyboard" {
 include ~/.config/sway/config.d/*
 include ~/.config/sway/`hostname`
 
-exec fcitx5 -d
+# exec fcitx5 -d
 exec xmodmap ~/.config/x11/Xmodmap
 exec avizo-service
