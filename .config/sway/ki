@@ -20,6 +20,8 @@ workspace $ws_s output DP-4
 
 output DP-4 bg ~/bentus/images/wallpapers/catherine/catherine-fb-clothed-3840x2160.jpg fill
 
+for_window [app_id="cellsum"] move container to workspace "s1:a"
+
 input "type:pointer" {
 	accel_profile flat
 	pointer_accel -0.6
