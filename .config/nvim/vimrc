@@ -125,6 +125,8 @@ nmap <silent> <S-l> :tabnext<CR>
 nmap <C-p> :GFiles --exclude-standard --others --cached<CR>
 " strips whitespace from current buffer
 nmap <leader>ss :StripWhitespace<CR>
+" ,t creates a new tab
+nmap <leader>t :tabnew<CR>
 " ; clears highlighted search results
 nnoremap ; :nohlsearch<cr>
 " ,sp toggles paste mode
