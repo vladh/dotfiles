@@ -46,6 +46,7 @@ bindsym $mod+p exec foot -c ~/.config/foot/launcher.ini --app-id=vladh_launcher 
 for_window [app_id="^vladh_launcher$"] floating enable, border none, resize set 70 ppt 70 ppt
 
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
+for_window [app_id="cellsum"] move container to workspace "s1:a"
 
 bindsym $mod+Tab layout toggle tabbed splith
 bindsym $mod+x kill
