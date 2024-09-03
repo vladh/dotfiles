@@ -43,4 +43,5 @@
 !alpine-packages
 !env
 !hosts
+!mimeapps.list
 !profile
