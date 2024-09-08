@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-arch-install-packages
+# arch-install-packages
 
 sudo systemctl enable --now NetworkManager
 sudo systemctl enable --now avahi-daemon
