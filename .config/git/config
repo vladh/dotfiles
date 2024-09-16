@@ -6,6 +6,7 @@
 [alias]
 	a = add
 	aa = add --all .
+	br = !git-recent-branches
 	c = commit --verbose
 	ca = commit --amend
 	cl = clone
