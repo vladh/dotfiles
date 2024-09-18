@@ -23,6 +23,7 @@
 	pf = push --force-with-lease
 	s = status
 	sh = show
+	sw = switch
 	u = pull
 [merge]
 	tool = vimdiff
