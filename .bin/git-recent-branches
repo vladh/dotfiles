@@ -3,6 +3,5 @@
 # https://github.com/jbranchaud/til/blob/master/git/switch-to-a-recent-branch-with-fzf.md
 
 branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
-branch=$(echo "$branches" |
-         fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+branch=$(echo "$branches" | fzf -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
 git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
